@@ -8,6 +8,6 @@ This is the summary of my book.
 	* [Permutations I](Subsets/Permutations.md)
 	* [Permutations II](Subsets/PermutationsII.md)
 * [Binary Search](BinarySearch/README.md)
-	*[Binary Search](BinarySearch/BinarySearch.md)
+	* [Binary Search](BinarySearch/BinarySearch.md)
 * [Two Pointers](Two-Pointers/README.md)
 	* [Partition List](Two-Pointers/PartitionList.md )
