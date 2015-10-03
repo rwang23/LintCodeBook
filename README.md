@@ -1,4 +1,4 @@
-This is the solution and explaination of lintcode.
+Solution and explaination of lintcode.
 
 This documents the time I learn LintCode.
 
