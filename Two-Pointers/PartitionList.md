@@ -1,4 +1,15 @@
+## Partition List
 
+Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
+
+You should preserve the original relative order of the nodes in each of the two partitions.
+
+    Given 1->4->3->2->5->2->null and x = 3,
+    return 1->2->2->4->3->5->null.
+
+####Tags: Two Pointers; Linked List
+
+####思路
 - 创建了两个链表 分别储存左边小于的 以及 右边大于的
 - 太精辟
 - leftDummmy存左边第一个节点
