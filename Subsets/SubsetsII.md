@@ -1,40 +1,38 @@
+## Subsets II
 
-##Subsets I
+### Given a list of numbers that may has duplicate numbers, return all possible subsets
 
-### Given a set of distinct integers, return all possible subsets.
+	If S = [1,2,2], a solution is:
 
-	If S = [1,2,3], a solution is:
 	[
-	  [3],
-	  [1],
 	  [2],
-	  [1,2,3],
-	  [1,3],
-	  [2,3],
+	  [1],
+	  [1,2,2],
+	  [2,2],
 	  [1,2],
 	  []
 	]
 
-### Note
+###Note
+- Each element in a subset must be in non-descending order.
 
-- Elements in a subset must be in non-descending order.
+- The ordering between two subsets is free.
 
 - The solution set must not contain duplicate subsets.
 
-####Tags: Recursion
+####Tag:Recursion
 
 ###思路
-- DFS
-- 当循环中i=0时，是以1开头的，在循环中pos+1进入递归，所以会有[1,2]和[1,3]，[1,2]再递归得到[1,2,3]。因为[1,3]时i==2，所以无法继续递归
-- 当循环中i=1时，是以2开头的，以此类推
+- 在subsets I的基础上添加限制条件
+-
 
 ```java
 class Solution {
-	/**
-	 * @param S: A set of numbers.
-	 * @return: A list of lists. All valid subsets.
-	 */
-	public ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> S) {
+    /**
+     * @param S: A set of numbers.
+     * @return: A list of lists. All valid subsets.
+     */
+    public ArrayList<ArrayList<Integer>> subsetsWithDup(ArrayList<Integer> S) {
 		// write your code here
 		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
 		ArrayList<Integer> list = new ArrayList<Integer>() ;
@@ -55,16 +53,13 @@ class Solution {
 	                          int pos) {
 		result.add(new ArrayList<Integer>(list));
 		for (int i = pos; i < nums.length; i++) {
+			if (i != pos && nums[i] == nums[i - 1]) {
+				continue;
+			}
 			list.add(nums[i]);
 			subsetshelper(result, list, nums, i + 1);
-			list.remove(list.size()-1);
+			list.remove(list.size() - 1);
 		}
 	}
 }
-
-
-
-
-
-
 ```
