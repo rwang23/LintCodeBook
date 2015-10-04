@@ -13,6 +13,7 @@ This is the summary of my book.
 	* [Find Peak Element](binarysearch/FindPeakElement.md)
 	* [Find Minimun in Rotated Sorted Array](binarysearch/Find-Min-In-Rotated-Array.md)
 	* [Search In a Big Sorted Array](binarysearch/Search-In-Big-Sorted-Array.md)
+	* [First Bad Version](binarysearch/First-Bad-Version.md)
 
 * [Two Pointers](Two-Pointers/README.md)
 	* [Partition List](Two-Pointers/PartitionList.md )
