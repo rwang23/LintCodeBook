@@ -7,6 +7,7 @@ This is the summary of my book.
 	* [Subsets II](Subsets/SubsetsII.md)
 	* [Permutations I](Subsets/Permutations.md)
 	* [Permutations II](Subsets/PermutationsII.md)
+
 * [Binary Search](binarysearch/README.md)
 	* [Binary Search](binarysearch/BinarySearch.md)
 	* [Search 2D Matrix](binarysearch/Search-2D-Matrix.md)
@@ -18,9 +19,13 @@ This is the summary of my book.
 	* [First Bad Version](binarysearch/First-Bad-Version.md)
 	* [Search For a Range](binarysearch/Search-For-Range.md)
 	* [Wood Cut](binarysearch/Wood-Cut.md)
+
 * [Binary Tree & Divide Conquer](BinaryTree\&DivideAndConquer/README.md)
 	* [Maximum Depth](BinaryTree\&DivideAndConquer/Maximum-Depth-of-Binary-Tree.md)
 	* [Minimum Depth](BinaryTree\&DivideAndConquer/Minimum-Depth-of-Binary-Tree.md)
+	* [In Order Traversal](BinaryTree\&DivideAndConquer/InOrderTraversal.md)
+	* [Post Order Traversal](BinaryTree\&DivideAndConquer/PostOrderTraversal.md)
+
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
 	* [Rotate String](SortedArray/RotateString.md)
