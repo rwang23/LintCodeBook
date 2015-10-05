@@ -38,10 +38,9 @@
 - 非常精妙的解法
 - 根据其特殊的性质，不再使用二分
 
-![](../image/Search\ a\ 2D\ Matrix\ II\ 1.png)
-![](../image/Search\ a\ 2D\ Matrix\ II\ 2.png)
-![](../image/Search\ a\ 2D\ Matrix\ II\ 3.png)
 ![](../image/Search-a-2D-Matrix-II-1.png)
+![](../image/Search-a-2D-Matrix-II-2.png)
+![](../image/Search-a-2D-Matrix-II-3.png)
 
 
 ```java
