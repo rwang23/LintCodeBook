@@ -20,11 +20,11 @@ This is the summary of my book.
 	* [Search For a Range](binarysearch/Search-For-Range.md)
 	* [Wood Cut](binarysearch/Wood-Cut.md)
 
-* [Binary Tree & Divide Conquer](BinaryTree\&DivideAndConquer/README.md)
-	* [Maximum Depth](BinaryTree\&DivideAndConquer/Maximum-Depth-of-Binary-Tree.md)
-	* [Minimum Depth](BinaryTree\&DivideAndConquer/Minimum-Depth-of-Binary-Tree.md)
-	* [In Order Traversal](BinaryTree\&DivideAndConquer/InOrderTraversal.md)
-	* [Post Order Traversal](BinaryTree\&DivideAndConquer/PostOrderTraversal.md)
+* [Binary Tree & Divide Conquer](BinaryTree&DivideAndConquer/README.md)
+	* [Maximum Depth](BinaryTree&DivideAndConquer/Maximum-Depth-of-Binary-Tree.md)
+	* [Minimum Depth](BinaryTree&DivideAndConquer/Minimum-Depth-of-Binary-Tree.md)
+	* [In Order Traversal](BinaryTree&DivideAndConquer/InOrderTraversal.md)
+	* [Post Order Traversal](BinaryTree&DivideAndConquer/PostOrderTraversal.md)
 
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
