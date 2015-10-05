@@ -17,6 +17,13 @@ This is the summary of my book.
 	* [Search In a Big Sorted Array](binarysearch/Search-In-Big-Sorted-Array.md)
 	* [First Bad Version](binarysearch/First-Bad-Version.md)
 	* [Search For a Range](binarysearch/Search-For-Range.md)
+	* [Wood Cut](binarysearch/Wood-Cut.md)
+* [Binary Tree & Divide Conquer](BinaryTree\&DivideAndConquer/README.md)
+	* [Maximum Depth](BinaryTree\&DivideAndConquer/Maximum-Depth-of-Binary-Tree.md)
+	* [Minimum Depth](BinaryTree\&DivideAndConquer/Minimum-Depth-of-Binary-Tree.md)
+* [Sorted Array](SortedArray/README.md)
+	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
+	* [Rotate String](SortedArray/RotateString.md)
 
 * [Two Pointers](Two-Pointers/README.md)
 	* [Partition List](Two-Pointers/PartitionList.md )
