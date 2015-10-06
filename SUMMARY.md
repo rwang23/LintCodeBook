@@ -25,7 +25,10 @@ This is the summary of my book.
 	* [Minimum Depth](BinaryTree&DivideAndConquer/Minimum-Depth-of-Binary-Tree.md)
 	* [In Order Traversal](BinaryTree&DivideAndConquer/InOrderTraversal.md)
 	* [Post Order Traversal](BinaryTree&DivideAndConquer/PostOrderTraversal.md)
+	* [Level Order Traversal](BinaryTree&DivideAndConquer/LevelOrderTraversal.md)
 	* [Balanced Binary Tree](BinaryTree&DivideAndConquer/BalancedBinaryTree.md)
+	* [Search Range in Binary Search Tree](BinaryTree&DivideAndConquer/Search-Range-In-Binary-Tree.md)
+	* [Validate Binary Search Tree](BinaryTree&DivideAndConquer/Validate-Binary-Search-Tree.md)
 
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
