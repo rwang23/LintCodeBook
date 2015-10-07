@@ -12,10 +12,11 @@
 	Given [4, 5, 6, 7, 0, 1, 2] return 0
 
 ####Note
-You may assume no duplicate exists in the array.
+
+    You may assume no duplicate exists in the array.
 
 ####Tags Expand
--Binary Search
+- Binary Search
 
 ####思路
 - 解法来自九章，自己写的有点冗长，在while中循环的条件很重要

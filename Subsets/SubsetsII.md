@@ -1,6 +1,6 @@
 ## Subsets II
 
-Given a list of numbers that may has duplicate numbers, return all possible subsets
+	Given a list of numbers that may has duplicate numbers, return all possible subsets
 
 	If S = [1,2,2], a solution is:
 
@@ -14,18 +14,21 @@ Given a list of numbers that may has duplicate numbers, return all possible subs
 	]
 
 ####Note
-- Each element in a subset must be in non-descending order.
+	- Each element in a subset must be in non-descending order.
 
-- The ordering between two subsets is free.
+	- The ordering between two subsets is free.
 
-- The solution set must not contain duplicate subsets.
+	- The solution set must not contain duplicate subsets.
 
-####Tag:Recursion
+####Tag
+- Recursion
 
 ####思路
 - 在subsets I的基础上添加限制条件
-- 当[1,2,2]后，回到[1,2]后，不再出现[1,2,2]；当有[2]，[2，2]后不再出现[2],[2,2] 所以这一位跟上一位不能一样 并且同时：
-- 但是[1,2,2]与[2,2]是可以出现的
+- 当[1,2,2]后，回到[1,2]后，不再出现[1,2,2]；当有[2],[2,2]后不再出现[2],[2,2] 所以这一位跟上一位不能一样 并且同时：
+- 但是[1,2,2]与[2,2]是可以出现的，只有顺序输出的12有用，也就是pos==i时
+- i = pos的时候， 比如1，2 第三个数 pos=i=2，所以要输出[1,2,2]
+- 只有顺序输出的12有用，
 
 ```java
 class Solution {

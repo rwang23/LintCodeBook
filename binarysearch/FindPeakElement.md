@@ -58,15 +58,17 @@ class Solution {
             }
         }
 
-        if( (A[start] > A[start]) && (A[start] > A[start]) ){
+        if( (A[start] > A[start + 1]) && (A[start] > A[start - 1]) ){
             return start;
-        }else if( (A[end] > A[end]) && (A[end] > A[end]) ){
+        }else if( (A[end] > A[end + 1]) && (A[end] > A[end - 1]) ){
             return end;
         }else{
             return -1;
         }
     }
 }
+
+
 
 
 ```
