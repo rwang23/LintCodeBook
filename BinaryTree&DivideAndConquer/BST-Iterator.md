@@ -30,6 +30,9 @@
 
 -----
 ####正常解法
+- O(1)time O(n)place
+- 可以进一步优化
+
 ```java
 /**
  * Definition of TreeNode:
@@ -94,4 +97,44 @@ public class Solution {
     }
 }
 
+```
+
+####挑战1
+- 优化了memory O(h)
+- 将原来的中序遍历分成了两个部分
+- 在初始化中，只进行入栈
+- 在next中，进行出栈
+- 非常精彩的解法
+
+
+```java
+public class BSTIterator {
+    Stack<TreeNode> stack;
+
+    public BSTIterator(TreeNode root) {
+        stack = new Stack<TreeNode>();
+        while (root != null) {
+            stack.push(root);
+            root = root.left;
+        }
+    }
+
+    /** @return whether we have a next smallest number */
+    public boolean hasNext() {
+        return !stack.isEmpty();
+    }
+
+    /** @return the next smallest number */
+    public TreeNode next() {
+        TreeNode node = stack.pop();
+        if (node.right != null) {
+            node = node.right;
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
+            }
+        }
+        return node;
+    }
+}
 ```
