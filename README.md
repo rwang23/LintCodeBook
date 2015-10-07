@@ -30,6 +30,8 @@ All codes are in java.
 
 [Repository on Github](https://github.com/rwang23/LintCodeBook)
 
+![](image/Sorting-Algorithms.png)
+
 Renfei
 
 <!-- Place this tag right after the last button or just before your close body tag. -->
