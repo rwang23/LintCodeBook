@@ -26,7 +26,7 @@ This is the summary of my book.
 	* [Conver Sorted Array to BST in minimum height](BinaryTree/Convert-Sorted-Array-to-BST-minimum-height.md)
 	* [Subtree](BinaryTree/Subtree.md)
 	* [Insert Node in BST](BinaryTree/Insert-Node-In-BST.md)
-	* [Pre Order Traversal](BinaryTree/InOrderTraversal.md)
+	* [Pre Order Traversal](BinaryTree/PreOrderTraversal.md)
 	* [In Order Traversal](BinaryTree/InOrderTraversal.md)
 	* [Post Order Traversal](BinaryTree/PostOrderTraversal.md)
 	* [Level Order Traversal](BinaryTree/LevelOrderTraversal.md)
