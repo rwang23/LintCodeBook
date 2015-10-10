@@ -62,6 +62,6 @@ This is the summary of my book.
 	* [Partition List](BFS/WordLadder.md)
 
 * [Math](Math/README.md)
-	* [Partition List](Math/TrailingZeros.md)
+	* [Trailing Zeros](Math/TrailingZeros.md)
 
 
