@@ -44,10 +44,20 @@ This is the summary of my book.
 * [Divide And Conquer](DivideAndConquer/README.md)
 	* [Fast Power](DivideAndConquer/FastPower.md)
 
+* [Dynamic Programming](DynamicProgramming/README.md)
+	* [Triangle](DynamicProgramming/Triangle.md)
 
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
 	* [Rotate String](SortedArray/RotateString.md)
 
 * [Two Pointers](Two-Pointers/README.md)
-	* [Partition List](Two-Pointers/PartitionList.md )
+	* [Partition List](Two-Pointers/PartitionList.md)
+
+* [BFS](BFS/README.md)
+	* [Partition List](BFS/WordLadder.md)
+
+* [Math](Math/README.md)
+	* [Partition List](Math/TrailingZeros.md)
+
+
