@@ -46,6 +46,10 @@ This is the summary of my book.
 
 * [Dynamic Programming](DynamicProgramming/README.md)
 	* [Triangle](DynamicProgramming/Triangle.md)
+	* [Climbing Stairs](DynamicProgramming/ClimbingStairs.md)
+	* [Minimum Path Sum](DynamicProgramming/Minimum-Path-Sum.md)
+	* [Unique Paths](DynamicProgramming/Unique-Paths.md)
+	* [Unique Paths II](DynamicProgramming/Unique-PathsII.md)
 
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)

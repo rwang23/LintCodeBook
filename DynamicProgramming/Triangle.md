@@ -54,3 +54,27 @@ public class Solution {
 }
 
 ```
+
+####分治法
+```java
+public class Solution {
+    /**
+     * @param triangle: a list of lists of integers.
+     * @return: An integer, minimum path sum.
+     */
+    public int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
+        // write your code here
+        return divideconquer(0, 0, triangle);
+    }
+
+    public int divideconquer(int x, int y, ArrayList<ArrayList<Integer>> triangle){
+        if (y == triangle.size() || x == triangle.size()) {
+            return 0;
+        }
+        int min = Math.min(divideconquer(x,y+1,triangle),divideconquer(x+1,y+1,triangle));
+        return min + triangle.get(y).get(x).intValue();
+    }
+
+
+}
+```
