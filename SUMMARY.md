@@ -52,6 +52,9 @@ This is the summary of my book.
 	* [Unique Paths II](DynamicProgramming/Unique-PathsII.md)
 	* [Jump Game](DynamicProgramming/Jump-Game.md)
 	* [Jump Game II](DynamicProgramming/Jump-GameII.md)
+	* [Longest Increasing Subsequence](DynamicProgramming/Longest-Increasing-Subsequence.md)
+	* [Longest Common Subsequence](DynamicProgramming/Longest-Common-Subsequence.md)
+	* [Longest Common Substring](DynamicProgramming/Longest-Common-Substring.md)
 	* [Palindrome Partitioning II](DynamicProgramming/Palindrome-PartitioningII.md)
 	* [Word Break](DynamicProgramming/WordBreak.md)
 
