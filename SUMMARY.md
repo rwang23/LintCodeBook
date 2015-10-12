@@ -45,8 +45,10 @@ This is the summary of my book.
 	* [Fast Power](DivideAndConquer/FastPower.md)
 
 * [Dynamic Programming](DynamicProgramming/README.md)
+	* [Longest Increasing Continuous Subsequence](DynamicProgramming/Longest-Increasing-Continuous-Subsequence.md)
 	* [Triangle](DynamicProgramming/Triangle.md)
 	* [Climbing Stairs](DynamicProgramming/ClimbingStairs.md)
+	* [House Robber](DynamicProgramming/HouseRobber.md)
 	* [Minimum Path Sum](DynamicProgramming/Minimum-Path-Sum.md)
 	* [Unique Paths](DynamicProgramming/Unique-Paths.md)
 	* [Unique Paths II](DynamicProgramming/Unique-PathsII.md)
