@@ -57,6 +57,9 @@ This is the summary of my book.
 	* [Longest Common Substring](DynamicProgramming/Longest-Common-Substring.md)
 	* [Palindrome Partitioning II](DynamicProgramming/Palindrome-PartitioningII.md)
 	* [Word Break](DynamicProgramming/WordBreak.md)
+	* [Distinct Subsequences](DynamicProgramming/Distinct-Subsequences.md)
+	* [Edit Distance](DynamicProgramming/Edit-Distance.md)
+	* [Interleaving String](DynamicProgramming/InterleavingString.md)
 
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
@@ -69,6 +72,7 @@ This is the summary of my book.
 	* [Word Ladder](BFS/WordLadder.md)
 
 * [Math](Math/README.md)
+	* [Plus One](Math/PlusOne.md)
 	* [Trailing Zeros](Math/TrailingZeros.md)
 
 
