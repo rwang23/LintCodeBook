@@ -50,6 +50,10 @@ This is the summary of my book.
 	* [Minimum Path Sum](DynamicProgramming/Minimum-Path-Sum.md)
 	* [Unique Paths](DynamicProgramming/Unique-Paths.md)
 	* [Unique Paths II](DynamicProgramming/Unique-PathsII.md)
+	* [Jump Game](DynamicProgramming/Jump-Game.md)
+	* [Jump Game II](DynamicProgramming/Jump-GameII.md)
+	* [Palindrome Partitioning II](DynamicProgramming/Palindrome-PartitioningII.md)
+	* [Word Break](DynamicProgramming/WordBreak.md)
 
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
@@ -59,7 +63,7 @@ This is the summary of my book.
 	* [Partition List](Two-Pointers/PartitionList.md)
 
 * [BFS](BFS/README.md)
-	* [Partition List](BFS/WordLadder.md)
+	* [Word Ladder](BFS/WordLadder.md)
 
 * [Math](Math/README.md)
 	* [Trailing Zeros](Math/TrailingZeros.md)
