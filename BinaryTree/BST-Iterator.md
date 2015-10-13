@@ -108,32 +108,31 @@ public class Solution {
 
 
 ```java
-public class BSTIterator {
-    Stack<TreeNode> stack;
+public class Solution {
+    private Stack<TreeNode> stack = new Stack<>();
+    private TreeNode curt;
 
-    public BSTIterator(TreeNode root) {
-        stack = new Stack<TreeNode>();
-        while (root != null) {
-            stack.push(root);
-            root = root.left;
-        }
+    // @param root: The root of binary tree.
+    public Solution(TreeNode root) {
+        curt = root;
     }
 
-    /** @return whether we have a next smallest number */
+    //@return: True if there has next node, or false
     public boolean hasNext() {
-        return !stack.isEmpty();
+        return (curt != null || !stack.isEmpty());
     }
 
-    /** @return the next smallest number */
+    //@return: return next node
     public TreeNode next() {
-        TreeNode node = stack.pop();
-        if (node.right != null) {
-            node = node.right;
-            while (node != null) {
-                stack.push(node);
-                node = node.left;
-            }
+        while (curt != null) {
+            stack.push(curt);
+            curt = curt.left;
         }
+
+        curt = stack.pop();
+        TreeNode node = curt;
+        curt = curt.right;
+
         return node;
     }
 }

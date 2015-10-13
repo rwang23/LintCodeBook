@@ -21,6 +21,7 @@
 - 仔细看题 nlog(len) n代表的是数组长度
 - brute force的话，n*len
 - 这样就要优化len, 通过二分去查找大概的区间
+- 也就是二分查找 增加判断条件就可以了
 
 ```java
 public class Solution {
