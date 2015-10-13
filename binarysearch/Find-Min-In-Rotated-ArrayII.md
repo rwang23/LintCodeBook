@@ -35,3 +35,27 @@ public class Solution {
     }
 }
 ```
+
+####然而其实也可以使用二分方法，最坏情况是o(n)
+```java
+public class Solution {
+    public int findMin(int[] num) {
+        int start = 0, end = num.length - 1;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (num[mid] > num[end]) {
+                start = mid;
+            } else if (num[mid] < num[end]) {
+                end = mid;
+            } else if (num[mid] == num[end]) {
+                end--;
+            }
+        }
+        if (num[start] < num[end]) {
+            return num[start];
+        } else {
+            return num[end];
+        }
+    }
+}
+```
