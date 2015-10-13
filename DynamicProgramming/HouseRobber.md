@@ -45,3 +45,31 @@ public class Solution {
 }
 
 ```
+
+####O(n) time and O(1) memory.
+- 其实上个版本只是用到了ret[i-2] ret[i-1]，那么只需要用两个变量去替换，然后每次循环更新两个变量的值就可以了
+
+```java
+public class Solution {
+    /**
+     * @param A: An array of non-negative integers.
+     * return: The maximum amount of money you can rob tonight
+     */
+    public long houseRobber(int[] A) {
+        // write your code here
+        if (A.length == 0) {
+            return 0;
+        }
+        long first = 0;
+        long second = A[0];
+        long max = second;
+        for (int i = 2; i <= A.length; i++) {
+            max = Math.max(Math.max(first+A[i-1],second), max);
+            first = second;
+            second = max;
+        }
+        return max;
+    }
+}
+
+```
