@@ -66,6 +66,9 @@ This is the summary of my book.
 	* [Interleaving String](DynamicProgramming/InterleavingString.md)
 	* [Unique Binary Search Trees](DynamicProgramming/Unique-Binary-Search-Trees.md)
 
+* [Sort](Sort/README.md)
+	* [Merge Intervals](Sort/MergeIntervals.md)
+
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
 	* [Rotate String](SortedArray/RotateString.md)
