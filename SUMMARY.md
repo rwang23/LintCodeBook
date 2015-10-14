@@ -1,6 +1,6 @@
 # Summary
 
-This is the summary of my book.
+This is the summary of my experience in LintCode.
 
 * [Subsets](Subsets/README.md)
 	* [Subsets I](Subsets/Subsets.md)
