@@ -25,7 +25,7 @@
 ####思路
 - 我自己用的quick sort 然而并不需要
 - Java有自己的库 Collection.sort
-- 需要掌握comparator
+- 需要掌握comparator 也是简化解题的关键
 - 九章的解法 spaca单独用了一个arraylist, 自己的解法就在原地进行，只使用了一个 int len
 
 ####修改后的解法

@@ -68,6 +68,9 @@ This is the summary of my book.
 
 * [Sort](Sort/README.md)
 	* [Merge Intervals](Sort/MergeIntervals.md)
+	* [Insertion Sort List](Sort/Insertion-Sort-List.md)
+	* [Sort Letters by Case](Sort/Sort-Letters-by-Case.md)
+	* [The Smallest Difference](Sort/The-Smallest-Difference.md)
 
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
