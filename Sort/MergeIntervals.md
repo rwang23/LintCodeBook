@@ -26,31 +26,30 @@
 - 我自己用的quick sort 然而并不需要
 - Java有自己的库 Collection.sort
 - 需要掌握comparator
+- 九章的解法 spaca单独用了一个arraylist, 自己的解法就在原地进行，只使用了一个 int len
 
-####正规解法
+####修改后的解法
 ```java
 public class Solution {
-    public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
+    public List<Interval> merge(List<Interval> intervals) {
         if (intervals == null || intervals.size() <= 1) {
             return intervals;
         }
 
         Collections.sort(intervals, new IntervalComparator());
 
-        ArrayList<Interval> result = new ArrayList<Interval>();
-        Interval last = intervals.get(0);
-        for (int i = 1; i < intervals.size(); i++) {
-            Interval curt = intervals.get(i);
-            if (curt.start <= last.end ){
-                last.end = Math.max(last.end, curt.end);
-            }else{
-                result.add(last);
-                last = curt;
+        int len = intervals.size();
+        for (int i = 1; i < len; ) {
+            if (intervals.get(i).start <= intervals.get(i - 1).end) {
+                intervals.get(i - 1).end = Math.max(intervals.get(i - 1).end,intervals.get(i).end) ;
+                intervals.remove(i);
+                len--;
+
+            } else {
+                i++;
             }
         }
-
-        result.add(last);
-        return result;
+        return intervals;
     }
 
 
