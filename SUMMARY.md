@@ -71,6 +71,9 @@ This is the summary of my experience in LintCode.
 	* [Insertion Sort List](Sort/Insertion-Sort-List.md)
 	* [Sort Letters by Case](Sort/Sort-Letters-by-Case.md)
 	* [The Smallest Difference](Sort/The-Smallest-Difference.md)
+	* [Sort Color](Sort/SortColors.md)
+	* [Sort Color II](Sort/SortColorsII.md)
+	* [Two Sum](Sort/Two-Sum.md)
 
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
