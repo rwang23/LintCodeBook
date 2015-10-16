@@ -74,6 +74,8 @@ This is the summary of my experience in LintCode.
 	* [Sort Color](Sort/SortColors.md)
 	* [Sort Color II](Sort/SortColorsII.md)
 	* [Two Sum](Sort/Two-Sum.md)
+	* [Kth Largetst Element](Sort/Kth-Largest-Element.md)
+	* [Largest Number](Sort/Largest-Number.md)
 
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
