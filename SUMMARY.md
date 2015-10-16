@@ -74,6 +74,7 @@ This is the summary of my experience in LintCode.
 	* [Sort Color](Sort/SortColors.md)
 	* [Sort Color II](Sort/SortColorsII.md)
 	* [Two Sum](Sort/Two-Sum.md)
+	* [Three Sum](Sort/Three-Sum.md)
 	* [Kth Largetst Element](Sort/Kth-Largest-Element.md)
 	* [Largest Number](Sort/Largest-Number.md)
 	* [Partition Array](Sort/Partition-Array.md)
