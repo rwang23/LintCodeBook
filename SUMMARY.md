@@ -76,6 +76,7 @@ This is the summary of my experience in LintCode.
 	* [Two Sum](Sort/Two-Sum.md)
 	* [Kth Largetst Element](Sort/Kth-Largest-Element.md)
 	* [Largest Number](Sort/Largest-Number.md)
+	* [Partition Array](Sort/Partition-Array.md)
 
 * [Sorted Array](SortedArray/README.md)
 	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
@@ -88,6 +89,8 @@ This is the summary of my experience in LintCode.
 	* [Word Ladder](BFS/WordLadder.md)
 
 * [Math](Math/README.md)
+	* [Sqrt](Math/Sqrt.md)
+	* [Fibonacci](Math/Fibonacci.md)
 	* [Plus One](Math/PlusOne.md)
 	* [Trailing Zeros](Math/TrailingZeros.md)
 
