@@ -87,7 +87,14 @@ This is the summary of my experience in LintCode.
 	* [Partition List](Two-Pointers/PartitionList.md)
 
 * [Linkedlist](Linkedlist/README.md)
+	* [Reverse Linked List](Linkedlist/Reverse-Linked-List.md)
+	* [Nth to Last Node in List](Linkedlist/Nth-to-Last-Node-in-List.md)
+	* [Remove Nth Node From End of List](Linkedlist/Remove-Nth-Node-From-End-of-List.md)
+	* [Remove Duplicates From Sorted List](Linkedlist/Remove-Duplicates-from-Sorted-List.md)
+	* [Remove Duplicates From Sorted List](Linkedlist/Remove-Duplicates-from-Sorted-ListII.md)
 	* [Add Two Numbers](Linkedlist/Add-Two-Numbers.md)
+	* [Rotate List](Linkedlist/Rotate-List.md)
+
 
 
 * [BFS](BFS/README.md)
