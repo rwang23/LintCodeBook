@@ -36,7 +36,7 @@ public class Solution {
         // write your code here
         ListNode mergelist = new ListNode(0);
         ListNode head = mergelist;
-        while (l1 != null || l2 != null) {
+        while (true) {
             if (l1 == null) {
                 mergelist.next = l2;
                 break;
