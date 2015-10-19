@@ -88,15 +88,20 @@ This is the summary of my experience in LintCode.
 
 * [Linkedlist](Linkedlist/README.md)
 	* [Reverse Linked List](Linkedlist/Reverse-Linked-List.md)
+	* [Reverse Linked List II](Linkedlist/Reverse-Linked-ListII.md)
 	* [Nth to Last Node in List](Linkedlist/Nth-to-Last-Node-in-List.md)
 	* [Remove Nth Node From End of List](Linkedlist/Remove-Nth-Node-From-End-of-List.md)
 	* [Remove Duplicates From Sorted List](Linkedlist/Remove-Duplicates-from-Sorted-List.md)
 	* [Remove Duplicates From UbSorted List](Linkedlist/Remove-Duplicates-from-Unsorted-List.md)
 	* [Remove Duplicates From Sorted List](Linkedlist/Remove-Duplicates-from-Sorted-ListII.md)
 	* [Swap Nodels in Pairs](Linkedlist/Swap-Nodes-in-Pairs.md)
+	* [Merge Two Sorted Lists](Linkedlist/Merge-Two-Sorted-Lists.md)
 	* [Merge K Sorted Lists](Linkedlist/Merge-k-Sorted-Lists.md)
+	* [Sort List](Linkedlist/Sort-List.md)
+	* [Reorder List](Linkedlist/Reorder-List.md)
 	* [Add Two Numbers](Linkedlist/Add-Two-Numbers.md)
 	* [Rotate List](Linkedlist/Rotate-List.md)
+	* [Reorder List](Linkedlist/Reorder-List.md)
 
 
 
@@ -107,6 +112,7 @@ This is the summary of my experience in LintCode.
 	* [Sqrt](Math/Sqrt.md)
 	* [Fibonacci](Math/Fibonacci.md)
 	* [Plus One](Math/PlusOne.md)
+	* [A + B Problem](Math/A+B-Problem.md)
 	* [Trailing Zeros](Math/TrailingZeros.md)
 
 
