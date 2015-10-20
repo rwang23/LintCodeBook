@@ -94,6 +94,8 @@ This is the summary of my experience in LintCode.
 	* [Remove Duplicates From Sorted List](Linkedlist/Remove-Duplicates-from-Sorted-List.md)
 	* [Remove Duplicates From UbSorted List](Linkedlist/Remove-Duplicates-from-Unsorted-List.md)
 	* [Remove Duplicates From Sorted List](Linkedlist/Remove-Duplicates-from-Sorted-ListII.md)
+	* [Linked List Cycle](Linkedlist/Linked-List-Cycle.md)
+	* [Linked List Cycle II](Linkedlist/Linked-List-CycleII.md)
 	* [Swap Nodels in Pairs](Linkedlist/Swap-Nodes-in-Pairs.md)
 	* [Merge Two Sorted Lists](Linkedlist/Merge-Two-Sorted-Lists.md)
 	* [Merge K Sorted Lists](Linkedlist/Merge-k-Sorted-Lists.md)
@@ -102,6 +104,7 @@ This is the summary of my experience in LintCode.
 	* [Add Two Numbers](Linkedlist/Add-Two-Numbers.md)
 	* [Rotate List](Linkedlist/Rotate-List.md)
 	* [Reorder List](Linkedlist/Reorder-List.md)
+	* [Copy List With Random Pointer](Linkedlist/Copy-List-with-Random-Pointer.md)
 
 
 
