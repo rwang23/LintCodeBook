@@ -41,8 +41,6 @@ This is the summary of my experience in LintCode.
 	* [Validate Binary Search Tree](BinaryTree/Validate-Binary-Search-Tree.md)
 	* [Binary Tree Maximum Path Sum](BinaryTree/Binary-Tree-Maximum-Path-Sum.md)
 
-* [Divide And Conquer](DivideAndConquer/README.md)
-	* [Fast Power](DivideAndConquer/FastPower.md)
 
 * [Dynamic Programming](DynamicProgramming/README.md)
 	* [Longest Increasing Continuous Subsequence](DynamicProgramming/Longest-Increasing-Continuous-Subsequence.md)
@@ -79,16 +77,11 @@ This is the summary of my experience in LintCode.
 	* [Largest Number](Sort/Largest-Number.md)
 	* [Partition Array](Sort/Partition-Array.md)
 
-* [Sorted Array](SortedArray/README.md)
-	* [Recover Rotated Sorted Array](SortedArray/Recover-Rotated-Sorted-Array.md)
-	* [Rotate String](SortedArray/RotateString.md)
-
-* [Two Pointers](Two-Pointers/README.md)
-	* [Partition List](Two-Pointers/PartitionList.md)
-
 * [Linkedlist](Linkedlist/README.md)
 	* [Reverse Linked List](Linkedlist/Reverse-Linked-List.md)
 	* [Reverse Linked List II](Linkedlist/Reverse-Linked-ListII.md)
+	* [Palindrome Linked List](Linkedlist/Palindrome-Linked-List.md)
+	* [Partition List](Linkedlist/PartitionList.md)
 	* [Nth to Last Node in List](Linkedlist/Nth-to-Last-Node-in-List.md)
 	* [Remove Nth Node From End of List](Linkedlist/Remove-Nth-Node-From-End-of-List.md)
 	* [Remove Duplicates From Sorted List](Linkedlist/Remove-Duplicates-from-Sorted-List.md)
@@ -106,6 +99,9 @@ This is the summary of my experience in LintCode.
 	* [Reorder List](Linkedlist/Reorder-List.md)
 	* [Copy List With Random Pointer](Linkedlist/Copy-List-with-Random-Pointer.md)
 
+* [Array](Array/README.md)
+	* [Recover Rotated Sorted Array](Array/Recover-Rotated-Sorted-Array.md)
+	* [Rotate String](Array/RotateString.md)
 
 
 * [BFS](BFS/README.md)
@@ -117,5 +113,6 @@ This is the summary of my experience in LintCode.
 	* [Plus One](Math/PlusOne.md)
 	* [A + B Problem](Math/A+B-Problem.md)
 	* [Trailing Zeros](Math/TrailingZeros.md)
+	* [Fast Power](Math/FastPower.md)
 
 
