@@ -104,6 +104,7 @@ This is the summary of my experience in LintCode.
 	* [Rotate String](Array/RotateString.md)
 	* [Maximum Subarray](Array/Maximum-Subarray.md)
 	* [Maximum Subarray II](Array/Maximum-SubarrayII.md)
+	* [Maximum Subarray III](Array/Maximum-SubarrayIII.md)
 	* [Minimum Subarray](Array/Minimum-Subarray.md)
 	* [Maximum Subarray Difference](Array/Maximum-Subarray-Difference.md)
 	* [Best Time to Buy and Sell Stock](Array/Best-Time-to-Buy-and-Sell-Stock.md)
