@@ -102,6 +102,7 @@ This is the summary of my experience in LintCode.
 * [Array](Array/README.md)
 	* [Recover Rotated Sorted Array](Array/Recover-Rotated-Sorted-Array.md)
 	* [Rotate String](Array/RotateString.md)
+	* [Maximum Subarray](Array/Maximum-Subarray.md)
 
 
 * [BFS](BFS/README.md)
