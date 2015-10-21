@@ -105,6 +105,7 @@ This is the summary of my experience in LintCode.
 	* [Maximum Subarray](Array/Maximum-Subarray.md)
 	* [Maximum Subarray II](Array/Maximum-SubarrayII.md)
 	* [Minimum Subarray](Array/Minimum-Subarray.md)
+	* [Maximum Subarray Difference](Array/Maximum-Subarray-Difference.md)
 	* [Best Time to Buy and Sell Stock](Array/Best-Time-to-Buy-and-Sell-Stock.md)
 	* [Best Time to Buy and Sell Stock II](Array/Best-Time-to-Buy-and-Sell-StockII.md)
 	* [Best Time to Buy and Sell Stock III](Array/Best-Time-to-Buy-and-Sell-StockIII.md)
