@@ -103,6 +103,9 @@ This is the summary of my experience in LintCode.
 	* [Recover Rotated Sorted Array](Array/Recover-Rotated-Sorted-Array.md)
 	* [Rotate String](Array/RotateString.md)
 	* [Maximum Subarray](Array/Maximum-Subarray.md)
+	* [Minimum Subarray](Array/Minimum-Subarray.md)
+	* [Best Time to Buy and Sell Stock](Array/Best-Time-to-Buy-and-Sell-Stock.md)
+	* [Best Time to Buy and Sell Stock II](Array/Best-Time-to-Buy-and-Sell-StockII.md)
 
 
 * [BFS](BFS/README.md)
