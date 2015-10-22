@@ -106,6 +106,7 @@ public class Solution {
         }
 
         root = root.right;
+        // //找右儿子的最小值也就是一直在它右子树第一个根节点一直向左遍历到叶节点
         while (root.left != null) {
             root = root.left;
         }
