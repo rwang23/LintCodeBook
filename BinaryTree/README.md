@@ -1,4 +1,4 @@
-#Lintcode Solution Book
+#Binary Tree
 
 ####Learning Progress
 
@@ -30,9 +30,11 @@ All codes are in java.
 
 [Repository on Github](https://github.com/rwang23/LintCodeBook)
 
-![](image/Sorting-Algorithms.png)
+####Skills
+- Often use divide and conquer idea to solve binary tree problem
+- Or use traversal or quene to do the iterative way
 
-Renfei
+
 
 <!-- Place this tag right after the last button or just before your close body tag. -->
 <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
