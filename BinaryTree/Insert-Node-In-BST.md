@@ -88,6 +88,7 @@ public class Solution {
 
 
 ####递归解法
+- 没有写root.val == node.val的情况，是因为如果有等于的情况，就覆盖掉就行，不用添加新的
 
 ```java
 public class Solution {
@@ -102,9 +103,10 @@ public class Solution {
         }
         if (root.val > node.val) {
             root.left = insertNode(root.left, node);
-        } else {
+        } else if (root.val < node.val){
             root.right = insertNode(root.right, node);
         }
+
         return root;
     }
 }
