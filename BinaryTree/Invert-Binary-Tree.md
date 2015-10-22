@@ -48,6 +48,8 @@ public class Solution {
 ----
 ####非递归
 - 遍历 互相交换左右子树
+- 使用了quene,将每一个要交换的子树入队存起来
+- 非常棒的方法
 
 ```java
 public class Solution {
