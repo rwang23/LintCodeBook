@@ -59,7 +59,7 @@ public class Solution {
 ```
 
 
-####递归
+####递归一(ArrayList声明在函数里)
 ```java
 public class Solution {
     public ArrayList<Integer> preorderTraversal(TreeNode root) {
@@ -77,6 +77,24 @@ public class Solution {
         result.add(root.val);
         result.addAll(left);
         result.addAll(right);
+        return result;
+    }
+}
+```
+####递归二(ArrayList声明在全局)
+```java
+public class Solution {
+
+    ArrayList<Integer> result = new ArrayList<Integer>();
+
+    public ArrayList<Integer> preorderTraversal(TreeNode root) {
+        // null or leaf
+        if (root == null) {
+            return result;
+        }
+        result.add(root.val);
+        ArrayList<Integer> left = preorderTraversal(root.left);
+        ArrayList<Integer> right = preorderTraversal(root.right);
         return result;
     }
 }
