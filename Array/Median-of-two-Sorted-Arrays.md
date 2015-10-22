@@ -2,7 +2,8 @@
 
 21% Accepted
 
-	There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays.
+	There are two sorted arrays A and B of size m and n respectively.
+    Find the median of the two sorted arrays.
 
 	Have you met this question in a real interview? Yes
 	Example

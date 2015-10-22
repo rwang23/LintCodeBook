@@ -2,7 +2,8 @@
 
 33% Accepted
 
-	Given a sorted (increasing order) array, Convert it to create a binary tree with minimal height.
+	Given a sorted (increasing order) array,
+    Convert it to create a binary tree with minimal height.
 
 	Have you met this question in a real interview? Yes
 	Example

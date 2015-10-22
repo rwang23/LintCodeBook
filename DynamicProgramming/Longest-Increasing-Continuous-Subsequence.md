@@ -2,7 +2,9 @@
 
 26% Accepted
 
-	Give you an integer array (index from 0 to n-1, where n is the size of this array)，find the longest increasing continuous subsequence in this array. (The definition of the longest increasing continuous subsequence here can be from right to left or from left to right)
+	Give you an integer array (index from 0 to n-1, where n is the size of this array)，
+    find the longest increasing continuous subsequence in this array.
+    (The definition of the longest increasing continuous subsequence here can be from right to left or from left to right)
 
 	Have you met this question in a real interview? Yes
 	Example

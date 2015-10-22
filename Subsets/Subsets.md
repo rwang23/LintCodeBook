@@ -1,7 +1,7 @@
 
 ##Subsets I
 
-Given a set of distinct integers, return all possible subsets.
+	Given a set of distinct integers, return all possible subsets.
 
 	If S = [1,2,3], a solution is:
 	[

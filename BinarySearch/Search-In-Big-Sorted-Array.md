@@ -1,7 +1,9 @@
 ##Search in a Big Sorted Array
 
 39% Accepted
-	Given a big sorted array, find the first index of a target number. Your algorithm should be in O(log k), where k is the first index of the target number.
+
+	Given a big sorted array, find the first index of a target number.
+    Your algorithm should be in O(log k), where k is the first index of the target number.
 
 	Return -1, if the number doesn't exist in the array.
 

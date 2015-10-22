@@ -2,7 +2,8 @@
 
 36% Accepted
 
-	Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+	Given a linked list, return the node where the cycle begins.
+    If there is no cycle, return null.
 
 	Have you met this question in a real interview? Yes
 	Example

@@ -2,7 +2,8 @@
 
 39% Accepted
 
-	Given an array of non-negative integers, you are initially positioned at the first index of the array.
+	Given an array of non-negative integers,
+    you are initially positioned at the first index of the array.
 
 	Each element in the array represents your maximum jump length at that position.
 
@@ -22,7 +23,9 @@
 
 	The time complexity of Dynamic Programming method is O(n^2).
 
-	We manually set the small data set to allow you pass the test in both ways. This is just to let you learn how to use this problem in dynamic programming ways. If you finish it in dynamic programming ways, you can try greedy method to make it accept again.
+	We manually set the small data set to allow you pass the test in both ways.
+    This is just to let you learn how to use this problem in dynamic programming ways.
+    If you finish it in dynamic programming ways, you can try greedy method to make it accept again.
 
 ####Tags Expand
 - Greedy

@@ -2,7 +2,8 @@
 
 37% Accepted
 
-	Given a string which contains only letters. Sort it by lower case first and upper case second.
+	Given a string which contains only letters.
+    Sort it by lower case first and upper case second.
 
 	Have you met this question in a real interview? Yes
 	Example

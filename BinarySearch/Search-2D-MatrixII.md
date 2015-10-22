@@ -2,7 +2,8 @@
 
 30% Accepted
 
-	Write an efficient algorithm that searches for a value in an m x n matrix, return the occurrence of it.
+	Write an efficient algorithm that searches for a value in an m x n matrix,
+    return the occurrence of it.
 
 	This matrix has the following properties:
 

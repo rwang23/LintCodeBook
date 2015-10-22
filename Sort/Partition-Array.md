@@ -2,7 +2,8 @@
 
 25% Accepted
 
-	Given an array nums of integers and an int k, partition the array (i.e move the elements in "nums") such that:
+	Given an array nums of integers and an int k, partition the array
+	(i.e move the elements in "nums") such that:
 
 	All elements < k are moved to the left
 	All elements >= k are moved to the right

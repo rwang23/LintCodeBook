@@ -2,7 +2,8 @@
 
 45% Accepted
 
-There is an integer array which has the following features:
+
+    There is an integer array which has the following features:
 
 	The numbers in adjacent positions are different.
 	A[0] < A[1] && A[A.length - 2] > A[A.length - 1].

@@ -2,7 +2,8 @@
 
 32% Accepted
 
-	Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+	Given a binary tree, return the level order traversal of its nodes' values.
+    (ie, from left to right, level by level).
 
 	Have you met this question in a real interview? Yes
 	Example
@@ -43,7 +44,8 @@
 - Queue集成了Collection, 所以可以使用size()
 - 使用queue 进行BFS
 - 完成一层，通过size大小判断，然后就可以加入result
-
+- Quene是 quene.peek()来判断是否为空(因为集成了collection，所以也可以isEmpty()) Stack是用stack.isEmpty()
+- 进入队列是quene.offer()  出队是quene.poll()
 
 ```java
 

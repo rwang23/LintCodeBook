@@ -1,6 +1,6 @@
 ##Permutations
 
-Given a list of numbers, return all possible permutations.
+	Given a list of numbers, return all possible permutations.
 
 	For nums = [1,2,3], the permutations are:
 

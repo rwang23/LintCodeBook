@@ -2,7 +2,8 @@
 
 27% Accepted
 
-	Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
+	Given a binary search tree and a node in it,
+    find the in-order successor of that node in the BST.
 
 	Have you met this question in a real interview? Yes
 	Example

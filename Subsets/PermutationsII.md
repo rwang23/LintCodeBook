@@ -1,6 +1,6 @@
 ##Permutations II
 
-Given a list of numbers with duplicate number in it. Find all unique permutations.
+	Given a list of numbers with duplicate number in it. Find all unique permutations.
 
 	For numbers [1,2,2] the unique permutations are:
 

@@ -2,7 +2,8 @@
 
 16% Accepted
 
-	Given an integer array, find a subarray with sum closest to zero. Return the indexes of the first number and last number.
+	Given an integer array, find a subarray with sum closest to zero.
+    Return the indexes of the first number and last number.
 
 	Have you met this question in a real interview? Yes
 	Example
