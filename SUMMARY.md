@@ -113,6 +113,7 @@ This is the summary of my experience in LintCode.
 	* [Best Time to Buy and Sell Stock](Array/Best-Time-to-Buy-and-Sell-Stock.md)
 	* [Best Time to Buy and Sell Stock II](Array/Best-Time-to-Buy-and-Sell-StockII.md)
 	* [Best Time to Buy and Sell Stock III](Array/Best-Time-to-Buy-and-Sell-StockIII.md)
+	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
 
 * [BFS](BFS/README.md)
