@@ -30,26 +30,26 @@ class Solution {
      */
     public int binarySearch(int[] nums, int target) {
         //write your code here
-        if(nums.length==0||nums==null){
+        if (nums.length == 0 || nums == null) {
             return -1;
         }
         int end = nums.length-1;
         int start = 0;
 
-        while(end>start+1){
+        while (end > start + 1) {
             int mid = start + (end - start) / 2;
-            if(nums[mid] == target){
+            if (nums[mid] == target) {
                 end = mid;
-            }else if(nums[mid] > target){
+            } else if(nums[mid] > target) {
                 end = mid;
-            }else{
+            } else {
                 start = mid;
             }
         }
 
-        if(nums[end] == target){
+        if (nums[end] == target) {
             return end;
-        }else if(nums[start] == target){
+        } else if(nums[start] == target) {
             return start;
         }
 
