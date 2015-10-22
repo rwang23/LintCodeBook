@@ -33,12 +33,9 @@ public class Solution {
         if (root == null) {
             return;
         }
-        if (root.left != null) {
-            invertBinaryTree(root.left);
-        }
-        if (root.right !=null) {
-            invertBinaryTree(root.right);
-        }
+
+        invertBinaryTree(root.left);
+        invertBinaryTree(root.right);
 
         TreeNode temp = root.left;
         root.left = root.right;
@@ -83,6 +80,6 @@ public class Solution {
         }
     }
 }
-```java
+```
 
 
