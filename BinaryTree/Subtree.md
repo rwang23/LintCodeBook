@@ -2,7 +2,7 @@
 
 20% Accepted
 
-	You have two every large binary trees: T1, with millions of nodes, and T2, with hundreds of nodes. Create an algorithm to decide if T2 is a subtree of T1.
+	You have two very large binary trees: T1, with millions of nodes, and T2, with hundreds of nodes. Create an algorithm to decide if T2 is a subtree of T1.
 
 	Have you met this question in a real interview? Yes
 	Example
@@ -36,9 +36,14 @@ public class Solution {
      * @param T1, T2: The roots of binary tree.
      * @return: True if T2 is a subtree of T1, or false.
      */
+    public class Solution {
+    /**
+     * @param T1, T2: The roots of binary tree.
+     * @return: True if T2 is a subtree of T1, or false.
+     */
     public boolean isSubtree(TreeNode T1, TreeNode T2) {
         // write your code here
-        if (T2 == T1 ){
+        if (T2 == null){
             return true;
         }else if (T1 == null) {
             return false;
@@ -57,6 +62,8 @@ public class Solution {
             return false;
         return isSameTree(T1.left,T2.left) && isSameTree(T1.right, T2.right);
     }
+}
+
 }
 
 ```
