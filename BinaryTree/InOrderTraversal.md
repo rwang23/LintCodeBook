@@ -26,6 +26,8 @@ Can you do it without recursion?
 - Binary Tree
 - Binary Tree Traversal
 
+
+####非递归
 ```java
 /**
  * Definition of TreeNode:
@@ -65,6 +67,30 @@ public class Solution {
             cur = cur.right;
         }
 
+        return result;
+    }
+}
+
+```
+
+####递归
+```java
+public class Solution {
+    /**
+     * @param root: The root of binary tree.
+     * @return: Inorder in ArrayList which contains node values.
+     */
+    ArrayList<Integer> result = new ArrayList<Integer>();
+
+    public ArrayList<Integer> inorderTraversal(TreeNode root) {
+        // write your code here
+        if (root == null) {
+            return result;
+        }
+
+        ArrayList<Integer> left = inorderTraversal(root.left);
+        result.add(root.val);
+        ArrayList<Integer> right = inorderTraversal(root.right);
         return result;
     }
 }

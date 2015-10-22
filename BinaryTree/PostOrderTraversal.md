@@ -26,7 +26,7 @@ Can you do it without recursion?
 - Binary Tree Traversal
 
 ####思路
-思路来源 <a href="http://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html">海子：二叉树的非递归遍历</a>
+- 思路来源 <a href="http://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html">海子：二叉树的非递归遍历</a>
 
 - 要保证根结点在左孩子和右孩子访问之后才能访问，因此对于任一结点P，先将其入栈。
 - 如果P不存在左孩子和右孩子，则可以直接访问它；或者P存在左孩子或者右孩子，但是其左孩子和右孩子都已被访问过了，则同样可以直接访问该结点。
@@ -35,7 +35,7 @@ Can you do it without recursion?
 
 
 
-
+####非递归
 ```java
 /**
  * Definition of TreeNode:
@@ -95,5 +95,26 @@ public class Solution {
 
     }
 }
+```
+####递归
+```java
+public class Solution {
+    /**
+     * @param root: The root of binary tree.
+     * @return: Inorder in ArrayList which contains node values.
+     */
+    ArrayList<Integer> result = new ArrayList<Integer>();
 
+    public ArrayList<Integer> postorderTraversal(TreeNode root) {
+        // write your code here
+        if (root == null) {
+            return result;
+        }
+
+        ArrayList<Integer> left = postorderTraversal(root.left);
+        ArrayList<Integer> right = postorderTraversal(root.right);
+        result.add(root.val);
+        return result;
+    }
+}
 ```
