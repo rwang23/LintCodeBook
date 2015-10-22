@@ -1,10 +1,4 @@
-#Lintcode Solution Book
-
-####Learning Progress
-
-Click [here](https://rwang23.gitbooks.io/lintcodebook/content/index.html) to read.
-
-The Github repository is [here](https://github.com/rwang23/LintCodeBook). Hope this will also help you and lets make progress together. If you like it, you can star it.
+#Dynamic Programming
 
 <!-- Place this tag where you want the button to render. -->
 <div>
@@ -20,19 +14,12 @@ The Github repository is [here](https://github.com/rwang23/LintCodeBook). Hope t
 <a class="github-button" href="https://github.com/rwang23/LintCodeBook/archive/master.zip" data-style="mega" aria-label="Download rwang23/LintCodeBook on GitHub">Download</a>
 </div>
 
-
-Solution and explaination of lintcode.
-
-This documents the time I my learning progress of LintCode.
-
-All codes are in java.
+###State
+###Function
+###Initialize
+###Answer
 
 
-[Repository on Github](https://github.com/rwang23/LintCodeBook)
-
-![](image/Sorting-Algorithms.png)
-
-Renfei
 
 <!-- Place this tag right after the last button or just before your close body tag. -->
 <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
