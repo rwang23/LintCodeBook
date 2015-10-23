@@ -20,6 +20,7 @@
 
 ####思路
 - 想规律，实在不行就把例子划出来画图找规律
+- 从宏观上去思考规律，画出来的只是辅助出来找规律的
 ![EditDistance](../image/Edit-Distance.jpg)
 
 ```java

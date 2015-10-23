@@ -30,6 +30,7 @@
 ####思路
 - 此题就是Uniquue-Paths变形
 - 只需要添加限制条件即可
+- 不要忘了初始化也有限制条件
 
 ```java
 public class Solution {

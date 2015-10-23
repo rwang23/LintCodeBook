@@ -28,8 +28,9 @@
 - Two Sequence DP
 - 仔细理解题意，题目意思不是很明确
 - 画图找规律，直接看不到规律就自己凑规律，其实都是数学原理
+- 画出矩阵型的图去找规律匹配
 
-####
+####题意理解
 
 	Since you can choose two b from three and there are total of 3 choices, i.e.,
 
