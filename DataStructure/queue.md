@@ -35,9 +35,9 @@ Java 中提供`PriorityQueue`类，该类是 Interface Queue 的另外一种实�
 
 不同方法的时间复杂度：
 
-- enqueuing and dequeuing: `offer`, `poll`, `remove()` and `add` - $$O(\log n)$$
-- Object: `remove(Object)` and `contains(Object)` - $$O(n)$$
-- retrieval: `peek`, `element`, and `size` - $$O(1)$$.
+- enqueuing and dequeuing: `offer`, `poll`, `remove()` and `add` - O(\log n)
+- Object: `remove(Object)` and `contains(Object)` - O(n)
+- retrieval: `peek`, `element`, and `size` - O(1).
 
 ## Deque - 双端队列
 
@@ -68,24 +68,24 @@ Deque<Integer> deque = new ArrayDeque<Integer>();
   </tr>
   <tr>
     <td>Insert</td>
-    <td>`addFirst(e)`</td>
-    <td>`offerFirst(e)`</td>
-    <td>`addLast(e)`</td>
-    <td>`offerLast(e)`</td>
+    <td>addFirst(e)</td>
+    <td>offerFirst(e)</td>
+    <td>addLast(e)</td>
+    <td>offerLast(e)</td>
   </tr>
   <tr>
     <td>Remove</td>
-    <td>`removeFirst()`</td>
-    <td>`pollFirst()`</td>
-    <td>`removeLast()`</td>
-    <td>`pollLast()`</td>
+    <td>removeFirst()</td>
+    <td>pollFirst()</td>
+    <td>removeLast()</td>
+    <td>pollLast()</td>
   </tr>
   <tr>
     <td>Examine</td>
-    <td>`getFirst()`</td>
-    <td>`peekFirst()`</td>
-    <td>`getLast()`</td>
-    <td>`peekLast()`</td>
+    <td>getFirst()</td>
+    <td>peekFirst()</td>
+    <td>getLast()</td>
+    <td>peekLast()</td>
   </tr>
 </table>
 
