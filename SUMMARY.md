@@ -128,6 +128,7 @@ This is the summary of my experience in LintCode.
    * [Map](DataStructure/map.md)
    * [Graph](DataStructure/graph.md)
 
+* [Data Structure Problem](DataStructureProblem/README.md)
 
 
 * [BFS](BFS/README.md)
