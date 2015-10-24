@@ -21,4 +21,4 @@
 
 其中步骤1是给步骤2和3用的。
 
-![Heapsort-example](image/Heapsort-example.gif)
+![Heapsort-example](../image/Heapsort-example.gif)
