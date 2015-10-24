@@ -23,6 +23,9 @@
 
 ####思路
 [来自水中的鱼](http://fisherlei.blogspot.com/2013/03/leetcode-unique-binary-search-trees.html)
+[Leetcode Most Vote](https://leetcode.com/discuss/24282/dp-solution-in-6-lines-with-explanation-f-i-n-g-i-1-g-n-i)
+
+
 
 	这题想了好久才想清楚。其实如果把上例的顺序改一下，就可以看出规律了。
 	 1                1                      2                       3             3

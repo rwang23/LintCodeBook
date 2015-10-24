@@ -46,6 +46,7 @@ public class Solution {
 
         for (int i = 1; i <= s.length(); i++) {
             canBreak[i] = false;
+            //Math.min(i, maxLength)用得非常的好，避免了出界
             for (int j = 1; j <= Math.min(i, maxLength); j++) {
                 if (!canBreak[i - j]) {
                     continue;
