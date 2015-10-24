@@ -116,6 +116,19 @@ This is the summary of my experience in LintCode.
 	* [Best Time to Buy and Sell Stock III](Array/Best-Time-to-Buy-and-Sell-StockIII.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
+* [Data Structure](DataStructure/README.md)
+   * [String](DataStructure/string.md)
+   * [Linked List](DataStructure/linked_list.md)
+   * [Binary Tree](DataStructure/binary_tree.md)
+   * [Huffman Compression](DataStructure/huffman_compression.md)
+   * [Queue](DataStructure/queue.md)
+   * [Heap](DataStructure/heap.md)
+   * [Stack](DataStructure/stack.md)
+   * [Set](DataStructure/set.md)
+   * [Map](DataStructure/map.md)
+   * [Graph](DataStructure/graph.md)
+
+
 
 * [BFS](BFS/README.md)
 	* [Word Ladder](BFS/WordLadder.md)
