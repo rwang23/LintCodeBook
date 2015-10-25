@@ -57,6 +57,8 @@ class Solution {
         }
 
         for(int i = 0; i < nums.length; i++) {
+        	//现在这个数跟前面那个数一样，并且前面的数还没用过，这种情况就是跳过了，就不符合遍历需求
+        	//一定要分析好条件的情况
             if (visited[i] == 1 || (i != 0 && nums[i] == nums[i - 1] && visited[i - 1] == 0)){
             //visited[i-1]是为了顺序访问
             //i!=0 是为了nums[i-1]不溢出
