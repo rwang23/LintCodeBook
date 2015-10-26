@@ -125,7 +125,7 @@ This is the summary of my experience in LintCode.
    * [Heap](DataStructure/heap.md)
    * [Stack](DataStructure/stack.md)
    * [Set](DataStructure/set.md)
-   * [Map](DataStructure/map.md)
+   * [Hash Map](DataStructure/map.md)
    * [Graph](DataStructure/graph.md)
 
 * [Data Structure Problem](DataStructureProblem/README.md)

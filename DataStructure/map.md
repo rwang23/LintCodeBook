@@ -2,6 +2,13 @@
 
 Map 是一种关联数组的数据结构，也常被称为字典或键值对。
 
+####User Define Hash
+![User Define Hash](../image/user-defined-hash.png)
+####String Hash
+![String Hash](../image/string-hash.png)
+####Chaining Hash
+![Chaining Hash](../image/chaining-hash.png)
+
 ## 编程实现
 
 ### Java
