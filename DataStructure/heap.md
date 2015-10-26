@@ -5,6 +5,8 @@
 
 [Heap Complexity](../image/heap.png)
 
+- PriorityQueue provides O(log(n)) time for the enqueing and dequeing methods (offer, poll, remove() and add); linear time for the remove(Object) and contains(Object) methods
+
 ## 特点
 
 1. **以数组表示，但是以完全二叉树的方式理解**。

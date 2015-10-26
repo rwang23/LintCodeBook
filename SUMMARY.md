@@ -129,7 +129,7 @@ This is the summary of my experience in LintCode.
    * [Graph](DataStructure/graph.md)
 
 * [Data Structure Problem](DataStructureProblem/README.md)
-
+	* [Heapify](DataStructureProblem/Heapify.md)
 
 * [BFS](BFS/README.md)
 	* [Word Ladder](BFS/WordLadder.md)
