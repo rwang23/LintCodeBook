@@ -8,7 +8,7 @@ Map 是一种关联数组的数据结构，也常被称为字典或键值对。
 ![String Hash](../image/string-hash.png)
 ####Chaining Hash
 ![Chaining Hash](../image/chaining-hash.png)
-
+![Chaining Hash2](../image/chaining-hash2.png)
 ## 编程实现
 
 ### Java
