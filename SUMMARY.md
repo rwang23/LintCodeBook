@@ -129,7 +129,10 @@ This is the summary of my experience in LintCode.
    * [Graph](DataStructure/graph.md)
 
 * [Data Structure Problem](DataStructureProblem/README.md)
+	* [Implement Queue By Two Stacks](DataStructureProblem/ImplementQueuebyTwoStacks.md)
 	* [Heapify](DataStructureProblem/Heapify.md)
+	* [Hash Function](DataStructureProblem/HashFunction.md)
+	* [Rehashing](DataStructureProblem/Rehashing.md)
 
 * [BFS](BFS/README.md)
 	* [Word Ladder](BFS/WordLadder.md)
