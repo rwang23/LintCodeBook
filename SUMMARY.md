@@ -133,6 +133,8 @@ This is the summary of my experience in LintCode.
 	* [Heapify](DataStructureProblem/Heapify.md)
 	* [Hash Function](DataStructureProblem/HashFunction.md)
 	* [Rehashing](DataStructureProblem/Rehashing.md)
+	* [Min Stack](DataStructureProblem/MinStack.md)
+	* [Longest Consecutive Sequence](DataStructureProblem/LongestConsecutiveSequence.md)
 
 * [BFS](BFS/README.md)
 	* [Word Ladder](BFS/WordLadder.md)
