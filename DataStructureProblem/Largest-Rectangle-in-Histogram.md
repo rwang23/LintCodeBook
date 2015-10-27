@@ -53,6 +53,7 @@ public class Solution {
 - stack push进去的是index，因为再找边界的时候找的是下标i, value的值可以直接height[i]
 - 在最后已经遍历完，栈底只剩下一个数时候，强行进入pop阶段而不是push，所以用了int cur = (i == height.length) ? -1 : height[i];
 - 非常巧妙的办法
+- 找左右比该节点大的数用递减栈，找左右比该节点小的数用递增栈
 
 ```java
 public class Solution {

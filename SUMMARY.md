@@ -136,6 +136,7 @@ This is the summary of my experience in LintCode.
 	* [Min Stack](DataStructureProblem/MinStack.md)
 	* [Longest Consecutive Sequence](DataStructureProblem/LongestConsecutiveSequence.md)
 	* [Largest Rectangle in Histogram](DataStructureProblem/Largest-Rectangle-in-Histogram.md)
+	* [LRU Cache](DataStructureProblem/LRU-Cache.md)
 
 * [BFS](BFS/README.md)
 	* [Word Ladder](BFS/WordLadder.md)
