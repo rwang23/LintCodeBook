@@ -142,6 +142,7 @@ This is the summary of my experience in LintCode.
 	* [Palindrome Partitioning](DFS/Palindrome-Partitioning.md)
 
 * [BFS](BFS/README.md)
+	* [Clone Graph](BFS/Clone-Graph.md)
 	* [Word Ladder](BFS/WordLadder.md)
 
 
