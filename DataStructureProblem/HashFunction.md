@@ -2,7 +2,10 @@
 
 15% Accepted
 
-	In data structure Hash, hash function is used to convert a string(or any other type) into an integer smaller than hash size and bigger or equal to zero. The objective of designing a hash function is to "hash" the key as unreasonable as possible. A good hash function can avoid collision as less as possible. A widely used hash function algorithm is using a magic number 33, consider any string as a 33 based big integer like follow:
+	In data structure Hash, hash function is used to convert a string(or any other type) into an integer smaller than hash size and bigger or equal to zero.
+    The objective of designing a hash function is to "hash" the key as unreasonable as possible.
+    A good hash function can avoid collision as less as possible.
+    A widely used hash function algorithm is using a magic number 33, consider any string as a 33 based big integer like follow:
 
 	hashcode("abcd") = (ascii(a) * 333 + ascii(b) * 332 + ascii(c) *33 + ascii(d)) % HASH_SIZE
 
