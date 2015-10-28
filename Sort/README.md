@@ -1,5 +1,10 @@
 This is the review of subsets.
 
+##Different Sort
+![Different Sort](../image/Sorting-Algorithms.png)
+
+
+
 ####Two Pointers Sort
 - Many problem use the two pointers to sort, the most classic one is the color sort
 
