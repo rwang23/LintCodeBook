@@ -30,7 +30,6 @@ All codes are in java.
 
 [Repository on Github](https://github.com/rwang23/LintCodeBook)
 
-![](image/Sorting-Algorithms.png)
 
 Renfei
 
