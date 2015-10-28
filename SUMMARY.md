@@ -2,11 +2,6 @@
 
 This is the summary of my experience in LintCode.
 
-* [Subsets](Subsets/README.md)
-	* [Subsets I](Subsets/Subsets.md)
-	* [Subsets II](Subsets/SubsetsII.md)
-	* [Permutations I](Subsets/Permutations.md)
-	* [Permutations II](Subsets/PermutationsII.md)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
@@ -139,9 +134,17 @@ This is the summary of my experience in LintCode.
 	* [LRU Cache](DataStructureProblem/LRU-Cache.md)
 	* [Max Tree](DataStructureProblem/Max-Tree.md)
 
+* [DFS](DFS/README.md)
+	* [Subsets I](DFS/Subsets.md)
+	* [Subsets II](DFS/SubsetsII.md)
+	* [Permutations I](DFS/Permutations.md)
+	* [Permutations II](DFS/PermutationsII.md)
+	* [Palindrome Partitioning](DFS/Palindrome-Partitioning.md)
 
 * [BFS](BFS/README.md)
 	* [Word Ladder](BFS/WordLadder.md)
+
+
 
 * [Math](Math/README.md)
 	* [Sqrt](Math/Sqrt.md)
