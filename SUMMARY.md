@@ -137,6 +137,7 @@ This is the summary of my experience in LintCode.
 * [DFS](DFS/README.md)
 	* [Combinations](DFS/Combinations.md)
 	* [Combination Sum](DFS/Combination-Sum.md)
+	* [Combination Sum II](DFS/Combination-SumII.md)
 	* [Subsets I](DFS/Subsets.md)
 	* [Subsets II](DFS/SubsetsII.md)
 	* [Permutations I](DFS/Permutations.md)
