@@ -143,6 +143,8 @@ This is the summary of my experience in LintCode.
 	* [Subsets II](DFS/SubsetsII.md)
 	* [Permutations I](DFS/Permutations.md)
 	* [Permutations II](DFS/PermutationsII.md)
+	* [N Queen I](DFS/N-Queens.md)
+	* [N Queen II](DFS/N-QueensII.md)
 	* [Palindrome Partitioning](DFS/Palindrome-Partitioning.md)
 
 * [BFS](BFS/README.md)
