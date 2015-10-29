@@ -143,6 +143,7 @@ This is the summary of my experience in LintCode.
 
 * [BFS](BFS/README.md)
 	* [Clone Graph](BFS/Clone-Graph.md)
+	* [Topological Sorting](BFS/Topological-Sorting.md)
 	* [Word Ladder](BFS/WordLadder.md)
 
 
