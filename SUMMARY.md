@@ -135,6 +135,7 @@ This is the summary of my experience in LintCode.
 	* [Max Tree](DataStructureProblem/Max-Tree.md)
 
 * [DFS](DFS/README.md)
+	* [K Sum II](DFS/kSumII.md)
 	* [Combinations](DFS/Combinations.md)
 	* [Combination Sum](DFS/Combination-Sum.md)
 	* [Combination Sum II](DFS/Combination-SumII.md)
