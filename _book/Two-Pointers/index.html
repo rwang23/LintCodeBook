@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Two Pointers | Two Pointers</title>
+        <title>Two Pointers | Lintcode Solution Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="5" data-basepath=".." data-revision="Fri Oct 30 2015 00:31:20 GMT-0400 (EDT)">
+    <div class="book" data-level="5" data-basepath=".." data-revision="Fri Oct 30 2015 00:33:30 GMT-0400 (EDT)">
     
 
 <div class="book-summary">
@@ -2474,7 +2474,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Two Pointers</a>
+        <a href="../" >Lintcode Solution Book</a>
     </h1>
 </div>
 
@@ -2484,8 +2484,24 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>This is the review of two pointers.</p>
-
+                        <h2 id="two-pointers">Two Pointers</h2>
+<p>&#x4E24;&#x6839;&#x6307;&#x9488;&#x6A21;&#x677F;</p>
+<pre><code>    int start = 0;
+    int end = A.length - 1;
+    while (start &lt;= end) {
+        while (start &lt;= end &amp;&amp; A[start] != elem) {
+            start++;
+        }
+        while (start &lt;= end &amp;&amp; A[end] == elem) {
+            end--;
+        }
+        if (start &lt;= end) {
+            exch(A, start, end);
+            start++;
+            end--;
+        }
+    }
+</code></pre>
                     
                     </section>
                 

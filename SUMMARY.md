@@ -97,6 +97,7 @@ This is the summary of my experience in LintCode.
 
 
 * [Linkedlist](Linkedlist/README.md)
+	* [Delete Node in the Middle of Singly Linked List](Linkedlist/Delete-Node-in-the-Middle-of-Singly-Linked-List.md)
 	* [Reverse Linked List](Linkedlist/Reverse-Linked-List.md)
 	* [Reverse Linked List II](Linkedlist/Reverse-Linked-ListII.md)
 	* [Palindrome Linked List](Linkedlist/Palindrome-Linked-List.md)
