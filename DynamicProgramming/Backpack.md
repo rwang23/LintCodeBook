@@ -24,6 +24,8 @@ You can not divide any item into small pieces.
 - Backpack
 
 ####基本做法
+- Space O(m*n) 因为每次就在用f[i] f[i-1] 所以应该空间是可以优化的
+- Time O(m*n)
 - 参考 背包九讲
 - f[i][j] = Math.max(f[i-1][j-A[i-1]] + V[i-1], f[i-1][j])
 
@@ -52,5 +54,32 @@ public class Solution {
     }
 }
 
+```
+####空间优化做法
+- 优化f[i][j]到f[j]
+- 此时第二重循环不能从j=0开始了，要从j=m开始 j--
+- 如果是j=0 j++开始，那么f[j-A[i-1]]用的就是新的值，不是原来的f[i-1][j-A[i-1]]而是刚计算完的f[1] f[2]这样
+
+
+```java
+public class Solution {
+
+    public int backPack(int m, int[] A) {
+        // write your code here
+        if (m ==0 || A == null || A.length == 0) {
+            return 0;
+        }
+        int[] f = new int[m+1];
+        f[0] = 0;
+        for (int i = 1; i <= A.length; i++) {
+            for (int j = m; j >= 0; j--) {
+                if (j >= A[i-1]) {
+                    f[j] = Math.max(f[j-A[i-1]] + A[i-1], f[j]);
+                }
+            }
+        }
+        return f[m];
+    }
+}
 
 ```
