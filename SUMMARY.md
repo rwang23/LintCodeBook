@@ -169,4 +169,7 @@ This is the summary of my experience in LintCode.
 	* [Trailing Zeros](Math/TrailingZeros.md)
 	* [Fast Power](Math/FastPower.md)
 
+* [OO Design](OODesign/README.md)
+	* [Sqrt](OODesign/Singleton.md)
+
 
