@@ -59,6 +59,8 @@ This is the summary of my experience in LintCode.
 	* [Edit Distance](DynamicProgramming/Edit-Distance.md)
 	* [Interleaving String](DynamicProgramming/InterleavingString.md)
 	* [Unique Binary Search Trees](DynamicProgramming/Unique-Binary-Search-Trees.md)
+	* [Backpack I](DynamicProgramming/Backpack.md)
+	* [Backpack II](DynamicProgramming/BackpackII.md)
 
 * [Sort](Sort/README.md)
 	* [Merge Intervals](Sort/MergeIntervals.md)
