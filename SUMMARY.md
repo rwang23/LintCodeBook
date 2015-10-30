@@ -27,6 +27,7 @@ This is the summary of my experience in LintCode.
 	* [Post Order Traversal](BinaryTree/PostOrderTraversal.md)
 	* [Level Order Traversal](BinaryTree/LevelOrderTraversal.md)
 	* [Level Order Traversal II](BinaryTree/LevelOrderTraversalII.md)
+	* [Flatten Binary Tree to Linked List](BinaryTree/Flatten-Binary-Tree-to-Linked-List.md)
 	* [Binary Tree From in and post order](BinaryTree/BinaryTree-From-Inorder-Postorder.md)
 	* [Binary Tree From in and pre order](BinaryTree/BinaryTree-From-Inorder-Preorder.md)
 	* [Binary Search Tree Iterator](BinaryTree/BST-Iterator.md)
@@ -79,6 +80,7 @@ This is the summary of my experience in LintCode.
 
 * [Two Pointers](Two-Pointers/README.md)
 	* [Remove Element](Two-Pointers/Remove-Element.md)
+	* [Remove Duplicates from Sorted Array](Two-Pointers/Remove-Duplicates-from-Sorted-Array.md)
 
 * [Array](Array/README.md)
 	* [Product of Array Exclude Itself](Array/Product-of-Array-Exclude-Itself.md)
@@ -171,5 +173,8 @@ This is the summary of my experience in LintCode.
 
 * [OO Design](OODesign/README.md)
 	* [Sqrt](OODesign/Singleton.md)
+
+* [Other Information]()
+	* [Company Level](CompanyLevel.md)
 
 

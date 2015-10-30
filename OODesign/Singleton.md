@@ -52,7 +52,6 @@ class Solution {
 - Suppose there are two threads T1 and T2. Both comes to create instance and execute “instance==null”, now both threads have identified instance variable to null thus assume they must create an instance. They sequentially goes to synchronized block and create the instances. At the end, we have two instances in our application.
 
 
-
 ```java
 class Solution {
     /**
