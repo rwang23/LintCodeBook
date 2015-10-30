@@ -100,6 +100,7 @@ This is the summary of my experience in LintCode.
 	* [Copy List With Random Pointer](Linkedlist/Copy-List-with-Random-Pointer.md)
 
 * [Array](Array/README.md)
+	* [Product of Array Exclude Itself](Array/Product-of-Array-Exclude-Itself.md)
 	* [Recover Rotated Sorted Array](Array/Recover-Rotated-Sorted-Array.md)
 	* [Rotate String](Array/RotateString.md)
 	* [Maximum Subarray](Array/Maximum-Subarray.md)
@@ -153,8 +154,6 @@ This is the summary of my experience in LintCode.
 	* [Clone Graph](BFS/Clone-Graph.md)
 	* [Topological Sorting](BFS/Topological-Sorting.md)
 	* [Word Ladder](BFS/WordLadder.md)
-
-
 
 * [Math](Math/README.md)
 	* [Sqrt](Math/Sqrt.md)
