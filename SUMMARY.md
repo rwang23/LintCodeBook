@@ -154,6 +154,7 @@ This is the summary of my experience in LintCode.
 	* [Subsets I](DFS/Subsets.md)
 	* [Subsets II](DFS/SubsetsII.md)
 	* [Permutations I](DFS/Permutations.md)
+	* [Permutations Index](DFS/Permutation-Index.md)
 	* [Permutations II](DFS/PermutationsII.md)
 	* [N Queen I](DFS/N-Queens.md)
 	* [N Queen II](DFS/N-QueensII.md)
