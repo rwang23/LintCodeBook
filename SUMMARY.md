@@ -135,6 +135,7 @@ This is the summary of my experience in LintCode.
    * [Graph](DataStructure/graph.md)
 
 * [Data Structure Problem](DataStructureProblem/README.md)
+	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)
 	* [Implement Queue By Two Stacks](DataStructureProblem/ImplementQueuebyTwoStacks.md)
 	* [Heapify](DataStructureProblem/Heapify.md)
 	* [Hash Function](DataStructureProblem/HashFunction.md)
@@ -164,6 +165,7 @@ This is the summary of my experience in LintCode.
 	* [Word Ladder](BFS/WordLadder.md)
 
 * [Math](Math/README.md)
+	* [Cosine Similarity](Math/Cosine-Similarity.md)
 	* [Sqrt](Math/Sqrt.md)
 	* [Fibonacci](Math/Fibonacci.md)
 	* [Plus One](Math/PlusOne.md)

@@ -17,3 +17,6 @@
                 end--;
             }
         }
+
+[很好的参考资料](http://blog.csdn.net/ohmygirl/article/details/7850068)
+
