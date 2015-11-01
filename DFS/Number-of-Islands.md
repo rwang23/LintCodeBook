@@ -23,7 +23,7 @@ If two 1 is adjacent, we consider them in the same island.
 We only consider up/down/left/right adjacent.
 
 ####思路
-- DFS
+- DFS方法
 - 只要遍历一遍，碰到一个1，就把它周围所有相连的1都标记为非1，这样整个遍历过程中碰到的1的个数就是所求解。
 
 ```java
