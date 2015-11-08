@@ -30,7 +30,7 @@ public class Solution {
         int start = 0, end = num.length - 1;
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
-            if (num[mid] >= num[end]) {
+            if (num[mid] >= num[end]) { //这个=号不要也可以，因为不会有这种情况
                 start = mid;
             } else {
                 end = mid;

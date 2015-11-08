@@ -47,6 +47,10 @@ public class Solution {
                 start = mid;
             } else if (num[mid] < num[end]) {
                 end = mid;
+            /*
+            因为是以num[end]作为参照物的，所以比较num[mid] = num[end]
+            如果是以num[start]作为参照物，那么就是比较num[mid]与mun[start]
+             */
             } else if (num[mid] == num[end]) {
                 end--;
             }
