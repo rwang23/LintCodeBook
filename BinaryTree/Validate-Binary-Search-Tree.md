@@ -82,8 +82,9 @@ public class Solution {
         if(p==null)
             return true;
 
-        if(p.val <= min || p.val >= max)
+        if(p.val <= min || p.val >= max) {
             return false;
+          }
 
         return isValidBST(p.left, min, p.val) && isValidBST(p.right, p.val, max);
     }
