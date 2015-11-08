@@ -176,7 +176,7 @@ This is the summary of my experience in LintCode.
 	* [Fast Power](Math/FastPower.md)
 
 * [OO Design](OODesign/README.md)
-	* [Sqrt](OODesign/Singleton.md)
+	* [Singleton](OODesign/Singleton.md)
 
 * [Other Information]()
 	* [Company Level](CompanyLevel.md)
