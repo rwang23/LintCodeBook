@@ -77,6 +77,8 @@ class Solution {
 
 ####优化后
 - 没有了边界问题
+- 因为第一个数和最后一个数肯定不是peak element，所以start = 1 end = A.length - 2
+- 判断的时候因为是peak 一定是start 与 end中的最大值
 
 ```java
 class Solution {
