@@ -34,9 +34,15 @@ public class Solution {
             return;
         }
 
+        /*
+        divide
+         */
         invertBinaryTree(root.left);
         invertBinaryTree(root.right);
-
+        /*
+        conquer
+        其实这个题里边divide conquer顺序不影响
+         */
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
