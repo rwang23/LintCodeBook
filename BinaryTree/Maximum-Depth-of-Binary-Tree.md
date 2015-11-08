@@ -38,3 +38,39 @@ public class Solution {
     }
 }
 ```
+
+###非递归
+- 就是level order traversal
+
+```java
+public class Solution {
+    public int maxDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+
+        TreeNode cur = root;
+        queue.offer(root);
+        int depth = 0;
+
+        while(queue.peek() != null){
+            int size = queue.size();
+            for(int i = 0; i < size; i++){
+                cur = queue.peek();
+                if(cur.left != null){
+                    queue.offer(cur.left);
+                }
+                if(cur.right != null){
+                    queue.offer(cur.right);
+                }
+                queue.poll();
+            }
+            depth++;
+
+        }
+        return depth;
+    }
+}
+```
