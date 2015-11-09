@@ -43,3 +43,51 @@ public class Solution {
 }
 
 ```
+####另一种思路
+- 从i j 关系去构思
+
+```java
+public class Solution {
+    public int jump(int[] A) {
+        int[] steps = new int[A.length];
+
+        steps[0] = 0;
+        for (int i = 1; i < A.length; i++) {
+            int min = Integer.MAX_VALUE;
+            for (int j = 0; j < i; j++) {
+                if (j + A[j] >= i) {
+                    min = Math.min(min,steps[j]);
+                }
+                steps[i] = min + 1;
+            }
+        }
+
+        return steps[A.length - 1];
+    }
+}
+
+```
+####优化
+- 加上贪心思想，遇到第一个就说明是最短路径，break
+
+```java
+public class Solution {
+    public int jump(int[] A) {
+        int[] steps = new int[A.length];
+
+        steps[0] = 0;
+        for (int i = 1; i < A.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (j + A[j] >= i) {
+                    steps[i] = steps[j] + 1;
+                    break;
+                }
+
+            }
+        }
+
+        return steps[A.length - 1];
+    }
+}
+
+```
