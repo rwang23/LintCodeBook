@@ -50,6 +50,7 @@ public class Solution {
             for (int j = 1; j <= word2.length(); j++) {
                 if (word1.charAt(i-1) != word2.charAt(j-1)) {
                     //注意这个Min的取值 是连续取两次
+                    //如果长度相等的时候，需要的是replace 所以是min[i-1][j-1] + 1
                     min[i][j] = Math.min(Math.min(min[i-1][j],min[i][j-1]), min[i-1][j-1]) + 1;
                 } else {
                     min[i][j] = min[i-1][j-1];
