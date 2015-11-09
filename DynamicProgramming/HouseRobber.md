@@ -24,6 +24,8 @@
 
 ####O(n) time and O(n) memory.
 - DP
+- ret[i] = Math.max(ret[i-2]+A[i-1],ret[i-1]);
+- ret[0] = 0, 必须初始化第一步
 
 ```java
 public class Solution {

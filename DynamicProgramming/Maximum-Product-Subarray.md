@@ -13,6 +13,7 @@
 - Subarray
 
 ####思路
+- 易错题
 - 实在不行就弄两个变量
 - 一大一小
 - Maximum Subarray那题的变种。由于正负得负，负负得正的关系。以A[i]结尾的max product subarray同时取决于以A[i-1]结尾的max / min product subarray以及A[i]本身。因此，对每个i，需要记录min/max product两个状态：
