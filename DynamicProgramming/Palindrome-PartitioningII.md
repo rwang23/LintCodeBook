@@ -48,6 +48,12 @@ public class Solution {
         for (int i = 1; i <= s.length(); i++) {
             for (int j = 0; j < i; j++) {
                 if (result[j][i-1]) { // i-1
+                    /*
+                    这里不能使用贪心思想，因为不一定是遇到的第一个最小
+                    比如aba aba先遇到aba step = 1
+                    但是abaaba不需要划分 step =0
+                    有时候贪心容易出错，不如多做几步一点点找
+                     */
                     step[i] = Math.min(step[j] + 1, step[i]);
 
                 }
