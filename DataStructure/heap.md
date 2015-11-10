@@ -26,4 +26,7 @@
 
 其中步骤1是给步骤2和3用的。
 
+- 得到/删除最大值是针对已经实现了最大/最小堆说的，已经heapify了，所以针对一个元素sift sink就行
+- 而heapify的时候，这个时候是乱序的，需要从底层开始不断sink，一层一层往上走（得到值后，又跟下层进行对比）
+
 ![Heapsort-example](../image/Heapsort-example.gif)

@@ -23,6 +23,9 @@ int qLen = q.size(); // get queue length
 
 优先考虑右侧方法，右侧元素不存在时返回 `null`. 判断非空时使用`isEmpty()`方法，继承自 Collection.
 
+#### 用法
+- 常用在树的遍历里边
+
 ## Priority Queue - 优先队列
 
 应用程序常常需要处理带有优先级的业务，优先级最高的业务首先得到服务。因此优先队列这种数据结构应运而生。优先队列中的每个元素都有各自的优先级，优先级最高的元素最先得到服务；优先级相同的元素按照其在优先队列中的顺序得到服务。
@@ -93,5 +96,5 @@ Deque<Integer> deque = new ArrayDeque<Integer>();
 
 ## Reference
 
-- [優先佇列 - 维基百科，自由的百科全书](http://zh.wikipedia.org/zh/%E5%84%AA%E5%85%88%E4%BD%87%E5%88%97)
+- [优先队列 - 维基百科，自由的百科全书](http://zh.wikipedia.org/zh/%E5%84%AA%E5%85%88%E4%BD%87%E5%88%97)
 - [双端队列 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97)
