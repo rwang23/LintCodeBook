@@ -1,4 +1,4 @@
-Word Ladder
+##Word Ladder
 
 22% Accepted
 
@@ -20,46 +20,74 @@ Word Ladder
 	All words have the same length.
 	All words contain only lowercase alphabetic characters.
 
+####思路
+- level order遍历
+
 ```java
 public class Solution {
-    /**
-      * @param start, a string
-      * @param end, a string
-      * @param dict, a set of string
-      * @return an integer
-      */
     public int ladderLength(String start, String end, Set<String> dict) {
-        LinkedList<String> queue = new LinkedList<String>();
-        queue.add(start);
-        dict.add(end);
-        int step = 0;
+        if (dict == null || dict.size() == 0) {
+            return 0;
+        }
 
-        while (!queue.isEmpty()) {
-            LinkedList<String> level = new LinkedList<String>();
-            step++;
-            while (!queue.isEmpty()) {
-                String q = queue.poll();
-                if (q.equals(end)) {
-                    return step;
-                }
+        HashSet<String> hash = new HashSet<String>();
+        Queue<String> queue = new LinkedList<String>();
+        queue.offer(start);
+        hash.add(start);
 
-                char[] t = q.toCharArray();
-                for(int i = 0; i < start.length(); i++) {
-                    for(char c = 'a'; c <= 'z'; c++) {
-                        char temp = t[i];
-                        t[i] = c;
-                        String s = String.copyValueOf(t);
-                        t[i] = temp;
-                        if(dict.contains(s)) {
-                            level.add(s);
-                            dict.remove(s);
-                        }
+        int length = 1;
+        /*
+        典型的 BFS level order
+         */
+        while(!queue.isEmpty()) {
+            length++;
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                String word = queue.poll();
+                for (String nextWord: getNextWords(word, dict)) {
+                    if (hash.contains(nextWord)) {
+                        continue;
                     }
+                    if (nextWord.equals(end)) {
+                        return length;
+                    }
+
+                    hash.add(nextWord);
+                    queue.offer(nextWord);
                 }
             }
-            queue = level;
         }
         return 0;
+    }
+
+    // replace character of a string at given index to a given character
+    // return a new string
+    private String replace(String s, int index, char c) {
+        char[] chars = s.toCharArray();
+        chars[index] = c;
+        return new String(chars);
+    }
+
+    // get connections with given word.
+    // for example, given word = 'hot', dict = {'hot', 'hit', 'hog'}
+    // it will return ['hit', 'hog']
+    // 去循环每个字母，而不是单词，因为单词可能很多，而字母就这么些，我们查找用hashmap o(1)就能找到，省下了很多时间
+    // 这get next words的整个过程时间复杂度 O(a*26*len) -> O(len)
+    // 这样整个程序的时间复杂度 也就是 n*dict.size()*word.length
+    private ArrayList<String> getNextWords(String word, Set<String> dict) {
+        ArrayList<String> nextWords = new ArrayList<String>();
+        for (char c = 'a'; c <= 'z'; c++) {
+            for (int i = 0; i < word.length(); i++) {
+                if (c == word.charAt(i)) {
+                    continue;
+                }
+                String nextWord = replace(word, i, c);
+                if (dict.contains(nextWord)) {
+                    nextWords.add(nextWord);
+                }
+            }
+        }
+        return nextWords;
     }
 }
 
