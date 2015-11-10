@@ -9,7 +9,7 @@
 
 	hashcode("abcd") = (ascii(a) * 33^3 + ascii(b) * 33^2 + ascii(c) *33^1 + ascii(d)) % HASH_SIZE
 
-	                              = (97* 333 + 98 * 332 + 99 * 33 +100) % HASH_SIZE
+	                              = (97* 33^3 + 98 * 33^2 + 99 * 33^1 +100) % HASH_SIZE
 
 	                              = 3595978 % HASH_SIZE
 
