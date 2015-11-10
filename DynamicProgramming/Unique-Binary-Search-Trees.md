@@ -17,7 +17,7 @@
 ####Tags Expand
 - Catalan Number
 - Dynamic Programming
-
+- 从每棵树的根节点去思考
 
 
 

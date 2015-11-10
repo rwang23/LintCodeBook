@@ -7,7 +7,7 @@
     A good hash function can avoid collision as less as possible.
     A widely used hash function algorithm is using a magic number 33, consider any string as a 33 based big integer like follow:
 
-	hashcode("abcd") = (ascii(a) * 333 + ascii(b) * 332 + ascii(c) *33 + ascii(d)) % HASH_SIZE
+	hashcode("abcd") = (ascii(a) * 33^3 + ascii(b) * 33^2 + ascii(c) *33^1 + ascii(d)) % HASH_SIZE
 
 	                              = (97* 333 + 98 * 332 + 99 * 33 +100) % HASH_SIZE
 
@@ -31,7 +31,7 @@
 
 ####思路
 - 字符串较长时使用 long 型来计算33的幂会溢出！所以这道题的关键在于如何处理大整数溢出
-- (a * b) % m = a % m * b % m
+- (a * b) % m = (a % m * b % m) % m
 - 直接做是会溢出的
 
 ```java
