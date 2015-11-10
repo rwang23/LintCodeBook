@@ -39,9 +39,9 @@ Can you do it without recursion?
 - Recursion
 
 ####思路
-- 需要两个funciont,一个是dfs来递归，一个是draw来画图
+- 需要两个funcion,一个是dfs来递归，一个是draw来画图
 - 因为要来递归，所以先用ArrayList<Integer>的形式来找满足的图
-- 然后在找到所有结果之后再来调用draw，将ArrayList<Integer>转化为ArrayList<String>
+- 然后在找到所有结果之后再来调用draw，将`ArrayList<Integer>`转化为`ArrayList<String>`
 - 关键点去找满足条件的点。画图得知
 - 其中string的处理使用了StringBuffer类，这样String处理速度会更快，然后用Str.toString()又转化回了String
 
