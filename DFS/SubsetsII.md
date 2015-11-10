@@ -67,3 +67,47 @@ class Solution {
 	}
 }
 ```
+
+####另一种思考方式
+- 不在递归循环中去进行判断，而是在结果中进行判断
+- 如果该结果已经出现过了，就不再加入了（一定是122 以第一个2为基础的时候先出现）
+
+```java
+class Solution {
+    /**
+     * @param S: A set of numbers.
+     * @return: A list of lists. All valid subsets.
+     */
+    public ArrayList<ArrayList<Integer>> subsetsWithDup(ArrayList<Integer> S) {
+		// write your code here
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> list = new ArrayList<Integer>() ;
+		int[] nums = new int[S.size()];
+		for (int i = 0; i < nums.length; i++) {
+			nums[i] = S.get(i).intValue();
+		}
+		Arrays.sort(nums);
+
+		int pos = 0;
+		subsetshelper(result, list, nums, pos);
+		return result;
+	}
+
+	public void subsetshelper(ArrayList<ArrayList<Integer>> result,
+	                          ArrayList<Integer> list,
+	                          int[] nums,
+	                          int pos) {
+	    if(!result.contains(list)) {
+		    result.add(new ArrayList<Integer>(list));
+	    }
+		for (int i = pos; i < nums.length; i++) {
+// 			if (i != pos && nums[i] == nums[i - 1]) {
+// 				continue;
+// 			}
+			list.add(nums[i]);
+			subsetshelper(result, list, nums, i + 1);
+			list.remove(list.size() - 1);
+		}
+	}
+}
+```

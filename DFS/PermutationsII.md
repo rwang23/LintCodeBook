@@ -23,6 +23,7 @@ Do it without recursion.
 - visited[i-1]是为了顺序访问
 - i!=0 是为了nums[i-1]不溢出
 - nums[i]=nums[i-1]跟subset一样
+- 九章这个思路有点难理解，看下面自己的解法
 
 ```java
 class Solution {
@@ -88,4 +89,60 @@ class Solution {
     }
 }
 
+```
+
+
+####hashmap + DFS 解法
+- hashmap保存这个值的下标，如果用过，这次就不加入他了，如果没有才可以加入
+- 最后只需要判断result包含过这个list没有，如果没有，才加入
+
+```java
+class Solution {
+    /**
+     * @param nums: A list of integers.
+     * @return: A list of unique permutations.
+     */
+    public ArrayList<ArrayList<Integer>> permuteUnique(ArrayList<Integer> S) {
+		// write your code here
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		HashMap<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
+
+		if(S==null || S.size()==0){
+			return result;
+		}
+		int[] nums = new int[S.size()];
+
+		for (int i = 0; i < nums.length; i++) {
+			nums[i] = S.get(i).intValue();
+		}
+		Arrays.sort(nums);
+
+		subsetshelper(result, list, nums, hashmap);
+		return result;
+	}
+
+	public void subsetshelper(ArrayList<ArrayList<Integer>> result,
+	                          ArrayList<Integer> list,
+	                          int[] nums,
+	                          HashMap<Integer, Integer> hashmap) {
+		if(list.size() == nums.length && !result.contains(list)){
+			result.add(new ArrayList<Integer>(list));
+		}
+
+		for (int i = 0; i < nums.length; i++) {
+            if (hashmap.containsKey(i)) {
+                continue;
+            }
+
+			list.add(nums[i]);
+			hashmap.put(i, nums[i]);
+
+			subsetshelper(result, list, nums, hashmap);
+
+            hashmap.remove(i);
+			list.remove(list.size() - 1);
+		}
+	}
+}
 ```

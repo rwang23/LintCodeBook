@@ -1,1 +1,5 @@
-This is the review of subsets.
+####关键
+
+- 要先思考清楚递归的定义
+- 考虑递归中的限制条件
+- 考虑最终出递归的条件(什么时候return)
