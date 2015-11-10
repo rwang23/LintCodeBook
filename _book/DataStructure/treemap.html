@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Maximum Depth | Lintcode Solution Book</title>
+        <title>TreeMap | Lintcode Solution Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../BinaryTree/Minimum-Depth-of-Binary-Tree.html" />
+    <link rel="next" href="../DataStructure/graph.html" />
     
     
-    <link rel="prev" href="../BinaryTree/index.html" />
+    <link rel="prev" href="../DataStructure/map.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="2.1" data-basepath=".." data-revision="Tue Nov 10 2015 14:19:15 GMT-0500 (EST)">
+    <div class="book" data-level="8.10" data-basepath=".." data-revision="Tue Nov 10 2015 14:19:15 GMT-0500 (EST)">
     
 
 <div class="book-summary">
@@ -258,7 +258,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1" data-path="BinaryTree/Maximum-Depth-of-Binary-Tree.html">
+        <li class="chapter " data-level="2.1" data-path="BinaryTree/Maximum-Depth-of-Binary-Tree.html">
             
                 
                     <a href="../BinaryTree/Maximum-Depth-of-Binary-Tree.html">
@@ -1884,7 +1884,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8.10" data-path="DataStructure/treemap.html">
+        <li class="chapter active" data-level="8.10" data-path="DataStructure/treemap.html">
             
                 
                     <a href="../DataStructure/treemap.html">
@@ -2668,80 +2668,52 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="maximum-depth-of-binary-tree">Maximum Depth of Binary Tree</h2>
-<p>55% Accepted</p>
-<pre><code>Given a binary tree, find its maximum depth.
-
-The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
-
-Have you met this question in a real interview? Yes
-Example
-Given a binary tree as follow:
-
-  1
- / \
-2   3
-   / \
-  4   5
-The maximum depth is 3.
-</code></pre><h4 id="tags-expand">Tags Expand</h4>
+                        <h1 id="treemap">TreeMap</h1>
 <ul>
-<li>Divide and Conquer</li>
-<li>Recursion</li>
-<li>Binary Tree</li>
+<li>The TreeMap class implements the Map interface by using a tree. A TreeMap provides an efficient means of storing key/value pairs in sorted order, and allows rapid retrieval.</li>
 </ul>
-<h4 id="%E6%80%9D%E8%B7%AF">&#x601D;&#x8DEF;</h4>
-<ul>
-<li>&#x7B80;&#x5316;&#x6210;&#x4E24;&#x4EF6;&#x4E8B;&#x60C5;&#xFF1A;&#x6C42;&#x5DE6;&#x8FB9;&#x7684;&#x6700;&#x5927; &#x548C; &#x6C42;&#x53F3;&#x8FB9;&#x7684;&#x6700;&#x5927;&#xFF1B; &#x6700;&#x540E;&#x5408;&#x5E76;</li>
-</ul>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxDepth</span><span class="hljs-params">(TreeNode root)</span> </span>{
-        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
-            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-        }
+<p>You should note that, unlike a hash map, a tree map guarantees that its elements will be sorted in ascending key order.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.*;
 
-        <span class="hljs-keyword">int</span> left = maxDepth(root.left);
-        <span class="hljs-keyword">int</span> right = maxDepth(root.right);
-        <span class="hljs-keyword">return</span> Math.max(left, right) + <span class="hljs-number">1</span>;
-    }
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeMapDemo</span> </span>{
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+      <span class="hljs-comment">// Create a hash map</span>
+      TreeMap tm = <span class="hljs-keyword">new</span> TreeMap();
+      <span class="hljs-comment">// Put elements to the map</span>
+      tm.put(<span class="hljs-string">&quot;Zara&quot;</span>, <span class="hljs-keyword">new</span> Double(<span class="hljs-number">3434.34</span>));
+      tm.put(<span class="hljs-string">&quot;Mahnaz&quot;</span>, <span class="hljs-keyword">new</span> Double(<span class="hljs-number">123.22</span>));
+      tm.put(<span class="hljs-string">&quot;Ayan&quot;</span>, <span class="hljs-keyword">new</span> Double(<span class="hljs-number">1378.00</span>));
+      tm.put(<span class="hljs-string">&quot;Daisy&quot;</span>, <span class="hljs-keyword">new</span> Double(<span class="hljs-number">99.22</span>));
+      tm.put(<span class="hljs-string">&quot;Qadir&quot;</span>, <span class="hljs-keyword">new</span> Double(-<span class="hljs-number">19.08</span>));
+
+      <span class="hljs-comment">// Get a set of the entries</span>
+      Set set = tm.entrySet();
+      <span class="hljs-comment">// Get an iterator</span>
+      Iterator i = set.iterator();
+      <span class="hljs-comment">// Display elements</span>
+      <span class="hljs-keyword">while</span>(i.hasNext()) {
+         Map.Entry me = (Map.Entry)i.next();
+         System.out.print(me.getKey() + <span class="hljs-string">&quot;: &quot;</span>);
+         System.out.println(me.getValue());
+      }
+      System.out.println();
+      <span class="hljs-comment">// Deposit 1000 into Zara&apos;s account</span>
+      <span class="hljs-keyword">double</span> balance = ((Double)tm.get(<span class="hljs-string">&quot;Zara&quot;</span>)).doubleValue();
+      tm.put(<span class="hljs-string">&quot;Zara&quot;</span>, <span class="hljs-keyword">new</span> Double(balance + <span class="hljs-number">1000</span>));
+      System.out.println(<span class="hljs-string">&quot;Zara&apos;s new balance: &quot;</span> +
+      tm.get(<span class="hljs-string">&quot;Zara&quot;</span>));
+   }
 }
 </code></pre>
-<h3 id="%E9%9D%9E%E9%80%92%E5%BD%92">&#x975E;&#x9012;&#x5F52;</h3>
-<ul>
-<li>&#x5C31;&#x662F;level order traversal</li>
-</ul>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxDepth</span><span class="hljs-params">(TreeNode root)</span> </span>{
-        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
-            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-        }
-
-        Queue&lt;TreeNode&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;TreeNode&gt;();
-
-        TreeNode cur = root;
-        queue.offer(root);
-        <span class="hljs-keyword">int</span> depth = <span class="hljs-number">0</span>;
-
-        <span class="hljs-keyword">while</span>(queue.peek() != <span class="hljs-keyword">null</span>){
-            <span class="hljs-keyword">int</span> size = queue.size();
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; size; i++){
-                cur = queue.peek();
-                <span class="hljs-keyword">if</span>(cur.left != <span class="hljs-keyword">null</span>){
-                    queue.offer(cur.left);
-                }
-                <span class="hljs-keyword">if</span>(cur.right != <span class="hljs-keyword">null</span>){
-                    queue.offer(cur.right);
-                }
-                queue.poll();
-            }
-            depth++;
-
-        }
-        <span class="hljs-keyword">return</span> depth;
-    }
-}
+<h5 id="outputs">outputs</h5>
+<pre><code>Ayan: 1378.0
+Daisy 99.22
+ahnaz: 123.22
+Qadir: -19.08
+Zara: 3434.34
+Zara&apos;s current balance: 4434.34
 </code></pre>
-
                     
                     </section>
                 
@@ -2751,10 +2723,10 @@ The maximum depth is 3.
         </div>
 
         
-        <a href="../BinaryTree/index.html" class="navigation navigation-prev " aria-label="Previous page: Binary Tree"><i class="fa fa-angle-left"></i></a>
+        <a href="../DataStructure/map.html" class="navigation navigation-prev " aria-label="Previous page: Hash Map"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../BinaryTree/Minimum-Depth-of-Binary-Tree.html" class="navigation navigation-next " aria-label="Next page: Minimum Depth"><i class="fa fa-angle-right"></i></a>
+        <a href="../DataStructure/graph.html" class="navigation navigation-next " aria-label="Next page: Graph"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

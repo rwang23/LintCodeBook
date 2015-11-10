@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="2.3" data-basepath=".." data-revision="Mon Nov 02 2015 19:27:21 GMT-0500 (EST)">
+    <div class="book" data-level="2.3" data-basepath=".." data-revision="Tue Nov 10 2015 14:19:15 GMT-0500 (EST)">
     
 
 <div class="book-summary">
@@ -774,44 +774,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.13" data-path="DynamicProgramming/Longest-Common-Subsequence.html">
-            
-                
-                    <a href="../DynamicProgramming/Longest-Common-Subsequence.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.13.</b>
-                        
-                        Longest Common Subsequence
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.14" data-path="DynamicProgramming/Longest-Common-Substring.html">
-            
-                
-                    <a href="../DynamicProgramming/Longest-Common-Substring.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.14.</b>
-                        
-                        Longest Common Substring
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.15" data-path="DynamicProgramming/Palindrome-PartitioningII.html">
+        <li class="chapter " data-level="3.13" data-path="DynamicProgramming/Palindrome-PartitioningII.html">
             
                 
                     <a href="../DynamicProgramming/Palindrome-PartitioningII.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.15.</b>
+                            <b>3.13.</b>
                         
                         Palindrome Partitioning II
                     </a>
@@ -819,16 +789,46 @@
             
         </li>
     
-        <li class="chapter " data-level="3.16" data-path="DynamicProgramming/WordBreak.html">
+        <li class="chapter " data-level="3.14" data-path="DynamicProgramming/WordBreak.html">
             
                 
                     <a href="../DynamicProgramming/WordBreak.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.16.</b>
+                            <b>3.14.</b>
                         
                         Word Break
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="DynamicProgramming/Longest-Common-Subsequence.html">
+            
+                
+                    <a href="../DynamicProgramming/Longest-Common-Subsequence.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.15.</b>
+                        
+                        Longest Common Subsequence
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="DynamicProgramming/Longest-Common-Substring.html">
+            
+                
+                    <a href="../DynamicProgramming/Longest-Common-Substring.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.16.</b>
+                        
+                        Longest Common Substring
                     </a>
             
             
@@ -1884,14 +1884,29 @@
             
         </li>
     
-        <li class="chapter " data-level="8.10" data-path="DataStructure/graph.html">
+        <li class="chapter " data-level="8.10" data-path="DataStructure/treemap.html">
+            
+                
+                    <a href="../DataStructure/treemap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.10.</b>
+                        
+                        TreeMap
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.11" data-path="DataStructure/graph.html">
             
                 
                     <a href="../DataStructure/graph.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>8.10.</b>
+                            <b>8.11.</b>
                         
                         Graph
                     </a>
@@ -2508,7 +2523,7 @@
                         
                             <b>13.1.</b>
                         
-                        Sqrt
+                        Singleton
                     </a>
             
             
@@ -2688,9 +2703,15 @@ Example
             <span class="hljs-keyword">return</span>;
         }
 
+        <span class="hljs-comment">/*
+        divide
+         */</span>
         invertBinaryTree(root.left);
         invertBinaryTree(root.right);
-
+        <span class="hljs-comment">/*
+        conquer
+        &#x5176;&#x5B9E;&#x8FD9;&#x4E2A;&#x9898;&#x91CC;&#x8FB9;divide conquer&#x987A;&#x5E8F;&#x4E0D;&#x5F71;&#x54CD;
+         */</span>
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
@@ -2701,6 +2722,7 @@ Example
 <h4 id="%E9%9D%9E%E9%80%92%E5%BD%92">&#x975E;&#x9012;&#x5F52;</h4>
 <ul>
 <li>&#x904D;&#x5386; &#x4E92;&#x76F8;&#x4EA4;&#x6362;&#x5DE6;&#x53F3;&#x5B50;&#x6811;</li>
+<li>&#x4E5F;&#x5C31;&#x662F;level order traversal</li>
 <li>&#x4F7F;&#x7528;&#x4E86;quene,&#x5C06;&#x6BCF;&#x4E00;&#x4E2A;&#x8981;&#x4EA4;&#x6362;&#x7684;&#x5B50;&#x6811;&#x5165;&#x961F;&#x5B58;&#x8D77;&#x6765;</li>
 <li>&#x975E;&#x5E38;&#x68D2;&#x7684;&#x65B9;&#x6CD5;</li>
 </ul>

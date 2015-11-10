@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="2.2" data-basepath=".." data-revision="Mon Nov 02 2015 19:27:21 GMT-0500 (EST)">
+    <div class="book" data-level="2.2" data-basepath=".." data-revision="Tue Nov 10 2015 14:19:15 GMT-0500 (EST)">
     
 
 <div class="book-summary">
@@ -774,44 +774,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.13" data-path="DynamicProgramming/Longest-Common-Subsequence.html">
-            
-                
-                    <a href="../DynamicProgramming/Longest-Common-Subsequence.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.13.</b>
-                        
-                        Longest Common Subsequence
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.14" data-path="DynamicProgramming/Longest-Common-Substring.html">
-            
-                
-                    <a href="../DynamicProgramming/Longest-Common-Substring.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.14.</b>
-                        
-                        Longest Common Substring
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.15" data-path="DynamicProgramming/Palindrome-PartitioningII.html">
+        <li class="chapter " data-level="3.13" data-path="DynamicProgramming/Palindrome-PartitioningII.html">
             
                 
                     <a href="../DynamicProgramming/Palindrome-PartitioningII.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.15.</b>
+                            <b>3.13.</b>
                         
                         Palindrome Partitioning II
                     </a>
@@ -819,16 +789,46 @@
             
         </li>
     
-        <li class="chapter " data-level="3.16" data-path="DynamicProgramming/WordBreak.html">
+        <li class="chapter " data-level="3.14" data-path="DynamicProgramming/WordBreak.html">
             
                 
                     <a href="../DynamicProgramming/WordBreak.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.16.</b>
+                            <b>3.14.</b>
                         
                         Word Break
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="DynamicProgramming/Longest-Common-Subsequence.html">
+            
+                
+                    <a href="../DynamicProgramming/Longest-Common-Subsequence.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.15.</b>
+                        
+                        Longest Common Subsequence
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="DynamicProgramming/Longest-Common-Substring.html">
+            
+                
+                    <a href="../DynamicProgramming/Longest-Common-Substring.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.16.</b>
+                        
+                        Longest Common Substring
                     </a>
             
             
@@ -1884,14 +1884,29 @@
             
         </li>
     
-        <li class="chapter " data-level="8.10" data-path="DataStructure/graph.html">
+        <li class="chapter " data-level="8.10" data-path="DataStructure/treemap.html">
+            
+                
+                    <a href="../DataStructure/treemap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.10.</b>
+                        
+                        TreeMap
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.11" data-path="DataStructure/graph.html">
             
                 
                     <a href="../DataStructure/graph.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>8.10.</b>
+                            <b>8.11.</b>
                         
                         Graph
                     </a>
@@ -2508,7 +2523,7 @@
                         
                             <b>13.1.</b>
                         
-                        Sqrt
+                        Singleton
                     </a>
             
             
@@ -2721,6 +2736,60 @@ The minimum depth is 2
             <span class="hljs-keyword">return</span> Math.min(left, right) + <span class="hljs-number">1</span>;
         }
 
+    }
+}
+</code></pre>
+<h3 id="%E9%9D%9E%E9%80%92%E5%BD%92">&#x975E;&#x9012;&#x5F52;</h3>
+<ul>
+<li>level order traversal</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-comment">/**
+     * <span class="hljs-doctag">@param</span> root: The root of binary tree.
+     * <span class="hljs-doctag">@return</span>: An integer.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minDepth</span><span class="hljs-params">(TreeNode root)</span> </span>{
+        <span class="hljs-comment">// write your code here</span>
+        <span class="hljs-keyword">if</span>(root == <span class="hljs-keyword">null</span>){
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+
+        Queue&lt;TreeNode&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;TreeNode&gt;();
+
+        TreeNode cur = root;
+        queue.offer(root);
+        <span class="hljs-keyword">int</span> depth = <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">while</span>(queue.peek() != <span class="hljs-keyword">null</span>){
+            <span class="hljs-keyword">int</span> size = queue.size();
+            depth++;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; size; i++){
+                cur = queue.peek();
+                <span class="hljs-keyword">if</span>(cur.left == <span class="hljs-keyword">null</span> &amp;&amp; cur.right == <span class="hljs-keyword">null</span>) {
+                    <span class="hljs-keyword">return</span> depth;
+                }
+                <span class="hljs-keyword">if</span>(cur.left != <span class="hljs-keyword">null</span>){
+                    queue.offer(cur.left);
+                }
+                <span class="hljs-keyword">if</span>(cur.right != <span class="hljs-keyword">null</span>){
+                    queue.offer(cur.right);
+                }
+                queue.poll();
+            }
+
+        }
+        <span class="hljs-keyword">return</span> depth;
     }
 }
 </code></pre>

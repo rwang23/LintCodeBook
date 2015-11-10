@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="9.4" data-basepath=".." data-revision="Mon Nov 02 2015 19:27:21 GMT-0500 (EST)">
+    <div class="book" data-level="9.4" data-basepath=".." data-revision="Tue Nov 10 2015 14:19:15 GMT-0500 (EST)">
     
 
 <div class="book-summary">
@@ -774,44 +774,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.13" data-path="DynamicProgramming/Longest-Common-Subsequence.html">
-            
-                
-                    <a href="../DynamicProgramming/Longest-Common-Subsequence.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.13.</b>
-                        
-                        Longest Common Subsequence
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.14" data-path="DynamicProgramming/Longest-Common-Substring.html">
-            
-                
-                    <a href="../DynamicProgramming/Longest-Common-Substring.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.14.</b>
-                        
-                        Longest Common Substring
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.15" data-path="DynamicProgramming/Palindrome-PartitioningII.html">
+        <li class="chapter " data-level="3.13" data-path="DynamicProgramming/Palindrome-PartitioningII.html">
             
                 
                     <a href="../DynamicProgramming/Palindrome-PartitioningII.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.15.</b>
+                            <b>3.13.</b>
                         
                         Palindrome Partitioning II
                     </a>
@@ -819,16 +789,46 @@
             
         </li>
     
-        <li class="chapter " data-level="3.16" data-path="DynamicProgramming/WordBreak.html">
+        <li class="chapter " data-level="3.14" data-path="DynamicProgramming/WordBreak.html">
             
                 
                     <a href="../DynamicProgramming/WordBreak.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.16.</b>
+                            <b>3.14.</b>
                         
                         Word Break
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="DynamicProgramming/Longest-Common-Subsequence.html">
+            
+                
+                    <a href="../DynamicProgramming/Longest-Common-Subsequence.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.15.</b>
+                        
+                        Longest Common Subsequence
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="DynamicProgramming/Longest-Common-Substring.html">
+            
+                
+                    <a href="../DynamicProgramming/Longest-Common-Substring.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.16.</b>
+                        
+                        Longest Common Substring
                     </a>
             
             
@@ -1884,14 +1884,29 @@
             
         </li>
     
-        <li class="chapter " data-level="8.10" data-path="DataStructure/graph.html">
+        <li class="chapter " data-level="8.10" data-path="DataStructure/treemap.html">
+            
+                
+                    <a href="../DataStructure/treemap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.10.</b>
+                        
+                        TreeMap
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.11" data-path="DataStructure/graph.html">
             
                 
                     <a href="../DataStructure/graph.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>8.10.</b>
+                            <b>8.11.</b>
                         
                         Graph
                     </a>
@@ -2508,7 +2523,7 @@
                         
                             <b>13.1.</b>
                         
-                        Sqrt
+                        Singleton
                     </a>
             
             
@@ -2660,9 +2675,9 @@ The objective of designing a hash function is to &quot;hash&quot; the key as unr
 A good hash function can avoid collision as less as possible.
 A widely used hash function algorithm is using a magic number 33, consider any string as a 33 based big integer like follow:
 
-hashcode(&quot;abcd&quot;) = (ascii(a) * 333 + ascii(b) * 332 + ascii(c) *33 + ascii(d)) % HASH_SIZE
+hashcode(&quot;abcd&quot;) = (ascii(a) * 33^3 + ascii(b) * 33^2 + ascii(c) *33^1 + ascii(d)) % HASH_SIZE
 
-                              = (97* 333 + 98 * 332 + 99 * 33 +100) % HASH_SIZE
+                              = (97* 33^3 + 98 * 33^2 + 99 * 33^1 +100) % HASH_SIZE
 
                               = 3595978 % HASH_SIZE
 
@@ -2681,7 +2696,8 @@ For this problem, you are not necessary to design your own hash algorithm or con
 <h4 id="%E6%80%9D%E8%B7%AF">&#x601D;&#x8DEF;</h4>
 <ul>
 <li>&#x5B57;&#x7B26;&#x4E32;&#x8F83;&#x957F;&#x65F6;&#x4F7F;&#x7528; long &#x578B;&#x6765;&#x8BA1;&#x7B97;33&#x7684;&#x5E42;&#x4F1A;&#x6EA2;&#x51FA;&#xFF01;&#x6240;&#x4EE5;&#x8FD9;&#x9053;&#x9898;&#x7684;&#x5173;&#x952E;&#x5728;&#x4E8E;&#x5982;&#x4F55;&#x5904;&#x7406;&#x5927;&#x6574;&#x6570;&#x6EA2;&#x51FA;</li>
-<li>(a <em> b) % m = a % m </em> b % m</li>
+<li>(a <em> b) % m = (a % m </em> b % m) % m = ((a % m) * b) % m</li>
+<li>&#x591A;&#x9879;&#x5F0F;&#x6BCF;&#x6B21;&#x4E58;&#x4EE5;33&#x4E4B;&#x540E; &#x5C31;&#x5F00;&#x59CB;&#x6C42;&#x6A21;&#xFF0C;&#x5C31;&#x4E0D;&#x4F1A;&#x6EA2;&#x51FA;</li>
 <li>&#x76F4;&#x63A5;&#x505A;&#x662F;&#x4F1A;&#x6EA2;&#x51FA;&#x7684;</li>
 </ul>
 <pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{

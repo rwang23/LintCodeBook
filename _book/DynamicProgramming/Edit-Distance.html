@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="3.18" data-basepath=".." data-revision="Mon Nov 02 2015 19:27:21 GMT-0500 (EST)">
+    <div class="book" data-level="3.18" data-basepath=".." data-revision="Tue Nov 10 2015 14:19:15 GMT-0500 (EST)">
     
 
 <div class="book-summary">
@@ -774,44 +774,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.13" data-path="DynamicProgramming/Longest-Common-Subsequence.html">
-            
-                
-                    <a href="../DynamicProgramming/Longest-Common-Subsequence.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.13.</b>
-                        
-                        Longest Common Subsequence
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.14" data-path="DynamicProgramming/Longest-Common-Substring.html">
-            
-                
-                    <a href="../DynamicProgramming/Longest-Common-Substring.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.14.</b>
-                        
-                        Longest Common Substring
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.15" data-path="DynamicProgramming/Palindrome-PartitioningII.html">
+        <li class="chapter " data-level="3.13" data-path="DynamicProgramming/Palindrome-PartitioningII.html">
             
                 
                     <a href="../DynamicProgramming/Palindrome-PartitioningII.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.15.</b>
+                            <b>3.13.</b>
                         
                         Palindrome Partitioning II
                     </a>
@@ -819,16 +789,46 @@
             
         </li>
     
-        <li class="chapter " data-level="3.16" data-path="DynamicProgramming/WordBreak.html">
+        <li class="chapter " data-level="3.14" data-path="DynamicProgramming/WordBreak.html">
             
                 
                     <a href="../DynamicProgramming/WordBreak.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.16.</b>
+                            <b>3.14.</b>
                         
                         Word Break
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="DynamicProgramming/Longest-Common-Subsequence.html">
+            
+                
+                    <a href="../DynamicProgramming/Longest-Common-Subsequence.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.15.</b>
+                        
+                        Longest Common Subsequence
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="DynamicProgramming/Longest-Common-Substring.html">
+            
+                
+                    <a href="../DynamicProgramming/Longest-Common-Substring.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.16.</b>
+                        
+                        Longest Common Substring
                     </a>
             
             
@@ -1884,14 +1884,29 @@
             
         </li>
     
-        <li class="chapter " data-level="8.10" data-path="DataStructure/graph.html">
+        <li class="chapter " data-level="8.10" data-path="DataStructure/treemap.html">
+            
+                
+                    <a href="../DataStructure/treemap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.10.</b>
+                        
+                        TreeMap
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.11" data-path="DataStructure/graph.html">
             
                 
                     <a href="../DataStructure/graph.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>8.10.</b>
+                            <b>8.11.</b>
                         
                         Graph
                     </a>
@@ -2508,7 +2523,7 @@
                         
                             <b>13.1.</b>
                         
-                        Sqrt
+                        Singleton
                     </a>
             
             
@@ -2703,6 +2718,7 @@ Given word1 = &quot;mart&quot; and word2 = &quot;karma&quot;, return 3.
             <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= word2.length(); j++) {
                 <span class="hljs-keyword">if</span> (word1.charAt(i-<span class="hljs-number">1</span>) != word2.charAt(j-<span class="hljs-number">1</span>)) {
                     <span class="hljs-comment">//&#x6CE8;&#x610F;&#x8FD9;&#x4E2A;Min&#x7684;&#x53D6;&#x503C; &#x662F;&#x8FDE;&#x7EED;&#x53D6;&#x4E24;&#x6B21;</span>
+                    <span class="hljs-comment">//&#x5982;&#x679C;&#x957F;&#x5EA6;&#x76F8;&#x7B49;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x7684;&#x662F;replace &#x6240;&#x4EE5;&#x662F;min[i-1][j-1] + 1</span>
                     min[i][j] = Math.min(Math.min(min[i-<span class="hljs-number">1</span>][j],min[i][j-<span class="hljs-number">1</span>]), min[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>]) + <span class="hljs-number">1</span>;
                 } <span class="hljs-keyword">else</span> {
                     min[i][j] = min[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>];

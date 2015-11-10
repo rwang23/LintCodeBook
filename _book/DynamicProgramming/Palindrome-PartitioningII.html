@@ -32,7 +32,7 @@
     <link rel="next" href="../DynamicProgramming/WordBreak.html" />
     
     
-    <link rel="prev" href="../DynamicProgramming/Longest-Common-Substring.html" />
+    <link rel="prev" href="../DynamicProgramming/Longest-Increasing-Subsequence.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="3.15" data-basepath=".." data-revision="Mon Nov 02 2015 19:27:21 GMT-0500 (EST)">
+    <div class="book" data-level="3.13" data-basepath=".." data-revision="Tue Nov 10 2015 14:19:15 GMT-0500 (EST)">
     
 
 <div class="book-summary">
@@ -774,44 +774,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.13" data-path="DynamicProgramming/Longest-Common-Subsequence.html">
-            
-                
-                    <a href="../DynamicProgramming/Longest-Common-Subsequence.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.13.</b>
-                        
-                        Longest Common Subsequence
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.14" data-path="DynamicProgramming/Longest-Common-Substring.html">
-            
-                
-                    <a href="../DynamicProgramming/Longest-Common-Substring.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.14.</b>
-                        
-                        Longest Common Substring
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter active" data-level="3.15" data-path="DynamicProgramming/Palindrome-PartitioningII.html">
+        <li class="chapter active" data-level="3.13" data-path="DynamicProgramming/Palindrome-PartitioningII.html">
             
                 
                     <a href="../DynamicProgramming/Palindrome-PartitioningII.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.15.</b>
+                            <b>3.13.</b>
                         
                         Palindrome Partitioning II
                     </a>
@@ -819,16 +789,46 @@
             
         </li>
     
-        <li class="chapter " data-level="3.16" data-path="DynamicProgramming/WordBreak.html">
+        <li class="chapter " data-level="3.14" data-path="DynamicProgramming/WordBreak.html">
             
                 
                     <a href="../DynamicProgramming/WordBreak.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.16.</b>
+                            <b>3.14.</b>
                         
                         Word Break
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="DynamicProgramming/Longest-Common-Subsequence.html">
+            
+                
+                    <a href="../DynamicProgramming/Longest-Common-Subsequence.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.15.</b>
+                        
+                        Longest Common Subsequence
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="DynamicProgramming/Longest-Common-Substring.html">
+            
+                
+                    <a href="../DynamicProgramming/Longest-Common-Substring.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.16.</b>
+                        
+                        Longest Common Substring
                     </a>
             
             
@@ -1884,14 +1884,29 @@
             
         </li>
     
-        <li class="chapter " data-level="8.10" data-path="DataStructure/graph.html">
+        <li class="chapter " data-level="8.10" data-path="DataStructure/treemap.html">
+            
+                
+                    <a href="../DataStructure/treemap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.10.</b>
+                        
+                        TreeMap
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.11" data-path="DataStructure/graph.html">
             
                 
                     <a href="../DataStructure/graph.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>8.10.</b>
+                            <b>8.11.</b>
                         
                         Graph
                     </a>
@@ -2508,7 +2523,7 @@
                         
                             <b>13.1.</b>
                         
-                        Sqrt
+                        Singleton
                     </a>
             
             
@@ -2701,6 +2716,12 @@ Return 1 since the palindrome partitioning [&quot;aa&quot;,&quot;b&quot;] could 
         <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= s.length(); i++) {
             <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) {
                 <span class="hljs-keyword">if</span> (result[j][i-<span class="hljs-number">1</span>]) { <span class="hljs-comment">// i-1</span>
+                    <span class="hljs-comment">/*
+                    &#x8FD9;&#x91CC;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x8D2A;&#x5FC3;&#x601D;&#x60F3;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x9047;&#x5230;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;
+                    &#x6BD4;&#x5982;aba aba&#x5148;&#x9047;&#x5230;aba step = 1
+                    &#x4F46;&#x662F;abaaba&#x4E0D;&#x9700;&#x8981;&#x5212;&#x5206; step =0
+                    &#x6709;&#x65F6;&#x5019;&#x8D2A;&#x5FC3;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#xFF0C;&#x4E0D;&#x5982;&#x591A;&#x505A;&#x51E0;&#x6B65;&#x4E00;&#x70B9;&#x70B9;&#x627E;
+                     */</span>
                     step[i] = Math.min(step[j] + <span class="hljs-number">1</span>, step[i]);
 
                 }
@@ -2756,7 +2777,7 @@ Return 1 since the palindrome partitioning [&quot;aa&quot;,&quot;b&quot;] could 
         </div>
 
         
-        <a href="../DynamicProgramming/Longest-Common-Substring.html" class="navigation navigation-prev " aria-label="Previous page: Longest Common Substring"><i class="fa fa-angle-left"></i></a>
+        <a href="../DynamicProgramming/Longest-Increasing-Subsequence.html" class="navigation navigation-prev " aria-label="Previous page: Longest Increasing Subsequence"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../DynamicProgramming/WordBreak.html" class="navigation navigation-next " aria-label="Next page: Word Break"><i class="fa fa-angle-right"></i></a>
