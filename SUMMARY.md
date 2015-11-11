@@ -122,7 +122,7 @@ This is the summary of my experience in LintCode.
 	* [Rotate List](Linkedlist/Rotate-List.md)
 	* [Reorder List](Linkedlist/Reorder-List.md)
 	* [Copy List With Random Pointer](Linkedlist/Copy-List-with-Random-Pointer.md)
-
+	* [Convert Sorted List to Binary Search Tree](Linkedlist/Convert-Sorted-List-to-Binary-Search-Tree.md)
 
 * [Data Structure](DataStructure/README.md)
    * [String](DataStructure/string.md)
