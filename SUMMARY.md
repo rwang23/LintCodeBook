@@ -2,6 +2,8 @@
 
 This is the summary of my experience in LintCode.
 
+* [String](String/README.md)
+	* [](String/)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)

@@ -1,9 +1,5 @@
 # String
 
-String 相关的题常出现在面试题中，这里总结下 C++, Java, Python 中字符串常用的方法。
-
-## Java
-
 ```java
 String s1 = new String();
 String s2 = "billryan";
