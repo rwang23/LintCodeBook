@@ -1,4 +1,4 @@
-##Minimum Subarray Show result
+##Minimum Subarray
 
 37% Accepted
 
