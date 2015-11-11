@@ -22,6 +22,7 @@ Can you do it in time complexity O(n)?
 
 ####思路
 - 动态规划
+- 从第一个数就要开始思考
 - state: sum[i]是前i个数中，最大的subarray sum
 - function: sum[i] = A[i] + (sum[i-1] > 0 ? sum[i-1] ：0) 因为是连续的，所以要加上A[i]，如果前面和大于零，就加上
 - initialize: sum[0] = A[0]
