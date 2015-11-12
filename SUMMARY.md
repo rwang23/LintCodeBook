@@ -109,6 +109,7 @@ This is the summary of my experience in LintCode.
 	* [Partition List](Linkedlist/PartitionList.md)
 	* [Nth to Last Node in List](Linkedlist/Nth-to-Last-Node-in-List.md)
 	* [Remove Nth Node From End of List](Linkedlist/Remove-Nth-Node-From-End-of-List.md)
+	* [Remove Linked List Elements](Linkedlist/Remove-Linked-List-Elements.md)
 	* [Remove Duplicates From Sorted List](Linkedlist/Remove-Duplicates-from-Sorted-List.md)
 	* [Remove Duplicates From UbSorted List](Linkedlist/Remove-Duplicates-from-Unsorted-List.md)
 	* [Remove Duplicates From Sorted List](Linkedlist/Remove-Duplicates-from-Sorted-ListII.md)
