@@ -32,21 +32,16 @@
  *     }
  * }
  */
+
 public class Solution {
-    /**
-     * @param head: The first node of linked list.
-     * @param n: An integer.
-     * @return: The head of linked list.
-     */
-    ListNode removeNthFromEnd(ListNode head, int n) {
-        // write your code here
-        if (head == null) {
-            return null;
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        if (head == null || n <= 0) {
+            return head;
         }
-        ListNode fast = new ListNode(0);
-        fast.next = head;
-        head = fast;
-        ListNode slow = fast;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode fast = dummy;
+        ListNode slow = dummy;
         for (int i = 0; i < n && fast.next != null; i++) {
             fast = fast.next;
         }
@@ -54,11 +49,16 @@ public class Solution {
             fast = fast.next;
             slow = slow.next;
         }
-        if (slow.next != null) {
-            slow.next = slow.next.next;
-        }
 
-        return head.next;
+        slow.next = slow.next.next;
+        /*
+        这里return的是dummy.next
+        虽然感觉return head也是可以的
+        但是如果 输入是[1] 1
+        return head 还是[1]
+        dummy.next 就是 null 因为已经进行删除了 但是head还是他本身
+         */
+        return dummy.next;
     }
 }
 
