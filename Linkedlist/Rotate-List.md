@@ -28,6 +28,17 @@
  *     }
  * }
  */
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
 public class Solution {
     /**
      * @param head: the List
@@ -36,15 +47,28 @@ public class Solution {
      */
     public ListNode rotateRight(ListNode head, int k) {
         // write your code here
-        if (head == null) {
-            return null;
-        }
-        if (head.next == null) {
+        if (head == null || head.next == null || k == 0) {
             return head;
         }
+
+        ListNode temp = head;
+        int size = 1;
+        while (temp.next != null) {
+            temp = temp.next;
+            size++;
+        }
+
+        if (k % size == 0) {
+            return head;
+        }
+
         ListNode fast = head;
-        for (int i = 0; i < k && fast.next != null; i++) {
+        for (int i = 0; i < k % size; i++) {
+            if (fast.next != null) {
                 fast = fast.next;
+            } else {
+                return head;
+            }
         }
         ListNode cur = head;
         while (fast.next != null) {
@@ -58,5 +82,6 @@ public class Solution {
         return root;
     }
 }
+
 
 ```
