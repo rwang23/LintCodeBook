@@ -19,68 +19,51 @@ Could you do it in O(n) time and O(1) space?
 - 然后拆分后边部分，reverse，再比较
 
 ```java
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
 public class Solution {
-    /**
-     * @param head a ListNode
-     * @return a boolean
-     */
     public boolean isPalindrome(ListNode head) {
-        // Write your code here
-        if (head == null || head.next == null) {
+        if (head == null) {
             return true;
         }
-        ListNode preslow = new ListNode(0);
-        preslow.next = head;
-        ListNode fast = head.next;
-        ListNode slow = head;
-        while (fast != null && fast.next != null) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode slow = dummy;
+        ListNode fast = dummy;
+        while (fast.next != null && fast.next.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            preslow = preslow.next;
         }
-        ListNode mid = slow.next;
-        if (fast == null) { //for the odd number length of linkedlist
-            preslow.next = null;
-        } else { //for the even number length of linkedlist
-            slow.next = null;
+        ListNode second;
+        if (fast.next != null) {
+            second = slow.next.next;
+        } else {
+            second = slow.next;
         }
-        mid = reverse(mid);
-        while (head != null && mid != null) {
-            if (head.val != mid.val) {
+        slow.next = null;
+
+        ListNode reverseNode = reverse(second);
+        ListNode cur = dummy.next;
+
+        while (cur != null) {
+            if (cur.val != reverseNode.val) {
                 return false;
             }
-            head = head.next;
-            mid = mid.next;
-        }
-        if (head != null || mid != null) {
-            return false;
+            cur = cur.next;
+            reverseNode = reverseNode.next;
         }
         return true;
-
     }
-
     public ListNode reverse(ListNode head) {
-        // write your code here
         if (head == null) {
             return null;
         }
-        ListNode cur = head;
-        ListNode reverse = null;
-        while (cur != null) {
-            ListNode temp = cur.next;
-            cur.next = reverse;
-            reverse = cur;
-            cur = temp;
+        ListNode pre = null;
+        while (head != null) {
+            ListNode temp = head.next;
+            head.next = pre;
+            pre = head;
+            head = temp;
         }
-        return reverse;
+        return pre;
     }
 }
 
