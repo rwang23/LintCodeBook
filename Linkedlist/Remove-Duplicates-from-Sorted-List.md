@@ -27,22 +27,22 @@
  * }
  */
 public class Solution {
-    /**
-     * @param ListNode head is the head of the linked list
-     * @return: ListNode head of linked list
-     */
-    public static ListNode deleteDuplicates(ListNode head) {
-        // write your code here
-        ListNode dummy = new ListNode(0);
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode dummy = new ListNode(Integer.MIN_VALUE);
         dummy.next = head;
-        head = dummy;
-        while (head.next != null && head.next.next != null) {
-            if (head.next.val == head.next.next.val) {
-                head.next.next = head.next.next.next;
-            } else {
-                head = head.next;
+        ListNode current = dummy;
+        while (current != null && current.next != null) {
+            ListNode nextone = current.next;
+            if (current.val == nextone.val) {
+                current.next = nextone.next;
+            } else{
+                current = current.next;
             }
         }
+
         return dummy.next;
     }
 }
