@@ -53,8 +53,6 @@ class Solution {
             return start;
         }
 
-
-
         return -1;
     }
 }

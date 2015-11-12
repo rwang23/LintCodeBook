@@ -24,7 +24,7 @@
 int end = nums.length-1;
 int start = 0;
 
-while(end>start+1){
+while(end > start+1){
     int mid = start + (end - start) / 2;
     if(nums[mid] == target){
         end = mid;

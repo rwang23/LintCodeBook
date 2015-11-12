@@ -14,6 +14,7 @@ Linked List
 
 ####思路
 - 两个比较，然后merge，如果一个已经为空，直接赋予mergelist就可以
+- 链表类题就是画图,根据图/自己举得例子 来写
 
 
 ####创建一个新的list 空间O(n)
@@ -107,6 +108,25 @@ public class Solution {
 
         }
         return dummy.next;
+    }
+}
+```
+
+####递归解法
+```java
+public class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if(l1 == null) return l2;
+        if(l2 == null) return l1;
+
+        if(l1.val < l2.val) {
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeTwoLists(l2.next, l1);
+            return l2;
+        }
+
     }
 }
 ```

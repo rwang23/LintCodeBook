@@ -45,7 +45,7 @@ class Solution {
      */
     public int findFirstBadVersion(int n) {
         // write your code here
-        if(n<=2){
+        if(n <= 2){
             return n;
         }
 
