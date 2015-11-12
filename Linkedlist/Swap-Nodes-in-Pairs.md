@@ -15,7 +15,8 @@ Your algorithm should use only constant space. You may not modify the values in 
 - Linked List
 
 ####思路
-- 如果自己画得比家里乱了可以多设置几个变量，方便理解,本题我最开始就写乱了，后来用了first与second就好了
+- 如果自己画得比较里乱了可以多设置几个变量，方便理解,本
+- 多设置pre temp
 
 ```java
 /**
