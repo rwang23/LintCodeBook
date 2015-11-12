@@ -116,6 +116,7 @@ This is the summary of my experience in LintCode.
 	* [Linked List Cycle](Linkedlist/Linked-List-Cycle.md)
 	* [Linked List Cycle II](Linkedlist/Linked-List-CycleII.md)
 	* [Swap Nodels in Pairs](Linkedlist/Swap-Nodes-in-Pairs.md)
+	* [Intersection of Two Linked Lists](Linkedlist/Intersection-of-Two-Linked-Lists.md)
 	* [Merge Two Sorted Lists](Linkedlist/Merge-Two-Sorted-Lists.md)
 	* [Merge K Sorted Lists](Linkedlist/Merge-k-Sorted-Lists.md)
 	* [Sort List](Linkedlist/Sort-List.md)
