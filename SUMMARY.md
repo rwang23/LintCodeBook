@@ -72,7 +72,6 @@ This is the summary of my experience in LintCode.
 	* [The Smallest Difference](Sort/The-Smallest-Difference.md)
 	* [Sort Color](Sort/SortColors.md)
 	* [Sort Color II](Sort/SortColorsII.md)
-	* [Two Sum](Sort/Two-Sum.md)
 	* [Three Sum](Sort/Three-Sum.md)
 	* [Three Sum Closest](Sort/3-Sum-Closest.md)
 	* [Four Sum](Sort/Four-Sum.md)
@@ -83,6 +82,8 @@ This is the summary of my experience in LintCode.
 * [Two Pointers](Two-Pointers/README.md)
 	* [Remove Element](Two-Pointers/Remove-Element.md)
 	* [Remove Duplicates from Sorted Array](Two-Pointers/Remove-Duplicates-from-Sorted-Array.md)
+	* [Two Sum](Two-Pointers/Two-Sum.md)
+	* [Two Sum II](Two-Pointers/Two-Sum-II.md)
 
 * [Array](Array/README.md)
 	* [Product of Array Exclude Itself](Array/Product-of-Array-Exclude-Itself.md)

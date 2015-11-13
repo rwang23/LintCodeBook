@@ -1,4 +1,4 @@
-##Combination Sum II Show result
+##Combination Sum II
 
 26% Accepted
 
