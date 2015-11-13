@@ -57,3 +57,13 @@ public class Solution {
 }
 
 ```
+
+####O(1) space思路
+1. This is the simple way where two loops are used. Outer loop is used to pick the elements one by one and inner loop compares the picked element with rest of the elements.
+2. In general, Merge Sort is the best suited sorting algorithm for sorting linked lists efficiently.
+1)  Sort the elements using Merge Sort. We will soon be writing a post about sorting a linked list. O(nLogn)
+2)  Remove duplicates in linear time using the algorithm for removing duplicates in sorted Linked List. O(n)
+
+Please note that this method doesn’t preserve the original order of elements.
+
+Time Complexity: O(nLogn)

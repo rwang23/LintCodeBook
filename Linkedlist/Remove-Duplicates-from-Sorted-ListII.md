@@ -1,4 +1,4 @@
-##Remove Duplicates from Sorted List II Show result
+##Remove Duplicates from Sorted List II
 
 27% Accepted
 
@@ -21,8 +21,9 @@ Linked List
 ```java
 public class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        if(head == null || head.next == null)
+        if(head == null || head.next == null) {
             return head;
+        }
 
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -39,6 +40,51 @@ public class Solution {
             }
         }
 
+        return dummy.next;
+    }
+}
+```
+
+####原来的看不明白了 又写了一下
+- 关键还是在于preNode
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode dummy = new ListNode(Integer.MIN_VALUE);
+        dummy.next = head;
+        ListNode preNode = dummy;
+
+        int tempValue = head.val;
+        while (head != null) {
+            ListNode nextNode = head.next;
+            boolean isDuplicates = false;
+            while (nextNode != null && tempValue == nextNode.val) {
+                nextNode = nextNode.next;
+                isDuplicates = true;
+            }
+            if (isDuplicates) {
+                preNode.next = nextNode;
+            } else {
+                preNode = preNode.next;
+            }
+            if (nextNode != null) {
+                tempValue = nextNode.val;
+            }
+            head = nextNode;
+
+        }
         return dummy.next;
     }
 }

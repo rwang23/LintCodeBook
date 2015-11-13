@@ -3,7 +3,6 @@
 47% Accepted
 
 	Given a linked list, determine if it has a cycle in it.
-	Have you met this question in a real interview? Yes
 	Example
 	Given -21->10->4->5, tail connects to node index 1, return true
 
@@ -41,18 +40,17 @@ public class Solution {
         }
         ListNode fast = head;
         ListNode slow = head;
-        boolean isCycle = false;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
             if (fast == slow) {
-                isCycle = true;
-                break;
+                return true;
             }
         }
-        return isCycle;
+        return false;
     }
 }
+
 
 
 ```
