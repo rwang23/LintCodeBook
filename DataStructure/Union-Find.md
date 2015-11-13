@@ -18,3 +18,6 @@
 #### 2: Path Compression
 ![](../image/path-compression-improve.png)
 ![](../image/path-compression-union.png)
+
+####Summary
+![](../image/union-find-summary.png)
