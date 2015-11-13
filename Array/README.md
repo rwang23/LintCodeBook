@@ -1,9 +1,4 @@
-Solution and explaination of lintcode.
+##Array
 
-This documents the time I learn LintCode.
-
-All codes are java.
-
-You can review the book here:
-<br>
-<a href="https://rwang23.gitbooks.io/lintcodebook/content/index.html">LintCode Book</a>
+####求最大最小元素
+- 求一个集合中的最大最小元素,可以先想到heap
