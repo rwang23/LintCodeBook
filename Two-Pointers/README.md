@@ -20,3 +20,6 @@
 
 [很好的参考资料](http://blog.csdn.net/ohmygirl/article/details/7850068)
 
+####对撞型指针
+- 用于two sum类型里边
+- 通过对撞型指针优化算法,根本就是证明不用扫描多余的状态
