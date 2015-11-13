@@ -132,6 +132,7 @@ This is the summary of my experience in LintCode.
    * [String](DataStructure/string.md)
    * [Linked List](DataStructure/linked_list.md)
    * [Binary Tree](DataStructure/binary_tree.md)
+   * [Trie Tree](DataStructure/trie.md)
    * [Huffman Compression](DataStructure/huffman_compression.md)
    * [Queue](DataStructure/queue.md)
    * [Heap](DataStructure/heap.md)

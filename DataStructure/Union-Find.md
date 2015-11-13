@@ -1,6 +1,10 @@
 ##Union Find
 
 ###Basic Java Model
+优化前合并与查找时间复杂度都是O(n)
+Compressed path优化后 都是O(1)
+union find不支持删除操作
+
 
 ```java
 /*
@@ -24,6 +28,21 @@ void union(int x, int y) {
 	if (root_x != root_y) {
 		hashmap.put(root_x, root_y);
 	}
+}
+
+int compressed_find(int x) {
+	int root = hashmap.get(x);
+	while (root != hashmap.get(root)) {
+		root = hashmap.get(root);
+	}
+	int temp = -1;
+	int cur = x;
+	while (fa != hashmap.get(cur)) {
+		temp = hashmap.get(cur);
+		hashmap.put(cur, root);
+		cur = temp;
+	}
+	return root;
 }
 ```
 
