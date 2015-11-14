@@ -227,7 +227,6 @@ class HashHeap {
 
     void delete(int now) {
         size_t--;
-        ;
         Node hashnow = hash.get(now);
         int id = hashnow.id;
         int num = hashnow.num;

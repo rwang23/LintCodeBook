@@ -138,14 +138,16 @@ This is the summary of my experience in LintCode.
    * [Trie Tree](DataStructure/trie.md)
    * [Huffman Compression](DataStructure/huffman_compression.md)
    * [Queue](DataStructure/queue.md)
-   * [Heap](DataStructure/heap.md)
+   * [Deque](DataStructure/Deque.md)
    * [Stack](DataStructure/stack.md)
+   * [Heap](DataStructure/heap.md)
    * [Set](DataStructure/set.md)
    * [Hash Map](DataStructure/map.md)
    * [TreeMap](DataStructure/treemap.md)
    * [Graph](DataStructure/graph.md)
-   * [Union Find](DataStructure/Union-Find.md)
    * [Scan Line](DataStructure/scan-line.md)
+   * [Union Find](DataStructure/Union-Find.md)
+
 
 * [Data Structure Problem](DataStructureProblem/README.md)
 	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)
