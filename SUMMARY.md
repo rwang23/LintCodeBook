@@ -142,6 +142,7 @@ This is the summary of my experience in LintCode.
    * [TreeMap](DataStructure/treemap.md)
    * [Graph](DataStructure/graph.md)
    * [Union Find](DataStructure/Union-Find.md)
+   * [Scan Line](DataStructure/Scan-Line.md)
 
 * [Data Structure Problem](DataStructureProblem/README.md)
 	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)
