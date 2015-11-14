@@ -42,7 +42,8 @@ public class HashSetDemo {
       System.out.println(hs);
    }
 }
+```
 This would produce the following result:
-[D, E, F, A, B, C]```
+[D, E, F, A, B, C]
 
 
