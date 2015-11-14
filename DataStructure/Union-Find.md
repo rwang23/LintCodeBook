@@ -37,7 +37,7 @@ int compressed_find(int x) {
 	}
 	int temp = -1;
 	int cur = x;
-	while (fa != hashmap.get(cur)) {
+	while (cur != hashmap.get(cur)) {
 		temp = hashmap.get(cur);
 		hashmap.put(cur, root);
 		cur = temp;
