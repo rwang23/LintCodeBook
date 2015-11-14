@@ -31,12 +31,12 @@ All codes are in java.
 [Repository on Github](https://github.com/rwang23/LintCodeBook)
 
 
-Renfei
-
 <!-- Place this tag right after the last button or just before your close body tag. -->
 <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 
-####License
+###License
+-----------
+
 The MIT License (MIT)
 
 Copyright (c) 2015 Renfei Wang. https://github.com/rwang23
