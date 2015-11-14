@@ -173,6 +173,7 @@ This is the summary of my experience in LintCode.
 
 * [BFS](BFS/README.md)
 	* [Clone Graph](BFS/Clone-Graph.md)
+	* [Find the Connected Component in the Undirected Graph](BFS/Find-the-Connected-Component-in-the-UG.md)
 	* [Topological Sorting](BFS/Topological-Sorting.md)
 	* [Word Ladder](BFS/WordLadder.md)
 
