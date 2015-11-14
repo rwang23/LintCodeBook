@@ -25,7 +25,7 @@ A hash table stores information by using a mechanism called hashing. In hashing,
 The hash code is then used as the index at which the data associated with the key is stored. The transformation of the key into its hash code is performed automatically.
 
 ```java
-mport java.util.*;
+import java.util.*;
 
 public class HashSetDemo {
 
