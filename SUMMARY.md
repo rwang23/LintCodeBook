@@ -3,7 +3,7 @@
 This is the summary of my experience in LintCode.
 
 * [Java](Java/README.md)
-	* [Comparatpr](Java/comparator.md)
+	* [Comparator](Java/comparator.md)
 
 * [String](String/README.md)
 	* [](String/)
