@@ -1,2 +1,5 @@
 ##Tries Tree
-[Tries Tree](../pdf/52Tries.pdf)
+
+![](../image/Trie-search.png)
+![](../image/Trie-insertion.png)
+![](../image/Trie-deletion.png)
