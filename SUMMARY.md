@@ -6,7 +6,7 @@ This is the summary of my experience in LintCode.
 	* [Comparator](Java/comparator.md)
 
 * [String](String/README.md)
-	* [](String/)
+
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
@@ -195,7 +195,7 @@ This is the summary of my experience in LintCode.
 * [OO Design](OODesign/README.md)
 	* [Singleton](OODesign/Singleton.md)
 
-* [Other Information]()
-	* [Company Level](CompanyLevel.md)
+* [Other Information](Others/README.md)
+	* [Company Level](Others/CompanyLevel.md)
 
 
