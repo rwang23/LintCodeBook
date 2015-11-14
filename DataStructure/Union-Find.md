@@ -46,8 +46,9 @@ union find不支持删除操作
         void union(int x, int y){
         	int root_x = find(x);
         	int root_y = find(y);
-        	if(root_x != root_y)
+        	if(root_x != root_y) {
         		hashmap.put(root_x, root_y);
+        	}
         }
 	}
 ```
