@@ -158,6 +158,7 @@ This is the summary of my experience in LintCode.
 	* [Largest Rectangle in Histogram](DataStructureProblem/Largest-Rectangle-in-Histogram.md)
 	* [LRU Cache](DataStructureProblem/LRU-Cache.md)
 	* [Max Tree](DataStructureProblem/Max-Tree.md)
+	* [Union Find: Find the Weak Connected Component](DataStructureProblem/Find-the-Weak-Connected-Component.md)
 
 * [DFS](DFS/README.md)
 	* [K Sum II](DFS/kSumII.md)
