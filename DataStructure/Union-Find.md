@@ -5,46 +5,55 @@
 Compressed path优化后 都是O(1)
 union find不支持删除操作
 
-
+###Implementation
 ```java
-/*
-用数组或者hashmap都可以
- */
-HashMap<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
-int find(int x) {
-	int root = hashmap.get(x);
-	/*
-	当没找到自己是根节点的时候,就继续深度遍历进入曾祖父找,直到找到最后的根节点
-	 */
-	while (root != hashmap.get(root)) {
-		root = hasmap.get(root);
-	}
-	return root;
-}
+	class UnionFind{
+		/*
+		用数组或者hashmap都可以
+		 */
+		HashMap<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
+		UnionFind(HashSet<Integer> hashSet){
+			for(Integer now : hashSet) {
+				hashmap.put(now, now);
+			}
+		}
+        int find(int x){
+	     /*
+		当没找到自己是根节点的时候,就继续深度遍历进入曾祖父找,直到找到最后的根节点
+		 */
+        	int parent =  hashmap.get(x);
+        	while(parent!=hashmap.get(parent)) {
+        		parent = hashmap.get(parent);
+        	}
+        	return parent;
+        }
+        int compressed_find(int x){
+        	int parent =  hashmap.get(x);
+        	while(parent!=hashmap.get(parent)) {
+        		parent = hashmap.get(parent);
+        	}
+        	int temp = -1;
+        	int fa = hashmap.get(x);
+        	while(fa!=hashmap.get(fa)) {
+        		temp = hashmap.get(fa);
+        		hashmap.put(fa, parent) ;
+        		fa = temp;
+        	}
+        	return parent;
 
-void union(int x, int y) {
-	int root_x = find(x);
-	int root_y = find(y);
-	if (root_x != root_y) {
-		hashmap.put(root_x, root_y);
-	}
-}
+        }
 
-int compressed_find(int x) {
-	int root = hashmap.get(x);
-	while (root != hashmap.get(root)) {
-		root = hashmap.get(root);
+        void union(int x, int y){
+        	int root_x = find(x);
+        	int root_y = find(y);
+        	if(root_x != root_y)
+        		hashmap.put(root_x, root_y);
+        }
 	}
-	int temp = -1;
-	int cur = x;
-	while (cur != hashmap.get(cur)) {
-		temp = hashmap.get(cur);
-		hashmap.put(cur, root);
-		cur = temp;
-	}
-	return root;
-}
 ```
+
+###题目参考
+- Find the Weak Connected Component in the Directed Graph
 
 ###课件参考
 
