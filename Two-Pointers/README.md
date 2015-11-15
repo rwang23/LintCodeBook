@@ -20,7 +20,15 @@
 
 [很好的参考资料](http://blog.csdn.net/ohmygirl/article/details/7850068)
 
-####对撞型指针
-- 用于two sum类型 Partition类
+####对撞型
+- 一个数组,两边向中间移动
+- 用于two sum类型 water类 Partition类
 - 通过对撞型指针优化算法,根本就是证明不用扫描多余的状态
 
+####前向型
+- 一个数组,同时向前
+- 用于 窗口类,快慢指针类
+
+####并行型
+- 两个数组
+- 用于 merger two linked list这种
