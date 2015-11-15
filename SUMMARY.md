@@ -87,7 +87,7 @@ This is the summary of my experience in LintCode.
 	* [Two Sum](Two-Pointers/Two-Sum.md)
 	* [Two Sum II](Two-Pointers/Two-Sum-II.md)
 	* [Container With Most Water](Two-Pointers/Container-With-Most-Water.md)
-	* [The Smallest Difference](Sort/The-Smallest-Difference.md)
+	* [The Smallest Difference](Two-Pointers/The-Smallest-Difference.md)
 
 
 * [Array](Array/README.md)
