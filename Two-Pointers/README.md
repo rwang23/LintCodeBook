@@ -65,6 +65,7 @@ public int minimumSize(int[] nums, int s) {
 
         /*
         指针J 开始作用,
+        判断j 首先 j <size && 导致会满足题意的条件
         长度length++
          */
         while (sum < s && j < size) {

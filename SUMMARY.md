@@ -81,7 +81,7 @@ This is the summary of my experience in LintCode.
 	* [Partition Array](Sort/Partition-Array.md)
 
 * [Two Pointers](Two-Pointers/README.md)
-	* [Kth Largetst Element](Sort/Kth-Largest-Element.md)
+	* [Kth Largetst Element](Two-Pointers/Kth-Largest-Element.md)
 	* [Remove Element](Two-Pointers/Remove-Element.md)
 	* [Remove Duplicates from Sorted Array](Two-Pointers/Remove-Duplicates-from-Sorted-Array.md)
 	* [Two Sum](Two-Pointers/Two-Sum.md)
