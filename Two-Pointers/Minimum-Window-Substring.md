@@ -92,4 +92,83 @@ public class Solution {
 
 ```
 
+
+
 ####优化解法
+- 把 char key = target.charAt(k) 单独写出来,否则 hashmap.containsKey(target.charAt(k)), 特别是些hashmap.put的时候太容易出低级bug
+- [0,6] --> 不需要找[0,7], 去找[1,6],如果[1,6]不行,再[1,7]
+- 这样的两根指针优化,常常用在,可以直接想到i,j两重循环去做,然后去思考是不是可以忽略一些情况,就变成两根指针同时前进,优化少掉一层负责度数量级
+
+```java
+public class Solution {
+    /**
+     * @param source: A string
+     * @param target: A string
+     * @return: A string denote the minimum window
+     *          Return "" if there is no such a string
+     */
+    public String minWindow(String source, String target) {
+        // write your code
+        if (source.length() == 0 || target.length() == 0 || source.length() < target.length()) {
+            return new String("");
+        }
+
+        int size = source.length();
+        String result = "";
+        int min = Integer.MAX_VALUE;
+        HashMap<Character, Integer> hashmap = new HashMap<Character, Integer>();
+        for (int k = 0; k < target.length(); k++) {
+            char key = target.charAt(k);
+            if (!hashmap.containsKey(key)) {
+                hashmap.put(key, 1);
+            } else {
+                hashmap.put(key, hashmap.get(key) + 1);
+            }
+        }
+
+        int count = 0;
+        for (int i = 0, j = 0; i < size && j <= size; i++) {
+            if (i != 0 && hashmap.containsKey(source.charAt(i - 1))) {
+                char key = source.charAt(i - 1);
+                hashmap.put(key, hashmap.get(key) + 1);
+                count--;
+            }
+
+            while (j < size && !isValid(hashmap, target)) {
+                char key = source.charAt(j);
+                if (hashmap.containsKey(key)) {
+                    hashmap.put(key, hashmap.get(key) - 1);
+                }
+                count++;
+                j++;
+            }
+
+            if (isValid(hashmap, target)) {
+                min = Math.min(min, count);
+                if (min == count) {
+                    result = source.substring(i, j);
+                }
+            }
+
+        }
+        return result;
+    }
+
+    public boolean isValid(HashMap<Character, Integer> hashmap, String target) {
+        boolean valid = true;
+        for (int i = 0; i < target.length(); i++) {
+            char key = target.charAt(i);
+            if (!hashmap.containsKey(key)) {
+                valid = false;
+                break;
+            }
+            if (hashmap.get(key) > 0 ) {
+                valid = false;
+                break;
+            }
+        }
+        return valid;
+    }
+}
+
+```

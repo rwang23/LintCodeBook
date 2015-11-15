@@ -28,9 +28,11 @@
 ####前向型
 - 一个数组,同时向前
 - 用于 窗口类,快慢指针类
+- 也就是不用多扫描多余的状态
 
 ####模板
 自己写的时候,无非就是条件变化而已
+先写暴力解法,再根据暴力解法优化即可
 
 ```java
 public int minimumSize(int[] nums, int s) {
@@ -42,6 +44,7 @@ public int minimumSize(int[] nums, int s) {
     if (nums == null || nums.length == 0) {
         return -1;
     }
+
     int size = nums.length;
     int min = Integer.MAX_VALUE;
     int sum = 0;
