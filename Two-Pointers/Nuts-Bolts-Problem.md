@@ -1,4 +1,4 @@
-##Nuts & Bolts Problem Show result
+##Nuts & Bolts Problem
 
 12% Accepted
 
