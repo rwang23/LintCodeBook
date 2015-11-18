@@ -8,6 +8,7 @@ This is the summary of my experience in LintCode.
 * [String](String/README.md)
 	* [Digit Counts](String/Digit-Counts.md)
 	* [Integer to Roman](String/Integer-to-Roman.md)
+	* [Roman to Integern](String/Roman-to-Integer.md)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
@@ -202,6 +203,7 @@ This is the summary of my experience in LintCode.
 	* [A + B Problem](Math/A+B-Problem.md)
 	* [Trailing Zeros](Math/TrailingZeros.md)
 	* [Fast Power](Math/FastPower.md)
+	* [Gray Code](Math/Gray-Code.md)
 
 * [OO Design](OODesign/README.md)
 	* [Singleton](OODesign/Singleton.md)

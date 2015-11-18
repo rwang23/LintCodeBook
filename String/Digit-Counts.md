@@ -49,3 +49,6 @@ class Solution {
 
 
 ```
+
+####更优的解法
+- [参考](http://www.hawstein.com/posts/20.4.html)
