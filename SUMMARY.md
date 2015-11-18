@@ -45,6 +45,7 @@ This is the summary of my experience in LintCode.
 	* [Balanced Binary Tree](BinaryTree/BalancedBinaryTree.md)
 	* [Search Range in Binary Search Tree](BinaryTree/Search-Range-In-Binary-Tree.md)
 	* [Validate Binary Search Tree](BinaryTree/Validate-Binary-Search-Tree.md)
+	* [Binary Tree Maximum Path Sum II](BinaryTree/Binary-Tree-Maximum-Path-SumII.md)
 	* [Binary Tree Maximum Path Sum](BinaryTree/Binary-Tree-Maximum-Path-Sum.md)
 
 
