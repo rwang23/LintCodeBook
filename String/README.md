@@ -19,7 +19,11 @@
 ##### CharArray to String 用
 	chars[index] = c;
     String s =  new String(chars);
+#### Integer to string
+	Integer.toString(i)
 
+#### Integer to Char
+	- integer转化为char(只限于0-9) char key = (char) ('0' + k);
 
 ```java
 String s1 = new String();

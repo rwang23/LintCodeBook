@@ -6,7 +6,8 @@ This is the summary of my experience in LintCode.
 	* [Comparator](Java/comparator.md)
 
 * [String](String/README.md)
-	* [Integer to Roman](BinarySearch/Integer-to-Roman.md)
+	* [Digit Counts](String/Digit-Counts.md)
+	* [Integer to Roman](String/Integer-to-Roman.md)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
