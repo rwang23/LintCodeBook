@@ -187,6 +187,8 @@ This is the summary of my experience in LintCode.
 	* [Permutations I](DFS/Permutations.md)
 	* [Permutations Index](DFS/Permutation-Index.md)
 	* [Permutations II](DFS/PermutationsII.md)
+	* [Next Permutations II](DFS/Next-Permutation-II.md)
+	* [Permutations Sequence](DFS/Permutations-Sequence.md)
 	* [Number of Islands](DFS/Number-of-Islands.md)
 	* [Letter Combinations of a Phone Number](DFS/Letter-Combinations-of-a-Phone-Number.md)
 	* [N Queen I](DFS/N-Queens.md)
