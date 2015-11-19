@@ -188,6 +188,7 @@ This is the summary of my experience in LintCode.
 	* [Permutations Index](DFS/Permutation-Index.md)
 	* [Permutations II](DFS/PermutationsII.md)
 	* [Number of Islands](DFS/Number-of-Islands.md)
+	* [Letter Combinations of a Phone Number](DFS/Letter-Combinations-of-a-Phone-Number.md)
 	* [N Queen I](DFS/N-Queens.md)
 	* [N Queen II](DFS/N-QueensII.md)
 	* [Palindrome Partitioning](DFS/Palindrome-Partitioning.md)
