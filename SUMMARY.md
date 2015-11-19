@@ -38,6 +38,7 @@ This is the summary of my experience in LintCode.
 	* [Level Order Traversal II](BinaryTree/LevelOrderTraversalII.md)
 	* [Complete Binary Tree](BinaryTree/Complete-Binary-Tree.md)
 	* [Symmetric Binary Tree](BinaryTree/Symmetric-Binary-Tree.md)
+	* [Segment Tree Build](BinaryTree/Segment-Tree-Build.md)
 	* [Flatten Binary Tree to Linked List](BinaryTree/Flatten-Binary-Tree-to-Linked-List.md)
 	* [Binary Tree From in and post order](BinaryTree/BinaryTree-From-Inorder-Postorder.md)
 	* [Binary Tree From in and pre order](BinaryTree/BinaryTree-From-Inorder-Preorder.md)
@@ -211,5 +212,6 @@ This is the summary of my experience in LintCode.
 
 * [Other Information](Others/README.md)
 	* [Company Level](Others/CompanyLevel.md)
+	* [Insertion Sort](Others/insertionsort.md)
 
 
