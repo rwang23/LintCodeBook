@@ -193,6 +193,7 @@ This is the summary of my experience in LintCode.
 	* [Palindrome Partitioning](DFS/Palindrome-Partitioning.md)
 
 * [BFS](BFS/README.md)
+	* [Route Between Two Nodes in Graph](BFS/Route-Between-Two-Nodes-in-Graph.md)
 	* [Clone Graph](BFS/Clone-Graph.md)
 	* [Find the Connected Component in the Undirected Graph](BFS/Find-the-Connected-Component-in-the-UG.md)
 	* [Topological Sorting](BFS/Topological-Sorting.md)
