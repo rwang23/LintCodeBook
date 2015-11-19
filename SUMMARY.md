@@ -40,6 +40,7 @@ This is the summary of my experience in LintCode.
 	* [Symmetric Binary Tree](BinaryTree/Symmetric-Binary-Tree.md)
 	* [Segment Tree Build](BinaryTree/Segment-Tree-Build.md)
 	* [Segment Tree Build II](BinaryTree/Segment-Tree-Build-II.md)
+	* [Segment Tree Query](BinaryTree/Segment-Tree-Query.md)
 	* [Flatten Binary Tree to Linked List](BinaryTree/Flatten-Binary-Tree-to-Linked-List.md)
 	* [Binary Tree From in and post order](BinaryTree/BinaryTree-From-Inorder-Postorder.md)
 	* [Binary Tree From in and pre order](BinaryTree/BinaryTree-From-Inorder-Preorder.md)
