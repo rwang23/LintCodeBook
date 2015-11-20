@@ -8,7 +8,7 @@ This is the summary of my experience in LintCode.
 * [String](String/README.md)
 	* [Digit Counts](String/Digit-Counts.md)
 	* [Integer to Roman](String/Integer-to-Roman.md)
-	* [Roman to Integern](String/Roman-to-Integer.md)
+	* [Roman to Integer](String/Roman-to-Integer.md)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
@@ -188,7 +188,7 @@ This is the summary of my experience in LintCode.
 	* [Permutations Index](DFS/Permutation-Index.md)
 	* [Permutations II](DFS/PermutationsII.md)
 	* [Next Permutations II](DFS/Next-Permutation-II.md)
-	* [Permutations Sequence](DFS/Permutations-Sequence.md)
+	* [Permutations Sequence](DFS/Permutation-Sequence.md)
 	* [Number of Islands](DFS/Number-of-Islands.md)
 	* [Letter Combinations of a Phone Number](DFS/Letter-Combinations-of-a-Phone-Number.md)
 	* [N Queen I](DFS/N-Queens.md)

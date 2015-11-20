@@ -41,33 +41,33 @@ public class Solution {
 
         int start = 0;
         int end = A.length - 1;
-        while(A[start] < target){
+        while (A[start] < target) {
             start = start*2 + 1;
             if(start > A.length - 1){
                 start = end;
                 break;
             }
         }
-        if(A[start] > target){
+        if (A[start] > target
             start = (start - 1) / 2;
         }
 
-        while(start + 1 < end){
+        while (start + 1 < end) {
             int mid = start + (end - start) / 2;
-            if(A[mid] == target){
+            if (A[mid] == target) {
                 end = mid;
-            }else if(A[mid] > target){
+            }else if (A[mid] > target) {
                 end = mid;
             }else{
                 start = mid;
             }
         }
 
-        if(A[start] == target){
+        if (A[start] == target) {
             return start;
-        }else if(A[end] == target){
+        } else if(A[end] == target) {
             return end;
-        }else{
+        } else{
             return -1;
         }
 

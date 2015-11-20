@@ -33,7 +33,7 @@ class Solution {
         if (nums.length == 0 || nums == null) {
             return -1;
         }
-        int end = nums.length-1;
+        int end = nums.length - 1;
         int start = 0;
 
         while (end > start + 1) {

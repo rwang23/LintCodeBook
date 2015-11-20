@@ -21,16 +21,16 @@
 ####Basic Model
 
 ```java
-int end = nums.length-1;
+int end = nums.length - 1;
 int start = 0;
 
 while (end > start+1) {
     int mid = start + (end - start) / 2;
-    if (nums[mid] == target){
+    if (nums[mid] == target) {
         end = mid;
-    } else if(nums[mid] > target) {
+    } else if (nums[mid] > target) {
         end = mid;
-    } else{
+    } else {
         start = mid;
     }
 }
