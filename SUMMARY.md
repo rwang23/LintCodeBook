@@ -17,6 +17,7 @@ This is the summary of my experience in LintCode.
 	* [Find Peak Element](BinarySearch/FindPeakElement.md)
 	* [Find Minimun in Rotated Sorted Array](BinarySearch/Find-Min-In-Rotated-Array.md)
 	* [Find Minimun in Rotated Sorted Array II](BinarySearch/Find-Min-In-Rotated-ArrayII.md)
+	* [Search in Rotated Sorted Array](BinarySearch/Search-in-Rotated-Sorted-Array.md)
 	* [Closest Number in Sorted Array](BinarySearch/Closest-Number-in-Sorted-Array.md)
 	* [Search In a Big Sorted Array](BinarySearch/Search-In-Big-Sorted-Array.md)
 	* [Total Occurrence of Target](BinarySearch/Total-Occurrence-of-Target.md)
