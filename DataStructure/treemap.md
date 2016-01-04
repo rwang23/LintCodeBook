@@ -43,7 +43,7 @@ public class TreeMapDemo {
 
 	Ayan: 1378.0
 	Daisy 99.22
-	ahnaz: 123.22
+	Mahnaz: 123.22
 	Qadir: -19.08
 	Zara: 3434.34
 	Zara's current balance: 4434.34

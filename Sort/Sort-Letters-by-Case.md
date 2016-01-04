@@ -46,9 +46,67 @@ public class Solution {
             }
         }
     }
+}
 
+
+```
+
+####Comparator的方法
+```java
+public class Solution {
+    /**
+     *@param chars: The letter array you should sort by Case
+     *@return: void
+     */
+    public void sortLetters(char[] input) {
+        //write your code here
+        Character[] temp = new Character[input.length];
+        for (int i = 0; i < input.length; i++) {
+            temp[i] = input[i];
+        }
+        //Arrays.sort(temp, new letterComparator<Character>());
+        Arrays.sort(temp, new Comparator<Character>() {
+            public int compare(Character c1, Character c2) {
+            int i1 = c1 >= 'a' ? (int)c1 - 'a' : (int)c1;
+            int i2 = c2 >= 'a' ? (int)c2 - 'a' : (int)c2;
+            return i1 - i2;
+            }
+        });
+        for (int i = 0; i < input.length; i++) {
+            input[i] = temp[i];
+        }
+    }
 
 }
 
+```
+####Comparator方法
+```java
+public class Solution {
+    /**
+     *@param chars: The letter array you should sort by Case
+     *@return: void
+     */
+    public void sortLetters(char[] input) {
+        //write your code here
+        Character[] temp = new Character[input.length];
+        for (int i = 0; i < input.length; i++) {
+            temp[i] = input[i];
+        }
+        //Arrays.sort(temp, new letterComparator<Character>());
+        Arrays.sort(temp, new letterComparator());
+        for (int i = 0; i < input.length; i++) {
+            input[i] = temp[i];
+        }
+    }
+
+    public class letterComparator implements Comparator<Character> {
+        public int compare(Character c1, Character c2) {
+            int i1 = c1 >= 'a' ? (int)c1 - 'a' : (int)c1;
+            int i2 = c2 >= 'a' ? (int)c2 - 'a' : (int)c2;
+            return i1 - i2;
+        }
+    }
+}
 
 ```

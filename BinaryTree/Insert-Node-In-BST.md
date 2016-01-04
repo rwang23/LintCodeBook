@@ -25,8 +25,9 @@ Can you do it without recursion?
 
 ####思路
 
-----
+
 ####非递归解法
+- 可以level order 也可以用下面这种简单方法
 
 ```java
 /**

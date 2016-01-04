@@ -16,6 +16,7 @@
 - 稍微跟数组的有一点不一样
 - [Youtube视频思路](https://www.youtube.com/watch?v=_5_v2E0OWVs)
 - 链表的基本操作了，搜索并进行相应的插入。数组是从找到目标之后，在前边的K里边从k找到0，而Linkedlist因为无法回到上一个，所以从0开始找找到k。所以要设置一个dummy head
+- 这里新建了一个pre链表,放入了排序的node,并且同时在head中删除已经排好的node
 
 ```java
 /**
@@ -41,10 +42,10 @@ public class Solution {
         ListNode helper = new ListNode(0);
         ListNode pre = helper;
         ListNode cur = head;
-        while (cur!=null) {
+        while (cur != null) {
             ListNode next = cur.next;
             pre = helper;
-            while (pre.next!=null && pre.next.val<=cur.val) {
+            while (pre.next != null && pre.next.val <= cur.val) {
                 pre = pre.next;
             }
             cur.next = pre.next;
