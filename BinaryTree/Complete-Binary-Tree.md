@@ -2,7 +2,10 @@
 
 21% Accepted
 
-	Check a binary tree is completed or not. A complete binary tree is not binary tree that every level is completed filled except the deepest level. In the deepest level, all nodes must be as left as possible. See more definition
+	Check a binary tree is completed or not.
+    A complete binary tree is not binary tree that every level is completed filled except the deepest level.
+    In the deepest level, all nodes must be as left as possible.
+    See more definition
 
 	Have you met this question in a real interview? Yes
 	Example
