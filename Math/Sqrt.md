@@ -23,36 +23,26 @@ O(log(x))
 Binary Search Mathematics
 
 ```java
-class Solution {
-    /**
-     * @param x: An integer
-     * @return: The sqrt of x
-     */
-    public int sqrt(int x) {
-        // write your code here
-        if(x==1){
-            return 1;
-        }
-        if(x<=0){
-            return 0;
-        }
-        int hi = x;
-        int lo = 0;
-        int mid = (lo+hi)/2;
-        while(lo<=hi){
-
-            if((long)mid*mid>(long)x){
-                hi = mid-1;
-                mid = (lo+hi)/2;
-            }else if((long)mid*mid<(long)x){
-                lo = mid+1;
-                mid = (lo+hi)/2;
-            }else{
+public class Solution {
+    public int mySqrt(int x) {
+        int start = 0;
+        int end = x;
+        while (start < end - 1) {
+            int mid = start + (end - start) / 2;
+            if (mid * mid == x) {
                 return mid;
+            } else if ((long) mid * mid > (long) x) {
+                end = mid;
+            } else {
+                start = mid;
             }
-
         }
-        return mid;
+
+        if ((long) end * end <= (long) x) {
+            return end;
+        } else {
+            return start;
+        }
     }
 }
 ```
