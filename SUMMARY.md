@@ -206,6 +206,7 @@ This is the summary of my experience in LintCode.
 * [Math](Math/README.md)
 	* [Cosine Similarity](Math/Cosine-Similarity.md)
 	* [Sqrt](Math/Sqrt.md)
+	* [Pow](Math/Pow.md)
 	* [Fibonacci](Math/Fibonacci.md)
 	* [Plus One](Math/PlusOne.md)
 	* [A + B Problem](Math/A+B-Problem.md)
