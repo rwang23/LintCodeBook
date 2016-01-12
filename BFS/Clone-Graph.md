@@ -76,7 +76,6 @@ public class Solution {
                     curinhash.neighbors.add(hashmap.get(next));
                 }
             }
-            hashmap.put(cur, curinhash);
         }
         return newHead;
     }

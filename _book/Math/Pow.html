@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Delete Node in the Middle of Singly Linked List | Lintcode Solution Book</title>
+        <title>Pow | Lintcode Solution Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../Linkedlist/Reverse-Linked-List.html" />
+    <link rel="next" href="../Math/Fibonacci.html" />
     
     
-    <link rel="prev" href="../Linkedlist/index.html" />
+    <link rel="prev" href="../Math/Sqrt.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="9.1" data-basepath=".." data-revision="Mon Jan 11 2016 22:38:58 GMT-0500 (EST)">
+    <div class="book" data-level="14.3" data-basepath=".." data-revision="Mon Jan 11 2016 22:38:58 GMT-0500 (EST)">
     
 
 <div class="book-summary">
@@ -1770,7 +1770,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="9.1" data-path="Linkedlist/Delete-Node-in-the-Middle-of-Singly-Linked-List.html">
+        <li class="chapter " data-level="9.1" data-path="Linkedlist/Delete-Node-in-the-Middle-of-Singly-Linked-List.html">
             
                 
                     <a href="../Linkedlist/Delete-Node-in-the-Middle-of-Singly-Linked-List.html">
@@ -2955,7 +2955,7 @@
             
         </li>
     
-        <li class="chapter " data-level="14.3" data-path="Math/Pow.html">
+        <li class="chapter active" data-level="14.3" data-path="Math/Pow.html">
             
                 
                     <a href="../Math/Pow.html">
@@ -3273,33 +3273,35 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="delete-node-in-the-middle-of-singly-linked-list">Delete Node in the Middle of Singly Linked List</h2>
-<p>37% Accepted</p>
-<pre><code>Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
+                        <h1 id="pow-x-n">Pow(x, n)</h1>
+<pre><code>Implement pow(x, n).
+</code></pre><h4 id="%E6%80%9D%E8%B7%AF">&#x601D;&#x8DEF;</h4>
+<pre><code>&#x8FD9;&#x9053;&#x9898;&#x662F;&#x4E00;&#x9053;&#x6570;&#x503C;&#x8BA1;&#x7B97;&#x7684;&#x9898;&#x76EE;&#xFF0C;&#x56E0;&#x4E3A;&#x6307;&#x6570;&#x662F;&#x53EF;&#x4EE5;&#x4F7F;&#x7ED3;&#x679C;&#x53D8;&#x5927;&#x7684;&#x8FD0;&#x7B97;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x6CE8;&#x610F;&#x8D8A;&#x754C;&#x7684;&#x95EE;&#x9898;&#x3002;
+&#x5982;&#x540C;&#x6211;&#x5728;Sqrt(x)&#x8FD9;&#x9053;&#x9898;&#x4E2D;&#x63D0;&#x5230;&#x7684;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x6570;&#x503C;&#x8BA1;&#x7B97;&#x7684;&#x9898;&#x76EE;&#x53EF;&#x4EE5;&#x7528;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x89E3;&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x4EE5;2&#x4E3A;&#x57FA;&#x8FDB;&#x884C;&#x4F4D;&#x5904;&#x7406;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;
+&#x53E6;&#x4E00;&#x79CD;&#x662F;&#x7528;&#x4E8C;&#x5206;&#x6CD5;&#x3002;
+&#x4E8C;&#x5206;&#x6CD5;&#x9012;&#x5F52;
+</code></pre><pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">myPow</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x, <span class="hljs-keyword">int</span> n)</span> </span>{
 
-Have you met this question in a real interview? Yes
-Example
-Given 1-&gt;2-&gt;3-&gt;4, and node 3. return 1-&gt;2-&gt;4
-</code></pre><h4 id="tags-expand">Tags Expand</h4>
-<ul>
-<li>Cracking The Coding Interview</li>
-<li>Linked List</li>
-</ul>
-<h4 id="%E6%80%9D%E8%B7%AF">&#x601D;&#x8DEF;</h4>
-<ul>
-<li>&#x4E00;&#x6765;&#x5C31;&#x60F3;&#x627E;&#x524D;&#x9762;&#x8282;&#x70B9;&#xFF0C;&#x662F;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x7684;</li>
-<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x590D;&#x5236;&#x540E;&#x9762;&#x7684;&#x8282;&#x70B9;&#x5230;&#x524D;&#x9762;&#x6765;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E86;</li>
-</ul>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-    <span class="hljs-comment">/**
-     * <span class="hljs-doctag">@param</span> node: the node in the list should be deleted
-     * <span class="hljs-doctag">@return</span>: nothing
-     */</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">deleteNode</span><span class="hljs-params">(ListNode node)</span> </span>{
-        <span class="hljs-comment">// write your code here</span>
-        ListNode temp = node.next;
-        node.val = temp.val;
-        node.next = temp.next;
+        <span class="hljs-keyword">if</span> (n &gt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> power(x, n);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> / power(x, -n);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">power</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x, <span class="hljs-keyword">int</span> n)</span> </span>{
+        <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        }
+
+        <span class="hljs-keyword">double</span> half = power(x, n /<span class="hljs-number">2</span>);
+
+        <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> half * half;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> half * half * x;
+        }
     }
 }
 </code></pre>
@@ -3313,10 +3315,10 @@ Given 1-&gt;2-&gt;3-&gt;4, and node 3. return 1-&gt;2-&gt;4
         </div>
 
         
-        <a href="../Linkedlist/index.html" class="navigation navigation-prev " aria-label="Previous page: Linkedlist"><i class="fa fa-angle-left"></i></a>
+        <a href="../Math/Sqrt.html" class="navigation navigation-prev " aria-label="Previous page: Sqrt"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../Linkedlist/Reverse-Linked-List.html" class="navigation navigation-next " aria-label="Next page: Reverse Linked List"><i class="fa fa-angle-right"></i></a>
+        <a href="../Math/Fibonacci.html" class="navigation navigation-next " aria-label="Next page: Fibonacci"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

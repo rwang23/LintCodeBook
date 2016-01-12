@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Delete Node in the Middle of Singly Linked List | Lintcode Solution Book</title>
+        <title>Segment Tree Build II | Lintcode Solution Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../Linkedlist/Reverse-Linked-List.html" />
+    <link rel="next" href="../BinaryTree/Segment-Tree-Query.html" />
     
     
-    <link rel="prev" href="../Linkedlist/index.html" />
+    <link rel="prev" href="../BinaryTree/Segment-Tree-Build.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="9.1" data-basepath=".." data-revision="Mon Jan 11 2016 22:38:58 GMT-0500 (EST)">
+    <div class="book" data-level="4.15" data-basepath=".." data-revision="Mon Jan 11 2016 22:38:58 GMT-0500 (EST)">
     
 
 <div class="book-summary">
@@ -615,7 +615,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.15" data-path="BinaryTree/Segment-Tree-Build-II.html">
+        <li class="chapter active" data-level="4.15" data-path="BinaryTree/Segment-Tree-Build-II.html">
             
                 
                     <a href="../BinaryTree/Segment-Tree-Build-II.html">
@@ -1770,7 +1770,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="9.1" data-path="Linkedlist/Delete-Node-in-the-Middle-of-Singly-Linked-List.html">
+        <li class="chapter " data-level="9.1" data-path="Linkedlist/Delete-Node-in-the-Middle-of-Singly-Linked-List.html">
             
                 
                     <a href="../Linkedlist/Delete-Node-in-the-Middle-of-Singly-Linked-List.html">
@@ -3273,33 +3273,84 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="delete-node-in-the-middle-of-singly-linked-list">Delete Node in the Middle of Singly Linked List</h2>
-<p>37% Accepted</p>
-<pre><code>Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
+                        <h2 id="segmemt-tree-build-ii">Segmemt Tree Build II</h2>
+<p>35% Accepted</p>
+<pre><code>The structure of Segment Tree is a binary tree
+which each node has two attributes start and end denote an segment / interval.
+
+start and end are both integers, they should be assigned in following rules:
+
+The root&apos;s start and end is given by build method.
+The left child of node A has start=A.left, end=(A.left + A.right) / 2.
+The right child of node A has start=(A.left + A.right) / 2 + 1, end=A.right.
+if start equals to end, there will be no children for this node.
+Implement a build method with a given array, so that we can create a corresponding segment tree with every node value represent the corresponding interval max value in the array, return the root of this segment tree.
 
 Have you met this question in a real interview? Yes
 Example
-Given 1-&gt;2-&gt;3-&gt;4, and node 3. return 1-&gt;2-&gt;4
+Given [3,2,1,4]. The segment tree will be:
+
+                 [0,  3] (max = 4)
+                  /            \
+        [0,  1] (max = 3)     [2, 3]  (max = 4)
+        /        \               /             \
+[0, 0](max = 3)  [1, 1](max = 2)[2, 2](max = 1) [3, 3] (max = 4)
+Clarification
+Segment Tree (a.k.a Interval Tree) is an advanced data structure which can support queries like:
+
+which of these intervals contain a given point
+which of these points are in a given interval
+See wiki: Segment Tree Interval Tree
 </code></pre><h4 id="tags-expand">Tags Expand</h4>
-<ul>
-<li>Cracking The Coding Interview</li>
-<li>Linked List</li>
-</ul>
+<p>Segment Tree</p>
 <h4 id="%E6%80%9D%E8%B7%AF">&#x601D;&#x8DEF;</h4>
 <ul>
-<li>&#x4E00;&#x6765;&#x5C31;&#x60F3;&#x627E;&#x524D;&#x9762;&#x8282;&#x70B9;&#xFF0C;&#x662F;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x7684;</li>
-<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x590D;&#x5236;&#x540E;&#x9762;&#x7684;&#x8282;&#x70B9;&#x5230;&#x524D;&#x9762;&#x6765;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E86;</li>
+<li>Segment Tree Build&#x7A0D;&#x5FAE;&#x53D8;&#x5F62;</li>
 </ul>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-    <span class="hljs-comment">/**
-     * <span class="hljs-doctag">@param</span> node: the node in the list should be deleted
-     * <span class="hljs-doctag">@return</span>: nothing
-     */</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">deleteNode</span><span class="hljs-params">(ListNode node)</span> </span>{
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * Definition of SegmentTreeNode:
+ * public class SegmentTreeNode {
+ *     public int start, end, max;
+ *     public SegmentTreeNode left, right;
+ *     public SegmentTreeNode(int start, int end, int max) {
+ *         this.start = start;
+ *         this.end = end;
+ *         this.max = max
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> SegmentTreeNode <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A)</span> </span>{
+        <span class="hljs-keyword">int</span> size = A.length - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span> build(<span class="hljs-number">0</span>, size, A);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> SegmentTreeNode <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end, <span class="hljs-keyword">int</span>[] A)</span> </span>{
         <span class="hljs-comment">// write your code here</span>
-        ListNode temp = node.next;
-        node.val = temp.val;
-        node.next = temp.next;
+        <span class="hljs-keyword">if</span> (start &gt; end) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+        <span class="hljs-keyword">int</span> max = findmax(A, start, end);
+        <span class="hljs-keyword">if</span> (start == end) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> SegmentTreeNode(start, end, max);
+        }
+        SegmentTreeNode root = <span class="hljs-keyword">new</span> SegmentTreeNode(start, end, max);
+        root.left = build(start, (start + end) /<span class="hljs-number">2</span>, A);
+        root.right = build((start + end) / <span class="hljs-number">2</span> + <span class="hljs-number">1</span>, end, A);
+
+        <span class="hljs-keyword">return</span> root;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findmax</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span> </span>{
+        <span class="hljs-keyword">int</span> max = Integer.MIN_VALUE;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = start; i &lt;= end; i++) {
+            <span class="hljs-keyword">if</span> (A[i] &gt; max) {
+                max = A[i];
+            }
+        }
+        <span class="hljs-keyword">return</span> max;
     }
 }
 </code></pre>
@@ -3313,10 +3364,10 @@ Given 1-&gt;2-&gt;3-&gt;4, and node 3. return 1-&gt;2-&gt;4
         </div>
 
         
-        <a href="../Linkedlist/index.html" class="navigation navigation-prev " aria-label="Previous page: Linkedlist"><i class="fa fa-angle-left"></i></a>
+        <a href="../BinaryTree/Segment-Tree-Build.html" class="navigation navigation-prev " aria-label="Previous page: Segment Tree Build"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../Linkedlist/Reverse-Linked-List.html" class="navigation navigation-next " aria-label="Next page: Reverse Linked List"><i class="fa fa-angle-right"></i></a>
+        <a href="../BinaryTree/Segment-Tree-Query.html" class="navigation navigation-next " aria-label="Next page: Segment Tree Query"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
