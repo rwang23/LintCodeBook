@@ -27,7 +27,22 @@
 
 
 ####我的代码
+- 我的代码速度太慢,在leetcode上跑出来属于最慢的
+- 因为代码不简化,用了两层递归,自然非常慢
+- 应该使用九章的代码
+
 ```java
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
 public class Solution {
     /**
      * @param root: The root of binary tree.
@@ -35,34 +50,24 @@ public class Solution {
      */
     public boolean isBalanced(TreeNode root) {
         // write your code here
-        if(root == null){
+        if (root == null) {
             return true;
         }
 
-        int left, right;
-        Boolean leftB, rightB;
-        leftB = isBalanced(root.left);
-        rightB = isBalanced(root.right);
+        int left = countHeight(root.left);
+        int right = countHeight(root.right);
+        boolean x = Math.abs(left - right) <= 1 ? true : false;
 
-        left = getDepth(root.left, 0);
-        right = getDepth(root.right, 0);
-
-        if(Math.abs(left - right) <= 1 && leftB && rightB){
-            return true;
-        }else{
-            return false;
-        }
-
+        return isBalanced(root.left) && isBalanced(root.right) && x;
     }
 
-    public int getDepth(TreeNode root, int count){
-        if(root == null){
+    public int countHeight(TreeNode root) {
+        if (root == null) {
             return 0;
         }
 
-        int left, right;
-        left = getDepth(root.left, count);
-        right = getDepth(root.right, count);
+        int left = countHeight(root.left);
+        int right = countHeight(root.right);
 
         return Math.max(left, right) + 1;
     }
