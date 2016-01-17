@@ -166,6 +166,7 @@ This is the summary of my experience in LintCode.
    * [Scan Line](DataStructure/scan-line.md)
    * [Union Find](DataStructure/Union-Find.md)
    * [Huffman Compression](DataStructure/huffman_compression.md)
+   * [Some other notes](DataStructure/notes.md)
 
 * [Data Structure Problem](DataStructureProblem/README.md)
 	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)
