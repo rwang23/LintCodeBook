@@ -23,7 +23,7 @@ Could you solve it with O(1) space?
 - 第二次扫描中我们把旧结点的随机指针赋给新节点的随机指针， 因为新结点都跟在旧结点的下一个值得注意的是，要赋值到新节点的随机值，node.random.next，其中node.next就是新结点
 - 最后将链表拆开，跳着赋值拆开就可以了
 
-
+####方法一
 ```java
 /**
  * Definition for singly-linked list with a random pointer.
@@ -39,39 +39,91 @@ public class Solution {
      * @return: A new head of a deep copy of the list.
      */
     public RandomListNode copyRandomList(RandomListNode head) {
+        // write your code here
         if (head == null) {
             return head;
         }
-        //first step
-        RandomListNode node = head;
-        while (node != null) {
-            RandomListNode newNode = new RandomListNode(node.label);
-            newNode.next = node.next;
-            node.next = newNode;
-            node = newNode.next;
+
+        HashMap<RandomListNode, RandomListNode> hashmap = new HashMap<RandomListNode, RandomListNode>();
+        RandomListNode dummy = new RandomListNode(0);
+        dummy.next = head;
+
+        RandomListNode newdummy = new RandomListNode(0);
+        RandomListNode newNode = newdummy;
+
+        while (head != null) {
+            RandomListNode copy = new RandomListNode(head.label);
+            newNode.next = copy;
+            hashmap.put(head, copy);
+            newNode = newNode.next;
+            head = head.next;
         }
-        //second step
-        node = head;
-        while (node != null) {
-            if(node.random != null) {
-                node.next.random = node.random.next;//.next是指的新节点
-            }
-            node = node.next.next;
-        }
-		//third step
-        node = head;
-        RandomListNode newNode = node.next;
-        RandomListNode newHead = newNode;
-        while (node != null) {
-            node.next = newNode.next;
-            if(newNode.next != null) {
-                newNode.next = newNode.next.next;
-            }
-            node = node.next;
+
+        newNode = newdummy.next;
+        head = dummy.next;
+
+        while (head != null) {
+            RandomListNode randomnode = hashmap.get(head.random);
+            newNode.random = randomnode;
+            head = head.next;
             newNode = newNode.next;
         }
-        return newHead;
+        return newdummy.next;
     }
 }
+```
 
+####方法二
+```java
+/**
+ * Definition for singly-linked list with a random pointer.
+ * class RandomListNode {
+ *     int label;
+ *     RandomListNode next, random;
+ *     RandomListNode(int x) { this.label = x; }
+ * };
+ */
+public class Solution {
+    /**
+     * @param head: The head of linked list with a random pointer.
+     * @return: A new head of a deep copy of the list.
+     */
+    public RandomListNode copyRandomList(RandomListNode head) {
+        // write your code here
+        if (head == null) {
+            return head;
+        }
+
+        RandomListNode dummy = new RandomListNode(0);
+        dummy.next = head;
+
+        while (head != null) {
+            RandomListNode newNode = new RandomListNode(head.label);
+            RandomListNode next = head.next;
+            head.next = newNode;
+            newNode.next = next;
+            head = next;
+        }
+
+        head = dummy.next;
+        while (head != null) {
+            RandomListNode random = head.random;
+            if (random != null) {
+                head.next.random = random.next;
+            }
+            head = head.next.next;
+        }
+
+        RandomListNode pre = dummy;
+        head = dummy.next;
+        while (head != null) {
+            RandomListNode next = head.next;
+            pre.next = next;
+            head = head.next.next;
+            pre = next;
+        }
+
+        return dummy.next;
+    }
+}
 ```

@@ -16,33 +16,54 @@ Linked List
 
 ####思路
 - 用Int去表征大小去比较
-- 重做
+- 重做: 完成
 
 ```java
+/**
+ * Definition for ListNode
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
 public class Solution {
-    public ListNode deleteDuplicates(ListNode head) {
-        if(head == null || head.next == null) {
+    /**
+     * @param ListNode head is the head of the linked list
+     * @return: ListNode head of the linked list
+     */
+    public static ListNode deleteDuplicates(ListNode head) {
+        // write your code here
+        if (head == null) {
             return head;
         }
 
-        ListNode dummy = new ListNode(0);
+        ListNode dummy = new ListNode(Integer.MAX_VALUE);
         dummy.next = head;
-        head = dummy;
+        ListNode pre = dummy;
 
-        while (head.next != null && head.next.next != null) {
-            if (head.next.val == head.next.next.val) {
-                int val = head.next.val;
-                while (head.next != null && head.next.val == val) {
-                    head.next = head.next.next;
-                }
-            } else {
+        while (head != null) {
+            int currentValue = head.val;
+            boolean isDuplicate = false;
+            while (head.next != null && head.next.val == currentValue) {
                 head = head.next;
+                isDuplicate = true;
             }
+            if (isDuplicate) {
+                pre.next = head.next;
+            } else {
+                pre = head;
+            }
+            head = head.next;
         }
 
         return dummy.next;
     }
 }
+
 ```
 
 ####原来的看不明白了 又写了一下
