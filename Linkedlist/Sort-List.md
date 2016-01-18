@@ -83,6 +83,96 @@ public class Solution {
 
     }
 }
+```
 
+####Merge Sort的模板做法
+```java
+/**
+ * Definition for ListNode.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int val) {
+ *         this.val = val;
+ *         this.next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    /**
+     * @param head: The head of linked list.
+     * @return: You should return the head of the sorted linked list,
+     *             using constant space complexity.
+     */
+    public ListNode sortList(ListNode head) {
+        // write your code here
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode mid = findMiddle(head);
+        ListNode next = mid.next;
+        mid.next = null;
+
+        return helper(head, next);
+    }
+
+    public ListNode helper(ListNode headA, ListNode headB) {
+        if (headB == null) {
+            return headA;
+        }
+
+        ListNode mid = findMiddle(headA);
+        ListNode next = mid.next;
+        mid.next = null;
+        ListNode left = helper(headA, next);
+
+        mid = findMiddle(headB);
+        next = mid.next;
+        mid.next = null;
+        ListNode right = helper(headB, next);
+
+        return mergeTwoLists(left, right);
+    }
+
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        // write your code here
+        ListNode mergelist = new ListNode(0);
+        ListNode head = mergelist;
+        while (true) {
+            if (l1 == null) {
+                mergelist.next = l2;
+                break;
+            } else if (l2 == null) {
+                mergelist.next = l1;
+                break;
+            }
+            if (l1.val >= l2.val) {
+                mergelist.next = l2;
+                l2 = l2.next;
+            } else {
+                mergelist.next = l1;
+                l1 = l1.next;
+            }
+            mergelist = mergelist.next;
+        }
+        return head.next;
+    }
+
+    public ListNode findMiddle(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while (fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+}
 
 ```

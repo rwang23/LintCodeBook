@@ -149,6 +149,8 @@ This is the summary of my experience in LintCode.
 	* [Reorder List](Linkedlist/Reorder-List.md)
 	* [Copy List With Random Pointer](Linkedlist/Copy-List-with-Random-Pointer.md)
 	* [Convert Sorted List to Binary Search Tree](Linkedlist/Convert-Sorted-List-to-Binary-Search-Tree.md)
+	* [Convert Binary Search Tree to Doubly Linked List](Linkedlist/Convert-Binary-Search-Tree-to-Doubly-Linked-List.md)
+
 
 * [Data Structure](DataStructure/README.md)
    * [String](DataStructure/string.md)

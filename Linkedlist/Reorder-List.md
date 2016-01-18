@@ -15,7 +15,7 @@
 
 ####思路
 - 拆分，然后后半段翻转，再merge
-- 重做
+- 重做 : 完成
 
 ```java
 /**
@@ -39,51 +39,49 @@ public class Solution {
         if (head == null || head.next == null) {
             return;
         }
-        ListNode slow = head;
+
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
         ListNode fast = head;
-        while (fast != null && fast.next != null) {
+        ListNode slow = head;
+
+        while (fast.next != null && fast.next.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
-        ListNode tail = reverse(slow.next);
-        slow.next = null;
 
-        int index = 0;
-        ListNode dummy = new ListNode(0);
-        ListNode temp = dummy;
-        while (head!=null && tail != null) {
-            if (index % 2 == 0) {
-                dummy.next = head;
-                head = head.next;
-            } else {
-                dummy.next = tail;
-                tail = tail.next;
-            }
-            dummy = dummy.next;
-            index ++;
+        ListNode half = slow.next;
+        slow.next = null;
+        half = reverseList(half);
+
+        while (head != null && half != null) {
+            ListNode next = head.next;
+            ListNode secondnext = null;
+            secondnext = half.next;
+            head.next = half;
+            half.next = next;
+            head = next;
+            half = secondnext;
         }
-         if (head != null) {
-            dummy.next = head;
-        } else {
-            dummy.next = tail;
-        }
-        head = temp.next;
+
     }
 
-    public ListNode reverse(ListNode head) {
-        // write your code here
-        if (head == null ) {
-            return null;
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
         }
-        ListNode cur = head;
-        ListNode reverse = null;
-        while (cur != null) {
-            ListNode temp = cur.next;
-            cur.next = reverse;
-            reverse = cur;
-            cur = temp;
+
+        //ListNode dummy = new ListNode(0);
+        ListNode pre = null;
+
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = pre;
+            pre = head;
+            head = next;
         }
-        return reverse;
+
+        return pre;
     }
 }
 
