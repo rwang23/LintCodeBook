@@ -31,7 +31,7 @@ Extra points if you can do it in O(n) time with O(k) extra space.
 Hash Table Heap Priority Queue
 
 
-####思路
+####思路1
 - 利用Priority queue来排序(建立一个自己的类,先通过times,再通过字母顺序排)
 - 先扫描各个单词的数目,使用Hashmap,因为这样在读取的时候只使用了o(1)的时间
 - 还有一个关键是,遍历hashmap
@@ -99,3 +99,6 @@ public class Solution {
 }
 
 ```
+
+####思路2
+- trie数
