@@ -76,3 +76,41 @@ public class Solution {
 }
 
 ```
+
+####更好理解的空间优化做法
+```java
+public class Solution {
+    /**
+     * @param m: An integer m denotes the size of a backpack
+     * @param A & V: Given n items with size A[i] and value V[i]
+     * @return: The maximum value
+     */
+    public int backPackII(int m, int[] A, int V[]) {
+        // write your code here
+        if (m <= 0 || A == null || V == null) {
+            return 0;
+        }
+
+        int n = A.length;
+        int[][] result = new int[2][m+1];
+        for (int i = 0; i <= m; i++) {
+            result[0][i] = 0;
+        }
+        for (int i = 0; i <= 1; i++) {
+            result[i][0] = 0;
+        }
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = m; j >= 0; j--) {
+                if (j - A[i-1] >= 0) {
+                    result[i%2][j] = Math.max(result[(i-1)%2][j], result[(i-1)%2][j-A[i-1]] + V[i-1]);
+                } else {
+                    result[i%2][j] = result[(i-1)%2][j];
+                }
+            }
+        }
+
+        return result[A.length%2][m];
+    }
+}
+```

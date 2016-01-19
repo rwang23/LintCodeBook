@@ -83,3 +83,40 @@ public class Solution {
 }
 
 ```
+####或者这样更好理解
+```java
+public class Solution {
+    /**
+     * @param m: An integer m denotes the size of a backpack
+     * @param A: Given n items with size A[i]
+     * @return: The maximum size
+     */
+    public int backPack(int m, int[] A) {
+        // write your code here
+        if (m <= 0 || A == null) {
+            return 0;
+        }
+
+        int n = A.length;
+        int[][] result = new int[2][m+1];
+        for (int i = 0; i <= m; i++) {
+            result[0][i] = 0;
+        }
+        for (int i = 0; i <= 1; i++) {
+            result[i][0] = 0;
+        }
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = m; j >= 0; j--) {
+                if (j - A[i-1] >= 0) {
+                    result[i%2][j] = Math.max(result[(i-1)%2][j], result[(i-1)%2][j-A[i-1]] + A[i-1]);
+                } else {
+                    result[i%2][j] = result[(i-1)%2][j];
+                }
+            }
+        }
+
+        return result[A.length%2][m];
+    }
+}
+```

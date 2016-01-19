@@ -44,27 +44,24 @@ public class Solution {
      */
     public boolean canJump(int[] A) {
         // wirte your code here
-        if (A.length <= 2) {
-            if(A.length >= 1 && A[0] >= 1){
-                return true;
-            }else {
+        if (A == null || A.length == 0) {
+            return true;
+        }
+
+        int size = A.length;
+        int[] f = new int[size];
+
+        f[0] = A[0];
+        for (int i = 1; i < size; i++) {
+            if (f[i-1] - 1 >= 0) {
+                f[i] = Math.max((f[i-1] - 1), A[i]);
+            } else {
                 return false;
             }
         }
 
-        int[] truth = new int[A.length];
-        truth[0] = A[0];
-        for (int i = 1; i < A.length - 1; i++) {
-            if (truth[i-1]>=1) {
-                truth[i] = Math.max(truth[i-1] - 1, A[i]);
-            } else {
-                truth[i] = 0;
-            }
-        }
-
-        return truth[A.length - 2] >= 1;
+        return true;
     }
 }
-
 
 ```

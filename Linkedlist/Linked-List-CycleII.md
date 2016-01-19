@@ -45,35 +45,35 @@ public class Solution {
     public ListNode detectCycle(ListNode head) {
         // write your code here
         if (head == null) {
-            return null;
+            return head;
         }
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode fast = dummy;
-        ListNode slow = dummy;
-        boolean isCycle = false;
-        while (fast != null && fast.next != null) {
+
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while (true) {
+            if (fast.next == null || fast.next.next == null) {
+                return null;
+            }
             fast = fast.next.next;
             slow = slow.next;
             if (fast == slow) {
-                isCycle = true;
                 break;
             }
         }
-        if (isCycle == false) {
-            return null;
-        }
-        slow = dummy;
-        while (slow != fast) {
-            slow = slow.next;
+
+        ListNode cross = slow;
+        slow = head;
+
+        while (fast != slow) {
             fast = fast.next;
+            slow = slow.next;
         }
+
         return slow;
-
-
-
     }
 }
+
 
 
 ```
