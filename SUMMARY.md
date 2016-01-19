@@ -182,6 +182,8 @@ This is the summary of my experience in LintCode.
 	* [Hash Function](DataStructureProblem/HashFunction.md)
 	* [Rehashing](DataStructureProblem/Rehashing.md)
 	* [Min Stack](DataStructureProblem/MinStack.md)
+	* [Ugly Number](DataStructureProblem/Ugly-Number.md)
+	* [Top K Frequent Words](DataStructureProblem/Top-K-Frequent-Words.md)
 	* [Longest Consecutive Sequence](DataStructureProblem/LongestConsecutiveSequence.md)
 	* [Largest Rectangle in Histogram](DataStructureProblem/Largest-Rectangle-in-Histogram.md)
 	* [LRU Cache](DataStructureProblem/LRU-Cache.md)

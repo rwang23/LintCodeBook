@@ -18,6 +18,7 @@ public class PriorityQueueTest {
 	static class PQsort implements Comparator<Integer> {
 
 		public int compare(Integer one, Integer two) {
+            //这是max heap
 			return two - one;
 		}
 	}
