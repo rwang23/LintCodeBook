@@ -172,9 +172,9 @@ This is the summary of my experience in LintCode.
 
 * [Data Structure Problem](DataStructureProblem/README.md)
 	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)
-	* [Implement Queue By Two Stacks](DataStructureProblem/Implement-Queueby-Two-Stacks.md)
-	* [Implement Queue By LinkedList](DataStructureProblem/Implement-Queue-By-Linked-List.md)
-	* [Implement Queue By LinkedList II](DataStructureProblem/Implement-Queue-By-Linked-List-II.md)
+	* [Implement Queue By Two Stacks](DataStructureProblem/Implement-Queue-by-Two-Stacks.md)
+	* [Implement Queue By LinkedList](DataStructureProblem/Implement-Queue-by-Linked-List.md)
+	* [Implement Queue By LinkedList II](DataStructureProblem/Implement-Queue-by-Linked-List-II.md)
 	* [Implement Stack](DataStructureProblem/Implement-Stack.md)
 	* [Implement Stack by Two Queues](DataStructureProblem/Implement-Stack-by-Two-Queues.md)
 	* [Heapify](DataStructureProblem/Heapify.md)
