@@ -178,7 +178,7 @@ This is the summary of my experience in LintCode.
 	* [Implement Stack](DataStructureProblem/Implement-Stack.md)
 	* [Implement Stack by Two Queues](DataStructureProblem/Implement-Stack-by-Two-Queues.md)
 	* [Heapify](DataStructureProblem/Heapify.md)
-	* [Heapify](DataStructureProblem/Heapify.md)
+	* [Merge k Sorted Arrays](DataStructureProblem/Merge-k-Sorted-Arrays.md)
 	* [Hash Function](DataStructureProblem/HashFunction.md)
 	* [Rehashing](DataStructureProblem/Rehashing.md)
 	* [Min Stack](DataStructureProblem/MinStack.md)
