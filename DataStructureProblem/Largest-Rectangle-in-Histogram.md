@@ -44,6 +44,7 @@ public class Solution {
 
 ####高级解法
 - [思路来源](http://www.cnblogs.com/legendmaner/archive/2013/04/18/3028748.html)
+- [图画解释](http://www.cnblogs.com/lichen782/p/leetcode_Largest_Rectangle_in_Histogram.html)
 - 单调栈，顾名思义就是说栈内的元素，按照某种方式排序下，必须是单调的。如果新入栈的元素破坏了单调性，就弹出栈内元素，直到满足单调性。它可以很方便地求出某个数的左边或者右边第一个比它大或者小的元素，而且总时间复杂度O(N)。
 - 要想找到里面的最大的面积，一定会有这么一种情况，得出的矩形的高度一定为所包含的某一个高度一致的。所以我们可以对某一个柱子的高度为标准，尽量的向两头扩展，这样就可以找出以它高度为标准的，并包含它本身的最大矩形。然后对每一个柱子都做类似的工作，最后挑出里面最大的矩形
 - 所以如果我们从第一个开始计算到第n个，计算到i时，如果我们可以快速的找出左边第一个（这里第一的意思是离i最近）的比i的高度小的，就可以完成了向左扩展的工作，而向右扩展，我们本来就是一直向右走，所以直接扩展。这时候就轮到：单调栈出场了！
@@ -78,7 +79,7 @@ public class Solution {
     完成。
 
 ####改进后的算法，debug了一个半小时
-- 重写
+- 重写 : 再重写
 - stack push进去的是index，因为再找边界的时候找的是下标i, value的值可以直接height[i]
 - 在最后已经遍历完，栈底只剩下一个数时候，强行进入pop阶段而不是push，所以用了int cur = (i == height.length) ? -1 : height[i];
 - 非常巧妙的办法
@@ -126,8 +127,25 @@ public class Solution {
         return maxArea;
     }
 }
+```
 
-
-
-
+####别人的简洁代码
+```java
+public int largestRectangleArea2(int[] height) {
+        Stack<Integer> stack = new Stack<Integer>();
+        int i = 0;
+        int maxArea = 0;
+        int[] h = new int[height.length + 1];
+        h = Arrays.copyOf(height, height.length + 1);
+        while(i < h.length){
+            if(stack.isEmpty() || h[stack.peek()] <= h[i]){
+                stack.push(i++);
+            }else {
+                int t = stack.pop();
+                //减1是因为这个高点已经被pop了,此时stack.peek()是下一个点的index
+                maxArea = Math.max(maxArea, h[t] * (stack.isEmpty() ? i : i - stack.peek() - 1));
+            }
+        }
+        return maxArea;
+    }
 ```
