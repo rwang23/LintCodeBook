@@ -54,3 +54,44 @@ public class Solution {
 
 
 ```
+
+####后来更清晰一点的解法
+```java
+public class Solution {
+    /**
+     * @param A: an integer array.
+     * @param k: a positive integer (k <= length(A))
+     * @param target: a integer
+     * @return a list of lists of integer
+     */
+    public ArrayList<ArrayList<Integer>> kSumII(int[] A, int k, int target) {
+        // write your code here
+        if (A == null) {
+            return new ArrayList<ArrayList<Integer>>();
+        }
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        dfs(result, list, A, k, target, 0, 0);
+        return result;
+    }
+
+    public void dfs(ArrayList<ArrayList<Integer>> result, ArrayList<Integer> list, int[] A, int k, int target, int pos, int sum) {
+        if (k == 0 && sum == target && !result.contains(list)) {
+            result.add(new ArrayList<Integer>(list));
+        }
+        if (sum > target || k < 0) {
+            return;
+        }
+
+        for (int i = pos; i < A.length; i++) {
+            k--;
+            sum = sum + A[i];
+            list.add(A[i]);
+            dfs(result, list, A, k, target, i+1, sum);
+            list.remove(list.size() - 1);
+            sum = sum - A[i];
+            k++;
+        }
+    }
+}
+```

@@ -1,6 +1,6 @@
 ##一些注意点
 
-- 判断arraylist为空 不能直接 arraylist == null 而是用isEmpty()
+- 判断arraylist为空 一种是 arraylist == null(本身为null) 另一种 是isEmpty() (已经创建,但是没有值)
 - 普通数组就可以直接 array == null
 -
 int compare(T o1,T o2)

@@ -143,6 +143,7 @@ public int largestRectangleArea2(int[] height) {
             }else {
                 int t = stack.pop();
                 //减1是因为这个高点已经被pop了,此时stack.peek()是下一个点的index
+                //而且这里不能是i - t,必须是i - stack.peek() - 1, 因为找的是左边最小值
                 maxArea = Math.max(maxArea, h[t] * (stack.isEmpty() ? i : i - stack.peek() - 1));
             }
         }

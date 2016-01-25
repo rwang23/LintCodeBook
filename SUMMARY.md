@@ -83,6 +83,7 @@ This is the summary of my experience in LintCode.
 
 * [Sort](Sort/README.md)
 	* [Merge Intervals](Sort/MergeIntervals.md)
+	* [Merge Sorted Array](Sort/Merge-Sorted-Array.md)
 	* [Insertion Sort List](Sort/Insertion-Sort-List.md)
 	* [Sort Letters by Case](Sort/Sort-Letters-by-Case.md)
 	* [Sort Color](Sort/SortColors.md)
@@ -202,6 +203,7 @@ This is the summary of my experience in LintCode.
 	* [Permutations Index](DFS/Permutation-Index.md)
 	* [Permutations II](DFS/PermutationsII.md)
 	* [Next Permutations II](DFS/Next-Permutation-II.md)
+	* [String Permutation II](DFS/String-Permutation-II.md)
 	* [Permutations Sequence](DFS/Permutation-Sequence.md)
 	* [Number of Islands](DFS/Number-of-Islands.md)
 	* [Letter Combinations of a Phone Number](DFS/Letter-Combinations-of-a-Phone-Number.md)

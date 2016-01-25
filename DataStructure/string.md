@@ -7,6 +7,8 @@ int s2Len = s2.length();
 s2.substring(4, 8); // return "ryan"
 StringBuilder sb = new StringBuilder(s2.substring(4, 8));
 sb.append("bill");
+sb.deleteCharAt(int index);
+sb.delete(int start, int end);
 String s2New = sb.toString(); // return "ryanbill"
 // convert String to char array
 char[] s2Char = s2.toCharArray();

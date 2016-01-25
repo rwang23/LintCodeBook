@@ -93,15 +93,19 @@ class Solution {
     }
 
     public void dfs(ArrayList<ArrayList<Integer>> result, ArrayList<Integer> combo, int n) {
-        for (int i = 0; i < combo.size(); i++) {
-            int x1 = combo.get(i);
-            for(int j = i + 1; j < combo.size(); j++) {
-                int x2 = combo.get(j);
-                if (j - i == Math.abs(x2 -x1)) {
-                    return;
-                }
-            }
+        // for (int i = 0; i < combo.size(); i++) {
+        //     int x1 = combo.get(i);
+        //     for(int j = i + 1; j < combo.size(); j++) {
+        //         int x2 = combo.get(j);
+        //         if (j - i == Math.abs(x2 -x1)) {
+        //             return;
+        //         }
+        //     }
+        // }
+        if (!isValid(combo)) {
+            return;
         }
+
         if (combo.size() == n) {
             result.add(new ArrayList<Integer>(combo));
             return;
@@ -114,6 +118,23 @@ class Solution {
             dfs(result, combo, n);
             combo.remove(combo.size() - 1);
         }
+    }
+
+    public boolean isValid(ArrayList<Integer> list) {
+        if (list == null || list.size() == 0) {
+            return true;
+        }
+        int y1 = list.size() - 1;
+        int x1 = list.get(y1);
+        for (int i = 0; i < list.size() - 1; i++) {
+            int y2 = i;
+            int x2 = list.get(y2);
+            if (Math.abs(y2 - y1) == Math.abs(x2 - x1)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 };
 
