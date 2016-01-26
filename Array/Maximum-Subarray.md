@@ -1,4 +1,4 @@
-##Maximum Subarray Show result
+##Maximum Subarray
 
 37% Accepted
 

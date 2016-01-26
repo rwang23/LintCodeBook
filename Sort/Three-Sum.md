@@ -74,3 +74,46 @@ public class Solution {
 }
 
 ```
+
+####后来写的,容易理解一点
+```java
+public class Solution {
+    /**
+     * @param numbers : Give an array numbers of n integer
+     * @return : Find all unique triplets in the array which gives the sum of zero.
+     */
+    public ArrayList<ArrayList<Integer>> threeSum(int[] numbers) {
+        // write your code here
+        if (numbers == null || numbers.length <= 2) {
+            return new ArrayList<ArrayList<Integer>>();
+        }
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+        int size = numbers.length;
+        Arrays.sort(numbers);
+
+        for (int i = 0; i < size; i++) {
+            int target = 0 - numbers[i];
+            int start = i + 1;
+            int end = size - 1;
+            while (start <  end) {
+                ArrayList<Integer> list = new ArrayList<Integer>();
+                if (numbers[start] + numbers[end] > target) {
+                    end--;
+                } else if (numbers[start] + numbers[end] < target) {
+                    start++;
+                } else {
+                    list.add(numbers[i]);
+                    list.add(numbers[start]);
+                    list.add(numbers[end]);
+                    if (!result.contains(list)) {
+                        result.add(list);
+                    }
+                    start++;
+                }
+            }
+        }
+        return result;
+
+    }
+}
+```

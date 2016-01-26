@@ -22,6 +22,7 @@ O(nlogn) time
 - The TreeMap class implements the Map interface by using a tree. A TreeMap provides an efficient means of storing key/value pairs in sorted order, and allows rapid retrieval.
 - 本题中，没有直接调用treemap,而是写了一个简要的pair,实现了相似的功能。 写了pair后，要自己写Comparator<pairr>去实现排序
 - 因为排序后，相邻的prefixsum之差是最小的，所以计算相邻的，再比较每次替换就可以了。不行的话，将已经写入的Arraylist 进行clear操作
+- 重做
 
 ```java
 public class Solution {
