@@ -1,4 +1,4 @@
-##Best Time to Buy and Sell Stock II Show result
+##Best Time to Buy and Sell Stock II
 
 50% Accepted
 

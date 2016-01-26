@@ -70,3 +70,28 @@ public class Solution {
 }
 
 ```
+####后来写的,更好理解
+```java
+public class Solution {
+    /**
+     * @param prices: Given an integer array
+     * @return: Maximum profit
+     */
+    public int maxProfit(int[] prices) {
+        // write your code here
+        if (prices == null || prices.length <= 1) {
+            return 0;
+        }
+
+        int min = prices[0];
+        int max = 0;
+        for (int i = 1; i < prices.length; i++) {
+            int profit = prices[i] - min;
+            max = Math.max(max, profit);
+            min = Math.min(min, prices[i]);
+        }
+
+        return max;
+    }
+}
+```

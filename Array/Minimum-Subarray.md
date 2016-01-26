@@ -25,6 +25,8 @@
 - initialize: sum[0] = A[0]
 - answer: 设置一个min去存最小值
 - 优化： 因为就用到了sum[i]和sum[i-1],所以用两个寄存器就可以了，没必要用数组
+- 这道题曾经有过小错误,
+- 就是min不是Integer.MAX_VALUE 而是 A.get(0)
 
 ```java
 public class Solution {
