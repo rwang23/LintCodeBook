@@ -16,6 +16,7 @@ O(1) Space, O(nlogn) Time
 - Two Pointers
 
 ####思路
+- easy
 - 类似于two sum, 但是画图
 - 因为是大于不再是等于了,所以不能再使用hashmap来优化了
 - 这个时候采取two sum的另一种做法, 利用排序来做
@@ -35,21 +36,25 @@ public class Solution {
      */
     public int twoSum2(int[] nums, int target) {
         // Write your code here
+        if (nums == null || nums.length < 2) {
+            return 0;
+        }
+
         Arrays.sort(nums);
+        int count = 0;
 
         int start = 0;
         int end = nums.length - 1;
-        int count = 0;
+
         while (start < end) {
             if (nums[start] + nums[end] > target) {
                 count = count + end - start;
                 end--;
-            } else if (nums[start] + nums[end] < target) {
-                start++;
-            } else {
+            } else if (nums[start] + nums[end] <= target) {
                 start++;
             }
         }
+
         return count;
     }
 }
