@@ -109,6 +109,9 @@ This is the summary of my experience in LintCode.
 
 
 * [Array](Array/README.md)
+	* [Single Number](Array/Single-Number.md)
+	* [Single Number II](Array/Single-Number-II.md)
+	* [Single Number III](Array/Single-Number-III.md)
 	* [Product of Array Exclude Itself](Array/Product-of-Array-Exclude-Itself.md)
 	* [Recover Rotated Sorted Array](Array/Recover-Rotated-Sorted-Array.md)
 	* [Rotate String](Array/RotateString.md)

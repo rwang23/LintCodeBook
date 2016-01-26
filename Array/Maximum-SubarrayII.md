@@ -60,6 +60,7 @@ public class Solution {
 
         int max = left[0] + right[1];
         for (int i = 1; i < nums.size() - 1; i++) {
+            //left[i]只是左边为i时的值,但不一定是左边的最大值,所以要不断找最大值
             if (left[i] < left[i-1]) {
                 left[i] = left[i-1];
             }
