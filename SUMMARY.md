@@ -84,6 +84,7 @@ This is the summary of my experience in LintCode.
 * [Sort](Sort/README.md)
 	* [Merge Intervals](Sort/MergeIntervals.md)
 	* [Merge Sorted Array](Sort/Merge-Sorted-Array.md)
+	* [Merge Sorted Array II](Sort/Merge-Sorted-Array-II.md)
 	* [Insertion Sort List](Sort/Insertion-Sort-List.md)
 	* [Sort Letters by Case](Sort/Sort-Letters-by-Case.md)
 	* [Sort Color](Sort/SortColors.md)
