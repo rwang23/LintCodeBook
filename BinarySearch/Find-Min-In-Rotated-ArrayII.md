@@ -37,6 +37,17 @@ public class Solution {
 ```
 
 ####然而其实也可以使用二分方法，最坏情况是o(n)
+
+
+
+    3 1 2 3 3 3 3
+    3 3 3 3 1 2 3
+
+    但可以肯定的是可以排除A[end]：因为即使min = A[end]，
+    由于A[end] = A[mid]，排除A[end]并没有让min丢失。所以增加的条件是：
+
+    A[mid] = A[end]：搜索A[start : end-1]
+
 ```java
 public class Solution {
     public int findMin(int[] num) {

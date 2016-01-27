@@ -26,6 +26,55 @@ This is the review of subsets.
 ####Quick Sort Partitioning
 ![Quick Sort Partitioning](../image/QuickSort-Partitioning.png)
 
+####更直观的partition的写法
+```java
+class Solution{
+	public void quickSort(int[] nums){
+        if (nums == null || nums.length == 0) {
+            return;
+        }
+        sortHelper(nums, 0, nums.length - 1);
+    }
+
+    public void sortHelper(int[] nums, int start, int end){
+        if (start >= end) {
+            return;
+        }
+        int partitionPoint = partition(nums, start, end);
+        sortHelper(nums, start, partitionPoint - 1);
+        sortHelper(nums, partitionPoint, end);
+        }
+    }
+
+    public void swap(int[] nums, int x, int y) {
+        int temp = nums[x];
+        nums[x] = nums[y];
+        nums[y] = temp;
+    }
+
+    public int partition(int[] nums, int start, int end){
+        int mid = start + (end - start)/2;
+
+        int pivot = nums[mid];
+        while (start <= end) {
+            while (start <= end && nums[start] < pivot) {
+                start++;
+            }
+            while (start <= end && nums[end] > pivot) {
+                end--;
+            }
+            if (start <= end) {
+                swap(nums, start, end);
+                start++;
+                end--;
+            }
+        }
+        return start;
+        //index = start前的,数组元素已经小于现在的nums[start],后面的大于
+    }
+}
+```
+
 ####Quick Sort Improve
 ![Quick Sort Improve](../image/QuickSort-Improve.png)
 
