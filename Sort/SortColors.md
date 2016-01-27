@@ -56,11 +56,11 @@ class Solution {
 ```
 
 ####Better Solution
-    i从0到blue index扫描，
-    遇到0，放在red index位置，red index后移；
-    遇到2，放在blue index位置，blue index前移；
-    遇到1，i后移。
-    扫描一遍得到排好序的数组。时间O(n)，空间O(1)
+    用i记录0应该放的位置，j记录2应该放的位置。
+    cur从0到j扫描，
+    遇到0，放在i位置，i后移；
+    遇到2，放在j位置，j前移；
+    遇到1，cur后移。
 
 ```java
 class Solution {
