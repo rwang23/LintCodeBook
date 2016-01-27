@@ -56,6 +56,12 @@ class Solution {
 ```
 
 ####Better Solution
+    i从0到blue index扫描，
+    遇到0，放在red index位置，red index后移；
+    遇到2，放在blue index位置，blue index前移；
+    遇到1，i后移。
+    扫描一遍得到排好序的数组。时间O(n)，空间O(1)
+
 ```java
 class Solution {
     /**
@@ -64,12 +70,13 @@ class Solution {
      */
     public void sortColors(int[] A) {
 
-        int red=0;int blue=A.length-1;
-        for (int i=0;i<=blue && i < A.length;) {
+        int red = 0;
+        int blue = A.length-1;
+        for (int i = 0; i <= blue && i < A.length;) {
             if (A[i] == 0 && i > red ) {
-                swap(A,i,red++);
+                swap(A, i, red++);
             } else if (A[i] == 2 && i <= blue)
-                swap(A,i,blue--);
+                swap(A, i, blue--);
             else
                 i++;
         }
