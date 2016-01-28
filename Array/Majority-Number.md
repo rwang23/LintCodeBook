@@ -17,6 +17,7 @@ Greedy Enumeration LintCode Copyright Zenefits
 ####思路
 - 来自于一篇论文
 - 消除法
+- 先找到,然后测试,看到底是不是,因为可能出现并没有majoritynumber的情况
 - 当然 也可以排序, 找中间的值,也能实现
 
 ```java
