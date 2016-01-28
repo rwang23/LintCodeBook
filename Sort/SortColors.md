@@ -73,12 +73,13 @@ class Solution {
         int red = 0;
         int blue = A.length-1;
         for (int i = 0; i <= blue && i < A.length;) {
-            if (A[i] == 0 && i > red ) {
+            if (A[i] == 0 && i >= red ) {
                 swap(A, i, red++);
             } else if (A[i] == 2 && i <= blue)
                 swap(A, i, blue--);
             else
                 i++;
+                //当A[i] == 1的时候, 这个时候,不用移位,i才向前进(之后遇到0了才移过来)
         }
     }
 

@@ -26,7 +26,7 @@ This is the review of subsets.
 ####Quick Sort Partitioning
 ![Quick Sort Partitioning](../image/QuickSort-Partitioning.png)
 
-####更直观的partition的写法
+####另一种写法
 ```java
 class Solution{
 	public void quickSort(int[] nums){
@@ -42,8 +42,8 @@ class Solution{
         }
         int partitionPoint = partition(nums, start, end);
         sortHelper(nums, start, partitionPoint - 1);
-        sortHelper(nums, partitionPoint, end);
-        }
+        sortHelper(nums, partitionPoint + 1, end);
+
     }
 
     public void swap(int[] nums, int x, int y) {
@@ -56,14 +56,14 @@ class Solution{
         int mid = start + (end - start)/2;
 
         int pivot = nums[mid];
-        while (start <= end) {
-            while (start <= end && nums[start] < pivot) {
+        while (start < end) {
+            while (start < end && nums[start] < pivot) {
                 start++;
             }
-            while (start <= end && nums[end] > pivot) {
+            while (start < end && nums[end] > pivot) {
                 end--;
             }
-            if (start <= end) {
+            if (start < end) {
                 swap(nums, start, end);
                 start++;
                 end--;

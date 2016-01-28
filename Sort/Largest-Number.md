@@ -109,14 +109,11 @@ public class Solution {
             sb.append(strs[i]);
         }
         String result = sb.toString();
-        int index = 0;
-        while (index < result.length() && result.charAt(index) == '0') {
-            index++;
-        }
-        if (index == result.length()) {
+
+        if (result.charAt(0) == '0') {
             return "0";
         }
-        return result.substring(index);
+        return result;
     }
 }
 ```

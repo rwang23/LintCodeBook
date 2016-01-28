@@ -36,7 +36,7 @@ class Solution {
         int end = colors.length - 1;
         for (int i = 0; i < k / 2; i++) {
             for (int j = start; j <= end && j < colors.length;) {
-                if (colors[j] == i + 1 && j > start) {
+                if (colors[j] == i + 1 && j >= start) {
                     swap(colors, j, start++);
                 } else if (colors[j] == k - i && j <= end) {
                     swap(colors, j, end--);
