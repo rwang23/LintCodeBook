@@ -23,7 +23,7 @@ LintCode Copyright Hash Table Linked List
 - 这个题跟前俩也很像
 - 无非就是k低效
 - 第一种方法,把majority number ii 写成k层循环的形式,但是这样时间复杂度是O(kn)
-- 第二种方法,直接用hashmao去存
+- 第二种方法,直接用hashmap去存
 
 ```java
 public class Solution {
@@ -53,6 +53,7 @@ public class Solution {
         }
 
         // recalculate counters
+        // reset the filtered counters to test
         for (Integer i : counters.keySet()) {
             counters.put(i, 0);
         }

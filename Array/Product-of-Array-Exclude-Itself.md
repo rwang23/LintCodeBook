@@ -45,6 +45,8 @@ public class Solution {
 - left_product[i] 表示i前边的数的积
 - right_product[i] 表示i后边的数的积
 - 再一个for循环，去给result添加值
+- 设置left right的时候 定义先设置好,这样好考虑边界条件
+- 比如left[i] 表示 前i-1个数的乘积 right[i] 后i+1个数的乘积
 
 ```java
 public class Solution {
