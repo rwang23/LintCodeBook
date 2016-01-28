@@ -8,19 +8,20 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - 如果求最大最小值的时候,初始化设置不一定是Integer.MAX_VALUE / MIN_VALUE, 很有可能是数组第一个数字,注意题意,容易粗心
 
 
-- 重做的题
+###重做的题
 - inorder successor in bst
 - binary tree path sum
 - subarry sum closest
 - maximum product subarray
 - best time to buy and sell stock iii
+- permutations index
 
-- 还没完全掌握
+###还没完全掌握
  -Unique Binary Search Trees
 
- -难题
+###难题
  - maximum subarray iii
  - median of two sorted arrays
 
- - 每天理解
+###每天理解
  - quicksort以及partition array 自己在这里经常犯错误

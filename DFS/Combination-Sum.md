@@ -30,6 +30,7 @@
 ####思路
 - 标准DFS题
 - 易错点在于pos的传递
+- 因为提供的数组可能存在duplicate number,所以在挑选的时候,因为前一个数已经无限次使用过了,所以不需要duplicate number了,所以跳过
 
 ```java
 public class Solution {
