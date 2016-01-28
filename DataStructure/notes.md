@@ -17,7 +17,8 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - permutations index
 
 ###还没完全掌握
- -Unique Binary Search Trees
+ - Unique Binary Search Trees
+ - next permutations
 
 ###难题
  - maximum subarray iii
