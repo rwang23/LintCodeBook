@@ -26,10 +26,9 @@ This is the review of subsets.
 ####Quick Sort Partitioning
 ![Quick Sort Partitioning](../image/QuickSort-Partitioning.png)
 
-####另一种写法
+####另一种写法 / 推荐用这一种
 ```java
-class Solution{
-	public void quickSort(int[] nums){
+    public void quickSort(int[] nums){
         if (nums == null || nums.length == 0) {
             return;
         }
@@ -53,26 +52,28 @@ class Solution{
     }
 
     public int partition(int[] nums, int start, int end){
-        int mid = start + (end - start)/2;
-
-        int pivot = nums[mid];
-        while (start < end) {
-            while (start < end && nums[start] < pivot) {
+        //int mid = start + (end - start)/2;
+        int lo = start;
+        int pivot = nums[lo];
+        start++;
+        while (start <= end) {
+            while (start <= end && nums[start] < pivot) {
                 start++;
             }
-            while (start < end && nums[end] > pivot) {
+            while (start <= end && nums[end] > pivot) {
                 end--;
             }
-            if (start < end) {
+            if (start <= end) {
                 swap(nums, start, end);
                 start++;
                 end--;
             }
         }
+        //一定要--start,因为上一次交换start已经start = start + 1,而我们需要的是没有+1的start
+        swap(nums, lo, --start);
         return start;
         //index = start前的,数组元素已经小于现在的nums[start],后面的大于
     }
-}
 ```
 
 ####Quick Sort Improve
