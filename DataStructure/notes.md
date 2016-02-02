@@ -26,3 +26,4 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 
 ###每天理解
  - quicksort以及partition array 自己在这里经常犯错误
+ - trie树
