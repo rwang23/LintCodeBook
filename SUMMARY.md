@@ -4,6 +4,8 @@ This is the summary of my experience in LintCode.
 
 * [Java](Java/README.md)
 	* [Comparator](Java/comparator.md)
+	* [Concepts](Java/concepts.md)
+	* [GUI](Java/GUI.md)
 
 * [String](String/README.md)
 	* [Digit Counts](String/Digit-Counts.md)
