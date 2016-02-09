@@ -72,29 +72,35 @@ public class Solution {
         if (nums == null || nums.length == 0) {
             return -1;
         }
+
         int size = nums.length;
-        int min = Integer.MAX_VALUE;
-        int sum = 0;
-        int length = 0;
-        for (int i = 0,  j = 0; i < size && j <= size; i++) {
-            if (i != 0) {
-                sum = sum - nums[i-1];
-                length--;
-            }
 
-            while (sum < s && j < size) {
-                sum = sum + nums[j++];
-                length++;
+        for (int i = 0; i < size; i++) {
+            if (nums[i] >= s) {
+                return 1;
             }
-
-            if (sum >= s) {
-                min = Math.min(min, length);
-            }
-
         }
 
-        return min == Integer.MAX_VALUE ? -1 : min;
+        int sum = 0;
+        int i = 0;
+        int j = 0;
+        int count = 0;
+        int min = Integer.MAX_VALUE;
 
+        for (i = 0; i < size; i++) {
+
+            while (sum < s && j < size) {
+                sum += nums[j++];
+                count++;
+            }
+            if (sum >= s) {
+                min = Math.min(min, count);
+            }
+            sum -= nums[i];
+            count--;
+
+        }
+        return (min == Integer.MAX_VALUE) ? -1 : min;
     }
 }
 

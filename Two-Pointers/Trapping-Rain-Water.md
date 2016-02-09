@@ -15,7 +15,7 @@ O(n) time and O(n) memory is also acceptable.
 Two Pointers, Forward-Backward, Traversal Array
 
 ####思路
-
+- 对撞型指针(含水类)
 - 两根指针标准题
 - 直接看题目的图形更加直观
 - http://www.lintcode.com/en/problem/trapping-rain-water/
