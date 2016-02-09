@@ -70,15 +70,17 @@ public class Solution {
      */
     public int triangleCount(int S[]) {
         // write your code here
-        if (S == null || S.length < 3) {
-            return -1;
+        if (S == null || S.length <= 2) {
+            return 0;
         }
+
+        int size = S.length;
         Arrays.sort(S);
-        int len = S.length;
         int count = 0;
-        for (int i = 2; i < len; i++) {
-            int end = i - 1;
+
+        for (int i = 2; i < size; i++) {
             int start = 0;
+            int end = i - 1;
             while (start < end) {
                 if (S[start] + S[end] > S[i]) {
                     count = count + end - start;
@@ -88,6 +90,7 @@ public class Solution {
                 }
             }
         }
+
         return count;
     }
 }

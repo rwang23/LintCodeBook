@@ -23,7 +23,7 @@ The Github repository is [here](https://github.com/rwang23/LintCodeBook). Hope t
 
 Solution and explaination of lintcode.
 
-This documents the time I my learning progress of LintCode.
+This note documents my learning progress of LintCode.
 
 All codes are in java.
 
@@ -39,7 +39,7 @@ All codes are in java.
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Renfei Wang. https://github.com/rwang23
+Copyright (c) 2016 Renfei Wang. https://github.com/rwang23
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
