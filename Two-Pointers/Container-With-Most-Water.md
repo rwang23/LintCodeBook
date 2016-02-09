@@ -41,18 +41,18 @@ public class Solution {
 
 
 ####优化解法
-先从暴力解法开始思考
-无非就是要忽略掉一些情况
-假设 [2,1,4,6,2,3]
-考虑 [2,3]的情况
-此时 end = 5, left = 0, area = (5-0) * min(2,3) = 10
-这个时候还需要考虑 end = 4/3/2/1的情况嘛?
-也就是 [2,2] [2,6] [2,4] [2,1]的情况?
-完全不用,因为end=5 left=0时候, 2<3, 上述情况不会让area比10大了
+    先从暴力解法开始思考
+    无非就是要忽略掉一些情况
+    假设 [2,1,4,6,2,3]
+    考虑 [2,3]的情况
+    此时 end = 5, left = 0, area = (5-0) * min(2,3) = 10
+    这个时候还需要考虑 end = 4/3/2/1的情况嘛?
+    也就是 [2,2] [2,6] [2,4] [2,1]的情况?
+    完全不用,因为end=5 left=0时候, 2<3, 上述情况不会让area比10大了
 
-反之,考虑height[end] > height[start]的情况
+    反之,考虑height[end] > height[start]的情况
 
-这样,就优化到了O(n)
+    这样,就优化到了O(n)
 
 ```java
 public class Solution {
@@ -62,23 +62,27 @@ public class Solution {
      */
     public int maxArea(int[] heights) {
         // write your code here
-        if (heights == null || heights.length == 0) {
+        if (heights == null || heights.length < 2) {
             return 0;
         }
+
         int start = 0;
         int end = heights.length - 1;
-        int max = Integer.MIN_VALUE;
+        int max = 0;
+
         while (start < end) {
-            if (heights[start] <= heights[end]) {
+            while (heights[start] <= heights[end] && start < end) {
                 max = Math.max(max, (end - start) * heights[start]);
                 start++;
-            } else if (heights[start] > heights[end]) {
+            }
+            while (heights[start] > heights[end] && start < end) {
                 max = Math.max(max, (end - start) * heights[end]);
                 end--;
             }
         }
 
         return max;
+
     }
 }
 
