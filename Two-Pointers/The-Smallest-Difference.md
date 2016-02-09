@@ -19,7 +19,7 @@ Two Pointers LintCode Copyright Sort Array
 - 两种解法，一种是通过二分，一种是通过two pointers
 - 拿到这道题的时候，就想到了先排序再二分查找
 - 注意自己写二分的规范，免得边界条件容易出错，比如 end = mid,自己第一次写成了end = mid -1，这纠错了
-- two pointers也是很好的方法
+- two pointers, 两个数组,两个指针,也是很好的方法
 
 ####二分
 ```java
@@ -56,23 +56,36 @@ public class Solution {
 
 ####Two Pointers
 ```java
-
 public class Solution {
+    /**
+     * @param A, B: Two integer arrays.
+     * @return: Their smallest difference.
+     */
     public int smallestDifference(int[] A, int[] B) {
+        // write your code here
+        if (A == null || B == null) {
+            return -1;
+        }
+
         Arrays.sort(A);
         Arrays.sort(B);
 
-        int i = 0, j = 0;
+        int startA = 0;
+        int startB = 0;
         int min = Integer.MAX_VALUE;
 
-        while (i < A.length && j < B.length) {
-            min = Math.min(min, Math.abs(A[i] - B[j]));
-            if (A[i] <= B[j]) {
-                i++;
+        while (startA < A.length && startB < B.length) {
+            if (A[startA] == B[startB]) {
+                return 0;
+            } else if (A[startA] > B[startB]) {
+                min = Math.min(min, A[startA] -  B[startB]);
+                startB++;
             } else {
-                j++;
+                min = Math.min(min, B[startB] - A[startA]);
+                startA++;
             }
         }
+
         return min;
     }
 }

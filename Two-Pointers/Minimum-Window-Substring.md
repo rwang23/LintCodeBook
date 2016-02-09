@@ -172,3 +172,83 @@ public class Solution {
 }
 
 ```
+
+####之后写的更容易理解版本
+
+- 前向型双指针,只需要变i,而j不变,因为[i,j]如果刚好是可包含targat的串,[i,j+1]肯定也是,[i+1,j][i+2,j]等等肯定不是,此时j才继续向前进
+- 设置hashmap来存target
+- 设置一个copy来保存现在的状态
+- 注意将map赋值到copy的时候,要创建新的,不然还是一个内存的位置
+
+```java
+public class Solution {
+    /**
+     * @param source: A string
+     * @param target: A string
+     * @return: A string denote the minimum window
+     *          Return "" if there is no such a string
+     */
+    public String minWindow(String source, String target) {
+        // write your code
+        if (source == null || target == null || source.length() < target.length()) {
+            return new String("");
+        }
+
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        StringBuilder process = new StringBuilder("");
+        String result = new String("");
+
+        for (int i = 0; i < target.length(); i++) {
+            char cur = target.charAt(i);
+            if (map.containsKey(cur)) {
+                map.put(cur, map.get(cur) + 1);
+            } else {
+                map.put(cur, 1);
+            }
+        }
+
+        int i = 0;
+        int j = 0;
+        int min = Integer.MAX_VALUE;
+        HashMap<Character, Integer> copy = new HashMap<Character, Integer>(map);
+
+        for (i = 0; i < source.length(); i++) {
+
+            while (valid(copy) && j < source.length()) {
+                char cur = source.charAt(j++);
+                if (copy.containsKey(cur)) {
+                    copy.put(cur, copy.get(cur) - 1);
+                }
+                process.append(cur);
+            }
+
+            if (!valid(copy)) {
+                min = Math.min(min, process.length());
+                if (min == process.length()) {
+                    result = process.toString();
+                }
+            }
+            process.deleteCharAt(0);
+            char curchar = source.charAt(i);
+            if (map.containsKey(curchar)) {
+                if (copy.containsKey(curchar)) {
+                    copy.put(curchar, copy.get(curchar) + 1);
+                }
+            }
+        }
+
+        return result;
+
+    }
+
+    public boolean valid(HashMap<Character, Integer> map) {
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            int value = entry.getValue();
+            if (value > 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+```

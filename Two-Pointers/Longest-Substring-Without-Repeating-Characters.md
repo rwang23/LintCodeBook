@@ -65,29 +65,28 @@ public class Solution {
      */
     public int lengthOfLongestSubstring(String s) {
         // write your code here
-        if (s == "" || s == null || s.length() == 0) {
+        if (s == null || s.length() == 0) {
             return 0;
         }
 
-        HashSet<Character> hashset = new HashSet<Character>();
         int size = s.length();
-        int max = Integer.MIN_VALUE;
-        int count = 0;
+        HashSet<Character> set = new HashSet<Character>();
+        int i = 0;
+        int j = 0;
+        int length = 0;
+        int max = 0;
 
-        for (int i = 0, j = 0; i < size && j <= size; i++) {
+        for (i = 0; i < size; i++) {
 
-            if (i != 0 && hashset.contains(s.charAt(i -1))) {
-                hashset.remove(s.charAt(i -1));
-                count--;
+            while ( j < size && !set.contains(s.charAt(j))) {
+                length++;
+                set.add(s.charAt(j++));
             }
 
-            while (j < size && !hashset.contains(s.charAt(j))) {
-                count++;
-                hashset.add(s.charAt(j));
-                j++;
-            }
-
-            max = Math.max(max, count);
+            max = Math.max(max, length);
+            char cur = s.charAt(i);
+            set.remove(cur);
+            length--;
         }
 
         return max;
