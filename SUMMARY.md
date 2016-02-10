@@ -8,6 +8,7 @@ This is the summary of my experience in LintCode.
 	* [GUI](Java/GUI.md)
 
 * [String](String/README.md)
+	* [String Permutation](String/String-Permutation.md)
 	* [Digit Counts](String/Digit-Counts.md)
 	* [Integer to Roman](String/Integer-to-Roman.md)
 	* [Roman to Integer](String/Roman-to-Integer.md)
@@ -115,6 +116,7 @@ This is the summary of my experience in LintCode.
 
 
 * [Array](Array/README.md)
+	* [Spiral Matrix](Array/Spiral-Matrix.md)
 	* [Single Number](Array/Single-Number.md)
 	* [Single Number II](Array/Single-Number-II.md)
 	* [Single Number III](Array/Single-Number-III.md)
