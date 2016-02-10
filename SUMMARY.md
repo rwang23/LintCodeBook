@@ -110,6 +110,7 @@ This is the summary of my experience in LintCode.
 	* [Longest Substring Without Repeating Characters](Two-Pointers/Longest-Substring-Without-Repeating-Characters.md)
 	* [Minimum Window Substring](Two-Pointers/Minimum-Window-Substring.md)
 	* [K Closest Numbers In Sorted Array](Two-Pointers/K-Closest-Numbers-In-Sorted-Array.md)
+	* [Longest Substring with At Most K Distinct Characters](Two-Pointers/Longest-Substring-with-At-Most-K-Distinct-Characters.md)
 	* [Nuts Bolts Problem](Two-Pointers/Nuts-Bolts-Problem.md)
 
 
