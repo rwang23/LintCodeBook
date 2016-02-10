@@ -116,7 +116,8 @@ This is the summary of my experience in LintCode.
 
 
 * [Array](Array/README.md)
-	* [Spiral Matrix](Array/Spiral-Matrix.md)
+	* [Spiral Matrix I](Array/Spiral-Matrix.md)
+	* [Spiral Matrix II](Array/Spiral-Matrix-II.md)
 	* [Single Number](Array/Single-Number.md)
 	* [Single Number II](Array/Single-Number-II.md)
 	* [Single Number III](Array/Single-Number-III.md)
