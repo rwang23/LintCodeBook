@@ -29,7 +29,7 @@ This is the summary of my experience in LintCode.
 	* [Wood Cut](BinarySearch/Wood-Cut.md)
 
 * [Binary Tree](BinaryTree/README.md)
-	* [Binary Tree Path](BinaryTree/Binary-Tree-Path.md)
+	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
 	* [Maximum Depth](BinaryTree/Maximum-Depth-of-Binary-Tree.md)
 	* [Minimum Depth](BinaryTree/Minimum-Depth-of-Binary-Tree.md)
 	* [Invert Binary Tree](BinaryTree/Invert-Binary-Tree.md)
@@ -235,6 +235,7 @@ This is the summary of my experience in LintCode.
 	* [Word Ladder](BFS/WordLadder.md)
 
 * [Math](Math/README.md)
+	* [Valid Sudoku](Math/Valid-Sudoku.md)
 	* [Happy Number](Math/Happy-Number.md)
 	* [Cosine Similarity](Math/Cosine-Similarity.md)
 	* [Sqrt](Math/Sqrt.md)

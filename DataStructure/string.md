@@ -1,4 +1,4 @@
-# String
+#String
 
 ```java
 String s1 = new String();
@@ -12,6 +12,16 @@ sb.delete(int start, int end);
 String s2New = sb.toString(); // return "ryanbill"
 // convert String to char array
 char[] s2Char = s2.toCharArray();
+
+// convert char arrays to string
+	char[] myString = new char[] {'T', 'H', 'I', 'S', ' ',  'I', 'S', ' ', 'T', 'E', 'S', 'T'};
+
+		String output1 = new String(myString);
+		System.out.println("output1 : " + output1);
+
+		String output2 = String.valueOf(myString);
+		System.out.println("\noutput2 : " + output2);
+
 // char at index 4
 char ch = s2.charAt(4); // return 'r'
 // find index at first
