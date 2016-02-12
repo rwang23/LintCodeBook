@@ -55,8 +55,6 @@ public class Solution {
                 i = i + 2;
                 continue;
             }
-
-
             cur = s.substring(i-1, i);
             if (hashtmap.containsKey(cur)) {
                 sum += hashtmap.get(cur);

@@ -48,6 +48,9 @@ public class Solution {
 
     A[mid] = A[end]：搜索A[start : end-1]
 
+- 出现最前面和末尾一样的情况,比如3,3,3,2,3,3,3
+- 如果相等,就不能判断在前面还是后面了,所以直接end--
+
 ```java
 public class Solution {
     public int findMin(int[] num) {

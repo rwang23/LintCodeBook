@@ -76,22 +76,20 @@ public class Solution {
         int rightend = root.right.end;
 
         if (start >= leftstart && end <= leftend) {
-             max = Math.max(query(root.left, start, end), max);
+             max = query(root.left, start, end);
         }
 
         if (start >= rightstart && end <= rightend){
-            max = Math.max(query(root.right, start, end), max);
+            max = query(root.right, start, end);
         }
 
         if (start <= leftend && end >= rightstart) {
-            int localmax = Math.max(query(root.left, start, leftend), query(root.right, rightstart, end) );
-            max = Math.max(localmax, max);
+            max = Math.max(query(root.left, start, leftend), query(root.right, rightstart, end) );
         }
 
         return max;
     }
 }
-
 ```
 
 ####一个特别简便的写法但稍慢的写法
@@ -107,7 +105,6 @@ public class Solution {
         if (root.start == root.end) {
             return root.max;
         }
-        int mid = ((root.start + root.end) / 2);
         return Math.max(query(root.left, start, end), query(root.right, start, end));
     }
 }
