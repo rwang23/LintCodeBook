@@ -97,8 +97,27 @@ public class Person {
 }
 ```
 
+###Polymorphism
 
+Person
+String name
+String getName()
+String toString()
 
+Student
+int studentID
+int getId()
+String toString()
+
+```java
+Person s = new Student("cara", 1234);
+//s.getId()
+//如果按照上边这么写,  compiler error
+//因为compiler不知道在调用的是student的,它只去person里边找了
+//这个时候就要用casting了
+((Student) s).getId();
+//这样写才行
+```
 
 
 
