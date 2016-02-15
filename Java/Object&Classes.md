@@ -83,3 +83,25 @@ public class Faculty extends Person {
 
 ```
 
+###Overriding
+####Overloading vs Overriding
+- Overloading: same class has same method name with different parameters
+- Overriding: subclass has same method name with the same parameters as the superclass
+
+```java
+public class Person {
+	private String name;
+	public String toString() {
+		return this.getName();
+	}
+}
+```
+
+
+
+
+
+
+
+
+
