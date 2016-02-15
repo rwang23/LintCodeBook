@@ -126,9 +126,18 @@ if (s instanceof Student) {
 	((Student) s).getId();
 }
 ```
+	Person s = new Student("cara", 1234);
+	如果之后s调用了function,
+	是哪个class的就调用哪个class里边的function
+	所以s调用的是student
+	哪怕student和Person都有的function,也是按照student的标准调用
+	如果子类里边没有,就调用父类里边的(如果里边出现了this,this指的现在的s)
 
 
+###Abstract and Interface
 
+Interface only define required methods
 
-
+class must be abstract if any methods are
+(indicate methods have to be modified)
 
