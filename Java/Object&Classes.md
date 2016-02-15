@@ -43,7 +43,7 @@ public class Person {
 public class Person extends Object {
 	private String name;
 	public Person() {
-		super();
+		super();//这行不写也是强制执行的
 		//super() has to be the first line
 	}
 }
@@ -55,6 +55,9 @@ public class Person extends Object {
 		super();
 		this.name = n;
 	}
+	public void setName(String n) {
+		this.name = n;
+	}
 }
 
 public class Student extends Person {
@@ -63,6 +66,20 @@ public class Student extends Person {
 		//this.name = n; 这样写就出问题了,因为name是person的private的,不能这么去access
 		super(n);//要这么去access
 	}
+	public Student() {
+		this("student");//这种方式也能Initialize,调用了上面的initialize的方式
+	}
 }
+
+public class Faculty extends Person {
+	public Faculty(String n) {
+		this.setName("student");
+		//这样写,一定会出现compiler error
+		//因为compiler会自动先加上一句super()
+		//然而在person里边,没有没有添加参数的constructor,所以compiler error
+	}
+
+}
+
 ```
 
