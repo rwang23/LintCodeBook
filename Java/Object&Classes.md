@@ -99,15 +99,15 @@ public class Person {
 
 ###Polymorphism
 
-Person
-String name
-String getName()
-String toString()
+		Person
+		String name
+		String getName()
+		String toString()
 
-Student
-int studentID
-int getId()
-String toString()
+		Student
+		int studentID
+		int getId()
+		String toString()
 
 ```java
 Person s = new Student("cara", 1234);
@@ -116,7 +116,15 @@ Person s = new Student("cara", 1234);
 //因为compiler不知道在调用的是student的,它只去person里边找了
 //这个时候就要用casting了
 ((Student) s).getId();
-//这样写才行
+//这样写才行,告诉compiler 相信自己的代码
+//但是这样如果s不是student,就会出现runtime error
+```
+有更好的办法
+
+```java
+if (s instanceof Student) {
+	((Student) s).getId();
+}
 ```
 
 
