@@ -5,6 +5,7 @@ This is the summary of my experience in LintCode.
 * [Java](Java/README.md)
 	* [Comparator](Java/comparator.md)
 	* [Concepts](Java/concepts.md)
+	* [Objects and Classes](Java/Object&Classes.md)
 	* [GUI](Java/GUI.md)
 
 * [String](String/README.md)

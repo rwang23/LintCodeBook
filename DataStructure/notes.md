@@ -10,16 +10,17 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 	rgb[0] = (int) (255 * ratio);
 
 ###重做的题
-- inorder successor in bst
-- binary tree path sum
-- subarry sum closest
-- maximum product subarray
+- inorder successor in bst done
+- binary tree path sum done
+- subarry sum closest done
+- maximum product subarray done
 - best time to buy and sell stock iii
 - permutations index
 
 ###还没完全掌握
  - Unique Binary Search Trees
  - next permutations
+ - heap的实现
 
 ###难题
  - maximum subarray iii

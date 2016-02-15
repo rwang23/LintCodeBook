@@ -1,4 +1,4 @@
-##Median of two Sorted Arrays Show result
+##Median of two Sorted Arrays
 
 21% Accepted
 
