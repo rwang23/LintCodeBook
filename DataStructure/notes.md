@@ -16,15 +16,19 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - maximum product subarray done
 - best time to buy and sell stock iii
 - permutations index
+- Union Find: find the weak component
+- word ladder
 
 ###还没完全掌握
  - Unique Binary Search Trees
  - next permutations
+ - permutation sequence
  - heap的实现
 
+
 ###难题
- - maximum subarray iii
- - median of two sorted arrays
+ - maximum subarray iii done
+ - median of two sorted arrays done
 
 ###每天理解
  - quicksort以及partition array 自己在这里经常犯错误

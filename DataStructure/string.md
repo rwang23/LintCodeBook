@@ -1,5 +1,9 @@
 #String
 
+String 是不能通过concat来改变的,除非赋值给一个新的String
+String s = "Hello";
+s.concat(" World!");
+System.out.println(s);
 
 ```java
 String s1 = new String();
@@ -30,3 +34,39 @@ int index = s2.indexOf('r'); // return 4. if not found, return -1
 ```
 
 StringBuffer 与 StringBuilder, 前者保证线程安全，后者不是，但单线程下效率高一些，一般使用 StringBuilder.
+判断string是否相等 用.equals()
+== tests for reference equality (whether they are the same object).
+.equals() tests for value equality (whether they are logically "equal").
+
+char[] array
+for (char c : array) {
+
+}
+这个loop里边,c是array的copy,不是直接的array,
+所以改变每个c的值并不改变array
+要改变还是用for (int i = 0; i < array.length; i++) {
+	array[i] = xx;
+}
+
+
+###Regular Expression
+####Repetion
++ means one or more
+* means zero or more
+| means or
+[123] match any character in the set
+[1-3] range 1-3
+^ excludes others
+
+
+	String text = "Hello  hello?";
+	String[] words = text.split(" +")
+	//match one or more space
+
+
+####Concatenation
+得到word
+[a-zA-Z]+
+得到sentence
+[^.!?]+
+
