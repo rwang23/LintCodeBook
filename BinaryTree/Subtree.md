@@ -71,3 +71,54 @@ public class Solution {
 }
 
 ```
+####后来写的更简便的方法,但是更容易出错
+- 因为可能有多个节点的值是一样的
+- 所以单纯T1.val == T2.val就return helper(T1.left, T2.left) && helper(T1.right, T2.right);是错误的
+
+```java
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+public class Solution {
+    /**
+     * @param T1, T2: The roots of binary tree.
+     * @return: True if T2 is a subtree of T1, or false.
+     */
+    public boolean isSubtree(TreeNode T1, TreeNode T2) {
+        // write your code here
+        if (T2 == null) {
+            return true;
+        }
+        return helper(T1, T2);
+    }
+
+
+    public boolean helper(TreeNode T1, TreeNode T2) {
+
+        if (T1 == null && T2 == null) {
+            return true;
+        }
+
+        if (T1 == null || T2 == null) {
+            return false;
+        }
+
+        boolean case1 = false;
+        if (T1.val == T2.val) {
+            case1 =  helper(T1.left, T2.left) && helper(T1.right, T2.right);
+        }
+
+        boolean case2 = helper(T1.left, T2) || helper(T1.right, T2);
+
+        return case1 || case2;
+    }
+}
+```

@@ -40,36 +40,33 @@ public class Solution {
      * @return all root-to-leaf paths
      */
     public List<String> binaryTreePaths(TreeNode root) {
-
-        List<String> ret = new ArrayList<String>();
-
-        if(root == null){
-            return ret;
+        // Write your code here
+        if (root == null) {
+            return new ArrayList<String>();
         }
 
-        dfs(root, new StringBuilder(), ret);
-
-        return ret;
+        List<String> result = new ArrayList<String>();
+        StringBuilder string = new StringBuilder("");
+        helper(root, result, string);
+        return result;
     }
 
-    public void dfs(TreeNode root, StringBuilder sb, List<String> ret){
+    public void helper(TreeNode root, List<String> result, StringBuilder string) {
+        if (root.left == null && root.right == null) {
+            string.append(Integer.toString(root.val));
+            result.add(new String(string.toString()));
+            return;
+        }
 
-       if(root.left == null && root.right == null){
-           sb.append(root.val);
-           ret.add(sb.toString());
-           return;
-       }
+        string.append(Integer.toString(root.val));
+        string.append("->");
 
-       sb.append(root.val);
-       sb.append("->");
-
-       if(root.left != null){
-           dfs(root.left, new StringBuilder(sb), ret);
-       }
-
-       if(root.right != null){
-           dfs(root.right, new StringBuilder(sb), ret);
-       }
+        if (root.left != null) {
+            helper(root.left, result, new StringBuilder(string) );
+        }
+        if (root.right != null) {
+            helper(root.right, result, new StringBuilder(string));
+        }
     }
 }
 ```
