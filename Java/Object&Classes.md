@@ -134,6 +134,15 @@ if (s instanceof Student) {
 	如果子类里边没有,就调用父类里边的(如果里边出现了this,this指的现在的s)
 
 
+
+	// Assume the variable feature stores a PointFeature object
+	SimplePointMarker pm = new OceanQuakeMarker(feature);
+	EarthquakeMarker em = pm;
+	Sorry, that's incorrect.
+	The first line is fine. But the second line will not work without a cast. Even though the object pointed to by pm is actually an OceanQuakeMarker, which is always an EarthquakeMarker, java "forgets" about that. To fix the problem, you can change the second line to:
+
+	EarthquakeMarker em = (EarthquakeMarker)pm;
+
 ###Abstract and Interface
 
 Interface only define required methods

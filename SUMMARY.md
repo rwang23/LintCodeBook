@@ -7,6 +7,8 @@ This is the summary of my experience in LintCode.
 	* [Concepts](Java/concepts.md)
 	* [Objects and Classes](Java/Object&Classes.md)
 	* [GUI](Java/GUI.md)
+	* [Iterator](Java/Iterator.md)
+	* [Some Common Use](Java/Some-Common-Use.md)
 
 * [String](String/README.md)
 	* [String Permutation](String/String-Permutation.md)

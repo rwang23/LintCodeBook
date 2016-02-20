@@ -1,5 +1,11 @@
 ###Some Common Use
 
+####Java Timing
+long startTime = System.nanoTime();
+function performed
+long endTime = System.nanoTime();
+long totalTime = (endTime - startTime) / 1000000000.0;
+System.out.println(totalTime);
 ####Charater to Integer
 Character.getNumericValue(c)
 It returns -1 if the character is not a digit.

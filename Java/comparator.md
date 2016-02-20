@@ -1,5 +1,15 @@
-####Comparator用法
+##Comparator用法
 
+####CompareTo
+
+    a compareTo() method that will define the order of two instances of a given object. Specifically, our compareTo() method needs to return an integer as follows:
+
+    a negative number if our object comes before the one passed in; -1 表明 从小到大
+    a positive number if our object comes after the one passed in; +1 表明 从大到小
+    otherwise, zero (meaning they're equal in terms of ordering).
+
+
+####Comparator
 Comparator 不能直接用在char int上边,要用在Character Integer,否则就要报错
 
 ```java
