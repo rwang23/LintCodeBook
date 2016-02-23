@@ -237,7 +237,7 @@ The cause of the race condition
 
 So, do you see how the problem was caused here? Because Jill’s thread switched out (to Jack’s thread) right before the accountBalance variable was updated, Jill’s deposit was not counted.
 
-If you remember the definition of a race condition, the example we just gave should clear it up. Here's the definition of a race condition again, in case you forgot: A race condition occurs when a program or application malfunctions because of an unexpected ordering of events that produces contention over the same resource. Hopefully, now it makes a lot more sense.
+If you remember the definition of a race condition, the example we just gave should clear it up. Here's the definition of a race condition again, in case you forgot: *A race condition occurs when a program or application malfunctions because of an unexpected ordering of events that produces contention over the same resource.* Hopefully, now it makes a lot more sense.
 
 Synchronization fixes race conditions in multi-threaded programs
 
@@ -300,3 +300,15 @@ public class BankAccount {
 What does the synchronized keyword do for us here? Well, if a thread is executing inside either the deposit or transfer blocks, then it is now impossible for any other threads to enter either of those methods. This means that only one thread can execute those functions at a time - which is exactly what we want to prevent the problem with the accountBalance variable that we described earlier.
 
 First, it is not possible for two invocations of synchronized methods on the same object to interleave - so one thread can not interrupt another thread until it is done executing all of the code in a synchronized method. So, when one thread is executing a synchronized method all other threads are blocked from entering that method.
+
+
+##What is the difference between a System Thread and a User Thread?
+
+There is a difference between user threads and system threads, and it helps to explain that difference. The system creates the system thread (no surprise there). Everything starts with the system thread – it is the first and main thread. The application usually ends when the system thread terminates. User threads are created by the application to do tasks that either cannot or should not be done by the system thread.
+
+Applications which display user interfaces have to be careful when using threads. The system (or main) thread in these types of applications is also called the event thread – because it waits for and submits events (like clicks of the mouse and keyboard actions) to the application for processing. Allowing the event/system thread to be blocked for any period of time is generally considered bad programming practice, because it can lead to an unresponsive application or even a frozen computer. The problem of a blocked event thread is avoided by creating user threads to handle time consuming operations.
+
+So, What are The Differences Between System and User Threads?
+
+
+From the discussion above, you can probably extract this information, but we thought we would make it very clear. System threads are the main threads used in an application, whereas user threads are created to handle different tasks as they come to the application.
