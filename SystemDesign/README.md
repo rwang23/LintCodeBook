@@ -21,12 +21,7 @@ The Github repository is [here](https://github.com/rwang23/LintCodeBook). Hope t
 </div>
 
 
-Solution and explaination of lintcode.
-
-This documents the time I my learning progress of LintCode.
-
-All codes are in java.
-
+[This section comes from](ProgramerInterview.com)
 
 [Repository on Github](https://github.com/rwang23/LintCodeBook)
 

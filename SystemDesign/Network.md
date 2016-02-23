@@ -1,10 +1,14 @@
+#Computer Network
+
 ##What happens when you visit a website? What exactly goes on after you type a URL into a browser?
 
 When you visit a website a lot of things happen behind the scenes that you may not be aware of. Let’s go through a list of those things in the order that they occur:
 
 1.	When you visit a website, the web browser that you are using (whether it is Chrome, Safari, Firefox, Internet Explorer etc.) will contact what’s called a DNS (Domain Name System) server that will translate the human readable website name into a numeric IP address. It’s important to remember that every website name is basically an alias for an IP address. So, DNS converts that URL into an IP address, and each website has its own unique IP address.
 
-DNS is interesting because of the fact that it is basically works in a hierarchical structure. There are many DNS servers distributed throughout the world, and if one DNS server does not know a particular IP address, then it will ask another DNS server that is “higher up” in the hierarchy. How does your personal computer know which DNS server to use? Well, your ISP (Internet Service Provider) actually sends some extra network information to your computer whenever you connect to the Internet. That “extra” network information includes which DNS server your computer should be using whenever you visit a website.
+```
+	DNS is interesting because of the fact that it is basically works in a hierarchical structure. There are many DNS servers distributed throughout the world, and if one DNS server does not know a particular IP address, then it will ask another DNS server that is “higher up” in the hierarchy. How does your personal computer know which DNS server to use? Well, your ISP (Internet Service Provider) actually sends some extra network information to your computer whenever you connect to the Internet. That “extra” network information includes which DNS server your computer should be using whenever you visit a website.
+```
 
 Once a DNS server finds the IP address of the website you are looking for, that IP address is returned to your browser.
 

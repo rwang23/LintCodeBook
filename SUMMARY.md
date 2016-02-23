@@ -14,8 +14,7 @@ This is the summary of my experience in LintCode.
 
 * [System Design](SystemDesign/README.md)
 	* [Network](SystemDesign/Network.md)
-
-
+	* [Operating Systems](SystemDesign/OperatingSystems.md)
 
 * [String](String/README.md)
 	* [String Permutation](String/String-Permutation.md)
