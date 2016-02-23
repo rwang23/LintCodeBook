@@ -96,6 +96,8 @@ This is the summary of my experience in LintCode.
 	* [Backpack I](DynamicProgramming/Backpack.md)
 	* [Backpack II](DynamicProgramming/BackpackII.md)
 	* [Coins In a Line I](DynamicProgramming/Coins-in-a-Line.md)
+	* [Coins In a Line II](DynamicProgramming/Coins-in-a-Line-II.md)
+	* [Coins In a Line III](DynamicProgramming/Coins-in-a-Line-III.md)
 
 * [Sort](Sort/README.md)
 	* [Merge Intervals](Sort/MergeIntervals.md)
