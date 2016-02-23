@@ -23,3 +23,8 @@ String.valueOf(number)
 int foo = Integer.parseInt("1234");
 (If you have it in a StringBuffer, you'll need to do Integer.parseInt(myBuffer.toString()); instead).
 Integer x = Integer.valueOf(str);
+
+####sort reverse order
+对于array与arraylist
+Arrays.sort(arraylist, Collections.reverseOrder());
+Collections.sort(arraylist, Collections.reverseOrder());

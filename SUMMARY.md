@@ -8,7 +8,14 @@ This is the summary of my experience in LintCode.
 	* [Objects and Classes](Java/Object&Classes.md)
 	* [GUI](Java/GUI.md)
 	* [Iterator](Java/Iterator.md)
+	* [Synchronized](Java/Synchronized.md)
+	* [Exception](Java/Exception.md)
 	* [Some Common Use](Java/Some-Common-Use.md)
+
+* [System Design](SystemDesign/README.md)
+	* [Network](SystemDesign/Network.md)
+
+
 
 * [String](String/README.md)
 	* [String Permutation](String/String-Permutation.md)
