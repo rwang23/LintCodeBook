@@ -95,6 +95,7 @@ This is the summary of my experience in LintCode.
 	* [Unique Binary Search Trees](DynamicProgramming/Unique-Binary-Search-Trees.md)
 	* [Backpack I](DynamicProgramming/Backpack.md)
 	* [Backpack II](DynamicProgramming/BackpackII.md)
+	* [Coins In a Line I](DynamicProgramming/Coins-in-a-Line.md)
 
 * [Sort](Sort/README.md)
 	* [Merge Intervals](Sort/MergeIntervals.md)
