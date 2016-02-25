@@ -22,6 +22,7 @@ This is the summary of my experience in LintCode.
 	* [Digit Counts](String/Digit-Counts.md)
 	* [Integer to Roman](String/Integer-to-Roman.md)
 	* [Roman to Integer](String/Roman-to-Integer.md)
+	* [Isomorphic Strings](String/Isomorphic-Strings.md)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
@@ -256,10 +257,14 @@ This is the summary of my experience in LintCode.
 	* [Pow](Math/Pow.md)
 	* [Fibonacci](Math/Fibonacci.md)
 	* [Plus One](Math/PlusOne.md)
-	* [A + B Problem](Math/A+B-Problem.md)
 	* [Trailing Zeros](Math/TrailingZeros.md)
 	* [Fast Power](Math/FastPower.md)
 	* [Gray Code](Math/Gray-Code.md)
+
+* [Bits Manipulation](BitsManipulation/README.md)
+	* [Bitwise AND of Numbers Range](BitsManipulation/Bitwise-AND-of-Numbers-Range.md)
+	* [Gray Code](BitsManipulation/Gray-Code.md)
+	* [A + B Problem](BitsManipulation/A+B-Problem.md)
 
 * [OO Design](OODesign/README.md)
 	* [Singleton](OODesign/Singleton.md)

@@ -28,3 +28,8 @@ String.valueOf(number)
 	对于array与arraylist
 	Arrays.sort(arraylist, Collections.reverseOrder());
 	Collections.sort(arraylist, Collections.reverseOrder());
+
+####使用二进制运算要注意
+- 很可能bug就是一些小错误造成的
+- 比如(nums[i] & xor) == 0
+- 如果携程了 nums[i] & xoe == 0 就错误了
