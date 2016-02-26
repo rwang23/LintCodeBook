@@ -272,6 +272,5 @@ This is the summary of my experience in LintCode.
 
 * [Other Information](Others/README.md)
 	* [Company Level](Others/CompanyLevel.md)
-	* [Insertion Sort](Others/insertionsort.md)
 
 
