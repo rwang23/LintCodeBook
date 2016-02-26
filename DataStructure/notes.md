@@ -25,10 +25,10 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
  - permutation sequence
  - heap的实现
 
+###做错的题
+- leetcode Integer to English Words
 
 ###难题
- - maximum subarray iii done
- - median of two sorted arrays done
 
 ###每天理解
  - quicksort以及partition array 自己在这里经常犯错误

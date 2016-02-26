@@ -71,6 +71,7 @@ This is the summary of my experience in LintCode.
 	* [Validate Binary Search Tree](BinaryTree/Validate-Binary-Search-Tree.md)
 	* [Binary Tree Maximum Path Sum II](BinaryTree/Binary-Tree-Maximum-Path-SumII.md)
 	* [Binary Tree Maximum Path Sum](BinaryTree/Binary-Tree-Maximum-Path-Sum.md)
+	* [Recover Binary Search Tree](BinaryTree/Recover-Binary-Search-Tree.md)
 
 
 * [Dynamic Programming](DynamicProgramming/README.md)
@@ -259,7 +260,6 @@ This is the summary of my experience in LintCode.
 	* [Plus One](Math/PlusOne.md)
 	* [Trailing Zeros](Math/TrailingZeros.md)
 	* [Fast Power](Math/FastPower.md)
-	* [Gray Code](Math/Gray-Code.md)
 
 * [Bits Manipulation](BitsManipulation/README.md)
 	* [Bitwise AND of Numbers Range](BitsManipulation/Bitwise-AND-of-Numbers-Range.md)
