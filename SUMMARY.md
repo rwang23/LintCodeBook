@@ -11,11 +11,9 @@ This is the summary of my experience in LintCode.
 	* [Synchronized](Java/Synchronized.md)
 	* [Exception](Java/Exception.md)
 	* [Some Common Use](Java/Some-Common-Use.md)
+	* [String](Java/string.md)
+	* [Some other notes](Java/notes.md)
 
-* [System Design](SystemDesign/README.md)
-	* [Network](SystemDesign/Network.md)
-	* [Operating Systems](SystemDesign/OperatingSystems.md)
-	* [Design Pattern](SystemDesign/DesignPattern.md)
 
 * [String](String/README.md)
 	* [String Permutation](String/String-Permutation.md)
@@ -186,7 +184,6 @@ This is the summary of my experience in LintCode.
 
 
 * [Data Structure](DataStructure/README.md)
-   * [String](DataStructure/string.md)
    * [Linked List](DataStructure/linked_list.md)
    * [Binary Tree](DataStructure/binary_tree.md)
    * [Trie Tree](DataStructure/trie.md)
@@ -201,7 +198,6 @@ This is the summary of my experience in LintCode.
    * [Scan Line](DataStructure/scan-line.md)
    * [Union Find](DataStructure/Union-Find.md)
    * [Huffman Compression](DataStructure/huffman_compression.md)
-   * [Some other notes](DataStructure/notes.md)
 
 * [Data Structure Problem](DataStructureProblem/README.md)
 	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)

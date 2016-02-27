@@ -8,6 +8,22 @@
 
 链表就是链式存储的线性表。根据指针域的不同，链表分为单向链表、双向链表、循环链表等等。
 
+##容易犯错的地方
+    在Convert Sorted List to Binary Search Tree这道题里,
+    自己写的时候犯了大错,
+    假设有个ListNode 是head
+    当ListNode cur = head时,两者指向同一个
+    如果cur = null,
+    并没有摧毁原来的对象,摧毁的只是这个cur reference
+
+    同时,
+    如果有链表
+    head -> a -> b -> c -> d
+    如果将head = null,整个链表将会自动删除,
+    (如果有别的node赋值好了,这个会保留, 比如事先声明 ListNode next = head.next)
+    之后并不能读取到了next
+
+
 ## 编程实现
 
 ### Java

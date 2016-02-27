@@ -26,6 +26,9 @@
 - 从底层开始构造,按照中序遍历,因为current是全局变量,所以其实是left里边的root先构造,然后是root,此时这个root就是中序遍历的中点,然后是right
 - 这个解法很难理解,但是理解几次就好了
 
+####注意
+- 如果用分治的O(nlogn)的方法一定要用Pre指针,否则则会出现总结的linked list问题
+
 ```java
 public class Solution {
     private ListNode current;
