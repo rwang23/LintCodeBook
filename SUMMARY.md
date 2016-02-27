@@ -113,6 +113,8 @@ This is the summary of my experience in LintCode.
 	* [Four Sum](Sort/Four-Sum.md)
 	* [Largest Number](Sort/Largest-Number.md)
 	* [Partition Array](Sort/Partition-Array.md)
+	* [Count of Smaller Numbers After Self](Sort/Count-of-Smaller-Numbers-After-Self.md)
+
 
 * [Two Pointers](Two-Pointers/README.md)
 	* [Kth Largetst Element](Two-Pointers/Kth-Largest-Element.md)
@@ -253,10 +255,12 @@ This is the summary of my experience in LintCode.
 	* [Cosine Similarity](Math/Cosine-Similarity.md)
 	* [Sqrt](Math/Sqrt.md)
 	* [Pow](Math/Pow.md)
+	* [Power of Three](Math/Power-of-Three.md)
 	* [Fibonacci](Math/Fibonacci.md)
 	* [Plus One](Math/PlusOne.md)
 	* [Trailing Zeros](Math/TrailingZeros.md)
 	* [Fast Power](Math/FastPower.md)
+	* [Bulb Switcher](Math/Bulb-Switcher.md)
 
 * [Bits Manipulation](BitsManipulation/README.md)
 	* [Bitwise AND of Numbers Range](BitsManipulation/Bitwise-AND-of-Numbers-Range.md)

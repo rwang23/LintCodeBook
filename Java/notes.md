@@ -24,6 +24,8 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
  - next permutations
  - permutation sequence
  - heap的实现
+ - Count of Smaller Numbers After Self没理解
+ - Count of Range Sum没理解
 
 ###做错的题
 - leetcode Integer to English Words
