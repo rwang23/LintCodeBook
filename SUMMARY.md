@@ -242,6 +242,9 @@ This is the summary of my experience in LintCode.
 	* [N Queen II](DFS/N-QueensII.md)
 	* [Palindrome Partitioning](DFS/Palindrome-Partitioning.md)
 
+* [Memorization](Memorization/README.md)
+	* [Longest Increasing Path in a Matrix](Memorization/Longest-Increasing-Path-in-a-Matrix.md)
+
 * [BFS](BFS/README.md)
 	* [Route Between Two Nodes in Graph](BFS/Route-Between-Two-Nodes-in-Graph.md)
 	* [Clone Graph](BFS/Clone-Graph.md)
