@@ -32,21 +32,23 @@ char ch = s2.charAt(4); // return 'r'
 // find index at first
 int index = s2.indexOf('r'); // return 4. if not found, return -1
 ```
+###String[] arrays 转化成string
+Arrays.toString();
 
-StringBuffer 与 StringBuilder, 前者保证线程安全，后者不是，但单线程下效率高一些，一般使用 StringBuilder.
-判断string是否相等 用.equals()
-== tests for reference equality (whether they are the same object).
-.equals() tests for value equality (whether they are logically "equal").
+###StringBuffer 与 StringBuilder, 前者保证线程安全，后者不是，但单线程下效率高一些，一般使用 StringBuilder.
+###判断string是否相等 用.equals()
+####== tests for reference equality (whether they are the same object).
+####.equals() tests for value equality (whether they are logically "equal").
 
-char[] array
-for (char c : array) {
+	char[] array
+	for (char c : array) {
 
-}
-这个loop里边,c是array的copy,不是直接的array,
-所以改变每个c的值并不改变array
-要改变还是用for (int i = 0; i < array.length; i++) {
-	array[i] = xx;
-}
+	}
+	这个loop里边,c是array的copy,不是直接的array,
+	所以改变每个c的值并不改变array
+	要改变还是用for (int i = 0; i < array.length; i++) {
+		array[i] = xx;
+	}
 
 
 ###Regular Expression

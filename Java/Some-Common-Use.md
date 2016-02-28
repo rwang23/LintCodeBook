@@ -6,6 +6,7 @@
 	long endTime = System.nanoTime();
 	long totalTime = (endTime - startTime) / 1000000000.0;
 	System.out.println(totalTime);
+
 ####Charater to Integer
 	Character.getNumericValue(c)
 	It returns -1 if the character is not a digit.
@@ -23,6 +24,12 @@ String.valueOf(number)
 	int foo = Integer.parseInt("1234");
 	(If you have it in a StringBuffer, you'll need to do Integer.parseInt(myBuffer.toString()); instead).
 	Integer x = Integer.valueOf(str);
+
+####String[] arrays 转化成string
+Arrays.toString();
+
+####Character.toLowerCase()
+####Character.toUpperCase()
 
 ####sort reverse order
 	对于array与arraylist

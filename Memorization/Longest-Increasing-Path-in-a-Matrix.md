@@ -132,8 +132,9 @@ public class Solution {
             return 0;
         }
 
-        //可以不用赋值,Java里,数组自动初始化为0
-        // int[][] visited = new int[m][n];
+        int[][] visited = new int[m][n];
+
+        //Java会为数组自动初始化,所以初始化可以不用写
         // for (int i = 0; i < m; i++) {
         //     for (int j = 0; j < n; j++) {
         //         visited[i][j] = 0;
@@ -157,15 +158,17 @@ public class Solution {
         int[] x = new int[]{0, 1, 0, -1};
         int[] y = new int[]{-1, 0, 1, 0};
 
+        int max = 0;
         for (int k = 0; k < 4; k++) {
             int nx = i + x[k];
             int ny = j + y[k];
             if ( nx >= 0 && nx < m && ny >= 0 && ny < n && matrix[i][j] < matrix[nx][ny]) {
-                visited[i][j] = Math.max(dfs(i + x[k], j + y[k], m, n, matrix, visited), visited[i][j]);
+                max = Math.max(dfs(i + x[k], j + y[k], m, n, matrix, visited), max);
             }
         }
+        visited[i][j] = max + 1;
 
-        return ++visited[i][j];
+        return visited[i][j];
 
     }
 }

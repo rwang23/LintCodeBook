@@ -20,6 +20,7 @@ This is the summary of my experience in LintCode.
 	* [Digit Counts](String/Digit-Counts.md)
 	* [Integer to Roman](String/Integer-to-Roman.md)
 	* [Roman to Integer](String/Roman-to-Integer.md)
+	* [Valid Palindrome](String/Valid-Palindrome.md)
 	* [Isomorphic Strings](String/Isomorphic-Strings.md)
 
 * [Binary Search](BinarySearch/README.md)
