@@ -24,6 +24,7 @@ Dynamic Programming Array Game Theory
 - 画图找规律
 - 再通过简单的case代入,去寻找初始化
 - 通过初始化写循环条件
+- dp[i][j] 此时,先手的人从剩下的硬币 values[i] 到values[j]中,所能获得的最大价值
 
 
 ```java

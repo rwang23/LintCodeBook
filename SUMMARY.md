@@ -271,6 +271,7 @@ This is the summary of my experience in LintCode.
 	* [Bitwise AND of Numbers Range](BitsManipulation/Bitwise-AND-of-Numbers-Range.md)
 	* [Gray Code](BitsManipulation/Gray-Code.md)
 	* [A + B Problem](BitsManipulation/A+B-Problem.md)
+	* [Missing Number](BitsManipulation/Missing-Number.md)
 
 * [OO Design](OODesign/README.md)
 	* [Singleton](OODesign/Singleton.md)
