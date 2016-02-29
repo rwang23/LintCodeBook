@@ -2,8 +2,16 @@
 
 - 做二叉树 首先考虑分治法， 根据题目要求，放在左右子树做
 
+[Morris Traversal参考](http://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html)
 
 ###Morris PreOrder Traversal
+	1.If left child is null, print the current node data. Move to right child.
+	….Else, Make the right child of the inorder predecessor point to the current node. Two cases arise:
+	………a) The right child of the inorder predecessor already points to the current node. Set right child to NULL. Move to right child of current node.
+	………b) The right child is NULL. Set it to current node. Print current node’s data and move to left child of current node.
+	2...Iterate until current node is not NULL.
+
+
 ```java
     void morrisTraversalPreorder(Node current) {
         while (current != null) {
@@ -41,6 +49,25 @@
 ```
 
 ###Morris InOrder Traversal
+	1. Initialize current as root
+	2. While current is not NULL
+	   If current does not have left child
+	      a) Print current’s data
+	      b) Go to the right, i.e., current = current->right
+	   Else
+	      a) Make current as right child of the rightmost node in current's left subtree
+	      b) Go to this left child, i.e., current = current->left
+
+	1. 如果当前节点的左孩子为空，则输出当前节点并将其右孩子作为当前节点。
+
+	2. 如果当前节点的左孩子不为空，在当前节点的左子树中找到当前节点在中序遍历下的前驱节点。
+
+	   a) 如果前驱节点的右孩子为空，将它的右孩子设置为当前节点。当前节点更新为当前节点的左孩子。
+
+	   b) 如果前驱节点的右孩子为当前节点，将它的右孩子重新设为空（恢复树的形状）。输出当前节点。当前节点更新为当前节点的右孩子。
+
+	3. 重复以上1、2直到当前节点为空。
+
 ```java
     void MorrisTraversal(Node current) {
         Node pre;
@@ -69,8 +96,8 @@
 
                  /* Revert the changes made in if part to restore the original
                  tree i.e., fix the right child of predecssor */ else {
+                 	System.out.print(current.data + " ");
                     pre.right = null;
-                    System.out.print(current.data + " ");
                     current = current.right;
                 }   /* End of if condition pre->right == NULL */
 

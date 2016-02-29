@@ -71,6 +71,7 @@ This is the summary of my experience in LintCode.
 	* [Binary Tree Maximum Path Sum II](BinaryTree/Binary-Tree-Maximum-Path-SumII.md)
 	* [Binary Tree Maximum Path Sum](BinaryTree/Binary-Tree-Maximum-Path-Sum.md)
 	* [Recover Binary Search Tree](BinaryTree/Recover-Binary-Search-Tree.md)
+	* [Kth Smallest Element in a BST](BinaryTree/Kth-Smallest-Element-in-a-BST.md)
 
 
 * [Dynamic Programming](DynamicProgramming/README.md)
