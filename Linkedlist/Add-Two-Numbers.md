@@ -114,49 +114,79 @@ public class Solution {
 
 
 ####解法二
-- 来自九章
-- 时间也在1200ms左右
 - 直接计算，根本不必要去读取linkedlist数值，因为本来就翻转的，最前面的数就是个位数，其次是十位数，直接相加就可以了
 
 ```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
 public class Solution {
-    public ListNode addLists(ListNode l1, ListNode l2) {
-        if(l1 == null && l2 == null) {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        if (l1 == null || l2 == null) {
             return null;
         }
 
-        ListNode head = new ListNode(0);
-        ListNode point = head;
-        int carry = 0;
-        while(l1 != null && l2!=null){
-            int sum = carry + l1.val + l2.val;
-            point.next = new ListNode(sum % 10);
-            carry = sum / 10;
+        ListNode dummy = new ListNode(0);
+        ListNode result = dummy;
+
+        int carryBit = 0;
+        while (l1 != null && l2 != null) {
+            int newVal = l2.val + l1.val + carryBit;
+            if (newVal >= 10) {
+                newVal -= 10;
+                carryBit = 1;
+            } else {
+                carryBit = 0;
+            }
+            result.next = new ListNode(newVal);
+            result = result.next;
             l1 = l1.next;
             l2 = l2.next;
-            point = point.next;
         }
 
-        while(l1 != null) {
-            int sum =  carry + l1.val;
-            point.next = new ListNode(sum % 10);
-            carry = sum /10;
+        while (l1 != null) {
+            int newVal = l1.val;
+            if (carryBit != 0) {
+                newVal = l1.val + carryBit;
+            }
+            if (newVal >= 10) {
+                newVal -= 10;
+                carryBit = 1;
+            } else {
+                carryBit = 0;
+            }
+            result.next = new ListNode(newVal);
+            result = result.next;
             l1 = l1.next;
-            point = point.next;
         }
 
-        while(l2 != null) {
-            int sum =  carry + l2.val;
-            point.next = new ListNode(sum % 10);
-            carry = sum /10;
+        while (l2 != null) {
+            int newVal = l2.val;
+            if (carryBit != 0) {
+                newVal = l2.val + carryBit;
+            }
+            if (newVal >= 10) {
+                newVal -= 10;
+                carryBit = 1;
+            } else {
+                carryBit = 0;
+            }
+            result.next = new ListNode(newVal);
+            result = result.next;
             l2 = l2.next;
-            point = point.next;
         }
 
-        if (carry != 0) {
-            point.next = new ListNode(carry);
+        if (carryBit == 1) {
+            result.next = new ListNode(carryBit);
         }
-        return head.next;
+
+        return dummy.next;
+
     }
 }
 ```

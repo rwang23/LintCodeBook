@@ -23,60 +23,63 @@
 
 ####思路
 - quick select
+- As in quick sort, we have to do partition in halves *, and then in halves of a half, but this time, we only need to do the next round partition in one single partition (half) of the two where the element is expected to lie in.
+- It is like (not very accurate)
+- n + 1/2 n + 1/4 n + 1/8 n + ..... < 2 n
 
 ```java
-class Solution {
-    //param k : description of k
-    //param numbers : array of numbers
-    //return: description of return
-    public int kthLargestElement(int k, ArrayList<Integer> numbers) {
-        // write your code here
-        int lo = 0;
-        int hi = numbers.size() - 1;
-        k = numbers.size() - k;
-        while (lo < hi) {
-            int j = partition(numbers, lo, hi);
-            if (k > j) {
-                lo = j + 1;
-            } else if (k < j) {
-                hi = j - 1;
-            } else {
-                return numbers.get(k).intValue();
-            }
-        }
-        return numbers.get(k).intValue();
+public class Solution {
+    public int findKthLargest(int[] nums, int k) {
 
-    }
+        int kthSmallest = nums.length - k;
 
-    public int partition(ArrayList<Integer> numbers, int lo, int hi) {
-        int start = lo;
-        int end = hi + 1;
+        int start = 0;
+        int end = nums.length - 1;
+
         while (start < end) {
-            while (numbers.get(++start) < numbers.get(lo)) {
-                if (start == hi) {
-                    break;
-                }
+            int p = partition(nums, start, end);
+
+            if (p == kthSmallest) {
+                return nums[p];
+            } else if (p > kthSmallest) {
+                end = p - 1;
+            } else {
+                start = p + 1;
             }
-            while (numbers.get(--end) > numbers.get(lo)) {
-                if (end == lo) {
-                    break;
-                }
-            }
-            if (start >= end) {
-                break;
-            }
-            swap(numbers, start, end);
         }
-        swap(numbers, lo, end);
-        return end;
+
+        return nums[kthSmallest];
     }
 
-    public void swap(ArrayList<Integer> numbers, int lo, int hi) {
-        int temp = numbers.get(lo).intValue();
-        numbers.set(lo, numbers.get(hi).intValue());
-        numbers.set(hi, temp);
+    public int partition(int[] nums, int start, int end) {
+
+        int origin = start;
+        int pivot = nums[start++];
+
+        while (start <= end) {
+            while (start <= end && nums[start] < pivot) {
+                start++;
+            }
+            while (start<=end && nums[end] > pivot) {
+                end--;
+            }
+
+            if (start <= end) {
+                swap(nums, start, end);
+                start++;
+                end--;
+            }
+        }
+
+        swap(nums, origin, --start);
+        return start;
     }
 
-};
+    public void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
+    }
+}
 
 ```

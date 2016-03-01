@@ -28,7 +28,6 @@ LintCode Copyright Dynamic Programming Subarray Array
 - function details： max是从元素j-1到i-1（i-1因为aux[i][j]代表0->i-1元素中，j-1因为题目中说“The subarray should contain at least one number”）的max subarray, 用求maximum subarray的方法，需要从后往前算
 - initialize: aux[i][j]都为最小值
 - answer: aux[len][k]代表了 len-1元素中k段subarray的最大和
-- 重做
 
 
 ```java
