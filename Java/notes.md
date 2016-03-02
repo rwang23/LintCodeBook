@@ -31,6 +31,7 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 ###Leetcode一轮做错的题
 - leetcode Integer to English Words
 - Find the duplicate number
+- String to Integer (atoi)
 
 ###Leetcode一轮不会做的题
 - First Missing Positive

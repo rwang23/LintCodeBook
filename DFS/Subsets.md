@@ -29,37 +29,31 @@
 - 当循环中i=1时，是以2开头的，以此类推
 
 ```java
-class Solution {
-	/**
-	 * @param S: A set of numbers.
-	 * @return: A list of lists. All valid subsets.
-	 */
-	public ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> S) {
-		// write your code here
-		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-		ArrayList<Integer> list = new ArrayList<Integer>() ;
-		int[] nums = new int[S.size()];
-		for (int i = 0; i < nums.length; i++) {
-			nums[i] = S.get(i).intValue();
-		}
-		Arrays.sort(nums);
+public class Solution {
+    public List<List<Integer>> subsets(int[] nums) {
 
-		int pos = 0;
-		subsetshelper(result, list, nums, pos);
-		return result;
-	}
+        int length = nums.length;
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        if (length == 0) {
+            return result;
+        }
 
-	public void subsetshelper(ArrayList<ArrayList<Integer>> result,
-	                          ArrayList<Integer> list,
-	                          int[] nums,
-	                          int pos) {
-		result.add(new ArrayList<Integer>(list));
-		for (int i = pos; i < nums.length; i++) {
-			list.add(nums[i]);
-			subsetshelper(result, list, nums, i + 1);
-			list.remove(list.size()-1);
-		}
-	}
+        List<Integer> list = new ArrayList<Integer>();
+        Arrays.sort(nums);
+        dfs(result, list, nums, 0);
+        return result;
+    }
+
+    void dfs(List<List<Integer>> result, List<Integer> list, int[] nums, int pos) {
+
+        result.add(new ArrayList<Integer>(list));
+
+        for (int i = pos; i < nums.length; i++) {
+            list.add(nums[i]);
+            dfs(result, list, nums, i + 1);
+            list.remove(list.size() - 1);
+        }
+    }
 }
 ```
 

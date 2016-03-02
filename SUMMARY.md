@@ -22,6 +22,7 @@ This is the summary of my experience in LintCode.
 	* [Roman to Integer](String/Roman-to-Integer.md)
 	* [Valid Palindrome](String/Valid-Palindrome.md)
 	* [Isomorphic Strings](String/Isomorphic-Strings.md)
+	* [String to Integer (atoi)](String/String-to-Integer.md)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
