@@ -23,6 +23,7 @@ This is the summary of my experience in LintCode.
 	* [Valid Palindrome](String/Valid-Palindrome.md)
 	* [Isomorphic Strings](String/Isomorphic-Strings.md)
 	* [String to Integer (atoi)](String/String-to-Integer.md)
+	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
@@ -248,6 +249,7 @@ This is the summary of my experience in LintCode.
 	* [N Queen I](DFS/N-Queens.md)
 	* [N Queen II](DFS/N-QueensII.md)
 	* [Palindrome Partitioning](DFS/Palindrome-Partitioning.md)
+	* [Generalized Abbreviation](DFS/Generalized-Abbreviation.md)
 
 * [Memorization](Memorization/README.md)
 	* [Longest Increasing Path in a Matrix](Memorization/Longest-Increasing-Path-in-a-Matrix.md)
