@@ -72,6 +72,7 @@ This is the summary of my experience in LintCode.
 	* [Validate Binary Search Tree](BinaryTree/Validate-Binary-Search-Tree.md)
 	* [Binary Tree Maximum Path Sum II](BinaryTree/Binary-Tree-Maximum-Path-SumII.md)
 	* [Binary Tree Maximum Path Sum](BinaryTree/Binary-Tree-Maximum-Path-Sum.md)
+	* [Sum Root to Leaf Numbers](BinaryTree/Sum-Root-to-Leaf-Numbers.md)
 	* [Recover Binary Search Tree](BinaryTree/Recover-Binary-Search-Tree.md)
 	* [Count Univalue Subtrees](BinaryTree/Count-Univalue-Subtrees.md)
 	* [Count Complete Tree Nodes](BinaryTree/Count-Complete-Tree-Nodes.md)
