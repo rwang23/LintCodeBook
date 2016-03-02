@@ -28,8 +28,12 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
  - Count of Range Sum没理解
  - Morris Traversal
 
-###做错的题
+###Leetcode一轮做错的题
 - leetcode Integer to English Words
+- Find the duplicate number
+
+###Leetcode一轮不会做的题
+- First Missing Positive
 
 ###难题
 

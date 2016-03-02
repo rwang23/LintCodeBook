@@ -24,6 +24,8 @@ Do it without recursion.
 - i!=0 是为了nums[i-1]不溢出
 - nums[i]=nums[i-1]跟subset一样
 - 九章这个思路有点难理解，看下面自己的解法
+- 九章这个速度更快一些
+- 用了这个条件判断,就可以避开了很多cases
 
 ```java
 class Solution {
@@ -97,52 +99,41 @@ class Solution {
 - 最后只需要判断result包含过这个list没有，如果没有，才加入
 
 ```java
-class Solution {
-    /**
-     * @param nums: A list of integers.
-     * @return: A list of unique permutations.
-     */
-    public ArrayList<ArrayList<Integer>> permuteUnique(ArrayList<Integer> S) {
-		// write your code here
-		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-		ArrayList<Integer> list = new ArrayList<Integer>();
-		HashMap<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
+public class Solution {
+    public List<List<Integer>> permuteUnique(int[] nums) {
+        int length = nums.length;
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
 
-		if(S==null || S.size()==0){
-			return result;
-		}
-		int[] nums = new int[S.size()];
+        if (length == 0) {
+            return result;
+        }
 
-		for (int i = 0; i < nums.length; i++) {
-			nums[i] = S.get(i).intValue();
-		}
-		Arrays.sort(nums);
+        List<Integer> list = new ArrayList<Integer>();
+        HashSet<Integer> set = new HashSet<Integer>();
+        dfs(nums, result, list, set);
 
-		subsetshelper(result, list, nums, hashmap);
-		return result;
-	}
+        return result;
 
-	public void subsetshelper(ArrayList<ArrayList<Integer>> result,
-	                          ArrayList<Integer> list,
-	                          int[] nums,
-	                          HashMap<Integer, Integer> hashmap) {
-		if(list.size() == nums.length && !result.contains(list)){
-			result.add(new ArrayList<Integer>(list));
-		}
+    }
 
-		for (int i = 0; i < nums.length; i++) {
-            if (hashmap.containsKey(i)) {
+    public void dfs(int[] nums, List<List<Integer>> result, List<Integer> list, HashSet<Integer> set) {
+        if (list.size() == nums.length && !result.contains(list)) {
+            result.add(new ArrayList<Integer>(list));
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (set.contains(i)) {
                 continue;
             }
 
-			list.add(nums[i]);
-			hashmap.put(i, nums[i]);
+            list.add(nums[i]);
+            set.add(i);
 
-			subsetshelper(result, list, nums, hashmap);
+            dfs(nums, result, list, set);
 
-            hashmap.remove(i);
-			list.remove(list.size() - 1);
-		}
-	}
+            list.remove(list.size() - 1);
+            set.remove(i);
+        }
+    }
 }
 ```

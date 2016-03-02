@@ -71,6 +71,7 @@ This is the summary of my experience in LintCode.
 	* [Binary Tree Maximum Path Sum II](BinaryTree/Binary-Tree-Maximum-Path-SumII.md)
 	* [Binary Tree Maximum Path Sum](BinaryTree/Binary-Tree-Maximum-Path-Sum.md)
 	* [Recover Binary Search Tree](BinaryTree/Recover-Binary-Search-Tree.md)
+	* [Count Univalue Subtrees](BinaryTree/Count-Univalue-Subtreese.md)
 	* [Kth Smallest Element in a BST](BinaryTree/Kth-Smallest-Element-in-a-BST.md)
 
 
@@ -159,6 +160,8 @@ This is the summary of my experience in LintCode.
 	* [Best Time to Buy and Sell Stock III](Array/Best-Time-to-Buy-and-Sell-StockIII.md)
 	* [Best Time to Buy and Sell Stock with Cooldown](Array/Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
+	* [Find the Duplicate Number](Array/Find-the-Duplicate-Number.md)
+	* [First Missing Positive](Array/First-Missing-Positive.md)
 
 
 * [Linkedlist](Linkedlist/README.md)
@@ -267,8 +270,11 @@ This is the summary of my experience in LintCode.
 	* [Trailing Zeros](Math/TrailingZeros.md)
 	* [Fast Power](Math/FastPower.md)
 	* [Bulb Switcher](Math/Bulb-Switcher.md)
+	* [Self Crossing](Math/Self-Crossing.md)
+
 
 * [Bits Manipulation](BitsManipulation/README.md)
+	* [Number of 1 Bits](BitsManipulation/Number-of-1-Bits.md)
 	* [Bitwise AND of Numbers Range](BitsManipulation/Bitwise-AND-of-Numbers-Range.md)
 	* [Gray Code](BitsManipulation/Gray-Code.md)
 	* [A + B Problem](BitsManipulation/A+B-Problem.md)
