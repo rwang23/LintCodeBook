@@ -264,6 +264,7 @@ This is the summary of my experience in LintCode.
 	* [Cosine Similarity](Math/Cosine-Similarity.md)
 	* [Sqrt](Math/Sqrt.md)
 	* [Pow](Math/Pow.md)
+	* [Reverse Integer](Math/Reverse-Integer.md)
 	* [Power of Three](Math/Power-of-Three.md)
 	* [Fibonacci](Math/Fibonacci.md)
 	* [Plus One](Math/PlusOne.md)
@@ -274,6 +275,7 @@ This is the summary of my experience in LintCode.
 
 
 * [Bits Manipulation](BitsManipulation/README.md)
+	* [Reverse Bits](BitsManipulation/Reverse-Bits.md)
 	* [Number of 1 Bits](BitsManipulation/Number-of-1-Bits.md)
 	* [Bitwise AND of Numbers Range](BitsManipulation/Bitwise-AND-of-Numbers-Range.md)
 	* [Gray Code](BitsManipulation/Gray-Code.md)
