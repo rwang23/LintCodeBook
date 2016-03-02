@@ -26,58 +26,61 @@
 
 ```java
 /**
- * Definition for ListNode.
+ * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
  *     ListNode next;
- *     ListNode(int val) {
- *         this.val = val;
- *         this.next = null;
- *     }
+ *     ListNode(int x) { val = x; }
  * }
  */
 public class Solution {
-    /**
-     * @param lists: a list of ListNode
-     * @return: The head of one sorted list.
-     */
-    public ListNode mergeKLists(List<ListNode> lists) {
-        // write your code here
-        if (lists.size() == 0) {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length == 0) {
             return null;
         }
-        int len = lists.size();
-        for (int i = 1; i < len; i = i + i) {
-            for (int j = 0; j < len - i; j = j +i +i) {
-                ListNode merge = mergeTwoLists(lists.get(j),lists.get(j+i));
-                lists.set(j,merge);
+        int size = lists.length;
+
+        for (int len = 1; len < size; len = len + len) {
+            for (int i = 0; i + len < size; i = i + len * 2) {
+               lists[i] = mergeTwoLists(lists[i], lists[i + len]);
             }
         }
-        return lists.get(0);
+        return lists[0];
+
     }
+
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        // write your code here
-        ListNode mergelist = new ListNode(0);
-        ListNode head = mergelist;
-        while (true) {
+        if (l1 == null) {
+            return l2;
+        }
+        if (l2 == null) {
+            return l1;
+        }
+        ListNode dummy = new ListNode(0);
+        dummy.next = l1;
+        ListNode pre = dummy;
+        while (l1 != null || l2 != null) {
             if (l1 == null) {
-                mergelist.next = l2;
-                break;
-            } else if (l2 == null) {
-                mergelist.next = l1;
+                pre.next = l2;
                 break;
             }
-            if (l1.val >= l2.val) {
-                mergelist.next = l2;
-                l2 = l2.next;
+            if (l2 == null) {
+                break;
+            }
+
+            if (l1.val > l2.val) {
+                ListNode temp = l2.next;
+                pre.next = l2;
+                l2.next = l1;
+                l2 = temp;
+                pre = pre.next;
             } else {
-                mergelist.next = l1;
+                pre = pre.next;
                 l1 = l1.next;
             }
-            mergelist = mergelist.next;
-        }
-        return head.next;
 
+        }
+        return dummy.next;
     }
 }
 
