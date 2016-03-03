@@ -80,6 +80,7 @@ This is the summary of my experience in LintCode.
 
 
 * [Dynamic Programming](DynamicProgramming/README.md)
+	* [Range Sum Query - Immutable](DynamicProgramming/Range-Sum-Query.md)
 	* [Longest Increasing Continuous Subsequence](DynamicProgramming/Longest-Increasing-Continuous-Subsequence.md)
 	* [Triangle](DynamicProgramming/Triangle.md)
 	* [Climbing Stairs](DynamicProgramming/ClimbingStairs.md)
@@ -141,6 +142,9 @@ This is the summary of my experience in LintCode.
 
 
 * [Array](Array/README.md)
+	* [Shortest Word Distance](Array/Shortest-Word-Distance.md)
+	* [Shortest Word Distance II](Array/Shortest-Word-Distance-II.md)
+	* [Shortest Word Distance III](Array/Shortest-Word-Distance-III.md)
 	* [Spiral Matrix I](Array/Spiral-Matrix.md)
 	* [Spiral Matrix II](Array/Spiral-Matrix-II.md)
 	* [Single Number](Array/Single-Number.md)
@@ -264,6 +268,7 @@ This is the summary of my experience in LintCode.
 	* [Word Ladder](BFS/WordLadder.md)
 
 * [Math](Math/README.md)
+	* [Add Digits](Math/Add-Digits.md)
 	* [Valid Sudoku](Math/Valid-Sudoku.md)
 	* [Happy Number](Math/Happy-Number.md)
 	* [Cosine Similarity](Math/Cosine-Similarity.md)
