@@ -14,7 +14,6 @@ This is the summary of my experience in LintCode.
 	* [String](Java/string.md)
 	* [Some other notes](Java/notes.md)
 
-
 * [String](String/README.md)
 	* [String Permutation](String/String-Permutation.md)
 	* [Digit Counts](String/Digit-Counts.md)
@@ -231,6 +230,7 @@ This is the summary of my experience in LintCode.
 	* [Min Stack](DataStructureProblem/MinStack.md)
 	* [Ugly Number](DataStructureProblem/Ugly-Number.md)
 	* [Top K Frequent Words](DataStructureProblem/Top-K-Frequent-Words.md)
+	* [Meeting Rooms](DataStructureProblem/Meeting-Rooms.md)
 	* [Longest Consecutive Sequence](DataStructureProblem/LongestConsecutiveSequence.md)
 	* [Largest Rectangle in Histogram](DataStructureProblem/Largest-Rectangle-in-Histogram.md)
 	* [LRU Cache](DataStructureProblem/LRU-Cache.md)
@@ -282,7 +282,6 @@ This is the summary of my experience in LintCode.
 	* [Fast Power](Math/FastPower.md)
 	* [Bulb Switcher](Math/Bulb-Switcher.md)
 	* [Self Crossing](Math/Self-Crossing.md)
-
 
 * [Bits Manipulation](BitsManipulation/README.md)
 	* [Reverse Bits](BitsManipulation/Reverse-Bits.md)
