@@ -23,6 +23,7 @@ This is the summary of my experience in LintCode.
 	* [Isomorphic Strings](String/Isomorphic-Strings.md)
 	* [String to Integer (atoi)](String/String-to-Integer.md)
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
+	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
@@ -155,6 +156,7 @@ This is the summary of my experience in LintCode.
 	* [Product of Array Exclude Itself](Array/Product-of-Array-Exclude-Itself.md)
 	* [Recover Rotated Sorted Array](Array/Recover-Rotated-Sorted-Array.md)
 	* [Rotate String](Array/RotateString.md)
+	* [Best Meeting Point](Array/Best-Meeting-Point.md)
 	* [Maximum Subarray](Array/Maximum-Subarray.md)
 	* [Maximum Subarray II](Array/Maximum-SubarrayII.md)
 	* [Maximum Subarray III](Array/Maximum-SubarrayIII.md)
@@ -231,6 +233,7 @@ This is the summary of my experience in LintCode.
 	* [Ugly Number](DataStructureProblem/Ugly-Number.md)
 	* [Top K Frequent Words](DataStructureProblem/Top-K-Frequent-Words.md)
 	* [Meeting Rooms](DataStructureProblem/Meeting-Rooms.md)
+	* [Meeting Rooms II](DataStructureProblem/Meeting-Rooms-II.md)
 	* [Longest Consecutive Sequence](DataStructureProblem/LongestConsecutiveSequence.md)
 	* [Largest Rectangle in Histogram](DataStructureProblem/Largest-Rectangle-in-Histogram.md)
 	* [LRU Cache](DataStructureProblem/LRU-Cache.md)
@@ -255,7 +258,6 @@ This is the summary of my experience in LintCode.
 	* [N Queen I](DFS/N-Queens.md)
 	* [N Queen II](DFS/N-QueensII.md)
 	* [Palindrome Partitioning](DFS/Palindrome-Partitioning.md)
-	* [Generalized Abbreviation](DFS/Generalized-Abbreviation.md)
 
 * [Memorization](Memorization/README.md)
 	* [Longest Increasing Path in a Matrix](Memorization/Longest-Increasing-Path-in-a-Matrix.md)
