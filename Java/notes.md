@@ -37,8 +37,10 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - First Missing Positive
 - Different Ways to Add Parentheses
 
+###Leetcode一轮虽然做对,但是花时有点长或者需要注意再重做的题
+- Remove Duplicates from Sorted Array
+
 ###难题
 
 ###每天理解
- - quicksort以及partition array 自己在这里经常犯错误
  - trie树
