@@ -150,6 +150,7 @@ This is the summary of my experience in LintCode.
 
 
 * [Array](Array/README.md)
+	* [Rotate Array](Array/Rotate-Array.md)
 	* [Shortest Word Distance](Array/Shortest-Word-Distance.md)
 	* [Shortest Word Distance II](Array/Shortest-Word-Distance-II.md)
 	* [Shortest Word Distance III](Array/Shortest-Word-Distance-III.md)
