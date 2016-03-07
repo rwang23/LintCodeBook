@@ -45,6 +45,10 @@ public class Solution {
         j = 1;
 
         while (j < size) {
+            while (j < size && nums[i + 1] != Integer.MAX_VALUE && nums[j] != Integer.MAX_VALUE) {
+                j++;
+                i++;
+            }
             while (j < size && nums[j] == Integer.MAX_VALUE) j++;
             if (j >= size) break;
             swap(nums, ++i, j++);

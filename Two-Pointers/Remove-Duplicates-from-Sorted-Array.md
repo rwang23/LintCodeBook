@@ -57,6 +57,7 @@ public class Solution {
 ####更好的理解
 - 先找相同值,找到了之后赋值为max_value
 - 然后再遍历一遍,交换为max_value的值
+- 这个办法能够很好的解决follow up
 
 ```java
 public class Solution {

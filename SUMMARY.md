@@ -135,6 +135,7 @@ This is the summary of my experience in LintCode.
 	* [Kth Largetst Element](Two-Pointers/Kth-Largest-Element.md)
 	* [Remove Element](Two-Pointers/Remove-Element.md)
 	* [Remove Duplicates from Sorted Array](Two-Pointers/Remove-Duplicates-from-Sorted-Array.md)
+	* [Remove Duplicates from Sorted Array II](Two-Pointers/Remove-Duplicates-from-Sorted-ArrayII.md)
 	* [Two Sum](Two-Pointers/Two-Sum.md)
 	* [Two Sum II](Two-Pointers/Two-Sum-II.md)
 	* [Trapping Rain Water](Two-Pointers/Trapping-Rain-Water.md)
