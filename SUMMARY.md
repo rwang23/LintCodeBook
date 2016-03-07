@@ -56,6 +56,7 @@ This is the summary of my experience in LintCode.
 	* [Binary Tree Right Side](BinaryTree/Binary-Tree-Right-Side.md)
 	* [Populating Next Right Pointers in Each Node](BinaryTree/Populating-Next-Right-Pointers-in-Each-Node.md)
 	* [Populating Next Right Pointers in Each Node II](BinaryTree/Populating-Next-Right-Pointers-in-Each-Node-II.md)
+	* [Verify Preorder Serialization of a Binary Tree](BinaryTree/Verify-Preorder-Serialization-of-Binary-Tree.md)
 	* [Complete Binary Tree](BinaryTree/Complete-Binary-Tree.md)
 	* [Symmetric Binary Tree](BinaryTree/Symmetric-Binary-Tree.md)
 	* [Segment Tree Build](BinaryTree/Segment-Tree-Build.md)
