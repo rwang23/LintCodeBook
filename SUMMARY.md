@@ -15,6 +15,7 @@ This is the summary of my experience in LintCode.
 	* [Some other notes](Java/notes.md)
 
 * [String](String/README.md)
+	* [Reverse Words in a String](String/Reverse-Words-in-a-String.md)
 	* [String Permutation](String/String-Permutation.md)
 	* [Digit Counts](String/Digit-Counts.md)
 	* [Integer to Roman](String/Integer-to-Roman.md)
