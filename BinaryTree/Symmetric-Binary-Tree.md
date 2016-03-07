@@ -120,36 +120,35 @@ public class Solution {
 
 ####递归思路
 ```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 public class Solution {
-    /**
-     * @param root, the root of binary tree.
-     * @return true if it is a mirror of itself, or false.
-     */
     public boolean isSymmetric(TreeNode root) {
-    	if (root == null)
-    		return true;
-    	return isSymmetric(root.left, root.right);
+        if (root == null) {
+            return true;
+        }
+
+        return isSymmetric(root.left, root.right);
     }
+    public boolean isSymmetric(TreeNode left, TreeNode right) {
+        if (left == null && right == null) {
+            return true;
+        }
+        if (left == null || right == null) {
+            return false;
+        }
+        if (left.val != right.val) {
+            return false;
+        }
+        return isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
 
-    public boolean isSymmetric(TreeNode l, TreeNode r) {
-    	if (l == null && r == null) {
-    		return true;
-    	} else if (r == null || l == null) {
-    		return false;
-    	}
-
-    	if (l.val != r.val) {
-    		return false;
-    	}
-
-    	if (!isSymmetric(l.left, r.right)) {
-    		return false;
-    	}
-    	if (!isSymmetric(l.right, r.left)) {
-    		return false;
-    	}
-
-    	return true;
     }
 }
 ```

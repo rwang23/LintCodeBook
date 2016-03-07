@@ -35,6 +35,7 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 
 ###Leetcode一轮不会做的题
 - First Missing Positive
+- Different Ways to Add Parentheses
 
 ###难题
 
