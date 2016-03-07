@@ -53,6 +53,7 @@ This is the summary of my experience in LintCode.
 	* [Post Order Traversal](BinaryTree/PostOrderTraversal.md)
 	* [Level Order Traversal](BinaryTree/LevelOrderTraversal.md)
 	* [Level Order Traversal II](BinaryTree/LevelOrderTraversalII.md)
+	* [Binary Tree Right Side](BinaryTree/Binary-Tree-Right-Side.md)
 	* [Complete Binary Tree](BinaryTree/Complete-Binary-Tree.md)
 	* [Symmetric Binary Tree](BinaryTree/Symmetric-Binary-Tree.md)
 	* [Segment Tree Build](BinaryTree/Segment-Tree-Build.md)
