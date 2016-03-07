@@ -10,13 +10,14 @@
 	Example
 	Given input array A = [1,1,2],
 
-Your function should return length = 2, and A is now [1,2].
+    Your function should return length = 2, and A is now [1,2].
 
 ####Tags Expand
 - Two Pointers Array
 
 ####思路
 - 其实挺难的，需要画图通过两根指针来找规律来写
+- 如果没看明白,可以看第二种解法,就会清晰明了很多,不过速度慢一倍,不过也是O(n)
 
 ```java
 public class Solution {
@@ -51,4 +52,82 @@ public class Solution {
     }
 }
 
+```
+
+####更好的理解
+- 先找相同值,找到了之后赋值为max_value
+- 然后再遍历一遍,交换为max_value的值
+
+```java
+public class Solution {
+    public int removeDuplicates(int[] nums) {
+
+        int size = nums.length;
+        if (size <= 1) {
+            return size;
+        }
+
+        int i = 0;
+        int j = 1;
+
+        while (j < size) {
+            while (j < size && nums[i] == nums[j]) {
+                nums[j] = Integer.MAX_VALUE;
+                j++;
+            }
+
+            i = j;
+            j++;
+        }
+
+        i = 0;
+        j = 1;
+
+        while (j < size) {
+            while (j < size && nums[j] == Integer.MAX_VALUE) j++;
+            if (j >= size) break;
+            swap(nums, ++i, j++);
+        }
+
+        return i + 1;
+    }
+
+    public void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
+    }
+}
+```
+
+####写的第三种解法
+- 根据第二种解法简化
+
+```java
+public class Solution {
+    public int removeDuplicates(int[] nums) {
+
+        int size = nums.length;
+        if (size <= 1) {
+            return size;
+        }
+
+        int i = 0;
+        int j = 1;
+        while (j < size) {
+            while (j < size && nums[i] == nums[j]) j++;
+            while (j + 1 < size && nums[j] == nums[j + 1]) j++;
+            if (j >= size) break;
+            swap(nums, ++i, j++);
+        }
+
+        return i + 1;
+    }
+
+    public void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
+    }
+}
 ```
