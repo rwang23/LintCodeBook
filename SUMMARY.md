@@ -22,6 +22,7 @@ This is the summary of my experience in LintCode.
 	* [Valid Palindrome](String/Valid-Palindrome.md)
 	* [Isomorphic Strings](String/Isomorphic-Strings.md)
 	* [Strobogrammatic Number](String/Strobogrammatic-Number.md)
+	* [Strobogrammatic Number II](String/Strobogrammatic-Number-II.md)
 	* [String to Integer (atoi)](String/String-to-Integer.md)
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
