@@ -50,6 +50,7 @@ This is the summary of my experience in LintCode.
 	* [Convert Sorted Array to BST in minimum height](BinaryTree/Convert-Sorted-Array-to-BST-minimum-height.md)
 	* [Subtree](BinaryTree/Subtree.md)
 	* [Insert Node in BST](BinaryTree/Insert-Node-In-BST.md)
+	* [Closest Binary Search Tree Value](BinaryTree/Closest-Binary-Search-Tree-Value.md)
 	* [Pre Order Traversal](BinaryTree/PreOrderTraversal.md)
 	* [In Order Traversal](BinaryTree/InOrderTraversal.md)
 	* [Post Order Traversal](BinaryTree/PostOrderTraversal.md)
