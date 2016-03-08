@@ -46,4 +46,76 @@ public class HashSetDemo {
 This would produce the following result:
 [D, E, F, A, B, C]
 
+###Iterate through hashset
 
+How to Iterate over a Set/HashSet
+There are following two ways to iterate through HashSet:
+1) Using Iterator
+2) Without using Iterator
+
+####Example 1: Using Iterator
+```java
+import java.util.HashSet;
+import java.util.Iterator;
+
+class IterateHashSet{
+  public static void main(String[] args) {
+     // Create a HashSet
+     HashSet<String> hset = new HashSet<String>();
+
+     //add elements to HashSet
+     hset.add("Chaitanya");
+     hset.add("Rahul");
+     hset.add("Tim");
+     hset.add("Rick");
+     hset.add("Harry");
+
+     Iterator<String> it = hset.iterator();
+     while(it.hasNext()){
+        System.out.println(it.next());
+     }
+  }
+}
+```
+```
+Output:
+
+Chaitanya
+Rick
+Harry
+Rahul
+Tim
+```
+
+####Example 2: Iterate without using Iterator
+```java
+import java.util.HashSet;
+import java.util.Set;
+
+class IterateHashSet{
+  public static void main(String[] args) {
+     // Create a HashSet
+     Set<String> hset = new HashSet<String>();
+
+     //add elements to HashSet
+     hset.add("Chaitanya");
+     hset.add("Rahul");
+     hset.add("Tim");
+     hset.add("Rick");
+     hset.add("Harry");
+
+     for (String temp : hset) {
+        System.out.println(temp);
+     }
+  }
+}
+```
+```
+Output:
+
+Chaitanya
+Rick
+Harry
+Rahul
+Tim
+```

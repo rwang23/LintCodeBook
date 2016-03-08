@@ -54,6 +54,12 @@ public class ArrayDemo1 {
 
 The list is:[abc, klm, xyz, pqr]
 ```
+####Copy array
+```java
+    int[] a = {1,2,3};
+    int[] b = Arrays.copyOfRange(a, 0, a.length);
+```
+
 ####使用二进制运算要注意
 - 很可能bug就是一些小错误造成的
 - 比如(nums[i] & xor) == 0
