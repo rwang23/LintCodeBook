@@ -36,6 +36,8 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 ###Leetcode一轮不会做的题
 - First Missing Positive
 - Different Ways to Add Parentheses
+- Remove Duplicate Letters 不懂
+- (http://fujiaozhu.me/?p=772) (http://traceformula.blogspot.com/2015/12/remove-duplicate-letters-leetcode.html) (http://massivealgorithms.blogspot.com/2015/12/leetcode-316-remove-duplicate-letters.html) (http://www.bubuko.com/infodetail-1249912.html)
 
 ###Leetcode一轮虽然做对,但是花时有点长或者需要注意再重做的题
 - Remove Duplicates from Sorted Array I and II
