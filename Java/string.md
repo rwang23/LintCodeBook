@@ -50,6 +50,44 @@ Arrays.toString();
 		array[i] = xx;
 	}
 
+####Replace
+- This method returns a new string resulting from replacing all occurrences of oldChar in this string with newChar.
+
+```java
+import java.io.*;
+
+public class Test{
+   public static void main(String args[]){
+      String Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.replace('o', 'T'));
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.replace('l', 'D'));
+   }
+}
+This produces the following result:
+
+Return Value :WelcTme tT TutTrialspTint.cTm
+Return Value :WeDcome to TutoriaDspoint.com
+```
+
+####replaceAll
+- This method replaces each substring of this string that matches the given regular expression with the given replacement.
+
+```java
+public class Test{
+   public static void main(String args[]){
+      String Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.replaceAll("(.*)Tutorials(.*)",
+                         "AMROOD" ));
+   }
+}
+```
+
 
 ###Regular Expression
 ####Repetion
