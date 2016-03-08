@@ -21,19 +21,22 @@
 ####思路
 ```java
 public class Solution {
-    public int addDigits(int num) {
+    public int[] plusOne(int[] digits) {
 
-        int sum = 0;
-        do {
-            sum = 0;
-            while (num >= 1) {
-                int digit = num % 10;
-                num /= 10;
-                sum += digit;
+        int n = digits.length;
+        for(int i=n-1; i>=0; i--) {
+            if(digits[i] < 9) {
+                digits[i]++;
+                return digits;
             }
-            num = sum;
-        } while (sum >= 10);
-        return sum;
+
+            digits[i] = 0;
+        }
+
+        int[] newNumber = new int [n+1];
+        newNumber[0] = 1;
+
+        return newNumber;
     }
 }
 ```
