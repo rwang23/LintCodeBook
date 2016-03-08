@@ -64,3 +64,25 @@ The list is:[abc, klm, xyz, pqr]
 - 很可能bug就是一些小错误造成的
 - 比如(nums[i] & xor) == 0
 - 如果携程了 nums[i] & xoe == 0 就错误了
+
+###Java Random
+####1. Using Math.random()
+```java
+double random = Math.random() * 50 + 1;
+or
+int random = (int )(Math.random() * 50 + 1);
+```
+This will give you value from 1 to 50 using Math.random()
+
+Why?
+
+random() method returns a random number between 0.0 and 0.999. So, you multiply it by 50, so upper limit becomes 0.0 to 49.95, when you add 1, it becomes 1.0 to 50.95, now when you you truncate to int, you get 1 to 50. (thanks to @rup in comments). leepoint's awesome writeup on both the approaches.
+
+####2. Using Random class in Java.
+```java
+Random rand = new Random();
+int value = rand.nextInt(50); // 也可以使用rand.nextDouble() nextLong()
+This will give value from 0 to 49.
+
+For 1 to 50: rand.nextInt(50) + 1;
+```
