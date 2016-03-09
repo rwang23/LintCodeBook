@@ -1,6 +1,7 @@
 # Set
 
 Set 是一种用于保存不重复元素的数据结构。常被用作测试归属性，故其查找的性能十分重要。
+[三种set比较](http://www.programcreek.com/2013/03/hashset-vs-treeset-vs-linkedhashset/)
 
 ## 编程实现
 

@@ -73,3 +73,20 @@ class Solution {
 
 ```
 
+####或者
+```java
+class Solution {
+    /**
+     * @return: The same instance of this class every time
+     */
+    private static Solution s = null;
+    public synchronized static Solution getInstance() {
+        // write your code here
+        if(s == null){
+            s = new Solution();
+        }
+        return s;
+    }
+};
+
+```
