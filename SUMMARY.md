@@ -229,6 +229,7 @@ This is the summary of my experience in LintCode.
 
 * [Data Structure Implementation](Implementation/README.md)
    * [Queue](Implementation/Queue.md)
+   * [Stack](Implementation/Stack.md)
 
 
 * [Data Structure Problem](DataStructureProblem/README.md)
