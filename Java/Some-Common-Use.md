@@ -86,3 +86,12 @@ This will give value from 0 to 49.
 
 For 1 to 50: rand.nextInt(50) + 1;
 ```
+
+###Generic注意事项
+####Generic array creation is disallowed in Java
+```
+Item[] a = new Item[capacity];
+这样写就会错误了
+要
+Item[] a = (Item[]) new Object[capacity];
+```
