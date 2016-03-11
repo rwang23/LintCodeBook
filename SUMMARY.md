@@ -227,6 +227,10 @@ This is the summary of my experience in LintCode.
    * [Union Find](DataStructure/Union-Find.md)
    * [Huffman Compression](DataStructure/huffman_compression.md)
 
+* [Data Structure Implementation](Implementation/README.md)
+   * [Queue](Implementation/Queue.md)
+
+
 * [Data Structure Problem](DataStructureProblem/README.md)
 	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)
 	* [Implement Queue By Two Stacks](DataStructureProblem/Implement-Queue-by-Two-Stacks.md)
