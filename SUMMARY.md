@@ -233,6 +233,7 @@ This is the summary of my experience in LintCode.
    * [Deque](Implementation/Deque.md)
    * [Union Find](Implementation/UnionFind.md)
    * [Trie](Implementation/Trie.md)
+   * [HashMap](Implementation/HashMap.md)
 
 
 * [Data Structure Problem](DataStructureProblem/README.md)
