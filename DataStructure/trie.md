@@ -17,7 +17,7 @@ public class Trie<Value> {
 
 	private static class Node {
 		private Object value;
-		private Node[] next = new Node[R];
+		private Node[] next = (Node []) new Object[R];
 	}
 
 	public void put(String Key, Value val) {
