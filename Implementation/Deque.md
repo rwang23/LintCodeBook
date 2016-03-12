@@ -1,4 +1,5 @@
-###Stack
+###Deque
+
 ```java
 import java.util.Iterator;
 
@@ -43,29 +44,26 @@ public class MyDeque<Item> implements Iterable<Item>{
 
 	}
 
-	public Item pollFirst() {
+	public Item pollFirst(Item item) {
 		Node temp = head;
 		if (head == null) {
 			throw new NullPointerException();
 		} else {
-			Node temp2 = head;
 			head = head.next;
-			temp2.next = null;
 			head.pre = null;
 		}
 		size--;
 		return temp.item;
 	}
 
-	public Item pollLast() {
+	public Item pollLast(Item item) {
 		Node temp = head;
 		if (tail == null) {
 			throw new NullPointerException();
 		} else {
 			Node last = tail.pre;
-			tail.pre = null;
 			last.next = null;
-			tail = last;
+			last = tail;
 		}
 		size--;
 		return temp.item;
@@ -94,44 +92,8 @@ public class MyDeque<Item> implements Iterable<Item>{
 		public Item next() {
 			Node temp = cur;
 			cur = cur.next;
-			i--;
 			return temp.item;
 		}
-	}
-
-	public static void main(String[] args) {
-		MyDeque<String> q = new MyDeque<String>();
-
-		System.out.println("Mystack test");
-		q.offerFirst("first");
-		q.offerFirst("second");
-		q.offerFirst("third");
-		for (String s : q) {
-			System.out.println(s);
-		}
-		System.out.println("First test");
-
-		q.pollLast();
-		for (String s : q) {
-			System.out.println(s);
-		}
-		System.out.println("Second test");
-
-		q.offerFirst("fourth");
-		q.offerFirst("fifth");
-		q.pollLast();
-		for (String s : q) {
-			System.out.println(s);
-		}
-		System.out.println("Third test");
-
-		q.offerLast("sisth");
-		q.offerFirst("seventh");
-		q.pollFirst();
-		for (String s : q) {
-			System.out.println(s);
-		}
-		System.out.println("Fourth test");
 	}
 
 }
