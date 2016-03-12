@@ -1,4 +1,5 @@
 ###Trie
+[princeton](http://algs4.cs.princeton.edu/52trie/TrieST.java.html)
 
 ```java
 public class Trie<Value> {
@@ -10,6 +11,7 @@ public class Trie<Value> {
 
 	private static final int R =256;
 	private Node root = new Node();
+	private int size = 0;
 
 	public void put(String s, Value value) {
 		put(root, s, 0, value);
@@ -22,6 +24,7 @@ public class Trie<Value> {
 
 		if (s.length() == index) {
 			root.value = value;
+			size++;
 			return root;
 		}
 
@@ -53,5 +56,34 @@ public class Trie<Value> {
 	public boolean contains(String s) {
 		return get(s) != null;
 	}
+
+   public Iterable<String> keys() {
+        return keysWithPrefix("");
+    }
+
+    /**
+     * Returns all of the keys in the set that start with <tt>prefix</tt>.
+     * @param prefix the prefix
+     * @return all of the keys in the set that start with <tt>prefix</tt>,
+     *     as an iterable
+     */
+    public Iterable<String> keysWithPrefix(String prefix) {
+        Queue<String> results = new Queue<String>();
+        Node x = get(root, prefix, 0);
+        collect(x, new StringBuilder(prefix), results);
+        return results;
+    }
+
+    private void collect(Node x, StringBuilder prefix, Queue<String> results) {
+        if (x == null) return;
+        if (x.val != null) results.enqueue(prefix.toString());
+        for (char c = 0; c < R; c++) {
+            prefix.append(c);
+            collect(x.next[c], prefix, results);
+            prefix.deleteCharAt(prefix.length() - 1);
+        }
+    }
+
+
 }
 ```

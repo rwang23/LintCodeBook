@@ -44,7 +44,6 @@ public class UnionFind {
 		}
 
 		return parent;
-
 	}
 
 	public void union(int x, int y) {
@@ -86,7 +85,6 @@ public class UnionFind<Item> {
 		for (int i = 0; i < array.length; i++) {
 			map.put(array[i], array[i]);
 		}
-
 	}
 
 	UnionFind(ArrayList<Item> array) {
@@ -109,7 +107,6 @@ public class UnionFind<Item> {
 		}
 
 		return parent;
-
 	}
 
 	public void union(Item x, Item y) {
@@ -123,6 +120,5 @@ public class UnionFind<Item> {
 	public boolean connected(Item p, Item q) {
 		return find(p) == find(q);
 	}
-
 }
 ```
