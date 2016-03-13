@@ -234,7 +234,7 @@ This is the summary of my experience in LintCode.
    * [Union Find](Implementation/UnionFind.md)
    * [Trie](Implementation/Trie.md)
    * [HashMap](Implementation/HashMap.md)
-   * [Min Heap](Implementation/Min Heap.md)
+   * [Min Heap](Implementation/heap.md)
 
 
 * [Data Structure Problem](DataStructureProblem/README.md)
