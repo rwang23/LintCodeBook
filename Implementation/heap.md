@@ -1,6 +1,7 @@
 ###MinHeap
 
 ```java
+
 public class minheap<Item extends Comparable<Item>> {
 	private int size = 0;
 	private int capacity;
@@ -9,14 +10,13 @@ public class minheap<Item extends Comparable<Item>> {
 	@SuppressWarnings("unchecked")
 	minheap() {
 		this.capacity = 10;
-		array = (Item[]) new Object[capacity + 1];
-
+		array = (Item[]) new Comparable[capacity + 1];
 	}
 
 	@SuppressWarnings("unchecked")
 	minheap(int x) {
 		this.capacity = x;
-		array = (Item[]) new Object[capacity + 1];
+		array = (Item[]) new Comparable[x + 1];
 	}
 
 	public void createHeap(Item[] input) {
@@ -64,14 +64,14 @@ public class minheap<Item extends Comparable<Item>> {
 		int smallest = index;
 
 		while (index <= capacity) {
-			if (index * 2  < size && array[index * 2].compareTo(array[index]) < 0) {
+			if (index * 2  <= size && array[index * 2].compareTo(array[smallest]) < 0) {
 				smallest = index * 2;
 			}
-			if (index * 2 + 1 < size && array[index * 2 + 1].compareTo(array[index]) < 0) {
+			if (index * 2 + 1 <= size && array[index * 2 + 1].compareTo(array[smallest]) < 0) {
 				smallest = index * 2 + 1;
 			}
 
-			if (smallest >= capacity + 1) {
+			if (smallest == index) {
 				break;
 			}
 			swap(array, smallest, index);
@@ -106,5 +106,31 @@ public class minheap<Item extends Comparable<Item>> {
 	public int size() {
 		return size;
 	}
+
+	@SuppressWarnings("unchecked")
+	public static void main(String args[]){
+
+		Integer arrA [] = {3,2,1,7,8,4,10,16,12};
+		System.out.println("Original Array : ");
+		for(int i = 0; i<arrA.length; i++){
+			System.out.print("  " + arrA[i]);
+		}
+		System.out.println();
+
+		@SuppressWarnings("rawtypes")
+		minheap heap = new minheap(arrA.length);
+		System.out.print("\n Min-Heap : ");
+		heap.createHeap(arrA);
+		heap.display();
+
+		System.out.print("Extract Min :");
+		for(int i=0; i < arrA.length; i++){
+			System.out.print("  " + heap.extractMin());
+			System.out.print("\n Min-Heap : ");
+			heap.display();
+		}
+
+	}
 }
+
 ```
