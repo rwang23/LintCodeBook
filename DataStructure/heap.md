@@ -5,6 +5,9 @@
 
 ![Heap Complexity](../image/heap.png)
 
+[Implementation](http://algorithms.tutorialhorizon.com/binary-min-max-heap/)
+
+
 ##Priority Queue
 [Java PriorityQueue Class Example](http://www.programcreek.com/2009/02/using-the-priorityqueue-class-example/)
 - PriorityQueue provides O(log(n)) time for the enqueing and dequeing methods (offer, poll, remove() and add); linear time for the remove(Object) and contains(Object) methods
