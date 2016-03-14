@@ -32,6 +32,10 @@ char ch = s2.charAt(4); // return 'r'
 // find index at first
 int index = s2.indexOf('r'); // return 4. if not found, return -1
 ```
+
+####StringBuilder insert
+insert(index, char)
+ result.insert(0, cur)
 ###String[] arrays 转化成string
 Arrays.toString();
 
