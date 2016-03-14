@@ -68,3 +68,64 @@ public class Solution {
 }
 
 ```
+
+####BFS
+
+```java
+public class Solution {
+
+    private class Node{
+        int x;
+        int y;
+        Node(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    public int numIslands(boolean[][] grid) {
+        int m = grid.length;
+        if (m == 0) {
+            return 0;
+        }
+        int n = grid[0].length;
+        if (n == 0) {
+            return 0;
+        }
+
+        int[][] isVisited = new int[m][n];
+        int count = 0;
+        int[] xstep = new int[]{0, 1, -1, 0};
+        int[] ystep = new int[]{1, 0, 0, -1};
+        Queue<Node> queue = new LinkedList<Node>();
+
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == false || isVisited[i][j] == 1) {
+                    continue;
+                }
+                Node cur = new Node(i, j);
+                queue.offer(cur);
+                count++;
+
+                while (!queue.isEmpty()) {
+
+                    cur = queue.poll();
+                    for (int s = 0; s < 4; s++) {
+                        int nextX = cur.x + xstep[s];
+                        int nextY = cur.y + ystep[s];
+                        if (nextX < m && nextY < n && nextY >= 0 && nextX >= 0 && grid[nextX][nextY] == true && isVisited[nextX][nextY] == 0) {
+                            isVisited[nextX][nextY] = 1;
+                            Node next = new Node(nextX, nextY);
+                            queue.offer(next);
+                        }
+                    }
+
+                }
+            }
+        }
+        return count;
+    }
+}
+```
