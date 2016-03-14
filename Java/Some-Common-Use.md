@@ -95,3 +95,11 @@ Item[] a = new Item[capacity];
 要
 Item[] a = (Item[]) new Object[capacity];
 ```
+
+####ArrayList remove注意事项
+	我们知道remove有两种
+	一种是E remove(int index)
+	一种是boolean remove(Object o)
+	如果是Integer arraylist,将会自动调用remove(object o)
+	这个时候就不要用remove来removeindex了
+

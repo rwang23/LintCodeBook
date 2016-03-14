@@ -15,6 +15,7 @@ This is the summary of my experience in LintCode.
 	* [Some other notes](Java/notes.md)
 
 * [String](String/README.md)
+	* [Compress a String](String/Compress-String.md)
 	* [Reverse Words in a String](String/Reverse-Words-in-a-String.md)
 	* [String Permutation](String/String-Permutation.md)
 	* [Digit Counts](String/Digit-Counts.md)
@@ -151,6 +152,7 @@ This is the summary of my experience in LintCode.
 
 
 * [Array](Array/README.md)
+	* [Making New List](Array/Making-New-List.md)
 	* [Rotate Array](Array/Rotate-Array.md)
 	* [Shortest Word Distance](Array/Shortest-Word-Distance.md)
 	* [Shortest Word Distance II](Array/Shortest-Word-Distance-II.md)
@@ -290,6 +292,7 @@ This is the summary of my experience in LintCode.
 	* [Word Ladder](BFS/WordLadder.md)
 
 * [Math](Math/README.md)
+	* [Add Two Array](Math/add-two-array.md)
 	* [Add Digits](Math/Add-Digits.md)
 	* [Valid Sudoku](Math/Valid-Sudoku.md)
 	* [Happy Number](Math/Happy-Number.md)
