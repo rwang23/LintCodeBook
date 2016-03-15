@@ -1,4 +1,4 @@
-Group Anagrams
+##Group Anagrams
 
 	Total Accepted: 68964 Total Submissions: 256257 Difficulty: Medium
 	Given an array of strings, group anagrams together.
