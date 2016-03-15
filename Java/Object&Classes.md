@@ -12,6 +12,12 @@ As a language that has the Object Oriented feature, Java supports the following 
 	Method
 	Message Parsing
 
+###Encapsulation
+Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as as single unit. In encapsulation the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class, therefore it is also known as data hiding.
+
+###Polymorphism
+Polymorphism is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
+
 ###modifiers
 - public: can access any
 - protected: subclass, same class, same package (subclass可能不在一个package)(not protected)
