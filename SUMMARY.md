@@ -12,6 +12,7 @@ This is the summary of my experience in LintCode.
 	* [Exception](Java/Exception.md)
 	* [Some Common Use](Java/Some-Common-Use.md)
 	* [String](Java/string.md)
+	* [Equals](Java/equals.md)
 	* [Some other notes](Java/notes.md)
 
 * [String](String/README.md)
@@ -263,6 +264,8 @@ This is the summary of my experience in LintCode.
 	* [LRU Cache](DataStructureProblem/LRU-Cache.md)
 	* [Max Tree](DataStructureProblem/Max-Tree.md)
 	* [Union Find: Find the Weak Connected Component](DataStructureProblem/Find-the-Weak-Connected-Component.md)
+	* [Range Sum Query](DataStructureProblem/Range-Sum-Query.md)
+	* [Range Sum Query 2D Immutable](DataStructureProblem/Range-Sum-Query.md)
 
 * [DFS](DFS/README.md)
 	* [K Sum II](DFS/kSumII.md)
