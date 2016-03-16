@@ -265,7 +265,8 @@ This is the summary of my experience in LintCode.
 	* [Max Tree](DataStructureProblem/Max-Tree.md)
 	* [Union Find: Find the Weak Connected Component](DataStructureProblem/Find-the-Weak-Connected-Component.md)
 	* [Range Sum Query](DataStructureProblem/Range-Sum-Query.md)
-	* [Range Sum Query 2D Immutable](DataStructureProblem/Range-Sum-Query.md)
+	* [Range Sum Query 2D Immutable](DataStructureProblem/Range-Sum-Query-2D-Immutable.md)
+	* [Range Sum Query 2D Mutable](DataStructureProblem/Range-Sum-Query-2D-Mutable.md)
 
 * [DFS](DFS/README.md)
 	* [K Sum II](DFS/kSumII.md)
