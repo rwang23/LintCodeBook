@@ -23,6 +23,6 @@
 	You may assume that row1 ≤ row2 and col1 ≤ col2.
 
 ####思路
-- 还是segmenttree
+- 还是segmenttree,方法跟一维的一模一样
 - 自己写的时候写错了
 - [参考](http://www.cnblogs.com/yrbbest/p/5058571.html)
