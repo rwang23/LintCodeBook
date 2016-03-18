@@ -8,11 +8,11 @@
 
 	Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]], return false.
 
-####思路
+####BFS思路
 - 首先想到了BFS的方法
 - 1.暴力做法去得到每个点的neighbor, O(n2)
 - 2.然后想到了用hashmap, Map<Integer, List<Integer>> 这样O(n)就能得到neighbor点
-- 得到了neighbor点,就只需要BFS就可以了,注意不是valid的条件,就是两个点(不包括之前遍历的)指向了同一个点,或者有的点没有neighbor,这样就不能构成tree
+- 得到了neighbor点,就只需要BFS就可以了,注意不是valid的条件,就是两个点(不包括之前遍历的)指向了同一个点(有cycle),或者有的点没有neighbor,这样就不能构成tree
 - 最终时间复杂度还是O(n),但是跑出来的速度还是很慢
 
 ```java
@@ -102,7 +102,66 @@ public class Solution {
             }
         }
 
-        return map.size() == 0 ? true : false;
+        return map.size() == 0;
+    }
+}
+```
+
+####Union Find思路
+- Compress Union Find
+- 找节点
+- 一个n个节点树有且必须有n-1条边
+- 如果n个节点树有且必须有n-1条边也是无效的,只有一种原因,就是有cycle存在无效边
+- 如果Union find的时候,一个edges对里边,两个点一定相连,如果这两个相连的点parent一样,那么一定存在环了
+
+```java
+public class Solution {
+    public boolean validTree(int n, int[][] edges) {
+        if(n <= 1) {
+            return true;
+        }
+
+        int[] parent = new int[n];
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+        }
+
+        for (int i = 0; i < edges.length; i++) {
+            int x = find(parent, edges[i][0]);
+            int y = find(parent, edges[i][1]);
+
+            if (x == y) {
+                return false;
+            }
+
+            union(parent, x, y);
+        }
+        return edges.length == n - 1;
+    }
+
+    public int find(int[] parent, int i) {
+        int father = parent[i];
+        while (father != parent[father]) {
+             father = parent[father];
+        }
+
+        int index = i;
+        while (index != parent[index]) {
+            int temp = parent[index];
+            parent[index] = father;
+            index = temp;
+        }
+
+        return father;
+    }
+
+    public void union(int[] parent, int x, int y) {
+        int root_x = find(parent, x);
+        int root_y = find(parent, y);
+        if (root_x != root_y) {
+            parent[root_y] = root_x;
+        }
+        return;
     }
 }
 ```
