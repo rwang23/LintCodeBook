@@ -13,6 +13,7 @@
 - 最开始写的时候,乱成了浆糊
 - 后来改了改,没有直接输出string加入到result,而是分别把每个部分先求出来,这样就容易了很多
 
+
 ```java
 public class Solution {
     public List<String> restoreIpAddresses(String s) {
