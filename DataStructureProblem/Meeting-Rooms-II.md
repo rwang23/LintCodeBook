@@ -9,6 +9,7 @@
 
 
 ####思路
+- 与Lintcode 题目 Number of Airplanes in the Sky 一模一样
 - 解法使用了scan line
 - O(nlogn)
 

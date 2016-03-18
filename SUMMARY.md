@@ -297,6 +297,7 @@ This is the summary of my experience in LintCode.
 	* [Find the Connected Component in the Undirected Graph](BFS/Find-the-Connected-Component-in-the-UG.md)
 	* [Topological Sorting](BFS/Topological-Sorting.md)
 	* [Word Ladder](BFS/WordLadder.md)
+	* [Graph Valid Tree](BFS/Graph-Valid-Tree.md)
 
 * [Math](Math/README.md)
 	* [Add Two Array](Math/add-two-array.md)
