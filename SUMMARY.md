@@ -264,6 +264,7 @@ This is the summary of my experience in LintCode.
 	* [LRU Cache](DataStructureProblem/LRU-Cache.md)
 	* [Max Tree](DataStructureProblem/Max-Tree.md)
 	* [Union Find: Find the Weak Connected Component](DataStructureProblem/Find-the-Weak-Connected-Component.md)
+	* [Add and Search Word](DataStructureProblem/Add-and-Search-Word.md)
 	* [Range Sum Query](DataStructureProblem/Range-Sum-Query.md)
 	* [Range Sum Query 2D Immutable](DataStructureProblem/Range-Sum-Query-2D-Immutable.md)
 	* [Range Sum Query 2D Mutable](DataStructureProblem/Range-Sum-Query-2D-Mutable.md)
@@ -298,6 +299,7 @@ This is the summary of my experience in LintCode.
 	* [Topological Sorting](BFS/Topological-Sorting.md)
 	* [Word Ladder](BFS/WordLadder.md)
 	* [Graph Valid Tree](BFS/Graph-Valid-Tree.md)
+	* [Surrounded Regions](BFS/Surrounded-Regions.md)
 
 * [Math](Math/README.md)
 	* [Add Two Array](Math/add-two-array.md)
