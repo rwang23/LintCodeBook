@@ -28,7 +28,7 @@ public class Trie<Value> {
 		if (x == null) {
 			x = new Node();
 		}
-		if (d = key.length()) {
+		if (d == key.length()) {
 			x.val = val;
 			return x;
 		}

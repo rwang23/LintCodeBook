@@ -284,6 +284,7 @@ This is the summary of my experience in LintCode.
 	* [Permutations Sequence](DFS/Permutation-Sequence.md)
 	* [Number of Islands](DFS/Number-of-Islands.md)
 	* [Word Search](DFS/Word-Search.md)
+	* [Word Search II](DFS/Word-Search-II.md)
 	* [Letter Combinations of a Phone Number](DFS/Letter-Combinations-of-a-Phone-Number.md)
 	* [N Queen I](DFS/N-Queens.md)
 	* [N Queen II](DFS/N-QueensII.md)
