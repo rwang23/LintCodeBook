@@ -1,4 +1,5 @@
 ##Word Search II
+
 	Total Accepted: 16969 Total Submissions: 90342 Difficulty: Hard
 	Given a 2D board and a list of words from the dictionary, find all words in the board.
 
@@ -19,7 +20,8 @@
 
 ####思路
 - Trie + DFS
-- 22分钟写完,但是debug花了四十分钟
+- 22分钟写完,但是debug花了四十分钟(四十分钟debug跑过了自己的test case, 又用了二十分钟过了lintcode test case,再用了五分钟过了leetcode test case)
+- bug存在于很小的细节(写了两个newX,没写newY,debug半小时)
 - Trie没有必要fully implement,只需要先有了add(put)功能,之后的根据需要再写
 - 构造Trie的时候,构造了parent指针,这样方便回溯
 - ecclipse跑出来没问题,但是时间还是有点长
@@ -32,7 +34,6 @@ import java.util.List;
 public class Solution {
 
     class TrieNode{
-
         TrieNode[] next;
         TrieNode parent;
         int value;
@@ -66,24 +67,6 @@ public class Solution {
             return root;
         }
 
-
-        public int search(String s) {
-            return search(s, root, 0);
-        }
-
-        public int search(String s, TrieNode root, int index) {
-            if (root == null) {
-                return 0;
-            }
-
-            if (index == s.length()) {
-                return root.value;
-            }
-
-            int c = s.charAt(index) - 'a';
-            return search(s, root.next[c], index + 1);
-        }
-
         private TrieNode searchNode = root;
         public boolean isValid(char c) {
             if (searchNode == null) {
@@ -93,7 +76,6 @@ public class Solution {
             return searchNode.next[x] != null;
         }
     }
-
 
     public List<String> findWords(char[][] board, String[] words) {
         List<String> result = new ArrayList<String>();
@@ -122,12 +104,16 @@ public class Solution {
 
     public void dfs(List<String> result, Trie myTrie, int x, int y, char[][] board, StringBuilder s, int[][] visited) {
 
+        if (myTrie.searchNode.value != 0 && !result.contains(s.toString())) {
+            result.add(new String(s));
+        }
+
         if (myTrie.searchNode == null) {
             return;
         }
 
-        if (myTrie.searchNode.value != 0 && !result.contains(s.toString())) {
-            result.add(new String(s));
+        if (!(x < board.length && y < board[0].length && x >= 0 && y >= 0 && visited[x][y] == 0)) {
+            return;
         }
 
         char c = board[x][y];
@@ -139,16 +125,14 @@ public class Solution {
             for (int i = 0; i < 4; i++) {
                 int newX = x + xStep[i];
                 int newY = y + yStep[i];
-                if (newX < board.length && newY < board[0].length && newX >= 0 && newY >= 0 && visited[newX][newY] == 0) {
-                    char myChar = board[x][y];
-                    s.append(myChar);
-                    visited[x][y] = 1;
-                    myTrie.searchNode = myTrie.searchNode.next[c - 'a'];
-                    dfs(result, myTrie, newX, newY, board, s, visited);
-                    s.deleteCharAt(s.length() - 1);
-                    visited[x][y] = 0;
-                    myTrie.searchNode = myTrie.searchNode.parent;
-                }
+                char myChar = board[x][y];
+                s.append(myChar);
+                visited[x][y] = 1;
+                myTrie.searchNode = myTrie.searchNode.next[c - 'a'];
+                dfs(result, myTrie, newX, newY, board, s, visited);
+                s.deleteCharAt(s.length() - 1);
+                visited[x][y] = 0;
+                myTrie.searchNode = myTrie.searchNode.parent;
             }
         } else {
             return;
@@ -168,3 +152,5 @@ public class Solution {
     }
 }
 ```
+
+
