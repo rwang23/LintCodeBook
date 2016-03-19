@@ -268,6 +268,7 @@ This is the summary of my experience in LintCode.
 	* [Range Sum Query](DataStructureProblem/Range-Sum-Query.md)
 	* [Range Sum Query 2D Immutable](DataStructureProblem/Range-Sum-Query-2D-Immutable.md)
 	* [Range Sum Query 2D Mutable](DataStructureProblem/Range-Sum-Query-2D-Mutable.md)
+	* [Sliding Window Maximum](DataStructureProblem/Sliding-Window-Maximum.md)
 
 * [DFS](DFS/README.md)
 	* [K Sum II](DFS/kSumII.md)

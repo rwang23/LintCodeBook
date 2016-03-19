@@ -29,7 +29,7 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
  - Morris Traversal
 
 ###Leetcode一轮做错的题
-- leetcode Integer to English Words
+- Integer to English Words
 - Find the duplicate number
 - String to Integer (atoi)
 - Restore IP Addresses
@@ -42,8 +42,8 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 
 ###Leetcode一轮虽然做对,但是花时有点长或者需要注意再重做的题
 - Remove Duplicates from Sorted Array I and II
+- Word Search II, 特别考DFS里的限制条件,特别棒的题
 
 ###难题
 
 ###每天理解
- - trie树

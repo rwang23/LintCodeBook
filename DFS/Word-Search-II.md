@@ -24,7 +24,6 @@
 - bug存在于很小的细节(写了两个newX,没写newY,debug半小时)
 - Trie没有必要fully implement,只需要先有了add(put)功能,之后的根据需要再写
 - 构造Trie的时候,构造了parent指针,这样方便回溯
-- ecclipse跑出来没问题,但是时间还是有点长
 - 代码写了main函数来测试
 
 ```java
