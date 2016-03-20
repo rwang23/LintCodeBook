@@ -271,6 +271,8 @@ This is the summary of my experience in LintCode.
 	* [Sliding Window Maximum](DataStructureProblem/Sliding-Window-Maximum.md)
 	* [Find Median from Data Stream](DataStructureProblem/Find-Median-from-Data-Stream.md)
 	* [Sliding Window Median](DataStructureProblem/Sliding-Window-Median.md)
+	* [Trapping Rain Water II](DataStructureProblem/Trapping-Rain-Water-II.md)
+
 
 * [DFS](DFS/README.md)
 	* [K Sum II](DFS/kSumII.md)
