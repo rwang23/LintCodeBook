@@ -4,8 +4,6 @@
 	where the area of each cell is 1 x 1,
 	compute how much water it is able to trap after raining.
 
-
-
 	Have you met this question in a real interview? Yes
 	Example
 	Tags
@@ -18,6 +16,8 @@
 	[13,8,10,12]
 	[12,13,12,12]
 	[13,13,13,13]
+
+[原题有图 更容易理解](http://www.lintcode.com/en/problem/trapping-rain-water-ii/)
 
 ####思路
 - 使用min heap时间复杂度为 O(mnlogmn)
