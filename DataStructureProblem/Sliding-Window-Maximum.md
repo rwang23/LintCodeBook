@@ -22,8 +22,11 @@
 	Could you solve it in linear time?
 
 ####思路
-- max heap去求最大,然后指针不断往前走
+- 思路1:max heap去求最大,然后指针不断往前走,因为heap删除操作O(k),所以总时间复杂度为O(nk),为下面代码第一个实现
+- 思路2:max hashheap求最大,因为hashheap删除操作O(logk),所以总时间复杂度为O(nlogk)
+- 思路3:使用deque,deque首处就是最大值所在处,如果后面加入的元素更大,就从之前后面poll出去,如果长度超过了k,就把deque首处元素poll出去. 关键之处在于使用deque储存的是Index,而不是元素值本身. 时间复杂度O(n),为下面代码第二个实现
 
+####heap实现
 ```java
 public class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
@@ -50,6 +53,48 @@ public class Solution {
         }
         result[i] = pq.peek();
 
+
+        return result;
+    }
+}
+```
+
+####deque实现
+```java
+public class Solution {
+    public int[] maxSlidingWindow(int[] nums, int k) {
+
+        int size = nums.length;
+
+        if (size == 0 || k == 0 || size < k) {
+            return new int[0];
+        }
+        int[] result = new int[size - k + 1];
+
+        Deque<Integer> deque = new LinkedList<Integer>();
+        deque.offer(0);
+        int i = 0;
+        for (i = 1; i < k; i++) {
+            while (!deque.isEmpty() && nums[i] >= nums[deque.getLast()]) {
+                deque.removeLast();
+            }
+            deque.offer(i);
+        }
+
+        int index = 0;
+        result[index++] = nums[deque.getFirst()];
+
+        while (i < size) {
+            if (i - deque.getFirst() >= k) {
+                deque.removeFirst();
+            }
+            while (!deque.isEmpty() && nums[i] >= nums[deque.getLast()]) {
+                deque.removeLast();
+            }
+            deque.offer(i);
+            i++;
+            result[index++] = nums[deque.getFirst()];
+        }
 
         return result;
     }
