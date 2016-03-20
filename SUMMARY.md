@@ -270,6 +270,7 @@ This is the summary of my experience in LintCode.
 	* [Range Sum Query 2D Mutable](DataStructureProblem/Range-Sum-Query-2D-Mutable.md)
 	* [Sliding Window Maximum](DataStructureProblem/Sliding-Window-Maximum.md)
 	* [Find Median from Data Stream](DataStructureProblem/Find-Median-from-Data-Stream.md)
+	* [Sliding Window Median](DataStructureProblem/Sliding-Window-Median.md)
 
 * [DFS](DFS/README.md)
 	* [K Sum II](DFS/kSumII.md)
