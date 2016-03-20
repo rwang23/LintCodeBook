@@ -22,12 +22,12 @@
 	[1,2, | 7,8,5 | ], return the median 7;
 
 ####思路
-- 很容易想到以下的方法,写的时候用的方法3
+- 很容易想到以下的方法,写的时候用的方法3,好写:(
 - 方法1:暴力方法的话在k区间sort,时间复杂度 O(nklogk)
 - 方法2: 在k区间找中位数,不就是find k th largest number in a array吗? 用quick select, 该操作O(k),然后指针向后,总时间复杂度O(nk)
 - 方法3:使用heap记录两边的最大值最小值,同时指针向后移动 O(nk) , 因为default heap的删除操作时间复杂度是O(k)
 - 方法4:使用hashheap,因为删除的操作时间复杂度缩小成为了O(logk),所以总时间复杂度O(nlogk) 就是hashheap有点难实现
-- 方法5:使用Treemap,treemap也是sort,同时删除也是o(logk),总时间复杂度O(nlogk),面试可能会问treemap实现方法,对红黑树不熟悉就跪了
+- 方法5:使用Treemap,treemap也是sort,同时删除也是o(logk),总时间复杂度O(nlogk),面试可能会问treemap实现方法,对红黑树不熟悉就跪了(Treeset是不能有duplicate的,所以实现起来也有难度)
 
 ```java
 public class Solution {
