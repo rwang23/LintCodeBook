@@ -28,6 +28,7 @@ This is the summary of my experience in LintCode.
 	* [Strobogrammatic Number II](String/Strobogrammatic-Number-II.md)
 	* [String to Integer (atoi)](String/String-to-Integer.md)
 	* [Group Anagrams](String/Group-Anagrams.md)
+	* [Longest Palindromic Substring](String/Longest-Palindromic-Substring.md)
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
 
