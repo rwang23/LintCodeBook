@@ -32,6 +32,8 @@ char ch = s2.charAt(4); // return 'r'
 // find index at first
 int index = s2.indexOf('r'); // return 4. if not found, return -1
 ```
+####substring O(n)
+- 使用substring这个函数其实是O(n)时间复杂度,所以不要直接用,而是记录下Index就好了
 
 ####StringBuilder insert
 insert(index, char)
