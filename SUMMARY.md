@@ -272,6 +272,7 @@ This is the summary of my experience in LintCode.
 	* [Find Median from Data Stream](DataStructureProblem/Find-Median-from-Data-Stream.md)
 	* [Sliding Window Median](DataStructureProblem/Sliding-Window-Median.md)
 	* [Trapping Rain Water II](DataStructureProblem/Trapping-Rain-Water-II.md)
+	* [Building Outline](DataStructureProblem/Building-Outline.md)
 
 
 * [DFS](DFS/README.md)
