@@ -24,6 +24,9 @@
 
 ####思路
 - 需要掌握comparator 也是简化解题的关键
+- You use remove function, which will cost O(n) each time in worst case. That means, in your for loop, the time complexity is O(n^2).
+- 所以能少用remove就少用
+- 所以写了第二个代码
 
 ```java
 /**
@@ -69,4 +72,52 @@ public class Solution {
     }
 }
 
+```
+
+####思路
+```java
+/**
+ * Definition for an interval.
+ * public class Interval {
+ *     int start;
+ *     int end;
+ *     Interval() { start = 0; end = 0; }
+ *     Interval(int s, int e) { start = s; end = e; }
+ * }
+ */
+
+public class Solution {
+    public List<Interval> merge(List<Interval> intervals) {
+        List<Interval> result = new ArrayList<Interval>();
+
+        if (intervals == null || intervals.size() == 0) {
+            return result;
+        }
+
+        Collections.sort(intervals, new Comparator<Interval>(){
+            public int compare(Interval i1, Interval i2) {
+                if (i1.start != i2.start) {
+                    return i1.start - i2.start;
+                } else {
+                    return i2.end - i2.end;
+                }
+            }
+        });
+
+        Interval cur = intervals.get(0);
+        result.add(cur);
+
+        for (int i = 1; i < intervals.size(); i++) {
+            cur = result.get(result.size() - 1);
+            Interval second = intervals.get(i);
+            if (cur.end >= second.start) {
+                cur.end = Math.max(cur.end, second.end);
+            } else {
+                result.add(second);
+            }
+        }
+
+        return result;
+    }
+}
 ```
