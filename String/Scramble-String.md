@@ -178,3 +178,4 @@ public class Solution {
 
 ####还有动规解法
 - [参考](http://www.cnblogs.com/TenosDoIt/p/3452004.html)
+- [参考](http://blog.csdn.net/linhuanmars/article/details/24506703)
