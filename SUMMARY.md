@@ -31,6 +31,7 @@ This is the summary of my experience in LintCode.
 	* [Longest Palindromic Substring](String/Longest-Palindromic-Substring.md)
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
+	* [Scramble String](String/Scramble-String.md)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
