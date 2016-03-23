@@ -138,7 +138,6 @@ This is the summary of my experience in LintCode.
 	* [Partition Array](Sort/Partition-Array.md)
 	* [Count of Smaller Numbers After Self](Sort/Count-of-Smaller-Numbers-After-Self.md)
 
-
 * [Two Pointers](Two-Pointers/README.md)
 	* [Kth Largetst Element](Two-Pointers/Kth-Largest-Element.md)
 	* [Remove Element](Two-Pointers/Remove-Element.md)
@@ -218,7 +217,6 @@ This is the summary of my experience in LintCode.
 	* [Convert Sorted List to Binary Search Tree](Linkedlist/Convert-Sorted-List-to-Binary-Search-Tree.md)
 	* [Convert Binary Search Tree to Doubly Linked List](Linkedlist/Convert-Binary-Search-Tree-to-Doubly-Linked-List.md)
 
-
 * [Data Structure](DataStructure/README.md)
    * [Linked List](DataStructure/linked_list.md)
    * [Binary Tree](DataStructure/binary_tree.md)
@@ -243,7 +241,6 @@ This is the summary of my experience in LintCode.
    * [Trie](Implementation/Trie.md)
    * [HashMap](Implementation/HashMap.md)
    * [Min Heap](Implementation/heap.md)
-
 
 * [Data Structure Problem](DataStructureProblem/README.md)
 	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)

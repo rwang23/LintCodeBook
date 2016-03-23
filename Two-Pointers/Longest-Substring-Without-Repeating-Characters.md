@@ -55,38 +55,29 @@ public class Solution {
 ####优化解法 O(n)
 - 假设[0,3]最长,那么不用去找[1,3] [2,3], 所以i++的时候 j不一定需要变
 - 去找的时候[1, ?] j++ 去找[1,4]
-- 注意边界条件 i==0的时候,没有remove这些操作,而且i!=0时候,remove的也是charAt(i-1)
 
 ```java
 public class Solution {
-    /**
-     * @param s: a string
-     * @return: an integer
-     */
     public int lengthOfLongestSubstring(String s) {
-        // write your code here
         if (s == null || s.length() == 0) {
             return 0;
         }
 
+        Set<Character> set = new HashSet<Character>();
+        char[] charArray = s.toCharArray();
         int size = s.length();
-        HashSet<Character> set = new HashSet<Character>();
+
         int i = 0;
         int j = 0;
-        int length = 0;
         int max = 0;
 
-        for (i = 0; i < size; i++) {
-
-            while ( j < size && !set.contains(s.charAt(j))) {
-                length++;
-                set.add(s.charAt(j++));
+        while (j < size) {
+            if (!set.contains(charArray[j])) {
+                set.add(charArray[j++]);
+                max = Math.max(max, j - i);
+            } else {
+                set.remove(charArray[i++]);
             }
-
-            max = Math.max(max, length);
-            char cur = s.charAt(i);
-            set.remove(cur);
-            length--;
         }
 
         return max;
