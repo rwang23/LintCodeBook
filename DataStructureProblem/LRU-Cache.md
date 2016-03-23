@@ -120,3 +120,122 @@ public class Solution {
 }
 
 ```
+
+
+####双向链表
+- 写了15分钟,debug25分钟,稍微有点慢了
+- 最关键的错误在于更新的点有可能是head节点,此时要将head = head.next,而不只是删除节点
+- 同时注意,每一部操作都要去更新pre 和 next, 稍微疏忽一点就可能造成错误
+- 双向链表感觉是比单向好写一些,但是容易错误一些
+
+```java
+public class LRUCache {
+
+    private class ListNode{
+        private ListNode next;
+        private ListNode pre;
+        private int value;
+        private int key;
+        ListNode(int value, int key) {
+            this.value = value;
+            this.key = key;
+        }
+    }
+
+    private ListNode head;
+    private ListNode tail;
+    private int capacity;
+    private Map<Integer, ListNode> map;
+    private int size;
+
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        map = new HashMap<Integer, ListNode>();
+        head = null;
+        tail = null;
+        size = 0;
+    }
+
+    public int get(int key) {
+        int value = -1;
+        if (!map.containsKey(key)) {
+            return -1;
+        } else {
+            ListNode cur = map.get(key);
+            value = cur.value;
+            if (cur == tail) {
+                return value;
+            }
+            ListNode pre = cur.pre;
+            ListNode next = cur.next;
+            if (pre != null) {
+                pre.next = next;
+            }
+            if (cur == head) {
+                head = head.next;
+            }
+            cur.next = null;
+            next.pre = pre;
+
+            tail.next = cur;
+            cur.next = null;
+            cur.pre = tail;
+            tail = tail.next;
+        }
+
+        return value;
+    }
+
+    public void set(int key, int value) {
+        if (head == null) {
+            head = new ListNode(value, key);
+            tail = head;
+            map.put(key, head);
+            size++;
+        } else {
+            if (map.containsKey(key)) {
+                ListNode cur = map.get(key);
+                cur.value = value;
+                if (cur == tail) {
+                    return;
+                }
+
+                ListNode pre = cur.pre;
+                ListNode next = cur.next;
+                if (pre != null) {
+                    pre.next = next;
+                }
+                if (cur == head) {
+                head = head.next;
+                }
+                next.pre = pre;
+                tail.next = cur;
+                cur.pre =tail;
+                cur.next = null;
+                tail = tail.next;
+            } else {
+                if (size < capacity) {
+                    ListNode cur = new ListNode(value, key);
+                    tail.next = cur;
+                    cur.pre = tail;
+                    tail = tail.next;
+                    map.put(key, cur);
+                    size++;
+                } else {
+                    ListNode cur = new ListNode(value, key);
+                    tail.next = cur;
+                    cur.pre = tail;
+                    tail = tail.next;
+                    map.put(key, cur);
+
+                    ListNode next = head.next;
+                    next.pre = null;
+                    map.remove(head.key);
+                    head.next = null;
+                    head = next;
+                }
+            }
+        }
+    }
+}
+```
