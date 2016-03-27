@@ -134,6 +134,7 @@ This is the summary of my experience in LintCode.
 	* [Sort Letters by Case](Sort/Sort-Letters-by-Case.md)
 	* [Sort Color](Sort/SortColors.md)
 	* [Sort Color II](Sort/SortColorsII.md)
+	* [Wiggle Sort](Sort/Wiggle-Sort.md)
 	* [Three Sum](Sort/Three-Sum.md)
 	* [Three Sum Closest](Sort/3-Sum-Closest.md)
 	* [Four Sum](Sort/Four-Sum.md)
