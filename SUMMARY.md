@@ -135,6 +135,7 @@ This is the summary of my experience in LintCode.
 	* [Sort Color](Sort/SortColors.md)
 	* [Sort Color II](Sort/SortColorsII.md)
 	* [Wiggle Sort](Sort/Wiggle-Sort.md)
+	* [Wiggle Sort II](Sort/Wiggle-Sort-II.md)
 	* [Three Sum](Sort/Three-Sum.md)
 	* [Three Sum Closest](Sort/3-Sum-Closest.md)
 	* [Four Sum](Sort/Four-Sum.md)
