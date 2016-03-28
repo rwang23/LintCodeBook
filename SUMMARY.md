@@ -160,7 +160,6 @@ This is the summary of my experience in LintCode.
 	* [Longest Substring with At Most K Distinct Characters](Two-Pointers/Longest-Substring-with-At-Most-K-Distinct-Characters.md)
 	* [Nuts Bolts Problem](Two-Pointers/Nuts-Bolts-Problem.md)
 
-
 * [Array](Array/README.md)
 	* [Making New List](Array/Making-New-List.md)
 	* [Rotate Array](Array/Rotate-Array.md)
@@ -193,7 +192,6 @@ This is the summary of my experience in LintCode.
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 	* [Find the Duplicate Number](Array/Find-the-Duplicate-Number.md)
 	* [First Missing Positive](Array/First-Missing-Positive.md)
-
 
 * [Linkedlist](Linkedlist/README.md)
 	* [Delete Node in the Middle of Singly Linked List](Linkedlist/Delete-Node-in-the-Middle-of-Singly-Linked-List.md)
@@ -261,6 +259,7 @@ This is the summary of my experience in LintCode.
 	* [Hash Function](DataStructureProblem/HashFunction.md)
 	* [Rehashing](DataStructureProblem/Rehashing.md)
 	* [Min Stack](DataStructureProblem/MinStack.md)
+	* [Zigzag Iterator](DataStructureProblem/Zigzag-Iterator.md)
 	* [Ugly Number](DataStructureProblem/Ugly-Number.md)
 	* [Top K Frequent Words](DataStructureProblem/Top-K-Frequent-Words.md)
 	* [Meeting Rooms](DataStructureProblem/Meeting-Rooms.md)
