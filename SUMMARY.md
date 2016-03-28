@@ -214,6 +214,7 @@ This is the summary of my experience in LintCode.
 	* [Merge Two Sorted Lists](Linkedlist/Merge-Two-Sorted-Lists.md)
 	* [Merge K Sorted Lists](Linkedlist/Merge-k-Sorted-Lists.md)
 	* [Sort List](Linkedlist/Sort-List.md)
+	* [Insertion Sort List](Linkedlist/Insertion-Sort-List.md)
 	* [Reorder List](Linkedlist/Reorder-List.md)
 	* [Add Two Numbers](Linkedlist/Add-Two-Numbers.md)
 	* [Rotate List](Linkedlist/Rotate-List.md)

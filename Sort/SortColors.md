@@ -74,8 +74,8 @@ class Solution {
         int blue = A.length-1;
         for (int i = 0; i <= blue && i < A.length;) {
             if (A[i] == 0 && i >= red ) {
-                swap(A, i, red++);
-            } else if (A[i] == 2 && i <= blue)
+                swap(A, i++, red++);
+            } else if (A[i] == 2 && i < blue)
                 swap(A, i, blue--);
             else
                 i++;
