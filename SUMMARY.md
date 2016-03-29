@@ -310,6 +310,7 @@ This is the summary of my experience in LintCode.
 	* [Route Between Two Nodes in Graph](BFS/Route-Between-Two-Nodes-in-Graph.md)
 	* [Clone Graph](BFS/Clone-Graph.md)
 	* [Find the Connected Component in the Undirected Graph](BFS/Find-the-Connected-Component-in-the-UG.md)
+	* [Number of Connected Components in an Undirected Graph](BFS/Number-of-Connected-Components.md)
 	* [Topological Sorting](BFS/Topological-Sorting.md)
 	* [Word Ladder](BFS/WordLadder.md)
 	* [Graph Valid Tree](BFS/Graph-Valid-Tree.md)
