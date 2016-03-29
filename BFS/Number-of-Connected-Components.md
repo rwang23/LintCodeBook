@@ -18,6 +18,7 @@
 ####思路
 - BFS/DFS/Union Find 三种方法
 
+
 ####Union Find
 ```java
 public class Solution {
@@ -129,3 +130,52 @@ public class Solution {
 ```
 
 ####DFS
+```java
+public class Solution {
+
+    private class Node {
+        private int id;
+        private List<Integer> neighbor;
+        Node(int id) {
+            this.id = id;
+            neighbor = new ArrayList<Integer>();
+        }
+    }
+    public int countComponents(int n, int[][] edges) {
+        if (n <= 0) {
+            return 0;
+        }
+
+        Node[] list = new Node[n];
+        for (int i = 0; i < n; i++) {
+            list[i] = new Node(i);
+        }
+        for (int i = 0; i < edges.length; i++) {
+            int cur = edges[i][0];
+            int next = edges[i][1];
+            list[cur].neighbor.add(next);
+            list[next].neighbor.add(cur);
+        }
+
+        int count = 0;
+        boolean[] visited = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                dfs(list, i, visited);
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public void dfs(Node[] list, int i, boolean[] visited) {
+        Node cur = list[i];
+        visited[i] = true;
+        for (Integer next : cur.neighbor) {
+            if (!visited[next]) {
+                dfs(list, next, visited);
+            }
+        }
+    }
+}
+```
