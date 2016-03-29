@@ -17,6 +17,8 @@ This is the summary of my experience in LintCode.
 
 * [String](String/README.md)
 	* [Compress a String](String/Compress-String.md)
+	* [Flip Game](String/Flip-Game.md)
+	* [Flip Game II](String/Flip-Game-II.md)
 	* [Reverse Words in a String](String/Reverse-Words-in-a-String.md)
 	* [String Permutation](String/String-Permutation.md)
 	* [Digit Counts](String/Digit-Counts.md)
