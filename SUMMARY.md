@@ -140,6 +140,7 @@ This is the summary of my experience in LintCode.
 	* [Wiggle Sort II](Sort/Wiggle-Sort-II.md)
 	* [Three Sum](Sort/Three-Sum.md)
 	* [Three Sum Closest](Sort/3-Sum-Closest.md)
+	* [Three Sum Smaller](Sort/3Sum-Smaller.md)
 	* [Four Sum](Sort/Four-Sum.md)
 	* [Largest Number](Sort/Largest-Number.md)
 	* [Partition Array](Sort/Partition-Array.md)
