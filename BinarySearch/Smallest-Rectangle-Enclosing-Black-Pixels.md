@@ -77,41 +77,97 @@ public class Solution {
 ```
 
 ####Binary Search
-[参考](https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/)
+- [参考](https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/)
+- 自己写还是用的自己的binary search模板,但是稍微麻烦一点
+- 分别找寻left right top bottom
+- 找left,就遍历每一个row,来找left,其他同理
 
 ```java
 public class Solution {
     private char[][] image;
     public int minArea(char[][] iImage, int x, int y) {
+        if (iImage == null || iImage.length == 0 || iImage[0].length == 0) {
+            return 0;
+        }
+
         image = iImage;
-        int m = image.length, n = image[0].length;
-        int left = searchColumns(0, y, 0, m, true);
-        int right = searchColumns(y + 1, n, 0, m, false);
+
+        int m = image.length;
+        int n = image[0].length;
+
+        int left = searchColumns(0, y, 0, m - 1, true);
+        int right = searchColumns(y, n - 1, 0, m - 1, false);
         int top = searchRows(0, x, left, right, true);
-        int bottom = searchRows(x + 1, m, left, right, false);
-        return (right - left) * (bottom - top);
+        int bottom = searchRows(x, m - 1, left, right, false);
+
+        return (right - left + 1) * (bottom - top + 1);
     }
-    private int searchColumns(int i, int j, int top, int bottom, boolean opt) {
-        while (i != j) {
-            int k = top, mid = (i + j) / 2;
-            while (k < bottom && image[k][mid] == '0') ++k;
-            if (k < bottom == opt)
-                j = mid;
-            else
-                i = mid + 1;
+
+    private int searchColumns(int start, int end, int top, int bottom, boolean option) {
+        while (start < end - 1) {
+            int k = top;
+            int mid = start + (end - start) / 2;
+            while (k <= bottom && image[k][mid] == '0') {
+                k++;
+            }
+            //if find the black pixel, then k <= bottom
+            //if not, k > bottom
+            if (k <= bottom == option) {
+                end = mid;
+            }
+            else {
+                start = mid;
+            }
         }
-        return i;
+        if (option) {
+            for (int i = top; i <= bottom; i++) {
+                if (image[i][start] == '1') {
+                    return start;
+                }
+            }
+            return end;
+        } else {
+             for (int i = top; i <= bottom; i++) {
+                if (image[i][end] == '1') {
+                    return end;
+                }
+            }
+            return start;
+        }
     }
-    private int searchRows(int i, int j, int left, int right, boolean opt) {
-        while (i != j) {
-            int k = left, mid = (i + j) / 2;
-            while (k < right && image[mid][k] == '0') ++k;
-            if (k < right == opt)
-                j = mid;
-            else
-                i = mid + 1;
+
+    private int searchRows(int start, int end, int left, int right, boolean option) {
+        while (start < end - 1) {
+            int k = left;
+            int mid = start + (end - start) / 2;
+            while (k <= right && image[mid][k] == '0') {
+                k++;
+            }
+            //if find the black pixel, then k <= bottom
+            //if not, k > right
+            if (k <= right == option) {
+                end = mid;
+            }
+            else {
+                start = mid;
+            }
         }
-        return i;
+
+        if (option) {
+            for (int i = left; i <= right; i++) {
+                if (image[start][i] == '1') {
+                    return start;
+                }
+            }
+            return end;
+        } else {
+            for (int i = left; i <= right; i++) {
+                if (image[end][i] == '1') {
+                    return end;
+                }
+            }
+            return start;
+        }
     }
 }
 ```
