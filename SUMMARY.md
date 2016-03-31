@@ -307,6 +307,7 @@ This is the summary of my experience in LintCode.
 	* [N Queen II](DFS/N-QueensII.md)
 	* [Palindrome Partitioning](DFS/Palindrome-Partitioning.md)
 	* [Restore IP Addresses](DFS/Restore-IP-Addresses.md)
+	* [Generate Parentheses](DFS/Generate-Parentheses.md)
 
 * [Memorization](Memorization/README.md)
 	* [Longest Increasing Path in a Matrix](Memorization/Longest-Increasing-Path-in-a-Matrix.md)
