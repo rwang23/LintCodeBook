@@ -16,6 +16,7 @@ String Two Pointers LintCode Copyright Hash Table
 
 
 ####思路
+- 第一个是leetcode的题,第二个解释lintcode上的题,有小差别,leetcode这个是后来写的,优美一些
 - 窗口型指针
 - 注意以下,不是必须k distinct而是k个以下就可以,所以有了以下代码
 
@@ -28,6 +29,51 @@ String Two Pointers LintCode Copyright Hash Table
 ```
 - 因为如果达到了k,那么就要减掉多余的一个,但是如果是因为j达到上限,说明还只是k个以下,就不用减
 
+####Leetcode
+```java
+public class Solution {
+    public int lengthOfLongestSubstringTwoDistinct(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+
+        int i = 0;
+        int j = 0;
+        int maxLen = 0;
+        int len = 0;
+        int n = s.length();
+        Map<Character, Integer> map = new HashMap<Character, Integer>();
+
+        while (j < n) {
+            char cur = s.charAt(j);
+            if (map.containsKey(cur)) {
+                j++;
+                len++;
+                map.put(cur, map.get(cur) + 1);
+                maxLen = Math.max(maxLen, len);
+            }
+            else {
+                while (map.size() == 2) {
+                    char head = s.charAt(i);
+                    map.put(head, map.get(head) - 1);
+                    len--;
+                    if (map.get(head) == 0) {
+                        map.remove(head);
+                    }
+                    i++;
+                }
+                map.put(cur, 1);
+                j++;
+                len++;
+                maxLen = Math.max(maxLen, len);
+            }
+        }
+        return maxLen;
+    }
+}
+```
+
+####Lintcode
 ```java
 public class Solution {
     /**

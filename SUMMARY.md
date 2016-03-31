@@ -129,6 +129,7 @@ This is the summary of my experience in LintCode.
 	* [Coins In a Line II](DynamicProgramming/Coins-in-a-Line-II.md)
 	* [Coins In a Line III](DynamicProgramming/Coins-in-a-Line-III.md)
 	* [Coin Change](DynamicProgramming/Coin-Change.md)
+	* [Burst Balloons](DynamicProgramming/Burst-Balloons.md)
 
 * [Sort](Sort/README.md)
 	* [Merge Intervals](Sort/MergeIntervals.md)
@@ -284,7 +285,6 @@ This is the summary of my experience in LintCode.
 	* [Sliding Window Median](DataStructureProblem/Sliding-Window-Median.md)
 	* [Trapping Rain Water II](DataStructureProblem/Trapping-Rain-Water-II.md)
 	* [Building Outline](DataStructureProblem/Building-Outline.md)
-
 
 * [DFS](DFS/README.md)
 	* [K Sum II](DFS/kSumII.md)
