@@ -102,4 +102,8 @@ Item[] a = (Item[]) new Object[capacity];
 	一种是boolean remove(Object o)
 	如果是Integer arraylist,将会自动调用remove(object o)
 	这个时候就不要用remove来removeindex了
+	list.remove(Integer.valueOf(2));
+	list.remove(list.indexOf(2));
+	You could use list.remove(new Integer(0)) to surely remove the object
+	List<Integer> intList = new ArrayList<Integer>(Arrays.asList(intArray));
 
