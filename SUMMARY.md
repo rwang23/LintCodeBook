@@ -49,6 +49,7 @@ This is the summary of my experience in LintCode.
 	* [First Bad Version](BinarySearch/First-Bad-Version.md)
 	* [Search For a Range](BinarySearch/Search-For-Range.md)
 	* [Wood Cut](BinarySearch/Wood-Cut.md)
+	* [Smallest Rectangle Enclosing Black Pixels](BinarySearch/Smallest-Rectangle-Enclosing-Black-Pixels.md)
 
 * [Binary Tree](BinaryTree/README.md)
 	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
@@ -317,6 +318,7 @@ This is the summary of my experience in LintCode.
 	* [Find the Connected Component in the Undirected Graph](BFS/Find-the-Connected-Component-in-the-UG.md)
 	* [Number of Connected Components in an Undirected Graph](BFS/Number-of-Connected-Components.md)
 	* [Topological Sorting](BFS/Topological-Sorting.md)
+	* [Mystical Lexical Order](BFS/Mystical-Lexical-Order.md)
 	* [Word Ladder](BFS/WordLadder.md)
 	* [Graph Valid Tree](BFS/Graph-Valid-Tree.md)
 	* [Surrounded Regions](BFS/Surrounded-Regions.md)
@@ -324,6 +326,7 @@ This is the summary of my experience in LintCode.
 * [Math](Math/README.md)
 	* [Add Two Array](Math/add-two-array.md)
 	* [Add Digits](Math/Add-Digits.md)
+	* [Much Larger Numbers](Math/Much-Larger-Numbers.md)
 	* [Valid Sudoku](Math/Valid-Sudoku.md)
 	* [Happy Number](Math/Happy-Number.md)
 	* [Cosine Similarity](Math/Cosine-Similarity.md)
