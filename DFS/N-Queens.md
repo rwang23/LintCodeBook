@@ -54,6 +54,7 @@ Can you do it without recursion?
 	满足y2 - y1 == Math.abs(x2 -x1) 的位置，两个皇后是会互相攻击的，
 	所以两个循环，找到这样的点
 
+####Lintcode
 ```java
 class Solution {
     /**
@@ -139,4 +140,84 @@ class Solution {
 };
 
 
+```
+
+####Leetcode
+```java
+public class Solution {
+    public List<List<String>> solveNQueens(int n) {
+        if (n <= 0) {
+            return new ArrayList<List<String>>();
+        }
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<Integer> queens = new ArrayList<Integer>();
+        Set<Integer> set = new HashSet<Integer>();
+        dfs(result, queens, set, n);
+        List<List<String>> board = printBoard(result, n);
+
+        return board;
+    }
+
+    public void dfs(List<List<Integer>> result, List<Integer> queens, Set<Integer> set, int n) {
+        if (!isValid(queens)) {
+            return;
+        }
+        if (queens.size() == n) {
+            result.add(new ArrayList<Integer>(queens));
+            return;
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (!set.contains(i)) {
+                queens.add(i);
+                set.add(i);
+                dfs(result, queens, set, n);
+                set.remove(i);
+                queens.remove(queens.size() - 1);
+            }
+        }
+    }
+
+    public boolean isValid(List<Integer> queens) {
+        if (queens == null || queens.size() == 0) {
+            return true;
+        }
+        int size = queens.size();
+        int curX = size - 1;
+        int curY = queens.get(curX);
+        for (int i = 0; i < size - 1; i++) {
+            int x = i;
+            int y = queens.get(x);
+            if (curX - x == Math.abs(curY - y)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public List<List<String>> printBoard(List<List<Integer>> input, int n) {
+        List<List<String>> result = new ArrayList<List<String>>();
+        if (input == null || input.size() == 0) {
+            return result;
+        }
+        for (int i = 0; i < input.size(); i++) {
+            List<Integer> curBoard = input.get(i);
+            List<String> oneBoard = new ArrayList<String>();
+            for (int j = 0; j < curBoard.size(); j++) {
+                StringBuilder string = new StringBuilder();
+                for (int k = 0; k < n; k++) {
+                    if (curBoard.get(j) != k) {
+                        string.append('.');
+                    }
+                    else {
+                        string.append('Q');
+                    }
+                }
+                oneBoard.add(string.toString());
+            }
+            result.add(oneBoard);
+        }
+        return result;
+    }
+}
 ```
