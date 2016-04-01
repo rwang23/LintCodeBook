@@ -326,6 +326,7 @@ This is the summary of my experience in LintCode.
 
 * [Math](Math/README.md)
 	* [Add Two Array](Math/add-two-array.md)
+	* [Nested List Weight Sum](Math/Nested-List-Weight-Sum.md)
 	* [Add Digits](Math/Add-Digits.md)
 	* [Much Larger Numbers](Math/Much-Larger-Numbers.md)
 	* [Valid Sudoku](Math/Valid-Sudoku.md)
@@ -341,10 +342,12 @@ This is the summary of my experience in LintCode.
 	* [Fast Power](Math/FastPower.md)
 	* [Bulb Switcher](Math/Bulb-Switcher.md)
 	* [Self Crossing](Math/Self-Crossing.md)
+	* [Sparse Matrix](Math/Sparse-Matrix.md)
 
 * [Bits Manipulation](BitsManipulation/README.md)
 	* [Reverse Bits](BitsManipulation/Reverse-Bits.md)
 	* [Number of 1 Bits](BitsManipulation/Number-of-1-Bits.md)
+	* [Counting Bits](BitsManipulation/Counting-Bits.md)
 	* [Bitwise AND of Numbers Range](BitsManipulation/Bitwise-AND-of-Numbers-Range.md)
 	* [Gray Code](BitsManipulation/Gray-Code.md)
 	* [A + B Problem](BitsManipulation/A+B-Problem.md)

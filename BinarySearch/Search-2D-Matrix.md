@@ -30,58 +30,48 @@ O(log(n) + log(m)) time
 
 
 ```java
-
 public class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        if (matrix == null || matrix.length == 0) {
-            return false;
-        }
-        if (matrix[0] == null || matrix[0].length == 0) {
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return false;
         }
 
-        int row = matrix.length;
-        int column = matrix[0].length;
+        int m = matrix.length;
+        int n = matrix[0].length;
 
-        // find the row index, the last number <= target
-        int start = 0, end = row - 1;
-        while (start + 1 < end) {
+        int start = 0;
+        int end = m - 1;
+        while (start < end - 1) {
             int mid = start + (end - start) / 2;
             if (matrix[mid][0] == target) {
                 return true;
-            } else if (matrix[mid][0] < target) {
-                start = mid;
-            } else {
+            }
+            else if (matrix[mid][0] > target) {
                 end = mid;
             }
-        }
-        if (matrix[end][0] <= target) {
-            row = end;
-        } else if (matrix[start][0] <= target) {
-            row = start;
-        } else {
-            return false;
+            else {
+                start = mid;
+            }
         }
 
-        // find the column index, the number equal to target
+        int row = (matrix[end][0] <= target) ? end : start;
+
         start = 0;
-        end = column - 1;
-        while (start + 1 < end) {
+        end = n - 1;
+        while (start < end - 1) {
             int mid = start + (end - start) / 2;
             if (matrix[row][mid] == target) {
                 return true;
-            } else if (matrix[row][mid] < target) {
-                start = mid;
-            } else {
+            }
+            else if (matrix[row][mid] > target) {
                 end = mid;
             }
+            else {
+                start = mid;
+            }
         }
-        if (matrix[row][start] == target) {
-            return true;
-        } else if (matrix[row][end] == target) {
-            return true;
-        }
-        return false;
+
+        return (matrix[row][start] == target || matrix[row][end] == target);
     }
 }
 ```
