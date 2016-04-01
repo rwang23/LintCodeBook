@@ -27,6 +27,7 @@
 
 ####超棒的思路,直接从节点进行改变
 [O(n)time, O(1)space](https://leetcode.com/discuss/18410/easy-o-n-iteration-solution-java)
+- 多次交换,画图就能看出来
 
 ```java
 public class Solution {

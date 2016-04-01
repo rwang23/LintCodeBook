@@ -19,7 +19,7 @@ Greedy
 - 正常二进制异或的时候 假设 0和1,最后得到1,其实就是加起来%2, 0 0 0 0 和 1 1,最后就是0
 - 这里我们尝试将每一位加起来 %3
 - 再还原出这个数
-
+- 下面写的这个不够好
 
 ```java
 public class Solution {
@@ -46,5 +46,26 @@ public class Solution {
         return result;
     }
 }
+```
+####空间优化
 
+```java
+public class Solution {
+    public int singleNumber(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        int len = nums.length;
+        int result = 0;
+        for (int i = 0; i < 32; i++) {
+            int digit = 0;
+            for (int j = 0; j < len; j++) {
+                digit += (nums[j] >> i) & 1;
+                digit %= 3;
+            }
+            result |= (digit) << i;
+        }
+        return result;
+    }
+}
 ```
