@@ -80,6 +80,63 @@ public class Solution {
         return result;
     }
 }
+```
 
+####Leetcode
+```java
+public class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return new int[0];
+        }
+        int len = nums.length;
+        int[] left = new int[len];
+        int[] right = new int[len];
+        left[0] = nums[0];
+        right[len - 1] = nums[len - 1];
+        for (int i = 1; i < len; i++) {
+            left[i] = left[i - 1] * nums[i];
+        }
+        for (int i = len - 2; i >= 0; i--) {
+            right[i] = right[i + 1] * nums[i];
+        }
 
+        int[] result = new int[len];
+        result[0] = right[1];
+        result[len - 1] = left[len - 2];
+        for (int i = 1; i < len - 1; i++) {
+            result[i] = left[i - 1] * right[i + 1];
+        }
+        return result;
+    }
+}
+```
+
+####空间优化
+- 左边过一遍,先留着左边相乘的值
+- 再过一遍右边,从头开始计算右边相乘的值,存在end里
+
+```java
+public class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return new int[0];
+        }
+        int len = nums.length;
+        int[] result = new int[len];
+
+        result[0] = 1;
+        for (int i = 1; i < len; i++) {
+            result[i] = result[i - 1] * nums[i - 1];
+        }
+
+        int end = 1;
+        for (int i = len - 2; i >= 0; i--) {
+            end *= nums[i + 1];
+            result[i] *= end;
+        }
+
+        return result;
+    }
+}
 ```

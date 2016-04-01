@@ -25,6 +25,7 @@
 ####思路
 - 直接矩阵乘法 O(mkn),不能通过
 - 参考第二种解法以及hashmap解法[参考](http://buttercola.blogspot.com/2016/01/leetcode-sparse-matrix-multiplication.html)
+- [CMU lecture](http://www.cs.cmu.edu/~scandal/cacm/node9.html)
 
 ```java
 public class Solution {
