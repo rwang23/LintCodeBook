@@ -97,7 +97,7 @@ This is the summary of my experience in LintCode.
 	* [Count Univalue Subtrees](BinaryTree/Count-Univalue-Subtrees.md)
 	* [Count Complete Tree Nodes](BinaryTree/Count-Complete-Tree-Nodes.md)
 	* [Kth Smallest Element in a BST](BinaryTree/Kth-Smallest-Element-in-a-BST.md)
-
+	* [Binary Tree Upside Down](BinaryTree/Binary-Tree-Upside-Down.md)
 
 * [Dynamic Programming](DynamicProgramming/README.md)
 	* [Range Sum Query - Immutable](DynamicProgramming/Range-Sum-Query.md)
