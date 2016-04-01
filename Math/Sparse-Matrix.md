@@ -23,7 +23,8 @@
 	                  | 0 0 1 |
 
 ####思路
-- 直接矩阵乘法 O(mkn),不能通过test case
+- 直接矩阵乘法 O(mkn),不能通过
+- 参考第二种解法以及hashmap解法[参考](http://buttercola.blogspot.com/2016/01/leetcode-sparse-matrix-multiplication.html)
 
 ```java
 public class Solution {
@@ -70,7 +71,6 @@ public class Solution {
                         result[i][k] += A[i][j] * B[j][k];
                     }
                 }
-
             }
         }
 
