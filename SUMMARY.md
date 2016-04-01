@@ -161,6 +161,7 @@ This is the summary of my experience in LintCode.
 	* [Container With Most Water](Two-Pointers/Container-With-Most-Water.md)
 	* [The Smallest Difference](Two-Pointers/The-Smallest-Difference.md)
 	* [Minimum Size Subarray Sum](Two-Pointers/Minimum-Size-Subarray-Sum.md)
+	* [Maximum Size Subarray Sum Equals k](Two-Pointers/Maximum-Size-Subarray-Sum-Equals-k.md)
 	* [Longest Substring Without Repeating Characters](Two-Pointers/Longest-Substring-Without-Repeating-Characters.md)
 	* [Minimum Window Substring](Two-Pointers/Minimum-Window-Substring.md)
 	* [K Closest Numbers In Sorted Array](Two-Pointers/K-Closest-Numbers-In-Sorted-Array.md)
