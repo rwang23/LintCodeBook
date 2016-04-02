@@ -48,6 +48,7 @@ This is the summary of my experience in LintCode.
 	* [Total Occurrence of Target](BinarySearch/Total-Occurrence-of-Target.md)
 	* [First Bad Version](BinarySearch/First-Bad-Version.md)
 	* [Search For a Range](BinarySearch/Search-For-Range.md)
+	* [Search Insert Position](BinarySearch/Search-Insert-Position.md)
 	* [Wood Cut](BinarySearch/Wood-Cut.md)
 	* [Smallest Rectangle Enclosing Black Pixels](BinarySearch/Smallest-Rectangle-Enclosing-Black-Pixels.md)
 
