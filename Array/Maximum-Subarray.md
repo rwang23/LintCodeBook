@@ -20,7 +20,7 @@ Can you do it in time complexity O(n)?
 - LintCode Copyright
 - Subarray Array
 
-####思路
+####思路1
 - 动态规划
 - 从第一个数就要开始思考
 - state: sum[i]是前i个数中，最大的subarray sum
@@ -28,6 +28,9 @@ Can you do it in time complexity O(n)?
 - initialize: sum[0] = A[0]
 - answer: 设置一个max去存最大值
 - 优化： 因为就用到了sum[i]和sum[i-1],所以用两个寄存器就可以了，没必要用数组
+
+####思路2
+- prefixSum
 
 ```java
 public class Solution {
