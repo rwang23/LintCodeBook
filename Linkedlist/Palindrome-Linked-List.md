@@ -19,52 +19,61 @@ Could you do it in O(n) time and O(1) space?
 - 然后拆分后边部分，reverse，再比较
 
 ```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
 public class Solution {
     public boolean isPalindrome(ListNode head) {
         if (head == null) {
             return true;
         }
+
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode slow = dummy;
-        ListNode fast = dummy;
-        while (fast.next != null && fast.next.next != null) {
+        ListNode pre = dummy;
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
+            pre = pre.next;
         }
-        ListNode second;
-        if (fast.next != null) {
-            second = slow.next.next;
-        } else {
-            second = slow.next;
-        }
-        slow.next = null;
+        pre.next = null;
 
-        ListNode reverseNode = reverse(second);
-        ListNode cur = dummy.next;
-
-        while (cur != null) {
-            if (cur.val != reverseNode.val) {
+        slow = reverse(slow);
+        while (head != null) {
+            if (head.val != slow.val) {
                 return false;
+            } else {
+                head = head.next;
+                slow = slow.next;
             }
-            cur = cur.next;
-            reverseNode = reverseNode.next;
         }
         return true;
     }
+
     public ListNode reverse(ListNode head) {
         if (head == null) {
-            return null;
+            return head;
         }
+
         ListNode pre = null;
-        while (head != null) {
-            ListNode temp = head.next;
-            head.next = pre;
-            pre = head;
-            head = temp;
+        ListNode cur = head;
+
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
         }
+
         return pre;
     }
 }
-
 ```
