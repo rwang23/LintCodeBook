@@ -29,6 +29,7 @@
 - 最终maxPathSum返回的是max，而helper只是在求每一条边上的最大值
 - 解法来源Leecode
 
+####Lintcode
 ```java
 public class Solution {
     int max = Integer.MIN_VALUE;
@@ -49,6 +50,42 @@ public class Solution {
         max = Math.max(max, root.val + left + right);
 
         return root.val + Math.max(left, right);
+    }
+}
+```
+
+####Leetcode
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    int max = Integer.MIN_VALUE;;
+    public int maxPathSum(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        maxSum(root);
+
+        return max;
+    }
+
+    public int maxSum(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int left = maxSum(root.left);
+        int right = maxSum(root.right);
+        max = Math.max(max, (left > 0 ? left : 0) + (right > 0 ? right : 0 )+ root.val);
+
+        return root.val + (Math.max(left, right) > 0 ? Math.max(left, right) : 0);
     }
 }
 ```

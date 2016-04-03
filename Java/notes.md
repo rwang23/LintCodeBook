@@ -55,3 +55,6 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - 然后二叉树DFS一般不用回溯,所以不用删除,这样导致传递的arraylist其实指向的是一个
 - 所以每次递归中要声明一个新的arraylist,这样才不会错误
 - 参见binary tree path sum II
+
+####条件表达式
+- 条件表达式一定要用括号,好几次就是这样错误几个运算在一起,也有条件表达式,结果没用括号,并且debug一个小时才发现! 注意注意!
