@@ -105,3 +105,38 @@ public class Solution {
     }
 }
 ```
+
+####进一步优化
+```java
+public class Solution {
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        if (candidates == null || candidates.length == 0) {
+            return new ArrayList<List<Integer>>();
+        }
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<Integer> list = new ArrayList<Integer>();
+        Arrays.sort(candidates);
+        dfs(result, list, candidates, target, 0);
+        return result;
+    }
+
+    public void dfs(List<List<Integer>> result, List<Integer> list, int[] candidates, int target, int position) {
+        if (target == 0) {
+            result.add(new ArrayList<Integer>(list));
+            return;
+        }
+        if (target < 0) {
+            return;
+        }
+
+        for (int i = position; i < candidates.length; i++) {
+            if (i > position && candidates[i] == candidates[i - 1]) {
+                continue;
+            }
+            list.add(candidates[i]);
+            dfs(result, list, candidates, target - candidates[i], i + 1);
+            list.remove(list.size() - 1);
+        }
+    }
+}
+```
