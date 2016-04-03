@@ -23,15 +23,7 @@
 - 所以拆开来发现 左右都没子树才开始计算,同时如果一来就是null,那就直接返回
 
 ```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
+
 public class Solution {
     int sum = 0;
     public int sumNumbers(TreeNode root) {
@@ -48,14 +40,12 @@ public class Solution {
             return;
         }
 
+        curVal = curVal * 10 + root.val;
         if (root.left == null && root.right == null) {
-            curVal *= 10;
-            curVal += root.val;
             sum += curVal;
             return;
         }
 
-        curVal = curVal * 10 + root.val;
         dfs(root.left, curVal);
         dfs(root.right, curVal);
     }
