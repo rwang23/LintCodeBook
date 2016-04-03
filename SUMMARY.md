@@ -107,6 +107,7 @@ This is the summary of my experience in LintCode.
 	* [Triangle](DynamicProgramming/Triangle.md)
 	* [Climbing Stairs](DynamicProgramming/ClimbingStairs.md)
 	* [House Robber](DynamicProgramming/HouseRobber.md)
+	* [House Robber II](DynamicProgramming/House-Robber-II.md)
 	* [Paint Fence](DynamicProgramming/Paint-Fence.md)
 	* [Paint House](DynamicProgramming/Paint-House.md)
 	* [Maximum Product Subarray](DynamicProgramming/Maximum-Product-Subarray.md)
