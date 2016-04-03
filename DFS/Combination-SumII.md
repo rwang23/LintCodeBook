@@ -64,3 +64,44 @@ public class Solution {
     }
 }
 ```
+
+####稍微优化
+- 在每次进入下一次递归的时候,检查
+- 如果i != 0 && candidates[i] == candidates[i - 1] && !list.contains(candidates[i])
+- 就不用进入了,这样速度提高了三倍
+
+```java
+public class Solution {
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        if (candidates == null || candidates.length == 0) {
+            return new ArrayList<List<Integer>>();
+        }
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<Integer> list = new ArrayList<Integer>();
+        Arrays.sort(candidates);
+        dfs(result, list, candidates, target, 0);
+        return result;
+    }
+
+    public void dfs(List<List<Integer>> result, List<Integer> list, int[] candidates, int target, int position) {
+        if (target == 0) {
+            if (!result.contains(list)) {
+                result.add(new ArrayList<Integer>(list));
+            }
+            return;
+        }
+        if (target < 0) {
+            return;
+        }
+
+        for (int i = position; i < candidates.length; i++) {
+            if (i != 0 && candidates[i] == candidates[i - 1] && !list.contains(candidates[i])) {
+                continue;
+            }
+            list.add(candidates[i]);
+            dfs(result, list, candidates, target - candidates[i], i + 1);
+            list.remove(list.size() - 1);
+        }
+    }
+}
+```
