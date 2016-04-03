@@ -19,8 +19,10 @@
 
 ####思路
 - 注意,一定是从root到节点
-- 理解题意错了,十分钟的题花了三十分钟debug,后来才明白理解错了
-
+- 还有解释注意 二叉树的 DFS 跟其他的通常有点不一样,
+- 其他DFS 一般在list里边加入了一个数,后来回溯的时候会再删除掉
+- 然后二叉树DFS一般不用回溯,所以不用删除,这样导致传递的arraylist其实指向的是一个
+- 所以每次递归中要声明一个新的arraylist,这样才不会错误
 
 ```java
 /**
@@ -33,38 +35,44 @@
  * }
  */
 
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 public class Solution {
     public List<List<Integer>> pathSum(TreeNode root, int sum) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) {
             return result;
         }
-        List<Integer> list = new ArrayList<Integer>();
-        list.add(root.val);
-        dfs(root, sum - root.val, result, list);
+
+        List<Integer> path = new ArrayList<Integer>();
+        dfs(result, path, root, sum);
         return result;
     }
 
-    public void dfs(TreeNode root, int sum, List<List<Integer>> result, List<Integer> list) {
-        if (sum == 0 && root.left == null && root.right == null) {
-            result.add(new ArrayList<Integer>(list));
-            return;
-        }
+    public void dfs(List<List<Integer>> result, List<Integer> path, TreeNode root, int sum) {
         if (root == null) {
             return;
         }
 
-        if (root.left != null) {
-            list.add(root.left.val);
-            dfs(root.left, sum - root.left.val, result, list);
-            list.remove(list.size() - 1);
+        List<Integer> newPath = new ArrayList<Integer>(path);
+        sum = sum - root.val;
+        newPath.add(root.val);
+        if (root.left == null && root.right == null && sum == 0) {
+            result.add(new ArrayList<Integer>(newPath));
+            return;
+        }
 
-        }
-        if (root.right != null) {
-            list.add(root.right.val);
-            dfs(root.right, sum - root.right.val, result, list);
-            list.remove(list.size() - 1);
-        }
+        dfs(result, newPath, root.left, sum);
+        dfs(result, newPath, root.right, sum);
+
+
     }
 }
 ```
