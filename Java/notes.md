@@ -48,6 +48,10 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - Remove Duplicates from Sorted Array I and II
 - Word Search II, 特别考DFS里的限制条件,特别棒的题
 
-###难题
-
-###每天理解
+##总结
+####二叉树中做DFS
+- 二叉树的 DFS 跟其他的通常有点不一样,
+- 其他DFS 一般在list里边加入了一个数,后来回溯的时候会再删除掉
+- 然后二叉树DFS一般不用回溯,所以不用删除,这样导致传递的arraylist其实指向的是一个
+- 所以每次递归中要声明一个新的arraylist,这样才不会错误
+- 参见binary tree path sum II
