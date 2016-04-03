@@ -296,6 +296,7 @@ This is the summary of my experience in LintCode.
 	* [Combinations](DFS/Combinations.md)
 	* [Combination Sum](DFS/Combination-Sum.md)
 	* [Combination Sum II](DFS/Combination-SumII.md)
+	* [Combination Sum III](DFS/Combination-Sum-III.md)
 	* [Subsets I](DFS/Subsets.md)
 	* [Subsets II](DFS/SubsetsII.md)
 	* [Permutations I](DFS/Permutations.md)
