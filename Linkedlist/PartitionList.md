@@ -16,7 +16,7 @@
 - leftDummmy存左边第一个节点
 - rightDummy存右边第一个节点
 - 比较大小存完之后，讲量表连接起来
-- 记得把right.next=null 避免溢出
+- 记得把right.next=null 避免溢出,否则变成了环
 
 
 ```java
@@ -51,6 +51,9 @@ public class Solution {
             head = head.next;
         }
 
+        /*
+        一定要注意这一行
+         */
         right.next = null;
         left.next = rightDummy.next;
         return leftDummy.next;
