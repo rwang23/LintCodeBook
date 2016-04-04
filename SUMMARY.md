@@ -336,6 +336,7 @@ This is the summary of my experience in LintCode.
 	* [Palindrome Number](Math/Palindrome-Number.md)
 	* [Nested List Weight Sum](Math/Nested-List-Weight-Sum.md)
 	* [Add Digits](Math/Add-Digits.md)
+	* [Set Matrix Zeroes](Math/Set-Matrix-Zeroes.md)
 	* [Much Larger Numbers](Math/Much-Larger-Numbers.md)
 	* [Valid Sudoku](Math/Valid-Sudoku.md)
 	* [Happy Number](Math/Happy-Number.md)
