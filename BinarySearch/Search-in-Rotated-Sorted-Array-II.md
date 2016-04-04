@@ -12,6 +12,7 @@
 - 我的思路是先找到最低点的index,找的时候有两种情况,一种要从end--开始找,一种是start++开始找
 - 然后通过index划分两边,再对两边分别进行binary search,找是否有target
 - 平均O(logn),最坏情况O(n)
+- 也可以直接做,[参考](https://leetcode.com/discuss/30308/java-solution-with-comments)
 
 ```java
 public class Solution {
