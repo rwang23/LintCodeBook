@@ -99,11 +99,7 @@ class Solution {
                 end = mid;
             }
         }
-        if(A[start] < A[end]) {
-            return end;
-        } else {
-            return start;
-        }
+        return A[start] > A[end] ? start : end
     }
 }
 ```
