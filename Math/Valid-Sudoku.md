@@ -95,3 +95,76 @@ class Solution {
     }
 };
 ```
+####后来写的更好简洁的代码
+
+```java
+public class Solution {
+    public boolean isValidSudoku(char[][] board) {
+        if (board == null || board.length == 0 || board[0].length == 0 || board.length % 3 != 0 ||  board.length != board[0].length) {
+            return false;
+        }
+
+        int size = board.length;
+        for (int i = 0; i < size; i++) {
+            if (!(isValidRow(board, i) && isValidCol(board, i))) {
+                return false;
+            }
+        }
+
+        int box = (board.length / 3) * (board.length / 3);
+        for (int i = 0; i < box; i++) {
+            if (!isValidBox(board, i)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public boolean isValidRow(char[][] board, int index) {
+        Set<Character> set = new HashSet<Character>();
+        int size = board.length;
+        for (int i = 0; i < size; i++) {
+            char cur = board[index][i];
+            if (set.contains(cur)) {
+                return false;
+            }
+            if (cur != '.') {
+                set.add(cur);
+            }
+        }
+        return true;
+    }
+    public boolean isValidCol(char[][] board, int index) {
+        Set<Character> set = new HashSet<Character>();
+        int size = board.length;
+        for (int i = 0; i < size; i++) {
+            char cur = board[i][index];
+             if (set.contains(cur)) {
+                return false;
+            }
+            if (cur != '.') {
+                set.add(cur);
+            }
+        }
+        return true;
+    }
+    public boolean isValidBox(char[][] board, int index) {
+        int x = (index / 3) * 3;
+        int y = (index % 3) * 3 ;
+        Set<Character> set = new HashSet<Character>();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                char cur = board[x + i][y + j];
+                if (set.contains(cur)) {
+                    return false;
+                }
+                if (cur != '.') {
+                    set.add(cur);
+                }
+            }
+        }
+        return true;
+    }
+}
+```
