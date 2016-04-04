@@ -22,50 +22,40 @@ Your algorithm should run in O(n) complexity.
 
 ```java
 public class Solution {
-    /**
-     * @param nums: A list of integers
-     * @return an integer
-     */
-    public int longestConsecutive(int[] num) {
-        // write you code here
-        if (num == null || num.length == 0) {
-            return -1;
+    public int longestConsecutive(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
         }
-        int length = num.length;
-        Hashtable<Integer,Integer> hashtable = new Hashtable<Integer,Integer>();
-        for (int i = 0; i < length; i++) {
-            hashtable.put(num[i], i);
-        }
-        int max = 1;
-        int i = 0;
-        while (!hashtable.isEmpty() && i < length) {
-            int cur;
-            int count = 1;
-            if (hashtable.containsKey(num[i])) {
-                cur = num[i];
-                hashtable.remove(cur);
-            } else {
-                i++;
-                continue;
-            }
-            cur = cur + 1;
-            while (hashtable.containsKey(cur)) {
-                count++;
-                hashtable.remove(cur);
-                cur = cur+1;
 
+        int len = nums.length;
+        Set<Integer> set = new HashSet<Integer>();
+
+        for (int i = 0; i < len; i++) {
+            if (!set.contains(nums[i])) {
+                set.add(nums[i]);
             }
-            cur = num[i] - 1;
-            while (hashtable.containsKey(cur)) {
-                count++;
-                hashtable.remove(cur);
-                cur = cur - 1;
-            }
-            max = Math.max(max, count);
-            i++;
         }
-        return max;
+
+        int maxLen = 0;
+        for (int i = 0; i < len; i++) {
+            if (set.contains(nums[i])) {
+                int countLen = 1;
+                int cur = nums[i];
+                set.remove(cur);
+                while (set.contains(++cur)) {
+                    countLen++;
+                    set.remove(cur);
+                }
+                cur = nums[i];
+                while (set.contains(--cur)) {
+                    countLen++;
+                    set.remove(cur);
+                }
+                maxLen = Math.max(maxLen, countLen);
+            }
+        }
+
+        return maxLen;
     }
 }
-
 ```
