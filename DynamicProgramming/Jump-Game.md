@@ -65,3 +65,25 @@ public class Solution {
 }
 
 ```
+
+####优化
+```java
+public class Solution {
+    public boolean canJump(int[] nums) {
+        if (nums == null || nums.length <= 1) {
+            return true;
+        }
+
+        int len = nums.length;
+
+        for (int i = 0; i < len - 1; i++) {
+            if (nums[i] == 0) {
+                return false;
+            }
+            nums[i + 1] = Math.max(nums[i + 1], nums[i] - 1);
+
+        }
+        return true;
+    }
+}
+```

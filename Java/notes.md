@@ -35,6 +35,7 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - Restore IP Addresses
 - Binary Tree Upside Down
 - Verify Preorder Sequence in Binary Search Tree
+- maximum product subarray
 
 ###Leetcode一轮不会做的题
 - First Missing Positive
