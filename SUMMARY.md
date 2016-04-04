@@ -20,6 +20,7 @@ This is the summary of my experience in LintCode.
 	* [Flip Game](String/Flip-Game.md)
 	* [Flip Game II](String/Flip-Game-II.md)
 	* [Reverse Words in a String](String/Reverse-Words-in-a-String.md)
+	* [Reverse Words in a String II](String/Reverse-Words-in-a-String-II.md)
 	* [String Permutation](String/String-Permutation.md)
 	* [Digit Counts](String/Digit-Counts.md)
 	* [Integer to Roman](String/Integer-to-Roman.md)
