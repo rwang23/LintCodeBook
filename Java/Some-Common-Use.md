@@ -60,6 +60,12 @@ The list is:[abc, klm, xyz, pqr]
     int[] b = Arrays.copyOfRange(a, 0, a.length);
 ```
 
+####array 初始化
+```java
+        int[] dp = new int[n + 1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+```
+
 ####使用二进制运算要注意
 - 很可能bug就是一些小错误造成的
 - 比如(nums[i] & xor) == 0
