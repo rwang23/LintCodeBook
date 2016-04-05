@@ -19,6 +19,7 @@ This is the summary of my experience in LintCode.
 	* [Longest Common Prefix](String/Longest-Common-Prefix.md)
 	* [Length of Last Word](String/Length-of-Last-Word.md)
 	* [Bulls and Cows](String/Bulls-and-Cows.md)
+	* [ZigZag Conversion](String/ZigZag-Conversion.md)
 	* [Compress a String](String/Compress-String.md)
 	* [Flip Game](String/Flip-Game.md)
 	* [Flip Game II](String/Flip-Game-II.md)
