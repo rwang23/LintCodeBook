@@ -16,6 +16,7 @@ This is the summary of my experience in LintCode.
 	* [Some other notes](Java/notes.md)
 
 * [String](String/README.md)
+	* [Longest Common Prefix](String/Longest-Common-Prefix.md)
 	* [Length of Last Word](String/Length-of-Last-Word.md)
 	* [Compress a String](String/Compress-String.md)
 	* [Flip Game](String/Flip-Game.md)
