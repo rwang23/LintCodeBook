@@ -19,6 +19,7 @@
 ####思路
 - using stack
 - [geeksforgeeks](http://www.geeksforgeeks.org/the-celebrity-problem/)
+- 这种题首先上来找规律,找到规律就很简单了
 
 ```
 The graph construction takes O(N2) time, it is similar to brute force search. In case of recursion, we reduce the problem instance by not more than one, and also combine step may examine M-1 persons (M – instance size).
@@ -78,6 +79,45 @@ public class Solution extends Relation {
         }
 
         return candidate;
+    }
+}
+```
+
+####空间优化
+- 其实不需要使用stack储存,直接使用两根指针来储存就可以了
+
+```java
+/* The knows API is defined in the parent class Relation.
+      boolean knows(int a, int b); */
+
+public class Solution extends Relation {
+    public int findCelebrity(int n) {
+        if (n <= 1) {
+            return -1;
+        }
+
+        int start = 0;
+        int end = n - 1;
+        //after while loop, start will be the candidate
+        while (start < end) {
+            if (knows(start, end)) {
+                start++;
+            } else {
+                end--;
+            }
+        }
+        //check
+        for (int i = 0; i < n; i++) {
+            if (i == start) {
+                continue;
+            }
+            if (knows(start, i) || !knows(i, start)) {
+                return -1;
+            }
+        }
+
+        return start;
+
     }
 }
 ```
