@@ -355,6 +355,7 @@ This is the summary of my experience in LintCode.
 	* [Bulb Switcher](Math/Bulb-Switcher.md)
 	* [Self Crossing](Math/Self-Crossing.md)
 	* [Sparse Matrix](Math/Sparse-Matrix.md)
+	* [Find the Celebrity](Math/Find-the-Celebrity.md)
 
 * [Bits Manipulation](BitsManipulation/README.md)
 	* [Reverse Bits](BitsManipulation/Reverse-Bits.md)
