@@ -100,41 +100,53 @@ public class Solution {
 
 ```
 
-####挑战1
+####优化
 - 优化了memory O(h)
 - 将原来的中序遍历分成了两个部分
+- 用stack记录parent就可以了, 跟 two sum in BST类似
 - 在初始化中，只进行入栈
 - 在next中，进行出栈
 - 非常精彩的解法
 
 
 ```java
-public class Solution {
-    private Stack<TreeNode> stack = new Stack<>();
-    private TreeNode curt;
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 
-    // @param root: The root of binary tree.
-    public Solution(TreeNode root) {
-        curt = root;
-    }
+public class BSTIterator {
 
-    //@return: True if there has next node, or false
-    public boolean hasNext() {
-        return (curt != null || !stack.isEmpty());
-    }
-
-    //@return: return next node
-    public TreeNode next() {
-        while (curt != null) {
-            stack.push(curt);
-            curt = curt.left;
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+    public BSTIterator(TreeNode root) {
+        while (root != null) {
+            stack.push(root);
+            root = root.left;
         }
+    }
 
-        curt = stack.pop();
-        TreeNode node = curt;
-        curt = curt.right;
+    /** @return whether we have a next smallest number */
+    public boolean hasNext() {
+        return !stack.isEmpty();
+    }
 
-        return node;
+    /** @return the next smallest number */
+    public int next() {
+            TreeNode cur = stack.pop();
+            int result = cur.val;
+            if (cur.right != null) {
+                cur = cur.right;
+                while (cur != null) {
+                    stack.push(cur);
+                    cur = cur.left;
+                }
+            }
+            return result;
     }
 }
 ```
