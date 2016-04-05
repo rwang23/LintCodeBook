@@ -22,51 +22,46 @@
 ####Tags Expand
 Binary Tree Binary Tree Traversal Facebook Google
 
+####思路
+- 唯一需要注意的是,每进入新一层,就要重新生命string,不然有可能会改变string值,导致错误
+
 ```java
 /**
- * Definition of TreeNode:
+ * Definition for a binary tree node.
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
  * }
  */
 public class Solution {
-    /**
-     * @param root the root of the binary tree
-     * @return all root-to-leaf paths
-     */
     public List<String> binaryTreePaths(TreeNode root) {
-        // Write your code here
         if (root == null) {
             return new ArrayList<String>();
         }
 
         List<String> result = new ArrayList<String>();
-        StringBuilder string = new StringBuilder("");
-        helper(root, result, string);
+        StringBuilder string = new StringBuilder();
+        dfs(root, result, string);
         return result;
     }
 
-    public void helper(TreeNode root, List<String> result, StringBuilder string) {
+    public void dfs(TreeNode root, List<String> result, StringBuilder string) {
+        if (root == null) {
+            return;
+        }
+        string = new StringBuilder(string);
         if (root.left == null && root.right == null) {
-            string.append(Integer.toString(root.val));
+            string.append(root.val);
             result.add(new String(string.toString()));
             return;
         }
 
-        string.append(Integer.toString(root.val));
+        string.append(root.val);
         string.append("->");
-
-        if (root.left != null) {
-            helper(root.left, result, new StringBuilder(string) );
-        }
-        if (root.right != null) {
-            helper(root.right, result, new StringBuilder(string));
-        }
+        dfs(root.left, result, string);
+        dfs(root.right, result, string);
     }
 }
 ```
