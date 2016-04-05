@@ -123,6 +123,7 @@ This is the summary of my experience in LintCode.
 	* [Jump Game](DynamicProgramming/Jump-Game.md)
 	* [Jump Game II](DynamicProgramming/Jump-GameII.md)
 	* [Longest Increasing Subsequence](DynamicProgramming/Longest-Increasing-Subsequence.md)
+	* [Increasing Triplet Subsequence](DynamicProgramming/Increasing-Triplet-Subsequence.md)
 	* [Palindrome Partitioning II](DynamicProgramming/Palindrome-PartitioningII.md)
 	* [Word Break](DynamicProgramming/WordBreak.md)
 	* [Longest Common Subsequence](DynamicProgramming/Longest-Common-Subsequence.md)
