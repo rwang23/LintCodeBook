@@ -66,6 +66,10 @@ public class BinaryIndexedTree {
 
 	    return BITree;
 	}
+
+	public int getRangeSum(int[] BITree, int start, int end) {
+		return getSum(BITree, end) - get(BITree, start);
+	}
 }
 
 ```
