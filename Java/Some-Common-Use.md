@@ -1,5 +1,7 @@
 ###Some Common Use
 
+####If string is null, we cannot use string.length()
+
 ####Java Timing
 	long startTime = System.nanoTime();
 	function performed
@@ -11,6 +13,9 @@
 	Character.getNumericValue(c)
 	It returns -1 if the character is not a digit.
 	int result = c - '0'
+####is Character a integer
+      System.out.println(Character.isDigit('c'));
+      System.out.println(Character.isDigit('5'));
 
 ####Integer to Character
 	int a = 1;

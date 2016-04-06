@@ -27,6 +27,7 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
  - Count of Smaller Numbers After Self没理解
  - Count of Range Sum没理解
  - Morris Traversal
+-  Count inversions in an array 用Binary indexed tree
 
 ###Leetcode一轮做错的题
 - Integer to English Words
