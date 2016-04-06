@@ -256,6 +256,7 @@ This is the summary of my experience in LintCode.
    * [Graph](DataStructure/graph.md)
    * [Scan Line](DataStructure/scan-line.md)
    * [Union Find](DataStructure/Union-Find.md)
+   * [Fenwick Tree](DataStructure/Fenwick-Tree.md)
    * [Huffman Compression](DataStructure/huffman_compression.md)
 
 * [Data Structure Implementation](Implementation/README.md)
