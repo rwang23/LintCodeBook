@@ -57,7 +57,7 @@ public class BinaryIndexedTree {
 	    }
 	    // Store the actual values in BITree[] using update()
 	    for (int i=0; i<n; i++) {
-	        updateBIT(BITree, n, i, arr);
+	        updateBIT(BITree, n, i, arr[i]);
 	    }
 	    // Uncomment below lines to see contents of BITree[]
 	    //for (int i=1; i<=n; i++) {
