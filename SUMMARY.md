@@ -16,6 +16,7 @@ This is the summary of my experience in LintCode.
 	* [Some other notes](Java/notes.md)
 
 * [String](String/README.md)
+	* [Count and Say](String/Count-and-Say.md)
 	* [Longest Common Prefix](String/Longest-Common-Prefix.md)
 	* [Length of Last Word](String/Length-of-Last-Word.md)
 	* [Bulls and Cows](String/Bulls-and-Cows.md)
