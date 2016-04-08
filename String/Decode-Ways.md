@@ -88,3 +88,70 @@ public class Solution {
     }
 }
 ```
+
+####空间优化
+
+```java
+public class Solution {
+    /*
+    state:
+    dp[i], how many num of decodings of first i char
+    function:
+    if (char(i - 2) == 1 || == 2)
+    dp[i] = dp[i - 1] + dp[i - 2]
+    else
+    dp[i] = dp[i - 1]
+    initialize:
+    dp[0] = 1;
+    if (char(0) == 1 || == 2)
+    dp[1] = 2
+    else
+    dp[1] = 1
+    answer:
+    dp[size - 1]
+
+    */
+    public int numDecodings(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+
+        int size = s.length();
+        if (s.charAt(0) == '0') {
+            return 0;
+        }
+        if (size == 1) {
+            return 1;
+        }
+        int[] dp = new int[3];
+
+        dp[0] = 1;
+        dp[1] = ((s.charAt(0) == '1') || (s.charAt(0) == '2' && s.charAt(1) <= '6')) ? 2 : 1;
+        if (s.charAt(1) == '0') {
+            if (s.charAt(0) == '1' || s.charAt(0) == '2') {
+                dp[1] = 1;
+            } else {
+                return 0;
+            }
+        }
+
+        for (int i = 2; i < size; i++) {
+            if (s.charAt(i) == '0' && (s.charAt(i - 1) != '1' && s.charAt(i - 1) != '2')) {
+                return 0;
+            } else {
+                if (s.charAt(i) == '0') {
+                    dp[i % 3] = dp[(i - 2) % 3];
+                }
+                else if ((s.charAt(i - 1) == '1') || (s.charAt(i - 1) == '2' && s.charAt(i) <= '6')) {
+                    dp[i % 3] = dp[(i - 1) % 3] + dp[(i - 2) % 3];
+                }
+                else {
+                    dp[i % 3] = dp[(i - 1) % 3];
+                }
+            }
+        }
+
+        return dp[(size - 1) % 3];
+    }
+}
+```
