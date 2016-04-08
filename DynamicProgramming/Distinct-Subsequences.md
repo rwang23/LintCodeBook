@@ -93,5 +93,51 @@ public class Solution {
 }
 
 ```
-####O(n) memory 思路
-- [来自Yu's Garden 第四种解法](http://www.cnblogs.com/yuzhangcmu/p/4196373.html)
+####O(n) memory 优化
+```java
+public class Solution {
+    /*
+    bbb bb
+    state:
+    dp[i][j], first i chars of S and first j chars of T, how many distinct subsequences
+
+    function:
+    if(s.charAt(i) == s.charAt(j))
+    dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j]
+    else
+    dp[i][j] = dp[i - 1][j]
+    initialization:
+    dp[i][0] = 0;
+    dp[0][j] = 0;
+
+    answer:
+    dp[m][n]
+    */
+    public int numDistinct(String s, String t) {
+        if (s == null || t == null) {
+            return 0;
+        }
+        int m = s.length();
+        int n = t.length();
+        int[][] dp = new int[2][n + 1];
+        // for (int i = 0; i <=m; i++) {
+        //     dp[i][0] = 1;
+        // }
+        dp[0][0] = 1;
+        dp[1][0] = 1;
+
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= Math.min(i, n); j++) {
+                char schar = s.charAt(i - 1);
+                char tchar = t.charAt(j - 1);
+                if (schar == tchar) {
+                    dp[i % 2][j] = dp[(i - 1) % 2][j - 1] + dp[(i - 1) % 2][j];
+                } else {
+                    dp[i % 2][j] = dp[(i - 1) % 2][j];
+                }
+            }
+        }
+        return dp[m % 2][n];
+    }
+}
+```
