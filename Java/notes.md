@@ -18,6 +18,7 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - permutations index
 - Union Find: find the weak component
 - word ladder
+- Unique Binary Search Trees
 
 ###还没完全掌握
  - Unique Binary Search Trees
@@ -27,7 +28,7 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
  - Count of Smaller Numbers After Self没理解
  - Count of Range Sum没理解
  - Morris Traversal
--  Count inversions in an array 用Binary indexed tree
+ -  Count inversions in an array 用Binary indexed tree
 
 ###Leetcode一轮做错的题
 - Integer to English Words
@@ -37,6 +38,8 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - Binary Tree Upside Down
 - Verify Preorder Sequence in Binary Search Tree
 - maximum product subarray
+- Unique Binary Search Trees II 做了一个多小时
+
 
 ###Leetcode一轮不会做的题
 - First Missing Positive
