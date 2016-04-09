@@ -43,6 +43,7 @@ This is the summary of my experience in LintCode.
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
 	* [Scramble String](String/Scramble-String.md)
+	* [Basic Calculator II](String/SBasic-Calculator-II.md)
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
