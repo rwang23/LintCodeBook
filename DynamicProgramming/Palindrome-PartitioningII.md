@@ -98,5 +98,99 @@ public class Solution {
     // }
 
 };
+```
 
+
+####后来写的,思路见注释
+
+```java
+/*
+dynamic programming
+
+state:
+dp[i], minCuts of first i char of s
+
+function:
+if (substring(i + 1, j + 1) isPalindrome)
+dp[i] = min(dp[j] + 1, dp[i])
+
+initialize:
+dp[i] = i - 1
+dp[0] = -1
+dp[1] = 0
+
+answer
+dp[size]
+
+O(n3)
+
+optimization:
+
+isPalindrome:
+
+we use them every time, so we can use memorization to get them first
+get  substring (i ,j) is palindrome first
+dp:
+
+state
+palindrom[i][j] is palindrome or not
+function:
+palindrom[i][j] = char(i) == char(j) && palindrom[i + 1][j - 1] == true
+initialize:
+palindrom[i][i] = true
+palindrom[i][i + 1] = char(i) == char(i + 1)
+answer:
+return palindrom array
+
+O(n2)
+*/
+public class Solution {
+    public int minCut(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+
+        int size = s.length();
+        boolean[][] palindrome = isPalindrome(s);
+
+        int[] dp = new int[size + 1];
+        for (int i = 0; i <= size; i++) {
+            dp[i] = i - 1;
+        }
+
+        for (int i = 1; i <= size; i++) {
+            for (int j = 0; j < i; j++) {
+                if (palindrome[j][i - 1]) {
+                    dp[i] = Math.min(dp[j] + 1, dp[i]);
+                }
+            }
+        }
+
+        return dp[size];
+    }
+
+    public boolean[][] isPalindrome(String s) {
+        if (s == null || s.length() == 0) {
+            return new boolean[0][0];
+        }
+        int size = s.length();
+        boolean[][] result = new boolean[size][size];
+
+        for (int i = 0; i < size; i++) {
+            result[i][i] = true;
+        }
+        for (int i = 1; i < size; i++) {
+            result[i - 1][i] = s.charAt(i - 1) == s.charAt(i);
+        }
+
+        for (int i = 2; i < size; i++) {
+            for (int j = 0; j < i - 1; j++) {
+                result[j][i] = (s.charAt(i) == s.charAt(j)) && result[j + 1][i - 1];
+            }
+        }
+
+        return result;
+
+    }
+}
 ```
