@@ -31,37 +31,36 @@
 
 ```java
 public class Solution {
-    /**
-     * @param s Roman representation
-     * @return an integer
-     */
     public int romanToInt(String s) {
-        // Write your code here
+        if (s == null) {
+            return 0;
+        }
         String[] symbols = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
         int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-        HashMap<String, Integer> hashtmap = new HashMap<String, Integer>();
-        for (int i = 0; i < symbols.length; i++) {
-            hashtmap.put(symbols[i], values[i]);
-        }
+
         int sum = 0;
-        StringBuilder temp = new StringBuilder(s);
-        temp.append("A");
-        s = temp.toString();
+        int j = 0;
+        for (int i = 1; i <= s.length();) {
+            while (j < symbols.length) {
 
-        for (int i = 1; i < s.length();) {
-            String cur = s.substring(i-1, i+1);
-            if (hashtmap.containsKey(cur)) {
-                sum += hashtmap.get(cur);
-                i = i + 2;
-                continue;
-            }
-            cur = s.substring(i-1, i);
-            if (hashtmap.containsKey(cur)) {
-                sum += hashtmap.get(cur);
-            }
-            i++;
+                String cur = symbols[j];
+                int size = cur.length();
 
+                if (size == 1 && s.substring(i - 1, i).equals(symbols[j])) {
+                    sum += values[j];
+                    i++;
+                    break;
+                }
+
+                if (i != s.length() && size == 2 && s.substring(i - 1, i + 1).equals(symbols[j])) {
+                    sum += values[j];
+                    i += 2;
+                    break;
+                }
+                j++;
+            }
         }
+
         return sum;
     }
 }
