@@ -1,6 +1,7 @@
 ##Gray Code
 
 33% Accepted
+
 	The gray code is a binary numeral system where two successive values differ in only one bit.
 
 	Given a non-negative integer n representing the total number of bits in the code,
@@ -25,34 +26,41 @@ O(2n) time.
 ####思路
 - (wiki)[https://zh.wikipedia.org/wiki/格雷码]
 - 找到规律，对每一个n，都是在n-1的基础上得到的
+- 参见wiki百科 镜像求graycode
 - 原来n-1的结果在最高位加1，并reverse
 
 ```java
 public class Solution {
-    public ArrayList<Integer> grayCode(int n) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
-        if (n <= 1) {
-            for (int i = 0; i <= n; i++){
-                result.add(i);
-            }
+    public List<Integer> grayCode(int n) {
+        List<Integer> result = new ArrayList<Integer>();
+        if (n < 0) {
             return result;
         }
-        result = grayCode(n - 1);
-        ArrayList<Integer> r1 = reverse(result);
-        int x = 1 << (n-1);
-        for (int i = 0; i < r1.size(); i++) {
-            r1.set(i, r1.get(i) + x);
+        result.add(0);
+        if (n == 0) {
+            return result;
         }
-        result.addAll(r1);
+        result.add(1);
+        for (int i = 2; i <= n; i++) {
+            result = helper(result, i);
+        }
         return result;
     }
 
-    public ArrayList<Integer> reverse (ArrayList<Integer> r) {
-        ArrayList<Integer> rev = new ArrayList<Integer>();
-        for (int i = r.size() - 1; i >= 0; i--) {
-            rev.add(r.get(i));
+    public List<Integer> helper(List<Integer> graycode, int n) {
+        if (graycode == null || graycode.size() == 0) {
+            return graycode;
         }
-        return rev;
+
+        int size = graycode.size();
+        int aux = 1 << (n - 1);
+        for (int i = size - 1; i >= 0; i--) {
+            int cur = graycode.get(i);
+            cur = cur | aux;
+            graycode.add(cur);
+        }
+        return graycode;
+
     }
 }
 ```
