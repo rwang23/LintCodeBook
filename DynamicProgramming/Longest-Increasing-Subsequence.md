@@ -76,3 +76,62 @@ public class Solution {
 }
 
 ```
+
+####Binary Search
+[参考](http://blog.csdn.net/ironyoung/article/details/49664087)
+
+```
+如果要修改到 O(n log n) time complexity？贪心法 + 二分搜索。
+
+增加一条辅助的顺序（ordered）栈（队列……完成任务就好），保存尽可能长的LIS。入栈的要求为：
+
+将a[0]入栈
+每次取栈顶元素top（最大元素）和读到的元素a[i](0<i<n)做比较：
+- 如果a[i] > top 则将a[i]入栈；
+- 如果a[i] <= top则二分查找栈中的比a[i]大的第1个数，并用a[i]替换它（如果栈顶元素被替换，说明有机会到达更长序列）；
+最长序列长度即为栈的大小
+直观理解：对于 x 和 y，如果 x < y 且 stack[y] < stack[x]，用 stack[x] 替换 stack[y]，此时的最长序列长度没有改变，但序列继续变长的''潜力''增大，这就是贪心的目标。
+
+举例：原序列为1，5，8，3，6，7
+
+开始1，5，8相继入栈，此时读到3，用3替换5，得到1，3，8；再读6，用6替换8，得到1，3，6；再读7，得到最终栈为1，3，6，7。最长递增子序列为长度4
+
+但是这个方法，有一个很大的缺陷：只能保证序列长度的正确性，不能保证栈中就是正确的序列。
+
+举例：原序列为1，5，8，2，栈内最后是 1，2，8 不是正确的序列。
+
+分析一下，我们可以看出，虽然有些时候这样得不到正确的序列，但最后算出来的个数是没错的，为什么呢？
+```
+
+```java
+
+public class Solution {
+    public int lengthOfLIS(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        ArrayList<Integer> lis = new ArrayList<Integer>();
+        for (int n : nums) {
+            if (lis.size() == 0 || lis.get(lis.size() - 1) < n) {
+                lis.add(n);
+            } else {
+                updateLIS(lis, n);
+            }
+        }
+        return lis.size();
+    }
+
+    private void updateLIS(ArrayList<Integer> lis, int n) {
+        int l = 0, r = lis.size() - 1;
+        while (l < r) {
+            int m = l + (r - l) / 2;
+            if (lis.get(m) < n) {
+                l = m + 1;
+            } else {
+                r = m;
+            }
+        }
+        lis.set(l, n);
+    }
+}
+```

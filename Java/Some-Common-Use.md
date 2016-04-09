@@ -35,7 +35,8 @@ Arrays.toString();
 
 ####Character.toLowerCase()
 ####Character.toUpperCase()
-
+####Arrays Binary Search
+Arrays.binarySearch(dp, 0, len, nums[i])
 ####sort reverse order
 	对于array与arraylist
 	Arrays.sort(arraylist, Collections.reverseOrder());
