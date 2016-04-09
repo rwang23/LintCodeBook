@@ -137,6 +137,7 @@ This is the summary of my experience in LintCode.
 	* [Longest Common Substring](DynamicProgramming/Longest-Common-Substring.md)
 	* [Distinct Subsequences](DynamicProgramming/Distinct-Subsequences.md)
 	* [Edit Distance](DynamicProgramming/Edit-Distance.md)
+	* [One Edit Distance](DynamicProgramming/One-Edit-Distance.md)
 	* [Interleaving String](DynamicProgramming/InterleavingString.md)
 	* [Unique Binary Search Trees](DynamicProgramming/Unique-Binary-Search-Trees.md)
 	* [Unique Binary Search Trees II](DynamicProgramming/Unique-Binary-Search-Trees-II.md)
