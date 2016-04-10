@@ -92,8 +92,6 @@ public class Solution {
 ```
 
 ####DFS方法
--  we first recursively call topological sorting for all its adjacent vertices, then push it to a stack. Finally, print contents of stack. Note that a vertex is pushed to stack only when all of its adjacent vertices (and their adjacent vertices and so on) are already in stack.
-- 使用stack
-- 该节点都在stack里边了，才进行push
-```
-```
+- 跟BFS一样
+- 先找indegree
+- 在对indegree == 0 的点,去进行DFS,DFS过程中,对该点的neighbor indegree减1,如果neighbor indegree = 0,那么递归这个点
