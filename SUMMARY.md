@@ -276,6 +276,7 @@ This is the summary of my experience in LintCode.
    * [Min Heap](Implementation/heap.md)
 
 * [Data Structure Problem](DataStructureProblem/README.md)
+	* [Flatten 2D Vector](DataStructureProblem/Flatten-2D-Vector.md)
 	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)
 	* [Implement Queue By Two Stacks](DataStructureProblem/Implement-Queue-by-Two-Stacks.md)
 	* [Implement Queue By LinkedList](DataStructureProblem/Implement-Queue-by-Linked-List.md)
