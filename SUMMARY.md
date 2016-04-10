@@ -342,6 +342,8 @@ This is the summary of my experience in LintCode.
 	* [Find the Connected Component in the Undirected Graph](BFS/Find-the-Connected-Component-in-the-UG.md)
 	* [Number of Connected Components in an Undirected Graph](BFS/Number-of-Connected-Components.md)
 	* [Topological Sorting](BFS/Topological-Sorting.md)
+	* [Course Schedule](BFS/Course-Schedule.md)
+	* [Course Schedule II](BFS/Course-Schedule-II.md)
 	* [Mystical Lexical Order](BFS/Mystical-Lexical-Order.md)
 	* [Word Ladder](BFS/WordLadder.md)
 	* [Graph Valid Tree](BFS/Graph-Valid-Tree.md)
