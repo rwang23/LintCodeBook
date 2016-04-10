@@ -22,3 +22,58 @@
 ####思路
 - 先inorder遍历BST
 - 再用两个同向指针找到K个数
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public List<Integer> closestKValues(TreeNode root, double target, int k) {
+        List<Integer> result = new ArrayList<Integer>();
+        if (root == null) {
+            return result;
+        }
+        List<Integer> traverse = new ArrayList<Integer>();
+        inorderTraverse(root, traverse);
+
+        int size = traverse.size();
+        for (int i = 0; i < k; i++) {
+            result.add(traverse.get(i));
+        }
+
+        for (int i = k; i < size; i++) {
+            int first = result.get(0);
+            int cur = traverse.get(i);
+            if (Math.abs((double)cur - target) < Math.abs((double)first - target)) {
+                result.remove(0);
+                result.add(cur);
+            } else {
+                break;
+            }
+        }
+        return result;
+    }
+
+    public void inorderTraverse(TreeNode root, List<Integer> traverse) {
+        if (root == null) {
+            return;
+        }
+        inorderTraverse(root.left, traverse);
+        traverse.add(root.val);
+        inorderTraverse(root.right, traverse);
+
+    }
+}
+```
+
+####Follow Up
+[Follow Up](https://leetcode.com/discuss/71820/java-5ms-iterative-following-hint-o-klogn-time-and-space)
+- 最开始还不明白,然后把Balance BST 的图画出来就明白了
+- 简直精妙
+- 找predeccusor 和 successor
