@@ -77,3 +77,4 @@ public class Solution {
 - 最开始还不明白,然后把Balance BST 的图画出来就明白了
 - 简直精妙
 - 找predeccusor 和 successor
+- 用pre和succ比较,如果在succ一边,那么久找到succ那边其他的小值,如果在pre这边,那么找到其他的最大值,直到找到k个
