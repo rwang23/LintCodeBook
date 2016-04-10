@@ -344,6 +344,7 @@ This is the summary of my experience in LintCode.
 	* [Topological Sorting](BFS/Topological-Sorting.md)
 	* [Course Schedule](BFS/Course-Schedule.md)
 	* [Course Schedule II](BFS/Course-Schedule-II.md)
+	* [Minimum Height Trees](BFS/Minimum-Height-Trees.md)
 	* [Mystical Lexical Order](BFS/Mystical-Lexical-Order.md)
 	* [Word Ladder](BFS/WordLadder.md)
 	* [Graph Valid Tree](BFS/Graph-Valid-Tree.md)
