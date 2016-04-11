@@ -82,3 +82,16 @@ public class Solution {
 }
 
 ```
+
+####DFS
+```java
+public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
+    if (node == null) return null;
+    if (map.containsKey(node)) return map.get(node);
+    UndirectedGraphNode copy = new UndirectedGraphNode(node.label);
+    map.put(node, copy);
+    for (UndirectedGraphNode n : node.neighbors)
+        copy.neighbors.add(cloneGraph(n));
+    return copy;
+}
+```
