@@ -92,3 +92,34 @@ class Solution {
 
 ```
 
+####While
+
+```java
+public class Solution {
+    public void sortColors(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return;
+        }
+
+        int n = nums.length;
+        int start = 0;
+        int end = n - 1;
+        int i = 0;
+        while (i <= end) {
+            if (nums[i] == 0) {
+                swap(nums, i++, start++);
+            } else if (nums[i] == 2) {
+                swap(nums, i, end--);
+            } else {
+                i++;
+            }
+        }
+    }
+
+    public void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
+    }
+}
+```

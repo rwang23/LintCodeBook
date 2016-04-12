@@ -32,6 +32,7 @@ Cracking The Coding Interview Matrix
 - 如果进行原地,就是替换一个值,然后要继续替换替换的这个值的位置
 - 画图,把整个矩阵遍历完,通过ij两重循环以及while来做的
 - 时间O(n)
+- newX = y, newY = n - x - 1
 
 ```java
 public class Solution {
