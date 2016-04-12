@@ -83,6 +83,7 @@ This is the summary of my experience in LintCode.
 	* [Level Order Traversal](BinaryTree/LevelOrderTraversal.md)
 	* [Level Order Traversal II](BinaryTree/LevelOrderTraversalII.md)
 	* [Binary Tree Zigzag Level Order Traversal](BinaryTree/Binary-Tree-Zigzag-Level-Order-Traversal.md)
+	* [Binary Tree Vertical Order Traversal](BinaryTree/Binary-Tree-Vertical-Order-Traversal.md)
 	* [Verify Preorder Sequence in Binary Search Tree](BinaryTree/Verify-Preorder-Sequence.md)
 	* [Binary Tree Right Side](BinaryTree/Binary-Tree-Right-Side.md)
 	* [Populating Next Right Pointers in Each Node](BinaryTree/Populating-Next-Right-Pointers-in-Each-Node.md)
