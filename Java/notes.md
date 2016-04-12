@@ -11,9 +11,6 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 
 ###重做的题
 - inorder successor in bst done
-- binary tree path sum done
-- subarry sum closest done
-- maximum product subarray done
 - best time to buy and sell stock iii
 - permutations index
 - Union Find: find the weak component
@@ -21,7 +18,6 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - Unique Binary Search Trees
 
 ###还没完全掌握
- - Unique Binary Search Trees
  - next permutations
  - permutation sequence
  - heap的实现
