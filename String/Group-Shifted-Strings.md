@@ -18,7 +18,7 @@
 	Note: For the return value, each inner list's elements must follow the lexicographic order.
 
 ####思路
-- [参考](http://blog.csdn.net/pointbreak1/article/details/48780345)
+- [](http://blog.csdn.net/pointbreak1/article/details/48780345)
 - 用一个hashtable去存string pattern,这个string pattern作为key,然后他对应的strings们作为value
 - 怎么去找这个string pattern呢?
 - 可以有很多方法,比如找string里边跟第一个字母的距离,或者每个字符的距离
