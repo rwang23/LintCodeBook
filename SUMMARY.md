@@ -190,6 +190,7 @@ This is the summary of my experience in LintCode.
 	* [Nuts Bolts Problem](Two-Pointers/Nuts-Bolts-Problem.md)
 
 * [Array](Array/README.md)
+	* [Shuffle an Array](Array/Shuffle-an-Array.md)
 	* [Making New List](Array/Making-New-List.md)
 	* [Rotate Array](Array/Rotate-Array.md)
 	* [Shortest Word Distance](Array/Shortest-Word-Distance.md)

@@ -37,6 +37,45 @@ Arrays.toString();
 ####Character.toUpperCase()
 ####Arrays Binary Search
 Arrays.binarySearch(dp, 0, len, nums[i])
+Arrays.binarySearch(dp, nums[i])
+
+```java
+
+public class ArrayDemo {
+
+   public static void main(String[] args) {
+
+   // initializing unsorted int array
+   int intArr[] = {30,20,5,12,55};
+
+   // sorting array
+   Arrays.sort(intArr);
+
+   // let us print all the elements available in list
+   System.out.println("The sorted int array is:");
+   for (int number : intArr) {
+   System.out.println("Number = " + number);
+   }
+
+   // entering the value to be searched
+   int searchVal = 12;
+
+   int retVal = Arrays.binarySearch(intArr,searchVal);
+
+   System.out.println("The index of element 12 is : " + retVal);
+   }
+}
+Let us compile and run the above program, this will produce the following result:
+
+The sorted int array is:
+Number = 5
+Number = 12
+Number = 20
+Number = 30
+Number = 55
+The index of element 12 is : 1
+
+```
 ####sort reverse order
 	对于array与arraylist
 	Arrays.sort(arraylist, Collections.reverseOrder());
