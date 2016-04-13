@@ -25,6 +25,7 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
  - Count of Range Sum没理解
  - Morris Traversal
  - Count inversions in an array 用Binary indexed tree
+ - Jump Game II Greedy
 
 ###Leetcode一轮做错的题
 - Integer to English Words
@@ -45,7 +46,8 @@ Compares its two arguments for order. Returns a negative integer, zero, or a pos
 - Remove Duplicate Letters 不懂
 - (http://fujiaozhu.me/?p=772) (http://traceformula.blogspot.com/2015/12/remove-duplicate-letters-leetcode.html) (http://massivealgorithms.blogspot.com/2015/12/leetcode-316-remove-duplicate-letters.html) (http://www.bubuko.com/infodetail-1249912.html)
 - Burst Balloons
--
+- Jump Game II Greedy
+
 
 ###Leetcode一轮虽然做对,但是花时有点长或者需要注意再重做的题
 - Remove Duplicates from Sorted Array I and II
