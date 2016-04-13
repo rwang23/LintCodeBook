@@ -66,3 +66,38 @@ public class Solution {
 
 
 ```
+
+####Leetcode
+```java
+public class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+        if (nums == null || nums.length <= 2) {
+            return -1;
+        }
+        Arrays.sort(nums);
+        int len = nums.length;
+        int close = nums[0] + nums[1] + nums[2];
+        for (int i = 0; i < len; i++) {
+            if (i != 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            int start = i + 1;
+            int end = len - 1;
+            while (start < end) {
+                int sum = nums[start] + nums[end] + nums[i];
+                if (Math.abs(close - target) > Math.abs(sum - target)) {
+                    close = sum;
+                }
+                if (sum == target) {
+                    return sum;
+                } else if (sum > target) {
+                    end--;
+                } else {
+                    start++;
+                }
+            }
+        }
+        return close;
+    }
+}
+```
