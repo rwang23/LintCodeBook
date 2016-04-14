@@ -11,6 +11,8 @@
 ####思路
 - [参考1](https://leetcodenotes.wordpress.com/2013/10/20/leetcode-multiply-strings-大整数的字符串乘法/comment-page-1/#comment-122)
 - [参考2](http://blog.csdn.net/fightforyourdream/article/details/17370495)
+- 把乘法过程画出来
+- 就会发现第k位结果是第i位乘以第k位的和(i+ j == k)
 
 ```java
 
