@@ -21,6 +21,7 @@ This is the summary of my experience in LintCode.
 	* [Count and Say](String/Count-and-Say.md)
 	* [Longest Common Prefix](String/Longest-Common-Prefix.md)
 	* [Length of Last Word](String/Length-of-Last-Word.md)
+	* [Simplify Path](String/Simplify-Path.md)
 	* [Group Shifted Strings](String/Group-Shifted-Strings.md)
 	* [Decode Ways](String/Decode-Ways.md)
 	* [Bulls and Cows](String/Bulls-and-Cows.md)
