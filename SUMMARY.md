@@ -360,6 +360,7 @@ This is the summary of my experience in LintCode.
 	* [Surrounded Regions](BFS/Surrounded-Regions.md)
 
 * [Math](Math/README.md)
+	* [Divide Two Integers](Math/Divide-Two-Integers.md)
 	* [Add Two Array](Math/add-two-array.md)
 	* [Palindrome Number](Math/Palindrome-Number.md)
 	* [Nested List Weight Sum](Math/Nested-List-Weight-Sum.md)
