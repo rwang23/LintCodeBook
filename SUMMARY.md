@@ -368,6 +368,7 @@ This is the summary of my experience in LintCode.
 	* [Add Digits](Math/Add-Digits.md)
 	* [Much Larger Numbers](Math/Much-Larger-Numbers.md)
 	* [Valid Sudoku](Math/Valid-Sudoku.md)
+	* [Sudoku Solver](Math/Sudoku-Solver.md)
 	* [Happy Number](Math/Happy-Number.md)
 	* [Cosine Similarity](Math/Cosine-Similarity.md)
 	* [Sqrt](Math/Sqrt.md)
