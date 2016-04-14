@@ -372,6 +372,7 @@ This is the summary of my experience in LintCode.
 	* [Cosine Similarity](Math/Cosine-Similarity.md)
 	* [Sqrt](Math/Sqrt.md)
 	* [Pow](Math/Pow.md)
+	* [Multiply Strings](Math/Multiply-Strings.md)
 	* [Reverse Integer](Math/Reverse-Integer.md)
 	* [Power of Three](Math/Power-of-Three.md)
 	* [Fibonacci](Math/Fibonacci.md)

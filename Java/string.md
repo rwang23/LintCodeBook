@@ -40,6 +40,9 @@ insert(index, char)
  result.insert(0, cur)
 ###String[] arrays 转化成string
 Arrays.toString();
+####注意判断string的时候
+自己判断空的substring的时候,用的是 str == null
+但是其实应该用str.equals(""),空是"",而不是null
 
 ###StringBuffer 与 StringBuilder, 前者保证线程安全，后者不是，但单线程下效率高一些，一般使用 StringBuilder.
 ###判断string是否相等 用.equals()
