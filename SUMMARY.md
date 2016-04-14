@@ -16,6 +16,7 @@ This is the summary of my experience in LintCode.
 	* [Some other notes](Java/notes.md)
 
 * [String](String/README.md)
+	* [Implement strStr()](String/Implement-strStr.md)
 	* [Add Binary](String/Add-Binary.md)
 	* [Count and Say](String/Count-and-Say.md)
 	* [Longest Common Prefix](String/Longest-Common-Prefix.md)
