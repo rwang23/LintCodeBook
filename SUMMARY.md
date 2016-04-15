@@ -25,6 +25,7 @@ This is the summary of my experience in LintCode.
 	* [Group Shifted Strings](String/Group-Shifted-Strings.md)
 	* [Decode Ways](String/Decode-Ways.md)
 	* [Bulls and Cows](String/Bulls-and-Cows.md)
+	* [Valid Parentheses](String/Valid-Parentheses.md)
 	* [ZigZag Conversion](String/ZigZag-Conversion.md)
 	* [Compress a String](String/Compress-String.md)
 	* [Flip Game](String/Flip-Game.md)
@@ -403,6 +404,12 @@ This is the summary of my experience in LintCode.
 	* [Singleton](OODesign/Singleton.md)
 	* [Rotate Image](OODesign/Rotate-Image.md)
 	* [Dog Lab](OODesign/DogLab.md)
+
+* [Google](Java/README.md)
+	* [Valid Parentheses](String/Valid-Parentheses.md)
+	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
+	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
+	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
 
 * [Other Information](Others/README.md)
 	* [Company Level](Others/CompanyLevel.md)

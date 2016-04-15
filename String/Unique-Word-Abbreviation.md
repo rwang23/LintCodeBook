@@ -25,6 +25,10 @@
 	isUnique("make") -> true
 
 ####思路
+- 注意["hello"],isUnique("hello") 是返回的true, hello是unique的单词
+- 所以使用hashmap的时候要注意一下,如果key只对应一个,就放入这个string,如果多个,自然是无效的,设置为null
+- 然后对比isUnique的时候,判断,首先是不是无效的,然后判断key对应的string是不是一致的
+
 ```java
 public class ValidWordAbbr {
     HashMap<String, String> map;
