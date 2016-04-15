@@ -41,3 +41,36 @@ public class Solution {
     }
 }
 ```
+
+####Memorization优化
+```java
+public class Solution {
+    public boolean canWin(String s) {
+        if (s == null || s.equals("")) {
+            return false;
+        }
+        HashMap<String, Boolean> map = new HashMap<String, Boolean>();
+        return dfs(s, map);
+    }
+
+    public boolean dfs(String s, HashMap<String, Boolean> map) {
+        if (map.containsKey(s)) {
+            return map.get(s);
+        }
+
+        int size = s.length();
+
+        for (int i = 0; i < size - 1; i++) {
+            if (s.charAt(i) == '+' && s.charAt(i + 1) == '+') {
+                String replaceString = s.substring(0, i) + "--" + s.substring(i + 2, size);
+                if (!dfs(replaceString, map)) {
+                    map.put(s, true);
+                    return true;
+                }
+            }
+        }
+        map.put(s, false);
+        return false;
+    }
+}
+```

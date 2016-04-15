@@ -416,6 +416,10 @@ This is the summary of my experience in LintCode.
 	* [Closest Binary Search Tree Value II](BinaryTree/Closest-Binary-Search-Tree-Value-II.md)
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
+	* [Strobogrammatic Number](String/Strobogrammatic-Number.md)
+	* [Strobogrammatic Number II](String/Strobogrammatic-Number-II.md)
+	* [Flip Game](String/Flip-Game.md)
+	* [Flip Game II](String/Flip-Game-II.md)
 	* [Power of Three](Math/Power-of-Three.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
