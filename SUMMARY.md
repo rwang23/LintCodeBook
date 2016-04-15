@@ -411,6 +411,7 @@ This is the summary of my experience in LintCode.
 	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
 	* [Paint Fence](DynamicProgramming/Paint-Fence.md)
 	* [Group Shifted Strings](String/Group-Shifted-Strings.md)
+	* [Plus One](Math/PlusOne.md)
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)

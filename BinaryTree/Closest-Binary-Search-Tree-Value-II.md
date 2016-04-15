@@ -21,8 +21,8 @@
 
 ####思路
 - 先inorder遍历BST
-- 再用两个同向指针找到K个数
-- 或者将中序遍历的结果放进deque,然后进行删减和添加操作
+- 再用两个同向指针找到K个数,要注意的是list的remove操作是O(n),所以这个方法会造成O(n2)的时间
+- 或者将中序遍历的结果放进deque,然后进行删减和添加操作,这个比较好一点,只是0(n)
 
 ```java
 /**
@@ -79,3 +79,59 @@ public class Solution {
 - 简直精妙
 - 找predeccusor 和 successor
 - 用pre和succ比较,如果在succ一边,那么久找到succ那边其他的小值,如果在pre这边,那么找到其他的最大值,直到找到k个
+
+```java
+public class Solution {
+    public List<Integer> closestKValues(TreeNode root, double target, int k) {
+        List<Integer> result = new LinkedList<Integer>();
+        // populate the predecessor and successor stacks
+        Stack<TreeNode> pred = new Stack<TreeNode>();
+        Stack<TreeNode> succ = new Stack<TreeNode>();
+        TreeNode curr = root;
+        while (curr != null) {
+            if (target <= curr.val) {
+                succ.push(curr);
+                curr = curr.left;
+            } else {
+                pred.push(curr);
+                curr = curr.right;
+            }
+        }
+        while (k > 0) {
+            if (pred.empty() && succ.empty()) {
+                break;
+            } else if (pred.empty()) {
+                result.add( getSuccessor(succ) );
+            } else if (succ.empty()) {
+                result.add( getPredecessor(pred) );
+            } else if (Math.abs(target - pred.peek().val) < Math.abs(target - succ.peek().val)) {
+                result.add( getPredecessor(pred) );
+            } else {
+                result.add( getSuccessor(succ) );
+            }
+            k--;
+        }
+        return result;
+     }
+
+    private int getPredecessor(Stack<TreeNode> st) {
+        TreeNode popped = st.pop();
+        TreeNode p = popped.left;
+        while (p != null) {
+            st.push(p);
+            p = p.right;
+        }
+        return popped.val;
+    }
+
+    private int getSuccessor(Stack<TreeNode> st) {
+        TreeNode popped = st.pop();
+        TreeNode p = popped.right;
+        while (p != null) {
+            st.push(p);
+            p = p.left;
+        }
+        return popped.val;
+    }
+}
+```

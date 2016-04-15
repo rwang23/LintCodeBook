@@ -45,3 +45,45 @@ public class Solution {
     }
 }
 ```
+
+####非递归
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int closestValue(TreeNode root, double target) {
+        if (root == null) {
+            return -1;
+        }
+
+        double diff = Math.abs((double)root.val - target);
+        double minDiff = diff;
+        int res = root.val;
+        while (root != null) {
+            if (target == (double)root.val) {
+                return root.val;
+            } else if (target > (double)root.val) {
+                root = root.right;
+            } else {
+                root = root.left;
+            }
+            if (root != null) {
+                diff = Math.abs((double)root.val - target);
+                minDiff = Math.min(diff, minDiff);
+                if (diff == minDiff) {
+                    res = root.val;
+                }
+            }
+        }
+        return res;
+    }
+}
+```
+
