@@ -27,6 +27,7 @@ public class Solution {
 ```
 
 ##思路2
+
 ```java
 public class Solution {
     public boolean isPowerOfThree(int n) {
@@ -47,29 +48,30 @@ public class Solution {
 }
 ```
 ####思路3
-```java
-public class Solution {
-public boolean isPowerOfThree(int n) {
-    // 1162261467 is 3^19,  3^20 is bigger than int
-    return ( n>0 &&  1162261467%n==0);
-}
-```
-
-##最简单方法
-###对数换底公式
-
-				logn(b)
-	loga(b) = 	-------
-				logn(a)
 
 ```java
 public class Solution {
     public boolean isPowerOfThree(int n) {
-        if (n <= 0) {
-            return false;
-        }
+        // 1162261467 is 3^19,  3^20 is bigger than int
+        return ( n>0 &&  1162261467%n==0);
+    }
+}
 
-        return n <= 0 ? false : n == Math.pow(3, Math.round(Math.log(n) / Math.log(3)));
+```
+
+##最简单方法
+
+###对数换底公式
+
+    				logn(b)
+    	loga(b) = 	-------
+    				logn(a)
+
+
+```java
+public class Solution {
+    public boolean isPowerOfThree(int n) {
+        return (Math.log10(n) / Math.log10(3)) % 1 == 0;
     }
 }
 ```
