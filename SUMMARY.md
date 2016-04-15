@@ -406,10 +406,15 @@ This is the summary of my experience in LintCode.
 	* [Dog Lab](OODesign/DogLab.md)
 
 * [Google](Java/README.md)
+	* [Min Stack](DataStructureProblem/MinStack.md)
 	* [Valid Parentheses](String/Valid-Parentheses.md)
-	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
+	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
+	* [Paint Fence](DynamicProgramming/Paint-Fence.md)
+	* [Group Shifted Strings](String/Group-Shifted-Strings.md)
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
+	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
+
 
 * [Other Information](Others/README.md)
 	* [Company Level](Others/CompanyLevel.md)

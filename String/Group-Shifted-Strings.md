@@ -18,13 +18,14 @@
 	Note: For the return value, each inner list's elements must follow the lexicographic order.
 
 ####思路
-- [](http://blog.csdn.net/pointbreak1/article/details/48780345)
+- [参考](http://blog.csdn.net/pointbreak1/article/details/48780345)
 - 用一个hashtable去存string pattern,这个string pattern作为key,然后他对应的strings们作为value
 - 怎么去找这个string pattern呢?
 - 可以有很多方法,比如找string里边跟第一个字母的距离,或者每个字符的距离
 - 还有一个容易错的地方,就是遇到超出了z之后又重头开始的情况,比如yza
 - 这个时候,可以((a - y) + 26) % 26
-- ["eqdf", "qcpr"]。
+- ["eqdf", "qcpr"]
+- 同时两个字符相减可能为两位数,所以用一个字符隔开,否则121的pattern 也有可能是1 21
 - ((‘q’ - 'e') + 26) % 26 = 12, ((‘d’ - 'q') + 26) % 26 = 13, ((‘f’ - 'd') + 26) % 26 = 2
 - ((‘c’ - 'q') + 26) % 26 = 12, ((‘p’ - 'c') + 26) % 26 = 13, ((‘r’ - 'p') + 26) % 26 = 2
 
