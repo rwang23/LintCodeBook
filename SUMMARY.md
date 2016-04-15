@@ -412,8 +412,11 @@ This is the summary of my experience in LintCode.
 	* [Paint Fence](DynamicProgramming/Paint-Fence.md)
 	* [Group Shifted Strings](String/Group-Shifted-Strings.md)
 	* [Plus One](Math/PlusOne.md)
+	* [Closest Binary Search Tree Value](BinaryTree/Closest-Binary-Search-Tree-Value.md)
+	* [Closest Binary Search Tree Value II](BinaryTree/Closest-Binary-Search-Tree-Value-II.md)
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
+	* [Power of Three](Math/Power-of-Three.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
 
