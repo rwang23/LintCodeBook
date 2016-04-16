@@ -292,6 +292,7 @@ This is the summary of my experience in LintCode.
 	* [Implement Queue By LinkedList II](DataStructureProblem/Implement-Queue-by-Linked-List-II.md)
 	* [Implement Stack](DataStructureProblem/Implement-Stack.md)
 	* [Implement Stack by Two Queues](DataStructureProblem/Implement-Stack-by-Two-Queues.md)
+	* [Implement Trie](DataStructureProblem/Implement-Trie.md)
 	* [Stack Sorting](DataStructureProblem/Stack-Sorting.md)
 	* [Heapify](DataStructureProblem/Heapify.md)
 	* [Merge k Sorted Arrays](DataStructureProblem/Merge-k-Sorted-Arrays.md)
