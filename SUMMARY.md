@@ -411,7 +411,7 @@ This is the summary of my experience in LintCode.
 	* [Rotate Image](OODesign/Rotate-Image.md)
 	* [Dog Lab](OODesign/DogLab.md)
 
-* [Google](Java/README.md)
+* [Google](Google/README.md)
 	* [Min Stack](DataStructureProblem/MinStack.md)
 	* [Valid Parentheses](String/Valid-Parentheses.md)
 	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
@@ -437,6 +437,7 @@ This is the summary of my experience in LintCode.
 	* [Flatten Nested List Iterator](DataStructureProblem/Flatten-Nested-List-Iterator.md)
 	* [Wiggle Sort](Sort/Wiggle-Sort.md)
 	* [Wiggle Sort II](Sort/Wiggle-Sort-II.md)
+	* [Implement Trie](DataStructureProblem/Implement-Trie.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
 * [Other Information](Others/README.md)
