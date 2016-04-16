@@ -43,6 +43,12 @@ public class Vector2D {
 
 ####后来写的,在hasNext()里边进行操作
 - 注意i.next()的类型转化
+- 或者在声明的时候
+- Iterator<List<Integer>> it;
+- Iterator<Integer> curr;
+- 而不是简单Iterator
+- 每当i2是null的时候,就是还没赋值,或者说,i1有,但是i2已经为空,就需要进入下一轮迭代,
+- 但是有可能出现[]这样的空集,这会i2还是为空,所以要用while
 
 ```java
 public class Vector2D implements Iterator<Integer> {
@@ -60,15 +66,15 @@ public class Vector2D implements Iterator<Integer> {
 
     @Override
     public boolean hasNext() {
-        if ((i2 == null || !i2.hasNext()) && i1.hasNext()) {
+        while ((i2 == null || !i2.hasNext()) && i1.hasNext()) {
             List<Integer> list = (List<Integer>)i1.next();
             i2 = list.iterator();
         }
 
-        while (i2 != null && !i2.hasNext() && i1.hasNext()) {
-            List<Integer> list = (List<Integer>)i1.next();
-            i2 = list.iterator();
-        }
+        // while (i2 != null && !i2.hasNext() && i1.hasNext()) {
+        //     List<Integer> list = (List<Integer>)i1.next();
+        //     i2 = list.iterator();
+        // }
         if (i2 == null) {
            return false;
         }
