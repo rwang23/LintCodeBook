@@ -54,170 +54,94 @@
 - 时间复杂度为O(n2)
 - 但是如果有5000个Node,在递归中就会stack over flow了
 - 参看第三个思路
+- [参考](https://leetcode.com/discuss/72739/two-o-n-solutions)
+
+####BFS找最长的path
+- [参考](https://github.com/lydxlx1/LeetCode/blob/master/src/_310.java)
+- 非常棒的BFS解法
+- 先随便找一个点找到这个点的最长path,当前最长path的终点一定就是整个图最长path的一个起始点或者结束点
+- 选着这个起始点,再继续找最长path,这条最长path就是整个图最长path
+- 就是一直没想明白如何把节点的顺序记录下来,从而把最长path记录下来
+- 这个解法很棒,用了两个数组
+- 用了一个数组来存当前的点离起点的距离,一个数组利用了我们只有label 0 -> n-1,所以利用了整数的性质,记录下来的当前节点的prev节点(也是一个整数表示)
+- 这样找完之后,我们就能通过prev这个数组找到整个最长path的所有节点,再加入到arraylist里边,直接可以找重点了
+
+```
+    It is easy to see that the root of an MHT has to be the middle point (or two middle points) of the longest path of the tree.
+    Though multiple longest paths can appear in an unrooted tree, they must share the same middle point(s).
+
+    Computing the longest path of a unrooted tree can be done, in O(n) time, by tree dp, or simply 2 tree traversals (dfs or bfs).
+    The following code does the latter.
+
+    Randomly select a node x as the root, do a dfs/bfs to find the node y that has the longest distance from y.
+    Then y must be one of the endpoints on some longest path.
+    Let y the new root, and do another dfs/bfs. Find the node z that has the longest distance from y.
+    Now, the path from y to z is the longest one, and thus its middle point(s) is the answer.
+```
 
 ```java
-public class Solution {
-    public List<Integer> findMinHeightTrees(int n, int[][] edges) {
-        List<Integer> result = new ArrayList<Integer>();
-        if (edges == null || edges.length == 0) {
-            return result;
-        }
+public class _310 {
+    int n;
+    List<Integer>[] e;
 
-        Map<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
-
-        for (int i = 0; i < edges.length; i++) {
-            int first = edges[i][0];
-            int second = edges[i][1];
-            if (!map.containsKey(first)) {
-                List<Integer> list = new ArrayList<Integer>();
-                list.add(second);
-                map.put(first, list);
-            } else {
-                map.get(first).add(second);
-            }
-            if (!map.containsKey(second)) {
-                List<Integer> list = new ArrayList<Integer>();
-                list.add(first);
-                map.put(second, list);
-            } else {
-                map.get(second).add(first);
-            }
-        }
-
-        List<List<Integer>> rootToLeafList = new ArrayList<List<Integer>>();
-        List<Integer> list = new ArrayList<Integer>();
+    private void bfs(int start, int[] dist, int[] pre) {
         boolean[] visited = new boolean[n];
-        dfs(rootToLeafList, list, map, visited, 0);
-        int maxLen = 0;
-
-        for (int i = 0; i < rootToLeafList.size(); i++) {
-            maxLen = Math.max(maxLen, rootToLeafList.get(i).size());
-        }
-
-        for (int i = 0; i < rootToLeafList.size(); i++) {
-            List<Integer> cur = rootToLeafList.get(i);
-            int len = cur.size();
-            if (maxLen == len) {
-                if (maxLen % 2 == 1) {
-                    if (!result.contains(cur.get(len / 2))) {
-                        result.add(cur.get(len / 2));
-                    }
-                } else {
-                    if (!result.contains(cur.get(len / 2 - 1))) {
-                        result.add(cur.get(len / 2 - 1));
-                    }
-                    if (!result.contains(cur.get(len / 2))) {
-                        result.add(cur.get(len / 2));
-                    }
+        Queue<Integer> queue = new ArrayDeque<>();
+        queue.add(start);
+        dist[start] = 0;
+        visited[start] = true;
+        pre[start] = -1;
+        while (!queue.isEmpty()) {
+            int u = queue.poll();
+            for (int v : e[u])
+                if (!visited[v]) {
+                    visited[v] = true;
+                    dist[v] = dist[u] + 1;
+                    queue.add(v);
+                    pre[v] = u;
                 }
-            }
-        }
-
-        return result;
-    }
-
-    public void dfs(List<List<Integer>> rootToLeafList, List<Integer> list, Map<Integer, List<Integer>> map, boolean[] visited, int node) {
-
-        List<Integer> neighbor = map.get(node);
-        boolean flag = true;
-        for (int next : neighbor) {
-            if (visited[next] == false) {
-                flag = false;
-                break;
-            }
-        }
-
-        if (flag) {
-            list.add(node);
-            visited[node] = true;
-            rootToLeafList.add(new ArrayList<Integer>(list));
-            return;
-        }
-
-        visited[node] = true;
-        for (int i = 0; i < neighbor.size(); i++) {
-            int next = neighbor.get(i);
-            if(!visited[next]) {
-                list.add(node);
-                dfs(rootToLeafList, list, map, visited, next);
-                list.remove(list.size() - 1);
-            }
         }
     }
-}
 
-```
-
-####BFS
-- O(n2)超时了
-
-```java
-public class Solution {
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
-        List<Integer> result = new ArrayList<Integer>();
-        if (edges == null || edges.length == 0) {
-            return result;
+        if (n <= 0) return new ArrayList<>();
+        this.n = n;
+        e = new List[n];
+        for (int i = 0; i < n; i++)
+            e[i] = new ArrayList<>();
+        for (int[] pair : edges) {
+            int u = pair[0];
+            int v = pair[1];
+            e[u].add(v);
+            e[v].add(u);
         }
 
-        Map<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
+        int[] d1 = new int[n];
+        int[] d2 = new int[n];
+        int[] pre = new int[n];
+        bfs(0, d1, pre);
+        int u = 0;
+        for (int i = 0; i < n; i++)
+            if (d1[i] > d1[u]) u = i;
 
-        for (int i = 0; i < edges.length; i++) {
-            int first = edges[i][0];
-            int second = edges[i][1];
-            if (!map.containsKey(first)) {
-                List<Integer> list = new ArrayList<Integer>();
-                list.add(second);
-                map.put(first, list);
-            } else {
-                map.get(first).add(second);
-            }
-            if (!map.containsKey(second)) {
-                List<Integer> list = new ArrayList<Integer>();
-                list.add(first);
-                map.put(second, list);
-            } else {
-                map.get(second).add(first);
-            }
+        bfs(u, d2, pre);
+        int v = 0;
+        for (int i = 0; i < n; i++)
+            if (d2[i] > d2[v]) v = i;
+
+        List<Integer> list = new ArrayList<>();
+        while (v != -1) {
+            list.add(v);
+            v = pre[v];
         }
 
-        int[] candidate = new int[n];
-        int minDepth = Integer.MAX_VALUE;
-        for (int i = 0; i < n; i++) {
-            boolean[] visited = new boolean[n];
-            Queue<Integer> queue = new LinkedList<Integer>();
-            queue.offer(i);
-            int depth = 0;
-            while (!queue.isEmpty()) {
-                int level = queue.size();
-                for (int l = 0; l < level; l++) {
-                    int cur = queue.poll();
-                    visited[cur] = true;
-                    List<Integer> neighbor = map.get(cur);
-                    for (int j = 0; j < neighbor.size(); j++) {
-                        int next = neighbor.get(j);
-                        if (!visited[next]) {
-                            queue.offer(next);
-                            visited[next] = true;
-                        }
-                    }
-                }
-                depth++;
-            }
-            candidate[i] = depth;
-            minDepth = Math.min(minDepth, depth);
-        }
-
-        for (int i = 0; i < n; i++) {
-            if (candidate[i] == minDepth) {
-                result.add(i);
-            }
-        }
-        return result;
+        if (list.size() % 2 == 1) return Arrays.asList(list.get(list.size() / 2));
+        else return Arrays.asList(list.get(list.size() / 2 - 1), list.get(list.size() / 2));
     }
 }
 ```
 
-####最优解
+####模拟topological
 - [参考](http://www.elvisyu.com/minimum-height-trees/)
 - 间接转化为了topological sort
 - 从叶子出发,当做叶子外层到里层的direction,然后topological
