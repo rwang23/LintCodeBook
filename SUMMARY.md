@@ -368,8 +368,8 @@ This is the summary of my experience in LintCode.
 	* [Surrounded Regions](BFS/Surrounded-Regions.md)
 
 * [Math](Math/README.md)
-	* [Hexadecimal to Decimal.md](Math/Hexadecimal-to-Decimal.md.md)
-	* [Any to Decimal.md](Math/AnyToDecimal.md.md)
+	* [Hexadecimal to Decimal.md](Math/Hexadecimal-to-Decimal.md)
+	* [Any to Decimal.md](Math/AnyToDecimal.md)
 	* [Divide Two Integers](Math/Divide-Two-Integers.md)
 	* [Add Two Array](Math/add-two-array.md)
 	* [Palindrome Number](Math/Palindrome-Number.md)
@@ -438,6 +438,7 @@ This is the summary of my experience in LintCode.
 	* [Wiggle Sort](Sort/Wiggle-Sort.md)
 	* [Wiggle Sort II](Sort/Wiggle-Sort-II.md)
 	* [Implement Trie](DataStructureProblem/Implement-Trie.md)
+	* [Minimum Height Trees](BFS/Minimum-Height-Trees.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
 * [Other Information](Others/README.md)
