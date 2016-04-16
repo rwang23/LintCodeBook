@@ -215,6 +215,7 @@ This is the summary of my experience in LintCode.
 	* [Rotate String](Array/RotateString.md)
 	* [Best Meeting Point](Array/Best-Meeting-Point.md)
 	* [Patching Array](Array/Patching-Array.md)
+	* [H-Index](Array/H-Index.md)
 	* [Maximum Subarray](Array/Maximum-Subarray.md)
 	* [Maximum Subarray II](Array/Maximum-SubarrayII.md)
 	* [Maximum Subarray III](Array/Maximum-SubarrayIII.md)
@@ -442,6 +443,7 @@ This is the summary of my experience in LintCode.
 	* [Minimum Height Trees](BFS/Minimum-Height-Trees.md)
 	* [Encode and Decode Strings](String/Encode-and-Decode-Strings.md)
 	* [Patching Array](Array/Patching-Array.md)
+	* [H-Index](Array/H-Index.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
 * [Other Information](Others/README.md)

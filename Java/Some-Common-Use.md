@@ -65,6 +65,10 @@ public class ArrayDemo {
    System.out.println("The index of element 12 is : " + retVal);
    }
 }
+
+```
+
+```
 Let us compile and run the above program, this will produce the following result:
 
 The sorted int array is:
@@ -74,10 +78,12 @@ Number = 20
 Number = 30
 Number = 55
 The index of element 12 is : 1
-
 ```
+
+
 ####sort reverse order
 	对于array与arraylist
+  array 进行 reverseOrder sort必须是Integer这种type,不能是primitive
 	Arrays.sort(arraylist, Collections.reverseOrder());
 	Collections.sort(arraylist, Collections.reverseOrder());
 
