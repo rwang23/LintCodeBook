@@ -428,8 +428,8 @@ This is the summary of my experience in LintCode.
 	* [Summary Ranges](Array/Summary-Ranges.md)
 	* [Number of Islands](DFS/Number-of-Islands.md)
 	* [Number of Islands II](DFS/Number-of-Islands-II.md)
+	* [Perfect Squares](Math/Perfect-Squares.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
-
 
 * [Other Information](Others/README.md)
 	* [Company Level](Others/CompanyLevel.md)
