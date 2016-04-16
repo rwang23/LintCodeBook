@@ -214,6 +214,7 @@ This is the summary of my experience in LintCode.
 	* [Recover Rotated Sorted Array](Array/Recover-Rotated-Sorted-Array.md)
 	* [Rotate String](Array/RotateString.md)
 	* [Best Meeting Point](Array/Best-Meeting-Point.md)
+	* [Patching Array](Array/Patching-Array.md)
 	* [Maximum Subarray](Array/Maximum-Subarray.md)
 	* [Maximum Subarray II](Array/Maximum-SubarrayII.md)
 	* [Maximum Subarray III](Array/Maximum-SubarrayIII.md)
@@ -439,6 +440,8 @@ This is the summary of my experience in LintCode.
 	* [Wiggle Sort II](Sort/Wiggle-Sort-II.md)
 	* [Implement Trie](DataStructureProblem/Implement-Trie.md)
 	* [Minimum Height Trees](BFS/Minimum-Height-Trees.md)
+	* [Encode and Decode Strings](String/Encode-and-Decode-Strings.md)
+	* [Patching Array](Array/Patching-Array.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
 * [Other Information](Others/README.md)

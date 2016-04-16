@@ -80,7 +80,7 @@
 ```
 
 ```java
-public class _310 {
+public class Solution {
     int n;
     List<Integer>[] e;
 
