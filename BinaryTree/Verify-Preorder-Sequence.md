@@ -12,7 +12,8 @@
 - 也可以用stack
 
 ####递归
-- O(n2)
+- 画出来就有规律了
+- O(nlogn)
 
 ```java
 public class Solution {

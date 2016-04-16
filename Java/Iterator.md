@@ -1,4 +1,6 @@
 ##Iterator
+- it.next()得到的是Object,一定要类型转换
+
 ```java
     public static void main(String []argh)
     {

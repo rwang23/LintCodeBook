@@ -10,10 +10,9 @@
 
 ####BFS思路
 - 首先想到了BFS的方法
-- 1.暴力做法去得到每个点的neighbor, O(n2)
-- 2.然后想到了用hashmap, Map<Integer, List<Integer>> 这样O(n)就能得到neighbor点
+- 用hashmap, Map<Integer, List<Integer>> 这样O(m)就能得到neighbor点,m是edges数量
 - 得到了neighbor点,就只需要BFS就可以了,注意不是valid的条件,就是两个点(不包括之前遍历的)指向了同一个点(有cycle),或者有的点没有neighbor,这样就不能构成tree
-- 最终时间复杂度还是O(n),但是跑出来的速度还是很慢
+- 最终时间复杂度还是O(n + m)
 
 ```java
 public class Solution {
@@ -83,9 +82,6 @@ public class Solution {
             for (int i = 0; i < size; i++) {
                 int cur = queue.poll();
                 List<Integer> neighbor = map.get(cur);
-                if (neighbor == null) {
-                    continue;
-                }
 
                 for (int j = 0; j < neighbor.size(); j++) {
                     int next = neighbor.get(j);
@@ -161,7 +157,6 @@ public class Solution {
         if (root_x != root_y) {
             parent[root_y] = root_x;
         }
-        return;
     }
 }
 ```

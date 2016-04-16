@@ -157,8 +157,8 @@ Item[] a = (Item[]) new Object[capacity];
 	我们知道remove有两种
 	一种是E remove(int index)
 	一种是boolean remove(Object o)
-	如果是Integer arraylist,将会自动调用remove(object o)
-	这个时候就不要用remove来removeindex了
+    使用的时候要注意
+    我们常常在使用remove(index),参考写的DFS
 	list.remove(Integer.valueOf(2));
 	list.remove(list.indexOf(2));
 	You could use list.remove(new Integer(0)) to surely remove the object

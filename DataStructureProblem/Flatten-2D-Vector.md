@@ -40,3 +40,46 @@ public class Vector2D {
     }
 }
 ```
+
+####后来写的,在hasNext()里边进行操作
+- 注意i.next()的类型转化
+
+```java
+public class Vector2D implements Iterator<Integer> {
+
+    private Iterator i1;
+    private Iterator i2;
+    public Vector2D(List<List<Integer>> vec2d) {
+        i1 = vec2d.iterator();
+    }
+
+    @Override
+    public Integer next() {
+        return (Integer)i2.next();
+    }
+
+    @Override
+    public boolean hasNext() {
+        if ((i2 == null || !i2.hasNext()) && i1.hasNext()) {
+            List<Integer> list = (List<Integer>)i1.next();
+            i2 = list.iterator();
+        }
+
+        while (i2 != null && !i2.hasNext() && i1.hasNext()) {
+            List<Integer> list = (List<Integer>)i1.next();
+            i2 = list.iterator();
+        }
+        if (i2 == null) {
+           return false;
+        }
+
+        return i1.hasNext() || i2.hasNext();
+    }
+}
+
+/**
+ * Your Vector2D object will be instantiated and called as such:
+ * Vector2D i = new Vector2D(vec2d);
+ * while (i.hasNext()) v[f()] = i.next();
+ */
+```
