@@ -49,6 +49,7 @@ public class Solution {
 - 让 n = size
 - 如果 0 >= size,那么就是 h-index = n, 不行就继续, 同时n--
 - 发现3 >= n - 3, 那么 n -3 就是我们所求
+- O(nlogn)
 
 ```java
 public class Solution {
@@ -65,6 +66,36 @@ public class Solution {
             }
             n--;
         }
+        return 0;
+    }
+}
+```
+
+####使用一个辅助数组
+- 时间 O(n)
+- 因为又是涉及到数据范围,并且是可以从0 - n
+- 所以用一个数组来储存次数,两次loop,就找到了结果
+
+```java
+public class Solution {
+    public int hIndex(int[] citations) {
+        int len = citations.length;
+        int[] count = new int[len + 1];
+
+        for (int c: citations)
+            if (c > len)
+                count[len]++;
+            else
+                count[c]++;
+
+
+        int total = 0;
+        for (int i = len; i >= 0; i--) {
+            total += count[i];
+            if (total >= i)
+                return i;
+        }
+
         return 0;
     }
 }

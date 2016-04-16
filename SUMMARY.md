@@ -216,6 +216,7 @@ This is the summary of my experience in LintCode.
 	* [Best Meeting Point](Array/Best-Meeting-Point.md)
 	* [Patching Array](Array/Patching-Array.md)
 	* [H-Index](Array/H-Index.md)
+	* [H-Index-II](Array/H-Index-II.md)
 	* [Maximum Subarray](Array/Maximum-Subarray.md)
 	* [Maximum Subarray II](Array/Maximum-SubarrayII.md)
 	* [Maximum Subarray III](Array/Maximum-SubarrayIII.md)
@@ -444,6 +445,7 @@ This is the summary of my experience in LintCode.
 	* [Encode and Decode Strings](String/Encode-and-Decode-Strings.md)
 	* [Patching Array](Array/Patching-Array.md)
 	* [H-Index](Array/H-Index.md)
+	* [H-Index-II](Array/H-Index-II.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
 * [Other Information](Others/README.md)
