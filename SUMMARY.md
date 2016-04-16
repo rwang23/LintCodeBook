@@ -372,6 +372,7 @@ This is the summary of my experience in LintCode.
 	* [Divide Two Integers](Math/Divide-Two-Integers.md)
 	* [Add Two Array](Math/add-two-array.md)
 	* [Palindrome Number](Math/Palindrome-Number.md)
+	* [Fraction to Recurring Decimal](Math/Fraction-to-Recurring-Decimal.md)
 	* [Nested List Weight Sum](Math/Nested-List-Weight-Sum.md)
 	* [Add Digits](Math/Add-Digits.md)
 	* [Much Larger Numbers](Math/Much-Larger-Numbers.md)
