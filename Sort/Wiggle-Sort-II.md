@@ -29,13 +29,14 @@ public class Solution {
         int mid = findMid(nums);
         int start = 0;
         int end = n - 1;
-        for (int i = 0; i < n;) {
-            if (nums[i] < mid && i >= start) {
-                swap(nums, i++, start++);
-            } else if (nums[i] > mid && i < end) {
-                swap(nums, i , end--);
+        int midIndex = 0;
+        while (midIndex < end) {
+            if (nums[midIndex] < mid) {
+                swap(nums, midIndex++, start++);
+            } else if (nums[midIndex] > mid ) {
+                swap(nums, midIndex , end--);
             } else {
-                i++;
+                midIndex++;
             }
         }
 

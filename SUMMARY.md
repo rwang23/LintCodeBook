@@ -432,6 +432,10 @@ This is the summary of my experience in LintCode.
 	* [Number of Islands](DFS/Number-of-Islands.md)
 	* [Number of Islands II](DFS/Number-of-Islands-II.md)
 	* [Perfect Squares](Math/Perfect-Squares.md)
+	* [Fraction to Recurring Decimal](Math/Fraction-to-Recurring-Decimal.md)
+	* [Flatten Nested List Iterator](DataStructureProblem/Flatten-Nested-List-Iterator.md)
+	* [Wiggle Sort](Sort/Wiggle-Sort.md)
+	* [Wiggle Sort II](Sort/Wiggle-Sort-II.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
 * [Other Information](Others/README.md)
