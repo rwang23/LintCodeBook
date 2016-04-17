@@ -17,6 +17,7 @@
 ####思路
 - 用stack 不断push进取
 - 当时-时,就是Push -num
+- 最容易错误的地方就是从string中提取出数字来,很容易出错
 
 ```java
 public class Solution {

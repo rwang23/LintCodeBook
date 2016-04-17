@@ -51,6 +51,7 @@ This is the summary of my experience in LintCode.
 	* [Scramble String](String/Scramble-String.md)
 	* [Regular Expression Matching](String/Regular-Expression-Matching.md)
 	* [Wildcard Matching](String/Wildcard-Matching.md)
+	* [Basic Calculator](String/Basic-Calculator.md)
 	* [Basic Calculator II](String/Basic-Calculator-II.md)
 
 * [Binary Search](BinarySearch/README.md)
@@ -444,7 +445,7 @@ This is the summary of my experience in LintCode.
 	* [Insert Interval](Sort/Insert-Interval.md)
 	* [Three Sum Smaller](Sort/3Sum-Smaller.md)
 	* [Merge K Sorted Lists](Linkedlist/Merge-k-Sorted-Lists.md)
-
+	* [Basic Calculator](String/Basic-Calculator.md)
 	* [Basic Calculator II](String/Basic-Calculator-II.md)
 
 	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
