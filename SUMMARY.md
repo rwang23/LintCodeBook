@@ -49,6 +49,7 @@ This is the summary of my experience in LintCode.
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
 	* [Scramble String](String/Scramble-String.md)
+	* [Regular Expression Matching](String/Regular-Expression-Matching.md)
 	* [Basic Calculator II](String/Basic-Calculator-II.md)
 
 * [Binary Search](BinarySearch/README.md)
@@ -103,6 +104,7 @@ This is the summary of my experience in LintCode.
 	* [Binary Tree From in and pre order](BinaryTree/BinaryTree-From-Inorder-Preorder.md)
 	* [Binary Tree Path Sum](BinaryTree/Binary-Tree-Path-Sum.md)
 	* [Binary Tree Path Sum II](BinaryTree/Binary-Tree-Path-SumII.md)
+	* [Binary Tree Longest Consecutive Sequence](BinaryTree/Binary-Tree-Longest-Consecutive-Sequence.md)
 	* [Binary Search Tree Iterator](BinaryTree/BST-Iterator.md)
 	* [Lowest Common Ancestor](BinaryTree/Lowest-Common-Ancestor.md)
 	* [Inorder Successor In BST](BinaryTree/Inorder-Successor-In-BST.md)
@@ -424,22 +426,29 @@ This is the summary of my experience in LintCode.
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
 	* [Perfect Squares](Math/Perfect-Squares.md)
 
-	* [Min Stack](DataStructureProblem/MinStack.md)
+	* [Building Outline](DataStructureProblem/Building-Outline.md)
+
+	* [Binary Tree Longest Consecutive Sequence](BinaryTree/Binary-Tree-Longest-Consecutive-Sequence.md)
+	* [Merge Intervals](Sort/MergeIntervals.md)
 	* [Valid Parentheses](String/Valid-Parentheses.md)
+	* [Find Median from Data Stream](DataStructureProblem/Find-Median-from-Data-Stream.md)
+	* [Game of Life](Array/Game-of-Life.md)
+	* [Zigzag Iterator](DataStructureProblem/Zigzag-Iterator.md)
+	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
+	* [Regular Expression Matching](String/Regular-Expression-Matching.md)
+
+	* [Min Stack](DataStructureProblem/MinStack.md)
 	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
 	* [Paint Fence](DynamicProgramming/Paint-Fence.md)
 	* [Group Shifted Strings](String/Group-Shifted-Strings.md)
 	* [Closest Binary Search Tree Value](BinaryTree/Closest-Binary-Search-Tree-Value.md)
 	* [Closest Binary Search Tree Value II](BinaryTree/Closest-Binary-Search-Tree-Value-II.md)
-
 	* [Power of Three](Math/Power-of-Three.md)
 	* [Strobogrammatic Number](String/Strobogrammatic-Number.md)
 	* [Strobogrammatic Number II](String/Strobogrammatic-Number-II.md)
 	* [Flip Game](String/Flip-Game.md)
 	* [Flip Game II](String/Flip-Game-II.md)
 	* [Palindrome Permutation](String/Palindrome-Permutation.md)
-
-
 	* [Fraction to Recurring Decimal](Math/Fraction-to-Recurring-Decimal.md)
 	* [Flatten Nested List Iterator](DataStructureProblem/Flatten-Nested-List-Iterator.md)
 	* [Wiggle Sort](Sort/Wiggle-Sort.md)
@@ -455,7 +464,6 @@ This is the summary of my experience in LintCode.
 	* [Find Peak Element](BinarySearch/FindPeakElement.md)
 	* [Flatten 2D Vector](DataStructureProblem/Flatten-2D-Vector.md)
 	* [Peeking Iterator](DataStructureProblem/Peeking-Iterator.md)
-	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 
 * [Other Information](Others/README.md)
 	* [Company Level](Others/CompanyLevel.md)
