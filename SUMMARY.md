@@ -436,6 +436,7 @@ This is the summary of my experience in LintCode.
 	* [Zigzag Iterator](DataStructureProblem/Zigzag-Iterator.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 	* [Regular Expression Matching](String/Regular-Expression-Matching.md)
+	* [Kth Smallest Element in a BST](BinaryTree/Kth-Smallest-Element-in-a-BST.md)
 
 	* [Min Stack](DataStructureProblem/MinStack.md)
 	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
