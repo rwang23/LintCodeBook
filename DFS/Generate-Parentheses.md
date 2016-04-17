@@ -43,3 +43,75 @@ public class Solution {
     }
 }
 ```
+
+####思路
+- 从DP思路来思考
+- Pair(n) 来源于 Pair(n - 1), 所以不断这么来源于底层
+- O(n4)
+
+```java
+public class Solution
+{
+    public List<String> generateParenthesis(int n)
+    {
+        List<List<String>> lists = new ArrayList<>();
+        lists.add(Collections.singletonList(""));
+
+        for (int i = 1; i <= n; ++i)
+        {
+            final List<String> list = new ArrayList<>();
+
+            for (int j = 0; j < i; ++j)
+            {
+                for (final String first : lists.get(j))
+                {
+                    for (final String second : lists.get(i - 1 - j))
+                    {
+                        list.add("(" + first + ")" + second);
+                    }
+                }
+            }
+
+            lists.add(list);
+        }
+
+        return lists.get(lists.size() - 1);
+    }
+}
+```
+
+####上边思路的DFS做法
+```
+For 2, it should place one "()" and add another one insert it but none tail it,
+
+'(' f(1) ')' f(0)
+
+or add none insert it but tail it by another one,
+
+'(' f(0) ')' f(1)
+
+Thus for n, we can insert f(i) and tail f(j) and i+j=n-1,
+
+'(' f(i) ')' f(j)
+```
+
+```java
+public List<String> generateParenthesis(int n) {
+    List<String> result = new ArrayList<String>();
+    if (n == 0) {
+        result.add("");
+    } else {
+        for (int i = n - 1; i >= 0; i--) {
+            List<String> insertSub = generateParenthesis(i);
+            List<String> tailSub = generateParenthesis(n - 1 - i);
+            for (String insert : insertSub) {
+                for (String tail : tailSub) {
+                    result.add("(" + insert + ")" + tail);
+                }
+            }
+
+        }
+    }
+    return result;
+}
+```

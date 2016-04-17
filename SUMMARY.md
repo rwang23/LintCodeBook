@@ -447,6 +447,7 @@ This is the summary of my experience in LintCode.
 	* [Merge K Sorted Lists](Linkedlist/Merge-k-Sorted-Lists.md)
 	* [Basic Calculator](String/Basic-Calculator.md)
 	* [Basic Calculator II](String/Basic-Calculator-II.md)
+	* [Generate Parentheses](DFS/Generate-Parentheses.md)
 
 	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
 	* [Paint Fence](DynamicProgramming/Paint-Fence.md)
