@@ -50,6 +50,7 @@ This is the summary of my experience in LintCode.
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
 	* [Scramble String](String/Scramble-String.md)
 	* [Regular Expression Matching](String/Regular-Expression-Matching.md)
+	* [Wildcard Matching](String/Wildcard-Matching.md)
 	* [Basic Calculator II](String/Basic-Calculator-II.md)
 
 * [Binary Search](BinarySearch/README.md)
@@ -436,9 +437,16 @@ This is the summary of my experience in LintCode.
 	* [Zigzag Iterator](DataStructureProblem/Zigzag-Iterator.md)
 	* [Median of two Sorted Arrays](Array/Median-of-two-Sorted-Arrays.md)
 	* [Regular Expression Matching](String/Regular-Expression-Matching.md)
+	* [Wildcard Matching](String/Wildcard-Matching.md)
 	* [Kth Smallest Element in a BST](BinaryTree/Kth-Smallest-Element-in-a-BST.md)
-
+	* [Binary Search Tree Iterator](BinaryTree/BST-Iterator.md)
 	* [Min Stack](DataStructureProblem/MinStack.md)
+	* [Insert Interval](Sort/Insert-Interval.md)
+	* [Three Sum Smaller](Sort/3Sum-Smaller.md)
+	* [Merge K Sorted Lists](Linkedlist/Merge-k-Sorted-Lists.md)
+
+	* [Basic Calculator II](String/Basic-Calculator-II.md)
+
 	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
 	* [Paint Fence](DynamicProgramming/Paint-Fence.md)
 	* [Group Shifted Strings](String/Group-Shifted-Strings.md)
