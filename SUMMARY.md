@@ -49,6 +49,8 @@ This is the summary of my experience in LintCode.
 	* [Unique Word Abbreviation](String/Unique-Word-Abbreviation.md)
 	* [Generalized Abbreviation](String/Generalized-Abbreviation.md)
 	* [Scramble String](String/Scramble-String.md)
+	* [Read N Characters Given Read4](String/Read-N-Characters-Given-Read4.md)
+	* [Read N Characters Given Read4 II](String/Read-N-Characters-Given-Read4-II.md)
 	* [Regular Expression Matching](String/Regular-Expression-Matching.md)
 	* [Wildcard Matching](String/Wildcard-Matching.md)
 	* [Basic Calculator](String/Basic-Calculator.md)
@@ -178,6 +180,7 @@ This is the summary of my experience in LintCode.
 	* [Largest Number](Sort/Largest-Number.md)
 	* [Partition Array](Sort/Partition-Array.md)
 	* [Count of Smaller Numbers After Self](Sort/Count-of-Smaller-Numbers-After-Self.md)
+	* [Count of Range Sum](Sort/Count-of-Range-Sum.md)
 
 * [Two Pointers](Two-Pointers/README.md)
 	* [Kth Largetst Element](Two-Pointers/Kth-Largest-Element.md)
@@ -355,6 +358,8 @@ This is the summary of my experience in LintCode.
 	* [Restore IP Addresses](DFS/Restore-IP-Addresses.md)
 	* [Generate Parentheses](DFS/Generate-Parentheses.md)
 	* [Reconstruct Itinerary](DFS/Reconstruct-Itinerary.md)
+	* [Expression Add Operators](DFS/Expression-Add-Operators.md)
+
 
 * [Memorization](Memorization/README.md)
 	* [Longest Increasing Path in a Matrix](Memorization/Longest-Increasing-Path-in-a-Matrix.md)
@@ -464,6 +469,11 @@ This is the summary of my experience in LintCode.
 	* [Strobogrammatic Number](String/Strobogrammatic-Number.md)
 	* [Strobogrammatic Number II](String/Strobogrammatic-Number-II.md)
 	* [Trie](Implementation/Trie.md)
+	* [Count of Smaller Numbers After Self](Sort/Count-of-Smaller-Numbers-After-Self.md)
+	* [Count of Range Sum](Sort/Count-of-Range-Sum.md)
+	* [Expression Add Operators](DFS/Expression-Add-Operators.md)
+	* [Read N Characters Given Read4](String/Read-N-Characters-Given-Read4.md)
+	* [Read N Characters Given Read4 II](String/Read-N-Characters-Given-Read4-II.md)
 
 	* [Binary Tree Paths](BinaryTree/Binary-Tree-Paths.md)
 	* [Paint Fence](DynamicProgramming/Paint-Fence.md)
