@@ -39,36 +39,38 @@ public class Solution {
 
         int i = 0;
         int j = 0;
-        int maxLen = 0;
+        int maxLen = 1;
         int len = 0;
         int n = s.length();
         Map<Character, Integer> map = new HashMap<Character, Integer>();
 
-        while (j < n) {
-            char cur = s.charAt(j);
-            if (map.containsKey(cur)) {
-                j++;
-                len++;
-                map.put(cur, map.get(cur) + 1);
-                maxLen = Math.max(maxLen, len);
-            }
-            else {
-                while (map.size() == 2) {
-                    char head = s.charAt(i);
-                    map.put(head, map.get(head) - 1);
-                    len--;
-                    if (map.get(head) == 0) {
-                        map.remove(head);
-                    }
-                    i++;
+        for (i = 0; i < n; i++) {
+            while (j < n && map.size() < 3) {
+                char tail = s.charAt(j++);
+                if (map.containsKey(tail)) {
+                    map.put(tail, map.get(tail) + 1);
+                } else {
+                    map.put(tail, 1);
                 }
-                map.put(cur, 1);
-                j++;
                 len++;
-                maxLen = Math.max(maxLen, len);
+                if (map.size() <= 2) {
+                    maxLen = Math.max(maxLen, len);
+                }
+                if (j == n) {
+                    return maxLen;
+                }
+            }
+            len--;
+
+            char head = s.charAt(i);
+            map.put(head, map.get(head) - 1);
+
+            if (map.get(head) == 0) {
+                map.remove(head);
             }
         }
         return maxLen;
+
     }
 }
 ```
