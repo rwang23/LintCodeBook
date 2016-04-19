@@ -8,13 +8,26 @@ Deque deque = new LinkedList<>();
 
 可以从头进,从头出,从尾进,从尾出
 
-	addFirst()
-	removeFirst() = poll()
-	addLast()
-	removeLast()
-	getFirst() = peek()
-	getLast()
-	size()
+      peek()
+      Retrieves, but does not remove, the head of the queue represented by this deque, or returns null if this deque is empty.
+
+      pop()
+      Pops an element from the stack represented by this deque.
+
+      push(E e)
+      Pushes an element onto the stack represented by this deque.
+
+      addFirst(E e)
+      Inserts the specified element at the front of this deque.
+
+      addLast(E e)
+      Inserts the specified element at the end of this deque
+
+      getFirst()
+      Retrieves, but does not remove, the first element of this deque.
+
+      getLast()
+      Retrieves, but does not remove, the last element of this deque.
 
 ```java
    deque.add(15);
