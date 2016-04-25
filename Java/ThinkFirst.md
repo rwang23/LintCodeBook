@@ -6,6 +6,7 @@
 - Do we have time complexity or space complexity requirement
 - What does the array hold? Numbers? Characters? Strings?
 - Are these integers all positive?
+- are there any duplicates?
 - is the array sorted first?
 - What's our return / return type?
 

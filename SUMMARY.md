@@ -25,6 +25,7 @@ This is the summary of my experience in LintCode.
 	* [Group Shifted Strings](String/Group-Shifted-Strings.md)
 	* [Decode Ways](String/Decode-Ways.md)
 	* [Bulls and Cows](String/Bulls-and-Cows.md)
+	* [Reverse Vowels of a String](String/Reverse-Vowels-of-a-String.md)
 	* [Valid Parentheses](String/Valid-Parentheses.md)
 	* [ZigZag Conversion](String/ZigZag-Conversion.md)
 	* [Compress a String](String/Compress-String.md)
@@ -388,8 +389,8 @@ This is the summary of my experience in LintCode.
 	* [Surrounded Regions](BFS/Surrounded-Regions.md)
 
 * [Math](Math/README.md)
-	* [Hexadecimal to Decimal.md](Math/Hexadecimal-to-Decimal.md)
-	* [Any to Decimal.md](Math/AnyToDecimal.md)
+	* [Hexadecimal to Decimal](Math/Hexadecimal-to-Decimal.md)
+	* [Any to Decimal](Math/AnyToDecimal.md)
 	* [Divide Two Integers](Math/Divide-Two-Integers.md)
 	* [Add Two Array](Math/add-two-array.md)
 	* [Palindrome Number](Math/Palindrome-Number.md)

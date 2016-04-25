@@ -6,8 +6,6 @@
 
 	Return a deep copy of the list.
 
-
-
 ####Challenge
 Could you solve it with O(1) space?
 

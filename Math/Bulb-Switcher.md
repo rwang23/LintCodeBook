@@ -24,6 +24,7 @@ Difficulty: Medium
 
 ####思路
 - 暴力
+
 ```java
 public class Solution {
     public int bulbSwitch(int n) {
