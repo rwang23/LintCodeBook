@@ -211,6 +211,7 @@ This is the summary of my experience in LintCode.
 	* [Shuffle an Array](Array/Shuffle-an-Array.md)
 	* [Summary Ranges](Array/Summary-Ranges.md)
 	* [Missing Ranges](Array/Missing-Ranges.md)
+	* [Gas Station](Array/Gas-Station.md)
 	* [Making New List](Array/Making-New-List.md)
 	* [Rotate Array](Array/Rotate-Array.md)
 	* [Shortest Word Distance](Array/Shortest-Word-Distance.md)
