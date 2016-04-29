@@ -22,6 +22,14 @@ state: dp[i] the maximal product of integer i
 function: dp[i] = Math.max(dp[i], dp[j] * (i - j))
 initialize : dp[1] = 1
 answer: dp[n]
+
+
+Math idea from https://leetcode.com/discuss/98276/why-factor-2-or-3-the-math-behind-this-problem
+
+If an optimal product contains a factor f >= 4,
+then you can replace it with factors 2 and f-2 without losing optimality, as 2*(f-2) = 2f-4 >= f. So you never need a factor greater than or equal to 4,
+meaning you only need factors 1, 2 and 3
+(and 1 is of course wasteful and you'd only use it for n=2 and n=3, where it's needed).
 */
 
 public class Solution {
