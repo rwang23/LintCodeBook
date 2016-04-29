@@ -29,6 +29,7 @@ This is the summary of my experience in LintCode.
 	* [Valid Parentheses](String/Valid-Parentheses.md)
 	* [ZigZag Conversion](String/ZigZag-Conversion.md)
 	* [Compress a String](String/Compress-String.md)
+	* [Word Pattern](String/Word-Pattern.md)
 	* [Flip Game](String/Flip-Game.md)
 	* [Flip Game II](String/Flip-Game-II.md)
 	* [Reverse Words in a String](String/Reverse-Words-in-a-String.md)
