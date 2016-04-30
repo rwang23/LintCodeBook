@@ -304,6 +304,8 @@ This is the summary of my experience in LintCode.
    * [Min Heap](Implementation/heap.md)
 
 * [Data Structure Problem](DataStructureProblem/README.md)
+	* [Contains Duplicate](DataStructureProblem/Contains-Duplicate.md)
+	* [Contains Duplicate II](DataStructureProblem/Contains-Duplicate-II.md)
 	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)
 	* [Implement Queue By Two Stacks](DataStructureProblem/Implement-Queue-by-Two-Stacks.md)
 	* [Implement Queue By LinkedList](DataStructureProblem/Implement-Queue-by-Linked-List.md)
