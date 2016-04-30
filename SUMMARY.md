@@ -354,6 +354,8 @@ This is the summary of my experience in LintCode.
 	* [Permutations I](DFS/Permutations.md)
 	* [Permutations Index](DFS/Permutation-Index.md)
 	* [Permutations II](DFS/PermutationsII.md)
+	* [Palindrome-Permutation](DFS/Palindrome-Permutation.md)
+	* [Palindrome-Permutation-II](DFS/Palindrome-Permutation-II.md)
 	* [Next Permutations II](DFS/Next-Permutation-II.md)
 	* [String Permutation II](DFS/String-Permutation-II.md)
 	* [Permutations Sequence](DFS/Permutation-Sequence.md)

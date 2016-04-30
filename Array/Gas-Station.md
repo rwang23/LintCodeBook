@@ -1,11 +1,11 @@
 ##Gas Station
 
-Total Accepted: 60288 Total Submissions: 220483 Difficulty: Medium
-There are N gas stations along a circular route, where the amount of gas at station i is gas[i].
+	Total Accepted: 60288 Total Submissions: 220483 Difficulty: Medium
+	There are N gas stations along a circular route, where the amount of gas at station i is gas[i].
 
-You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations.
+	You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations.
 
-Return the starting gas station's index if you can travel around the circuit once, otherwise return -1.
+	Return the starting gas station's index if you can travel around the circuit once, otherwise return -1.
 
 ####思路
 - brute force, 从每个节点开始算为起始点,O(n2)
