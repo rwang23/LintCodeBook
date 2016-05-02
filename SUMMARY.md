@@ -306,6 +306,7 @@ This is the summary of my experience in LintCode.
 * [Data Structure Problem](DataStructureProblem/README.md)
 	* [Contains Duplicate](DataStructureProblem/Contains-Duplicate.md)
 	* [Contains Duplicate II](DataStructureProblem/Contains-Duplicate-II.md)
+	* [Contains Duplicate III](DataStructureProblem/Contains-Duplicate-III.md)
 	* [Valid Parentheses](DataStructureProblem/Valid-Parentheses.md)
 	* [Implement Queue By Two Stacks](DataStructureProblem/Implement-Queue-by-Two-Stacks.md)
 	* [Implement Queue By LinkedList](DataStructureProblem/Implement-Queue-by-Linked-List.md)

@@ -1,6 +1,6 @@
 ##Closest Number in Sorted Array
 
-37% Accepted
+    37% Accepted
 
 	Given a target number and an integer array A sorted in ascending order,
 	find the index i in A such that A[i] is closest to the given target.
