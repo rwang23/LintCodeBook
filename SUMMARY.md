@@ -190,6 +190,7 @@ This is the summary of my experience in LintCode.
 	* [Count of Range Sum](Sort/Count-of-Range-Sum.md)
 
 * [Two Pointers](Two-Pointers/README.md)
+	* [Move Zeroes](Two-Pointers/Move-Zeroes.md)
 	* [Kth Largetst Element](Two-Pointers/Kth-Largest-Element.md)
 	* [Remove Element](Two-Pointers/Remove-Element.md)
 	* [Remove Duplicates from Sorted Array](Two-Pointers/Remove-Duplicates-from-Sorted-Array.md)
