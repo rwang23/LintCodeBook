@@ -1,14 +1,14 @@
 ##Paint Fence
 
-Total Accepted: 7437 Total Submissions: 24286 Difficulty: Easy
-There is a fence with n posts, each post can be painted with one of the k colors.
+    Total Accepted: 7437 Total Submissions: 24286 Difficulty: Easy
+    There is a fence with n posts, each post can be painted with one of the k colors.
 
-You have to paint all the posts such that no more than two adjacent fence posts have the same color.
+    You have to paint all the posts such that no more than two adjacent fence posts have the same color.
 
-Return the total number of ways you can paint the fence.
+    Return the total number of ways you can paint the fence.
 
-Note:
-n and k are non-negative integers.
+    Note:
+    n and k are non-negative integers.
 
 ####思路
 

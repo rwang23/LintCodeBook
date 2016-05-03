@@ -60,3 +60,42 @@ public class Solution {
     }
 }
 ```
+
+####利用数学规律
+```
+f(n) = 2 * f(n - 2)
+f(n) = 3 * f(n - 3)
+f(n) = 4 * f(n - 4) = 2 * f(n - 2)
+f(n) = 5 * f(n - 5) = 2 * f(n - 5) + 3 * f(n - 5) = f(n - 3) + f(n - 2) < f(n)
+所以得出4以上的就不需要再试了,只需要试到底是乘以2大还是乘以3大
+并且可以优化空间复杂度
+```
+
+```java
+
+public class Solution {
+    public int integerBreak(int n) {
+        if (n <= 1) {
+            return - 1;
+        }
+
+        if (n == 2) {
+            return 1;
+        }
+
+        if (n == 3) {
+            return 2;
+        }
+
+        int[] dp = new int[n + 1];
+        dp[1] = 1;
+        dp[2] = 2;
+        dp[3] = 3;
+
+        for (int i = 4; i <= n; i++) {
+            dp[i] = Math.max(dp[i - 2] * 2, dp[i - 3] * 3);
+        }
+        return dp[n];
+    }
+}
+```
