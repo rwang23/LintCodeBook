@@ -1,10 +1,10 @@
 ##Single Number II
 
-Given 3*n + 1 numbers, every numbers occurs triple times except one, find it.
+    Given 3*n + 1 numbers, every numbers occurs triple times except one, find it.
 
-Have you met this question in a real interview? Yes
-Example
-Given [1,1,2,3,3,3,2,2,4,1] return 4
+    Have you met this question in a real interview? Yes
+    Example
+    Given [1,1,2,3,3,3,2,2,4,1] return 4
 
 ####Challenge
 One-pass, constant extra space.

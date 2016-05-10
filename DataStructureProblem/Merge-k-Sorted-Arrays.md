@@ -1,4 +1,4 @@
-Merge k Sorted Arrays
+##Merge k Sorted Arrays
 
 	Given k sorted integer arrays, merge them into one sorted array.
 

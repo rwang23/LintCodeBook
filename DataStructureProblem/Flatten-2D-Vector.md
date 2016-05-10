@@ -11,7 +11,8 @@
 	  [3],
 	  [4,5,6]
 	]
-	By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: [1,2,3,4,5,6].
+	By calling next repeatedly until hasNext returns false,
+    the order of elements returned by next should be: [1,2,3,4,5,6].
 
 ####思路
 - 注意考虑到可能会出现空行的情况

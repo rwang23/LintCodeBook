@@ -327,6 +327,7 @@ This is the summary of my experience in LintCode.
 	* [Peeking Iterator](DataStructureProblem/Peeking-Iterator.md)
 	* [Ugly Number](DataStructureProblem/Ugly-Number.md)
 	* [Top K Frequent Words](DataStructureProblem/Top-K-Frequent-Words.md)
+	* [Moving Average from Data Stream](DataStructureProblem/Moving-Average-from-Data-Stream.md)
 	* [Meeting Rooms](DataStructureProblem/Meeting-Rooms.md)
 	* [Meeting Rooms II](DataStructureProblem/Meeting-Rooms-II.md)
 	* [Longest Consecutive Sequence](DataStructureProblem/LongestConsecutiveSequence.md)
