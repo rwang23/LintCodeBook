@@ -24,8 +24,6 @@ O(log k), k is the first index of the given target number.
 - 要求O(logk) 那么就去想如何才能logK,只有对原数进行倍增的办法
 - 剩下的也就是二分搜索
 
-
-
 ```java
 public class Solution {
     /**

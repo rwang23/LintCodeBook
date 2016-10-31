@@ -13,7 +13,6 @@
 	Given [4, 5, 6, 7, 0, 1, 2] return 0
 
 ####Note
-
     You may assume no duplicate exists in the array.
 
 ####Tags Expand

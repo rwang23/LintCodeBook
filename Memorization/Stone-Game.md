@@ -14,7 +14,6 @@
 	Related Problems
 	 Notes
 	For [4, 1, 1, 4], in the best solution, the total score is 18:
-
 	1. Merge second and third piles => [4, 2, 4], score +2
 	2. Merge the first two piles => [6, 4]，score +6
 	3. Merge the last two piles => [10], score +10
@@ -58,7 +57,6 @@ public class Solution {
             return dp[start][end];
         }
 
-
         int min = Integer.MAX_VALUE;
         for (int i = start; i < end; i++) {
             int left = dfs(A, dp, start, i, sum);
@@ -71,5 +69,4 @@ public class Solution {
         return dp[start][end];
     }
 }
-
 ```

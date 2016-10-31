@@ -68,7 +68,7 @@ public class Person extends Object {
 
 public class Student extends Person {
 	public Student(String n) {
-		super();
+		super();//这行一定会出现compiler error,在person里边,没有没有添加参数的constructor,所以compiler error
 		//this.name = n; 这样写就出问题了,因为name是person的private的,不能这么去access
 		super(n);//要这么去access
 	}
@@ -145,7 +145,10 @@ if (s instanceof Student) {
 	SimplePointMarker pm = new OceanQuakeMarker(feature);
 	EarthquakeMarker em = pm;
 	Sorry, that's incorrect.
-	The first line is fine. But the second line will not work without a cast. Even though the object pointed to by pm is actually an OceanQuakeMarker, which is always an EarthquakeMarker, java "forgets" about that. To fix the problem, you can change the second line to:
+	The first line is fine. But the second line will not work without a cast.
+	Even though the object pointed to by pm is actually an OceanQuakeMarker,
+	which is always an EarthquakeMarker, java "forgets" about that.
+	 To fix the problem, you can change the second line to:
 
 	EarthquakeMarker em = (EarthquakeMarker)pm;
 

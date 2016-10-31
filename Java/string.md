@@ -1,11 +1,11 @@
 #String
 
-String 是不能通过concat来改变的,除非赋值给一个新的String
+```java
+//String 是不能通过concat来改变的,除非赋值给一个新的String
 String s = "Hello";
-s.concat(" World!");
+s.concat(" World!");//s本来是null
 System.out.println(s);
 
-```java
 String s1 = new String();
 String s2 = "billryan";
 int s2Len = s2.length();
@@ -115,6 +115,14 @@ This produces the following result:
 
 Return Value :Welcome to Tutorialspoint.com
 ```
+
+####escape
+- \n Newline. Position the screen cursor at the beginning of the next line.
+- \t Horizontal tab. Move the screen cursor to the next tab stop.
+- \r Carriage return. Position the screen cursor at the beginning of the current lineódo not advance to the next line. Any characters output after the carriagereturn overwrite the characters previously output on that line.
+- \\ Backslash. Used to print a backslash character.
+- \" Double quote. Used to print a double-quote character. For example
+
 
 ###Regular Expression
 ####Repetion

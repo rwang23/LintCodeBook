@@ -15,7 +15,6 @@
 	Have you met this question in a real interview? Yes
 	Example
 	Given [1, 2, 1, 3, 4, 5, 7, 6]
-
 	Return index 1 (which is number 2) or 6 (which is number 7)
 
 ####Note
@@ -32,7 +31,6 @@ Time complexity O(logN)
 - 划分成小问题
 - 二分搜索
 - 注意边界
-
 
 ####优化前
 - 可能有边界问题

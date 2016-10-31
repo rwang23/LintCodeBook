@@ -12,6 +12,7 @@ This is the summary of my experience in LintCode.
 	* [Exception](Java/Exception.md)
 	* [Some Common Use](Java/Some-Common-Use.md)
 	* [String](Java/string.md)
+	* [Interface and abstract](Java/interface&abstract.md)
 	* [Equals](Java/equals.md)
 	* [Some other notes](Java/notes.md)
 

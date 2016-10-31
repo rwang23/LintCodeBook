@@ -27,9 +27,9 @@ public class Solution {
         //Arrays.sort(temp, new letterComparator<Character>());
         Arrays.sort(temp, new Comparator<Character>() {
             public int compare(Character c1, Character c2) {
-            int i1 = c1 >= 'a' ? (int)c1 - 'a' : (int)c1;
-            int i2 = c2 >= 'a' ? (int)c2 - 'a' : (int)c2;
-            return i1 - i2;
+              int i1 = c1 >= 'a' ? (int)c1 - 'a' : (int)c1;
+              int i2 = c2 >= 'a' ? (int)c2 - 'a' : (int)c2;
+              return i1 - i2;
             }
         });
         for (int i = 0; i < input.length; i++) {
