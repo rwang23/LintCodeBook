@@ -13,6 +13,7 @@ This is the summary of my experience in LintCode.
 	* [Some Common Use](Java/Some-Common-Use.md)
 	* [String](Java/string.md)
 	* [Interface and abstract](Java/interface&abstract.md)
+	* [Inner class](Java/innerClass.md)
 	* [Equals](Java/equals.md)
 	* [Some other notes](Java/notes.md)
 

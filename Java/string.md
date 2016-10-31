@@ -116,6 +116,16 @@ This produces the following result:
 Return Value :Welcome to Tutorialspoint.com
 ```
 
+####Character Methods:
+- 1) isLetter() Determines whether the specified char value is a letter.
+- 2) isDigit() Determines whether the specified char value is a digit.
+- 3) isWhitespace() Determines whether the specified char value is white space.
+- 4) isUpperCase() Determines whether the specified char value is uppercase.
+- 5) isLowerCase() Determines whether the specified char value is lowercase.
+- 6) toUpperCase() Returns the uppercase form of the specified char value.
+- 7) toLowerCase() Returns the lowercase form of the specified char value.
+- 8) toString() Returns a String object representing the specified character valuethat is, a one-character string
+
 ####escape
 - \n Newline. Position the screen cursor at the beginning of the next line.
 - \t Horizontal tab. Move the screen cursor to the next tab stop.
@@ -145,3 +155,53 @@ Return Value :Welcome to Tutorialspoint.com
 得到sentence
 [^.!?]+
 
+
+####wrapper class
+- Predefined classes hv been defined to represent the primtive datatypes in the form of object
+is called as Wrapper Classes.
+
+```java
+class A {
+   public static void main(String[] args) {
+      String str="100";
+      //String str="hello"; //java.lang.NumberFormatException
+      Integer i=new Integer(str);
+      System.out.println(i);//Number formatException
+   }
+}
+```
+#####String to int(not Integer)
+```
+byte byteValue()--->The value of the specified number as a byte
+short shortValue()--->The value of the specified number as a short
+long longValue()--->The value of the specified number as a long
+int intValue()--->The value of the specified number as a int
+double doubleValue()--->The value of the specified number as a double
+float floatValue()--->The value of the specified number as a float
+```
+
+```java
+class A {
+   public static void main(String[] args) {
+      String str="100";
+      Integer i=new Integer(str);
+      System.out.println(i);//100
+      int d=i.intValue();
+      System.out.println(d);//100
+   }
+}
+```
+#####Integer.parseInt() Double.parseDouble() to convert String to int and doulbe
+- static method
+
+```java
+
+   public static void main(String args[]){
+      int x =Integer.parseInt("9");
+      double c = Double.parseDouble("5");
+      int b = Integer.parseInt("444",16);
+      System.out.println(x);
+      System.out.println(c);
+      System.out.println(b);
+   }
+```

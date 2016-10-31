@@ -114,9 +114,3 @@ class A extends B {
 }
 ```
 
-####escape
-- \n Newline. Position the screen cursor at the beginning of the next line.
-- \t Horizontal tab. Move the screen cursor to the next tab stop.
-- \r Carriage return. Position the screen cursor at the beginning of the current lineódo not advance to the next line. Any characters output after the carriagereturn overwrite the characters previously output on that line.
-- \\ Backslash. Used to print a backslash character.
-- \" Double quote. Used to print a double-quote character. For example
