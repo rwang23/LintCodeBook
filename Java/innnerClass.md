@@ -46,3 +46,32 @@ class A {
 	}
 }
 ```
+####在static innerclass里边 只能声明static method和static variable
+
+####LocalInnerclass
+- if we declare a class inside the methods is called as localinnerclass.
+- localinnerclass will not support private ,protected static keyword
+- localinner class support inheritance and inteface,abstracts..
+
+```java
+class A {
+	//if we declare inside the methods class is called as localinnerclass.
+	void funA() {
+		class LocalIn {
+	//we cannot create object of localinnerclass out side class main method
+			void funIn() {
+				System.out.println("inside funIn");
+			}
+		}//localinnerclass
+
+		LocalIn l = new LocalIn();
+		l.funIn();
+	}
+
+	public static void main(String[] args) {
+		A b = new A();
+		b.funA();
+		System.out.println("Hello World!");
+	}
+}
+```
