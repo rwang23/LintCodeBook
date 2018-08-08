@@ -18,7 +18,7 @@ This is the summary of my experience in LintCode.
 	* [Interface and abstract](Java/interface&abstract.md)
 	* [Inner class](Java/innerClass.md)
 	* [Equals](Java/equals.md)
-	* [Regular Expression.md](Java/RegularExpression.md)
+	* [Regular Expression](Java/RegularExpression.md)
 	* [JDBC](Java/JDBC.md)
 	* [Some other notes](Java/notes.md)
 
