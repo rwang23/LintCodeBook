@@ -8,6 +8,11 @@
 [Implementation](http://algorithms.tutorialhorizon.com/binary-min-max-heap/)
 
 
+##注意点
+- 如果更新(在maxQueue,数量增加了或者在minQueue数量减少了),一个已经在heap的数据,那么可以先把它删了,再重新把更新后的object放进去
+- 要实现support find and delete by key,这个时候可以用treemap
+
+
 ##Priority Queue
 [Java PriorityQueue Class Example](http://www.programcreek.com/2009/02/using-the-priorityqueue-class-example/)
 - PriorityQueue provides O(log(n)) time for the enqueing and dequeing methods (offer, poll, remove() and add); linear time for the remove(Object) and contains(Object) methods
