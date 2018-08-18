@@ -1,5 +1,6 @@
-##Valid Palindrome
-	Difficulty: Easy
+##Valid Palindromehttps://www.lintcode.com/problem/valid-palindrome/description
+[lintcode](https://www.lintcode.com/problem/valid-palindrome/description)
+
 	Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 
 	For example,
@@ -30,38 +31,45 @@ public boolean isValid(char c)
 s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 ```
 
-####代码
+####没用regular expression
+- 用了Character.isLetterOrDigit(c1)
+
 ```java
 public class Solution {
+    /**
+     * @param s: A string
+     * @return: Whether the string is a valid palindrome
+     */
     public boolean isPalindrome(String s) {
-        if (s == null) {
+        // write your code here
+        if (s == null || s.equals("")) {
             return true;
         }
+        int start = 0;
+        int end = s.length() - 1;
+        while (start < end) {
 
-        String normal = new String("abcdefghijklmnopqrstuvwxyz0123456789");
-        HashSet<Character> set = new HashSet<Character>();
-        for (int i = 0; i < normal.length(); i++) {
-            set.add(normal.charAt(i));
-        }
-
-        for (int i = 0, j = s.length() - 1; i < j; i++, j-- ) {
-            while (i < j && !set.contains(Character.toLowerCase(s.charAt(i)))) {
-                i++;
-            }
-            while (i < j && !set.contains(Character.toLowerCase(s.charAt(j)))) {
-                j--;
+            char c1 = s.charAt(start);
+            while (start < end && !Character.isLetterOrDigit(c1)) {
+                start++;
+                c1 = s.charAt(start);
             }
 
-            if (i >= j) {
-                return true;
+            char c2 = s.charAt(end);
+            while (start < end && !Character.isLetterOrDigit(c2)) {
+                end--;
+                c2 = s.charAt(end);
             }
 
-            if (Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j))) {
+            if (Character.toLowerCase(c1) != Character.toLowerCase(c2)) {
                 return false;
+            } else {
+                start++;
+                end--;
             }
         }
-        return true;
 
+        return true;
     }
 }
 ```

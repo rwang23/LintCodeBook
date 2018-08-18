@@ -73,6 +73,9 @@ This is the summary of my experience in LintCode.
 	* [Roman to Integer](String/Roman-to-Integer.md)
 	* [Palindrome Permutation](String/Palindrome-Permutation.md)
 	* [Valid Palindrome](String/Valid-Palindrome.md)
+	* [Shortest Palindrome](String/Shortest-Palindrome.md)
+	* [Longest Palindrome](String/LongestPalindrome.md)
+	* [Palindrome Pairs](String/Palindrome-Pairs.md)
 	* [Isomorphic Strings](String/Isomorphic-Strings.md)
 	* [Strobogrammatic Number](String/Strobogrammatic-Number.md)
 	* [Strobogrammatic Number II](String/Strobogrammatic-Number-II.md)
@@ -91,8 +94,7 @@ This is the summary of my experience in LintCode.
 	* [Basic Calculator](String/Basic-Calculator.md)
 	* [Basic Calculator II](String/Basic-Calculator-II.md)
 	* [Remove Duplicate Letters](String/Remove-Duplicate-Letters.md)
-	* [Shortest Palindrome](String/Shortest-Palindrome.md)
-	* [Palindrome Pairs](String/Palindrome-Pairs.md)
+
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
