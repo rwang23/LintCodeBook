@@ -98,6 +98,8 @@ This is the summary of my experience in LintCode.
 
 * [Binary Search](BinarySearch/README.md)
 	* [Binary Search](BinarySearch/BinarySearch.md)
+	* [Last Position of Target](BinarySearch/LastPositionofTarget.md)
+	* [Maximum Number in Mountain Sequence](BinarySearch/MaximumNumberinMountainSequence.md)
 	* [Search 2D Matrix](BinarySearch/Search-2D-Matrix.md)
 	* [Search 2D Matrix II](BinarySearch/Search-2D-MatrixII.md)
 	* [Find Peak Element](BinarySearch/FindPeakElement.md)
