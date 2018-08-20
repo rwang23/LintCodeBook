@@ -34,8 +34,40 @@ char ch = s2.charAt(4); // return 'r'
 // find index at first
 int index = s2.indexOf('r'); // return 4. if not found, return -1
 ```
-####substring O(n)
+###substring O(n)
 - 使用substring这个函数其实是O(n)时间复杂度,所以不要直接用,而是记录下Index就好了
+
+###Java 中String的引用方式
+```java
+public class Hello {
+    public static void main(String argv[]) {
+        String sa = "abc";
+        String sb = "abc";
+        if (sa == sb) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
+```
+
+   上面这段代码的结果是Yes。
+
+   程序运行的过程是这样，先在内存中创建字符串“abc”, 然后将地址的引用给了变量sa， 随后又把这个地址的引用给了sb。因此sa和sb引用的是同一段内存。
+   由于String类是一个不可更改的类。字符串不可被更改，所以这样的方式并不会产生问题。
+
+###其他还有很多常见的一些 String 的函数经常用到，如:
+
+```
+   substring, 取子字符串
+   startsWith, 判断一个字符串是否以某个字符串开头
+   endsWith, 判断一个字符串是否以某个字符串结尾
+   compareTo, 比较两个字符串的大小，一般用于按照字典序排序字符串
+   indexOf，查询一个字符串里另外一个字符串第一次出现的位置
+   lastIndexOf, 查询一个字符串里另外一个字符串出现的最后一个位置
+   format, 格式化字符串
+```
 
 ####StringBuilder insert
 insert(index, char)
