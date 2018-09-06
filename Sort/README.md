@@ -85,6 +85,8 @@ private void mergeSort(int[] A, int start, int end, int[] temp) {
 
 
 ##Different Sort
+- Merge sort 是稳定排序，如果有两个2，如果2有一个属性叫做先后，那么2先能排到2后前面
+- Quick sort是不稳定排序，无法实现上述
 ![Different Sort](../image/Sorting-Algorithms.png)
 
 
