@@ -1,5 +1,89 @@
 This is the review of subsets.
 
+##Quick sort
+
+```java
+public void quickSort(int[] A, int start, int end) {
+        if (start >= end) {
+            return;
+        }
+
+        int index = rand.nextInt(end - start + 1)  + start;
+        int pivot = A[index];
+        int left = start;
+        int right = end;
+        
+        while (left <= right) {
+            while (left <= right && A[left] < pivot) {
+                left ++;
+            }
+            while (left <= right && A[right] > pivot) {
+                right --;
+            }
+            
+            if (left <= right) {
+                int temp = A[left];
+                A[left] = A[right];
+                A[right] = temp;
+                
+                left ++;
+                right --;
+            }
+        }
+        // A[start... right] 
+        quickSort(A, start, right);
+        // A[left ... end]
+        quickSort(A, left, end);
+    }
+```
+##Merge sort recursion
+```java
+private void mergeSort(int[] A, int start, int end, int[] temp) {
+        if (start >= end) {
+            return;
+        }
+        
+        int left = start, right = end;
+        int mid = (start + end) / 2;
+
+        mergeSort(A, start, mid, temp);
+        mergeSort(A, mid+1, end, temp);
+        merge(A, start, mid, end, temp);
+    }
+    
+    private void merge(int[] A, int start, int mid, int end, int[] temp) {
+        int left = start;
+        int right = mid+1;
+        int index = start;
+        
+        // merge two sorted subarrays in A to temp array
+        while (left <= mid && right <= end) {
+            if (A[left] < A[right]) {
+                temp[index++] = A[left++];
+            } else {
+                temp[index++] = A[right++];
+            }
+        }
+        while (left <= mid) {
+            temp[index++] = A[left++];
+        }
+        while (right <= end) {
+            temp[index++] = A[right++];
+        }
+        
+        // copy temp back to A
+        for (index = start; index <= end; index++) {
+            A[index] = temp[index];
+        }
+    }
+```
+
+##Merge Sort non-recursion
+```java
+```
+
+
+
 ##Different Sort
 ![Different Sort](../image/Sorting-Algorithms.png)
 
