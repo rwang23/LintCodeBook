@@ -13,6 +13,15 @@ Queue<Integer> q = new LinkedList<Integer>();
 int qLen = q.size(); // get queue length
 ```
 
+###Java常用的队列包括如下几种：
+
+队列内部存储元素的方式，一般有两种，数组（array）和链表（linked list）。两者的最主要区别是：
+数组对随机访问有较好性能。
+链表对插入和删除元素有较好性能。
+
+- ArrayDeque：数组存储。实现Deque接口，而Deque是Queue接口的子接口，代表双端队列（double-ended queue）。
+- LinkedList：链表存储。实现List接口和Duque接口，不仅可做队列，还可以作为双端队列，或栈（stack）来使用。
+
 #### Methods
 
 | 0:0 | Throws exception | Returns special value |
