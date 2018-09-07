@@ -86,3 +86,24 @@ Map<T, Set<T>> = new HashMap<Integer, HashSet<Integer>>();
 - 计算所有出度，找出入度为0的，加入宽度有限搜索队列的queue里
 - 找出入度为0这些点的出口，减去1的入度，再把入读为0的加入queue
 - 直至队列为空
+
+```java
+Queue<T> queue = new LinkedList<>();
+Set<T> set = new HashSet<>();
+
+set.add(start);
+queue.offer(start);
+while (!queue.isEmpty()) {
+//添加了这个size就是分层遍历的宽搜，不然就是不分层
+    int size = queue.size();
+    for (int i = 0; i < size; i++) {
+        T head = queue.poll();
+        for (T neighbor : head.neighbors) {
+            if (!set.contains(neighbor)) {
+                set.add(neighbor);
+                queue.offer(neighbor);
+            }
+        }
+    }
+}
+```
