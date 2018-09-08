@@ -49,11 +49,21 @@ Java 中提供`PriorityQueue`类，该类是 Interface Queue 的另外一种实�
 ### Java
 
 Java 在1.6之后提供了 Deque 接口，既可使用`ArrayDeque`（数组）来实现，也可以使用`LinkedList`（链表）来实现。前者是一个数组外加首尾索引，后者是双向链表。
-
+```
+  Java常用的队列包括如下几种：
+  ArrayDeque：数组存储。实现Deque接口，而Deque是Queue接口的子接口，代表双端队列（double-ended queue）。
+  LinkedList：链表存储。实现List接口和Duque接口，不仅可做队列，还可以作为双端队列，或栈（stack）来使用。
+  C++中，使用<queue>中的queue模板类，模板需两个参数，元素类型和容器类型，元素类型必要，而容器类型可选，默认deque，可改用list（链表）类型。
+  Python中，使用collections.deque，双端队列。
+```
 ```
 Deque<Integer> deque = new ArrayDeque<Integer>();
 ```
 
+###Message queue
+- 常用的消息队列实现包括RabbitMQ，ZeroMQ, Kafka等等。
+[为什么要用消息队列](http://www.ywnds.com/?p=5791)
+[RabbitMQ 应用及原理](https://blog.csdn.net/whoamiyang/article/details/54954780)
 #### Methods
 
 <table>
