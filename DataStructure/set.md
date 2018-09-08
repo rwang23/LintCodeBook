@@ -3,6 +3,38 @@
 Set 是一种用于保存不重复元素的数据结构。常被用作测试归属性，故其查找的性能十分重要。
 [三种set比较](http://www.programcreek.com/2013/03/hashset-vs-treeset-vs-linkedhashset/)
 
+##HashSet
+- 无重复数据
+- 可以有空数据
+- 数据无序
+```java
+Set<String> set = new HashSet<>();
+for (int i = 1; i < 6; i ++) {
+	set.add(i + "");
+}
+set.add("1"); //不会重复写入数据
+set.add(null);//可以写入空数据
+Iterator<String> iter = set.iterator();
+while (iter.hasNext()) {
+	system.out.print(iter.next() + " ");//数据无序 
+}// 输出(无序)为 3 4 1 5 null 2
+```
+##TreeSet
+- 无重复数据
+- 不能有空数据
+- 数据有序
+```java
+Set<String> set = new TreeSet<>();
+for (int i = 1; i < 6; i ++) {
+	set.add(i + "");
+}
+set.add("1"); //不会重复写入数据
+//set.add(null);//不可以写入空数据
+Iterator<String> iter = set.iterator();
+while (iter.hasNext()) {
+	system.out.print(iter.next() + " ");//数据有序
+}// 输出(有序)为 1 2 3 4 5
+```
 ## 编程实现
 
 ### Java
@@ -14,7 +46,6 @@ Set<String> hash = new HashSet<String>();
 hash.add("billryan");
 hash.contains("billryan");
 ```
-
 在不允许重复元素时可当做哈希表来用。
 
 ##HashSet
