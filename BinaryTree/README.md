@@ -10,7 +10,7 @@
 - [book](https://rwang23.gitbooks.io/lintcodebook/content/BinaryTree/PreOrderTraversal.html)
 ###中序遍历（又叫中根遍历）
 - 首先遍历左子树，然后访问根结点，最后遍历右子树。遍历左、右子树时，仍按中序遍历。若二叉树为空则返回。简记为左根右。
-- [book]https://rwang23.gitbooks.io/lintcodebook/content/BinaryTree/InOrderTraversal.html
+- [book](https://rwang23.gitbooks.io/lintcodebook/content/BinaryTree/InOrderTraversal.html)
 
 ###后序遍历（又叫后根遍历）
 - 首先遍历左子树，然后遍历右子树，最后访问根结点。遍历左、右子树时，仍按后序遍历。若二叉树为空则返回。简记为左右根。
