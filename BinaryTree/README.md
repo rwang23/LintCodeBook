@@ -8,6 +8,7 @@
 ###先序遍历（又叫先根遍历、前序遍历）
 - 首先访问根结点，然后遍历左子树，最后遍历右子树。遍历左、右子树时，仍按先序遍历。若二叉树为空则返回。
 - [book](https://rwang23.gitbooks.io/lintcodebook/content/BinaryTree/PreOrderTraversal.html)
+
 ###中序遍历（又叫中根遍历）
 - 首先遍历左子树，然后访问根结点，最后遍历右子树。遍历左、右子树时，仍按中序遍历。若二叉树为空则返回。简记为左根右。
 - [book](https://rwang23.gitbooks.io/lintcodebook/content/BinaryTree/InOrderTraversal.html)
