@@ -34,3 +34,30 @@ public class Solution {
     }
 }
 ```
+####非递归
+```java
+public double myPow(double x, int n) {
+        // Write your code here
+        boolean isNegative = false;
+        if (n < 0) {
+            x = 1 / x;
+            isNegative = true;
+            n = -(n + 1); // Avoid overflow when n == MIN_VALUE
+        }
+
+        double ans = 1, tmp = x;
+
+        while (n != 0) {
+            if (n % 2 == 1) {
+                ans *= tmp;
+            }
+            tmp *= tmp;
+            n /= 2;
+        }
+        
+        if (isNegative) {
+            ans *= x;
+        }
+        return ans;
+    }
+```
