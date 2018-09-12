@@ -20,7 +20,7 @@
 
 ##思路
 - 找到最近接的两个,其中一个可以等于target
-- 然后两根指针比较,左边的左移,右边的右移,注意index不要越界
+- 然后两根指针比较,左边的左移,右边的右移,注意左右不要越界，如果左边到达了0，那么就全部添加右边的，反之一样
 
 
 ```java
@@ -33,44 +33,46 @@ public class Solution {
      */
     public int[] kClosestNumbers(int[] A, int target, int k) {
         // write your code here
-        int[] result = new int[k];
-        if (A.length == 0 || k == 0) {
-            return result;
+        
+        if (A.length == 0) {
+            return new int[0];
         }
-
+        
+        int[] result = new int[k];
         int start = 0;
         int end = A.length - 1;
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
-            if (A[mid] >= target) {
+            if (A[mid] > target) {
                 end = mid;
             } else {
                 start = mid;
             }
         }
-
-        int index = 0;
-        while (start >= 0 && end <= A.length - 1 && index < k) {
-
+        
+        for (int i = 0; i < k; i++) {
+            
+            if (start < 0) {
+                result[i] = A[end];
+                end++;
+                continue;
+            }
+            
+            if (end > A.length - 1) {
+                result[i] = A[start];
+                start--;
+                continue;
+            }
+            
             if (Math.abs(A[start] - target) <= Math.abs(A[end] - target)) {
-                result[index] = A[start];
+                result[i] = A[start];
                 start--;
             } else {
-                result[index] = A[end];
+                result[i] = A[end];
                 end++;
             }
-
-            index++;
-
-            while (start < 0 && index < k) {
-                result[index++] = A[end++];
-            }
-
-            while (end > A.length - 1 && index < k) {
-                result[index++] = A[start--];
-            }
         }
-
+        
         return result;
     }
 }
