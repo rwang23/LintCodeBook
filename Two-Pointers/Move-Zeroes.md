@@ -1,4 +1,5 @@
 ##Move Zeroes
+
 	Total Accepted: 78338 Total Submissions: 177188 Difficulty: Easy
 	Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
@@ -10,34 +11,64 @@
 
 ####思路
 - Two pointers
+- 这里双指针是两种思路
+- 一种就第一种解法，分别找0和非0，然后调换，要注意j<=i
+- 另一种解法，就是直接找非0，然后把整个数组直接调换过去
 
+####思路1
 ```java
 public class Solution {
+    /**
+     * @param nums: an integer array
+     * @return: nothing
+     */
     public void moveZeroes(int[] nums) {
+        // write your code here
         if (nums == null || nums.length == 0) {
             return;
         }
-
-        int size = nums.length;
-        int i = 0;
-        int j = 0;
-        while (i < size && j < size) {
-            while (i < size && nums[i] != 0) {
+        
+        int i = 0; //zero index
+        int j = 0; //non-zero index
+        
+        while (i < nums.length && j < nums.length) {
+            while (i < nums.length && nums[i] != 0) {
                 i++;
             }
-            j = i + 1;
-            while (j < size && nums[j] == 0) {
+            
+            while (j < nums.length && nums[j] == 0 || j <= i) {
                 j++;
             }
-
-            if (i >= size || j >= size) {
-                break;
+            
+            if (i == nums.length || j == nums.length) {
+                return;
             }
-
+            
             int temp = nums[i];
             nums[i] = nums[j];
             nums[j] = temp;
-
+        }
+    }
+}
+```
+####思路2
+```java
+public class Solution {
+    /**
+     * @param nums an integer array
+     * @return nothing, do this in-place
+     */
+    public void moveZeroes(int[] nums) {
+        // Write your code here
+        int left = 0, right = 0;
+        while (right < nums.length) {
+            if (nums[right] != 0) {
+                int temp = nums[left];
+                nums[left] = nums[right];
+                nums[right] = temp;
+                left++;
+            }
+            right++;
         }
     }
 }
