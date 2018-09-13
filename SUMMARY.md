@@ -235,6 +235,7 @@ This is the summary of my experience in LintCode.
 	* [Remove Duplicates from Sorted Array II](Two-Pointers/Remove-Duplicates-from-Sorted-ArrayII.md)
 	* [Two Sum](Two-Pointers/Two-Sum.md)
 	* [Two Sum II](Two-Pointers/Two-Sum-II.md)
+	* [Two Sum II](Two-Pointers/Two-Sum-III.md)
 	* [Trapping Rain Water](Two-Pointers/Trapping-Rain-Water.md)
 	* [Container With Most Water](Two-Pointers/Container-With-Most-Water.md)
 	* [The Smallest Difference](Two-Pointers/The-Smallest-Difference.md)
