@@ -13,6 +13,7 @@ public void quickSort(int[] A, int start, int end) {
         int left = start;
         int right = end;
         
+        //就当作自己的Pattern，这里用的<=，记住，免得以后边界错误
         while (left <= right) {
             while (left <= right && A[left] < pivot) {
                 left ++;
@@ -80,15 +81,52 @@ private void mergeSort(int[] A, int start, int end, int[] temp) {
 
 ##Merge Sort non-recursion
 ```java
+    public void sortIntegers2(int[] A) {
+        // write your code here
+        int[] temp = new int[A.length];
+        for (int size = 1; size < A.length; size = size * 2) {
+            for (int i = 0; i < A.length - 1; i = i + size * 2) {
+                int left = i;
+                int right = Math.min(i + size * 2 - 1, A.length - 1);
+                //这里mid容易出错，因为给right加了限制之后，忘记了给mid也加上这个限制，因为Mid也可以超下标
+                int mid = Math.min(left + size -1, A.length - 1);
+                merge(A, left, mid, right, temp);
+            }
+        }
+    }
+    
+    private void merge(int[] A, int start, int mid, int end, int[] temp) {
+        int left = start;
+        int right = mid+1;
+        int index = start;
+        
+        // merge two sorted subarrays in A to temp array
+        while (left <= mid && right <= end) {
+            if (A[left] < A[right]) {
+                temp[index++] = A[left++];
+            } else {
+                temp[index++] = A[right++];
+            }
+        }
+        while (left <= mid) {
+            temp[index++] = A[left++];
+        }
+        while (right <= end) {
+            temp[index++] = A[right++];
+        }
+        
+        // copy temp back to A
+        for (index = start; index <= end; index++) {
+            A[index] = temp[index];
+        }
+    }
+
 ```
-
-
 
 ##Different Sort
 - Merge sort 是稳定排序，如果有两个2，如果2有一个属性叫做先后，那么2先能排到2后前面
 - Quick sort是不稳定排序，无法实现上述
 ![Different Sort](../image/Sorting-Algorithms.png)
-
 
 
 ####Two Pointers Sort
@@ -113,6 +151,7 @@ private void mergeSort(int[] A, int start, int end, int[] temp) {
 ![Quick Sort Partitioning](../image/QuickSort-Partitioning.png)
 
 ####另一种写法 / 推荐用这一种
+
 ```java
     public void quickSort(int[] nums){
         if (nums == null || nums.length == 0) {
