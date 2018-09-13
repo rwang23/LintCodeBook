@@ -233,6 +233,7 @@ This is the summary of my experience in LintCode.
 	* [Remove Element](Two-Pointers/Remove-Element.md)
 	* [Remove Duplicates from Sorted Array](Two-Pointers/Remove-Duplicates-from-Sorted-Array.md)
 	* [Remove Duplicates from Sorted Array II](Two-Pointers/Remove-Duplicates-from-Sorted-ArrayII.md)
+	* [Remove Duplicate Numbers in Array](Two-Pointers/Remove-Duplicate-Numbers-in-Array.md)
 	* [Two Sum](Two-Pointers/Two-Sum.md)
 	* [Two Sum II](Two-Pointers/Two-Sum-II.md)
 	* [Two Sum II](Two-Pointers/Two-Sum-III.md)
