@@ -55,3 +55,41 @@ class Solution {
 };
 
 ```
+
+###Non Recusion
+- 利用二进制与多项式分解，[快速幂非递归实现](https://blog.csdn.net/include_not_found_/article/details/78238093)
+- 这个思想太赞了，好些这种涉及幂次的非递归写法，都可以利用这个二进制与多项式
+
+```java
+public class Solution {
+    /**
+     * @param a: A 32bit integer
+     * @param b: A 32bit integer
+     * @param n: A 32bit integer
+     * @return: An integer
+     */
+    public int fastPower(int a, int b, int n) {
+        // write your code here
+        if (n < 0) {
+            return -1;
+        }
+        
+        if (n == 0) {
+            return 1 % b;
+        }
+        
+        
+        long ans = 1;
+        long temp = a;
+        while (n > 0) {
+            if ((n & 1) != 0) {  // 等价于 if (n % 2 != 0)
+                ans = (ans  * temp) % b;
+            }
+           
+            temp = (temp * temp) % b;
+            n = n >> 1;  //右移一位相当于n/2(类比十进制来理解)
+        }   
+        return (int)ans % b;
+    }
+}
+```
