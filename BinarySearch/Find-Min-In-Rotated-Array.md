@@ -19,10 +19,10 @@
 - Binary Search
 
 ####思路
-- 解法来自九章，自己写的有点冗长，在while中循环的条件很重要
 - 通过判断与end的关系就可以，然而自己判断num[mid]与num[mid-1]，这样也导致了需要考虑mid-1的边界条件
+- 或者判断与start的关系，但是判断start如果是没有rotate的array而是一个纯sorted array就需要考虑另一种情况
 
-
+####判断与end关系
 ```java
 public class Solution {
     public int findMin(int[] num) {
@@ -40,6 +40,37 @@ public class Solution {
         } else {
             return num[end];
         }
+    }
+}
+```
+####判断与start关系
+```java
+public class Solution {
+    /**
+     * @param nums: a rotated sorted array
+     * @return: the minimum number in the array
+     */
+    public int findMin(int[] nums) {
+        // write your code here
+        if (nums.length == 0) {
+            return Integer.MIN_VALUE;
+        }
+        
+        if (nums[0] < nums[nums.length - 1]) {
+            return nums[0];
+        }
+        int start = 0;
+        int end = nums.length - 1;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] >= nums[0]) {
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+        
+        return (nums[start] > nums[end]) ? nums[end] : nums[start];
     }
 }
 ```
