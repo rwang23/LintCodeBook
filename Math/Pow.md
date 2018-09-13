@@ -36,7 +36,7 @@ public class Solution {
 ```
 ####非递归
 - 利用二进制与多项式分解，[快速幂非递归实现](https://blog.csdn.net/include_not_found_/article/details/78238093)
-- 这个思想太赞了，好些这种设计幂次的非递归写法，都可以利用这个二进制与多项式
+- 这个思想太赞了，好些这种涉及幂次的非递归写法，都可以利用这个二进制与多项式
 
 ```java
 public double myPow(double x, int n) {
