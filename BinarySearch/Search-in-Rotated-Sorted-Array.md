@@ -93,35 +93,39 @@ public class Solution {
 
 ```java
 public class Solution {
-    public int search(int[] nums, int target) {
-
-        if (nums.length == 0) {
+    /**
+     * @param A: an integer rotated sorted array
+     * @param target: an integer to be searched
+     * @return: an integer
+     */
+    public int search(int[] A, int target) {
+        // write your code here
+        if (A == null || A.length == 0) {
             return -1;
         }
-
+        
         int start = 0;
-        int end = nums.length - 1;
-        int last = nums[end];
-
-        while (start < end - 1) {
+        int end = A.length - 1;
+        while (start + 1 < end) {
             int mid = start + (end - start) / 2;
-            if (nums[mid] == target) {
+            if (A[mid] == target) {
                 return mid;
-            } else if (nums[mid] > last) {
-                if (nums[mid] > target) {
-                    if (target > last) {
+            }
+            if (target > A[A.length - 1]) {
+                if (A[mid] > A[A.length - 1]) {
+                    if (A[mid] > target) {
                         end = mid;
                     } else {
                         start = mid;
                     }
                 } else {
-                    start = mid;
-                }
-            } else if (nums[mid] <= last) {
-                if (nums[mid] > target) {
                     end = mid;
+                }
+            } else {
+                if (A[mid] > A[A.length - 1]) {
+                    start = mid;
                 } else {
-                    if (target > last) {
+                    if (A[mid] > target) {
                         end = mid;
                     } else {
                         start = mid;
@@ -129,13 +133,15 @@ public class Solution {
                 }
             }
         }
-
-        if (nums[start] == target) {
+        
+        if (A[start] == target) {
             return start;
-        } else if (nums[end] == target) {
+        }
+        
+        if (A[end] == target) {
             return end;
         }
-
+        
         return -1;
     }
 }
