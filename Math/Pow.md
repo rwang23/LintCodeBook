@@ -35,6 +35,8 @@ public class Solution {
 }
 ```
 ####非递归
+- 利用二进制与多项式分解，[快速幂非递归实现](https://blog.csdn.net/include_not_found_/article/details/78238093)
+
 ```java
 public double myPow(double x, int n) {
         // Write your code here
