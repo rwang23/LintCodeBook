@@ -30,7 +30,7 @@ public void quickSort(int[] A, int start, int end) {
                 right --;
             }
         }
-        // A[start... right] 
+        // A[start... right] 这里用的right的原因是right已经比left小了，用right不会重复，下面用left同理
         quickSort(A, start, right);
         // A[left ... end]
         quickSort(A, left, end);
