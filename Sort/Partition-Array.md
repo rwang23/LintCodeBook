@@ -29,25 +29,41 @@ Two Pointers Sort Array
 
 ```java
 public class Solution {
-	/**
-     *@param nums: The integer array you should partition
-     *@param k: As description
-     *return: The index after partition
+    /**
+     * @param nums: The integer array you should partition
+     * @param k: An integer
+     * @return: The index after partition
      */
     public int partitionArray(int[] nums, int k) {
-        int i = 0, j = nums.length - 1;
-        while (i <= j) {
-            while (i <= j && nums[i] < k) i++;
-            while (i <= j && nums[j] >= k) j--;
-            if (i <= j) {
-                int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = temp;
-                i++;
-                j--;
+        // write your code here
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+
+        int left = 0;
+        int right = nums.length - 1;
+
+        while (left <= right) {
+            while (left <= right && nums[left] < k) {
+                left++;
+            }
+
+            while (left <= right && nums[right] >= k) {
+                right--;
+            }
+
+            if (left <= right) {
+                swap(nums, left++, right--);
             }
         }
-        return i;
+
+        return left;
+    }
+
+    public void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
     }
 }
 
