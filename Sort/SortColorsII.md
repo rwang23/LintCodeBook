@@ -20,6 +20,8 @@ A rather straight forward solution is a two-pass algorithm using counting sort. 
 
 
 ####思路
+- 参考此题在双指针下的做法
+	* [Sort Color II](Two-Pointers/Sort-Color-II.md)
 - 跟sort color类似，用两个指针分别表针前后
 - 先梳理最小值与最大值，然后次小值与次大值，依次类推
 

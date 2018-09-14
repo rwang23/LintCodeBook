@@ -22,6 +22,11 @@
 
 ####思路
 - Two Sum变形，多了一个循环
+- 这个List里边的contains,检查Integer,String,List<Integer>这种的时候,是比较的value,而不是地址
+- list1.equals(list2)
+	From the javadoc:
+
+	Compares the specified object with this list for equality. Returns true if and only if the specified object is also a list, both lists have the same size, and all corresponding pairs of elements in the two lists are equal.
 
 ```java
 public class Solution {

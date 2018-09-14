@@ -1,5 +1,14 @@
 ##Comparator用法
 
+
+####Compare
+- 是比较两个Object是否相同的办法,需要overwrite hashCode()
+- list1.equals(list2), 这个如果元素相等的话,是相等的,虽然两个list内存地址不同
+
+  	From the javadoc:
+
+  	Compares the specified object with this list for equality. Returns true if and only if the specified object is also a list, both lists have the same size, and all corresponding pairs of elements in the two lists are equal.
+
 ####CompareTo
 
     a compareTo() method that will define the order of two instances of a given object. Specifically, our compareTo() method needs to return an integer as follows:
