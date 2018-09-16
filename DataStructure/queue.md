@@ -49,6 +49,7 @@ Java 中提供`PriorityQueue`类，该类是 Interface Queue 的另外一种实�
 
 - enqueuing and dequeuing: `offer`, `poll`, `remove()` and `add` - O(\log n)
 - Object: `remove(Object)` and `contains(Object)` - O(n)
+- 自己实现的heap如果加上hashmap,可以实现remove O(logn) contains O(1)
 - retrieval: `peek`, `element`, and `size` - O(1).
 
 ## Deque - 双端队列
