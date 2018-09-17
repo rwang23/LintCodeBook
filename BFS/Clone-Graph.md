@@ -27,6 +27,7 @@
 - BFS = Queue + HashMap
 - Queue是abstract 所以 Queue<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
 - 这道题是深拷贝，深拷贝的意思就是单独再复制出来，新的跟旧的在内存地址上没有关联
+- 除了直接BFS和DFS，还可以通过serialize 再 deserialize的方法来做
 
 ```java
 /**
