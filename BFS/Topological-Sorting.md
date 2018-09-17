@@ -32,7 +32,7 @@ Can you do it in both BFS and DFS?
 ####思路
 - BFS方法
 
-
+####一刷
 ```java
 /**
  * Definition for Directed graph.
@@ -90,7 +90,77 @@ public class Solution {
     }
 }
 ```
+####二刷
+- 引入了count，最后比较results和count的大小，这样可以避免如果在图中出现了环的情况，那么其实就无解
 
+```java
+/**
+ * Definition for Directed graph.
+ * class DirectedGraphNode {
+ *     int label;
+ *     ArrayList<DirectedGraphNode> neighbors;
+ *     DirectedGraphNode(int x) { label = x; neighbors = new ArrayList<DirectedGraphNode>(); }
+ * };
+ */
+
+public class Solution {
+    /*
+     * @param graph: A list of Directed graph node
+     * @return: Any topological order for the given graph.
+     */
+    public ArrayList<DirectedGraphNode> topSort(ArrayList<DirectedGraphNode> graph) {
+        // write your code here
+        if (graph == null) {
+            return graph;
+        }
+        
+        Map<DirectedGraphNode, Integer> indegrees = new HashMap<DirectedGraphNode, Integer>();
+        
+        for (DirectedGraphNode node : graph) {
+            indegrees.put(node, 0);
+        }
+        
+        int count = 0;
+        for (DirectedGraphNode node : graph) { 
+            for (DirectedGraphNode neighbor : node.neighbors) {
+                int indegree = indegrees.get(neighbor);
+                indegrees.put(neighbor, indegree + 1);
+            }
+            count++;
+        }
+        
+        Queue<DirectedGraphNode> queue = new LinkedList<DirectedGraphNode>();
+        ArrayList<DirectedGraphNode> results = new ArrayList<DirectedGraphNode>();
+
+        for (Map.Entry<DirectedGraphNode, Integer> entry : indegrees.entrySet()) {
+            DirectedGraphNode node = entry.getKey();
+            int indegree = entry.getValue();
+            if (indegree == 0) {
+                queue.offer(node);
+            }
+        }
+        
+        while (!queue.isEmpty()) {
+            DirectedGraphNode cur = queue.poll();
+            results.add(cur);
+            
+            for (DirectedGraphNode neighbor : cur.neighbors) {
+
+                int indegree = indegrees.get(neighbor) - 1;
+                indegrees.put(neighbor, indegree);
+                if (indegree == 0) {
+                    queue.offer(neighbor);
+                }
+            }
+        }
+        
+        if (results.size() != count) {
+            return new ArrayList<DirectedGraphNode>();
+        }
+        return results;
+    }
+}
+```
 ####DFS方法
 - 跟BFS一样
 - 先找indegree
