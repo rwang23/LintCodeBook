@@ -27,41 +27,55 @@ Binary Tree Binary Tree Traversal Facebook Google
 
 ```java
 /**
- * Definition for a binary tree node.
+ * Definition of TreeNode:
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
  * }
  */
+
 public class Solution {
+    /**
+     * @param root: the root of the binary tree
+     * @return: all root-to-leaf paths
+     */
     public List<String> binaryTreePaths(TreeNode root) {
+        // write your code here
+        List<String> results = new ArrayList<String>(0);
         if (root == null) {
-            return new ArrayList<String>();
+            return results;
         }
-
-        List<String> result = new ArrayList<String>();
-        StringBuilder string = new StringBuilder();
-        dfs(root, result, string);
-        return result;
+        StringBuilder sb = new StringBuilder();
+        divide(root, sb, results);
+        
+        return results;
+        
     }
-
-    public void dfs(TreeNode root, List<String> result, StringBuilder string) {
-        if (root == null) {
-            return;
-        }
-        string = new StringBuilder(string);
+    
+    public void divide(TreeNode root, StringBuilder sb, List<String> results) {
+        
         if (root.left == null && root.right == null) {
-            string.append(root.val);
-            result.add(new String(string.toString()));
+            sb.append(root.val);
+            String result = new String(sb.toString());
+            results.add(result);
             return;
         }
-
-        string.append(root.val);
-        string.append("->");
-        dfs(root.left, result, string);
-        dfs(root.right, result, string);
+        
+        sb.append(root.val);
+        sb.append("->");
+        if (root.left != null) {
+            StringBuilder sbLeft = new StringBuilder(sb);
+             divide(root.left, sbLeft, results);
+        }
+        
+        if (root.right != null) {
+            StringBuilder sbRight = new StringBuilder(sb);
+            divide(root.right, sbRight, results);
+        }
     }
 }
 ```
