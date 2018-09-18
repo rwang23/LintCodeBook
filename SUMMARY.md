@@ -406,6 +406,7 @@ This is the summary of my experience in LintCode.
 	* [Topological Sorting](BFS/Topological-Sorting.md)
 	* [Course Schedule](BFS/Course-Schedule.md)
 	* [Course Schedule II](BFS/Course-Schedule-II.md)
+	* [Serialize and Deserialize Binary Tree](BFS/Serialize-Deserialize-Binary-Tree.md)
 	* [Alien Dictionary](BFS/Alien-Dictionary.md)
 	* [Minimum Height Trees](BFS/Minimum-Height-Trees.md)
 	* [Mystical Lexical Order](BFS/Mystical-Lexical-Order.md)
