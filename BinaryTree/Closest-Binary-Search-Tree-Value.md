@@ -10,6 +10,7 @@
 ####思路
 - 分治(因为是BST所以每次保留一边就行)
 - O(logn)
+- BST不用一来就准备利用中序遍历，也可以根据二分呀，每次舍弃一半子树，会更快
 
 ```java
 /**
@@ -49,40 +50,50 @@ public class Solution {
 ####非递归
 ```java
 /**
- * Definition for a binary tree node.
+ * Definition of TreeNode:
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
  * }
  */
-public class Solution {
-    public int closestValue(TreeNode root, double target) {
-        if (root == null) {
-            return -1;
-        }
 
-        double diff = Math.abs((double)root.val - target);
-        double minDiff = diff;
-        int res = root.val;
-        while (root != null) {
-            if (target == (double)root.val) {
-                return root.val;
-            } else if (target > (double)root.val) {
-                root = root.right;
-            } else {
-                root = root.left;
+public class Solution {
+    /**
+     * @param root: the given BST
+     * @param target: the given target
+     * @return: the value in the BST that is closest to the target
+     */
+    double min = Double.MAX_VALUE; 
+    int find = 0;
+    
+    
+    public int closestValue(TreeNode root, double target) {
+        // write your code here
+        if (root == null) {
+            return 0;
+        }
+        
+        TreeNode cur = root;
+        while (cur != null) {
+            if (Math.abs(cur.val - target) < min) {
+                min = Math.abs(cur.val - target);
+                find = cur.val;
             }
-            if (root != null) {
-                diff = Math.abs((double)root.val - target);
-                minDiff = Math.min(diff, minDiff);
-                if (diff == minDiff) {
-                    res = root.val;
-                }
+            
+            if (target - cur.val == 0.0) {
+                return cur.val;
+            } else if (target - cur.val > 0.0) {
+                cur = cur.right;
+            } else {
+                cur = cur.left;
             }
         }
-        return res;
+        
+        return find;
     }
 }
 ```
