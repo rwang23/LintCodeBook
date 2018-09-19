@@ -128,6 +128,7 @@ This is the summary of my experience in LintCode.
 	* [Two Sum in BST](BinaryTree/TwoSuminBST.md)
 	* [Closest Binary Search Tree Value](BinaryTree/Closest-Binary-Search-Tree-Value.md)
 	* [Closest Binary Search Tree Value II](BinaryTree/Closest-Binary-Search-Tree-Value-II.md)
+	* [Closest Binary Search Tree Value III](BinaryTree/Closest-Binary-Search-Tree-Value-III.md)
 	* [Pre Order Traversal](BinaryTree/PreOrderTraversal.md)
 	* [In Order Traversal](BinaryTree/InOrderTraversal.md)
 	* [Post Order Traversal](BinaryTree/PostOrderTraversal.md)
