@@ -155,6 +155,7 @@ This is the summary of my experience in LintCode.
 	* [Binary Tree Longest Consecutive Sequence](BinaryTree/Binary-Tree-Longest-Consecutive-Sequence.md)
 	* [Binary Search Tree Iterator](BinaryTree/BST-Iterator.md)
 	* [Lowest Common Ancestor](BinaryTree/Lowest-Common-Ancestor.md)
+	* [Lowest Common Ancestor III](BinaryTree/Lowest-Common-Ancestor-III.md)
 	* [Inorder Successor In BST](BinaryTree/Inorder-Successor-In-BST.md)
 	* [Balanced Binary Tree](BinaryTree/BalancedBinaryTree.md)
 	* [Tweaked Identical Binary Tree](BinaryTree/Tweaked-Identical-Binary-Tree.md)
