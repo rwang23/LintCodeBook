@@ -111,3 +111,49 @@ public class Solution {
     }
 }
 ```
+
+###解法2
+```java
+public class Solution {
+    /*
+     * @param root: The root of the binary tree.
+     * @param A: A TreeNode
+     * @param B: A TreeNode
+     * @return: Return the LCA of the two nodes.
+     */
+    private TreeNode LCA = null;
+    public TreeNode lowestCommonAncestor3(TreeNode root, TreeNode A, TreeNode B) {
+        // write your code here
+        helper(root, A, B);
+        return LCA;
+    }
+    
+    private ResultType helper(TreeNode root, TreeNode A, TreeNode B) {
+        if (root == null) {
+            return new ResultType(false, false);
+        }
+        
+        ResultType left = helper(root.left, A, B);
+        ResultType right = helper(root.right, A, B);
+        ResultType result = new ResultType(false, false);
+        
+        result.hasA = left.hasA || right.hasA || root == A;
+        result.hasB = left.hasB || right.hasB || root == B;
+        
+        if (LCA == null && result.hasA && result.hasB) {
+            LCA = root;
+        }
+        
+        return result;
+    }
+}
+
+class ResultType {
+    boolean hasA, hasB;
+    ResultType(boolean hasA, boolean hasB) {
+        this.hasA = hasA;
+        this.hasB = hasB;
+    }
+}
+```
+
