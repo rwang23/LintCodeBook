@@ -7,11 +7,11 @@
 ###Example
   For the following binary tree:
 
-    4
-   / \
-  3   7
-     / \
-    5   6
+        4
+       / \
+      3   7
+         / \
+        5   6
   LCA(3, 5) = 4
 
   LCA(5, 6) = 7
@@ -22,11 +22,17 @@
   node A or node B may not exist in tree.
   
   
-###思路
+###思路1
 - 这道题跟LCA I 的区别就是 A，B可能不存在在树中，
 - 所以可以用一个global variable 来记录结果， 或者建立一个resultType来作为return，这样就能判断出是不是想要的结果
 - TreeNode 在树中一定都是unique的，自己写的时候考虑了不unique的情况，但是根本不会发生，位置已经决定了一定是unique的，
 - 如果是找只是value相等的情况，那么就一定要考虑非unique的情况
+
+###思路2
+- 使用非递归，可以level traversal，每次记录找到点的父节点，并且记录找到A或者B的flag
+
+###思路3
+- 使用resultType
 
 ####解法
 - 使用了global variable
