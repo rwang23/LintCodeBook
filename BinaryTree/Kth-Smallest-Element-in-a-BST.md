@@ -52,44 +52,50 @@ public class Solution {
 ```
 
 ####另一个O(n)的思路
-- 不知道为什么不做memorization更快,只要1ms,上边O(k)要2ms,做了memorizasion要5ms
+- 算法思想类似于 Quick Select。
+- 分别算出每个节点的子节点总数，然后找第k个在左子树还是右子树，然后这样循环下去
+- 本来看似是log(k)，但是在最开始统计节点子节点总数的时候是O(n)
+- 这样做的优点就满足follow up，每子节点数量已经统计过了，每次插入新值得时候，对父母节点保存的子节点数+1就可以。不需要再次统计了，所以之后的时间复杂度就是log(k)
+
 
 ```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 public class Solution {
-    Map<TreeNode, Integer> map = new HashMap<TreeNode, Integer>();
+    /**
+     * @param root: the given BST
+     * @param k: the given k
+     * @return: the kth smallest element in BST
+     */
     public int kthSmallest(TreeNode root, int k) {
-        int count = countNodes(root.left);
-        if (k <= count) {
-            return kthSmallest(root.left, k);
-        } else if (k > count + 1) {
-            return kthSmallest(root.right, k-1-count); // 1 is counted as current node
-        }
-
-        return root.val;
+        Map<TreeNode, Integer> numOfChildren = new HashMap<>();
+        countNodes(root, numOfChildren);
+        return quickSelectOnTree(root, k, numOfChildren);
     }
-
-    public int countNodes(TreeNode root) {
+    
+    private int countNodes(TreeNode root, Map<TreeNode, Integer> numOfChildren) {
         if (root == null) {
             return 0;
         }
-        if (map.containsKey(root)) {
-            return map.get(root);
+        
+        int left = countNodes(root.left, numOfChildren);
+        int right = countNodes(root.right, numOfChildren);
+        numOfChildren.put(root, left + right + 1);
+        return left + right + 1;
+    }
+    
+    private int quickSelectOnTree(TreeNode root, int k, Map<TreeNode, Integer> numOfChildren) {
+        if (root == null) {
+            return -1;
         }
-
-        int left = countNodes(root.left);
-        int right =  countNodes(root.right);
-        int sum = left + right + 1;
-        map.put(root, sum);
-        return sum;
+        
+        int left = root.left == null ? 0 : numOfChildren.get(root.left);
+        if (left >= k) {
+            return quickSelectOnTree(root.left, k, numOfChildren);
+        }
+        if (left + 1 == k) {
+            return root.val;
+        }
+        
+        return quickSelectOnTree(root.right, k - left - 1, numOfChildren);
     }
 }
 ```
