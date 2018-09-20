@@ -27,7 +27,7 @@
 ####Tags Expand
 - Backtracking Array
 
-####思路
+####思路1
 - 标准DFS题
 - 易错点在于pos的传递
 - 因为提供的数组可能存在duplicate number,所以在挑选的时候,因为前一个数已经无限次使用过了,所以不需要duplicate number了,所以跳过
@@ -69,4 +69,61 @@ public class Solution {
     }
 }
 
+```
+
+
+###思路2
+- 在传递进DFS的时候，已经完成了去重，之后再DFS里边的条件就好写了
+
+```java
+public class Solution {
+    /**
+     * @param candidates: A list of integers
+     * @param target: An integer
+     * @return: A list of lists of integers
+     */
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        // write your code here
+        List<List<Integer>> results = new ArrayList<List<Integer>>();
+        List<Integer>  combination = new ArrayList<Integer>();
+        
+        if (candidates == null || candidates.length == 0) {
+            return results;
+        }
+        
+        Arrays.sort(candidates);
+        List<Integer> candidateList = new ArrayList<Integer>();
+        
+        for (int i = 0; i < candidates.length; i++) {
+            if (i >= 1 && candidates[i] == candidates[i - 1]) {
+                continue;
+            }
+            candidateList.add(candidates[i]);
+        }
+        
+        dfs(results, combination, candidateList, target, 0);
+        
+        return results;
+        
+    }
+    
+    public void dfs(List<List<Integer>> results, List<Integer> combination, List<Integer> candidateList, int target, int index) {
+        
+        if (target < 0) {
+            return;
+        }
+        
+        if (target == 0) {
+            results.add(new ArrayList<Integer>(combination));
+            return;
+        }
+        
+        for (int i = index; i < candidateList.size(); i++) {
+            int element = candidateList.get(i);
+            combination.add(element);
+            dfs(results, combination, candidateList, target - element, i);
+            combination.remove(combination.size() - 1);
+        }
+    }
+}
 ```
