@@ -365,6 +365,7 @@ This is the summary of my experience in LintCode.
 	* [Building Outline](DataStructureProblem/Building-Outline.md)
 
 * [DFS](DFS/README.md)
+	* [Split String](DFS/Split-String.md)
 	* [K Sum II](DFS/kSumII.md)
 	* [Combinations](DFS/Combinations.md)
 	* [Combination Sum](DFS/Combination-Sum.md)
