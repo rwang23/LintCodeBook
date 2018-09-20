@@ -77,3 +77,67 @@ public class Solution {
 
 ```
 
+###先生成palindrome的数组，到时候判断不用再去计算一次，省时间
+```java
+public class Solution {
+    /*
+     * @param s: A string
+     * @return: A list of lists of string
+     */
+    public List<List<String>> partition(String s) {
+        // write your code here
+        List<List<String>> results = new ArrayList<List<String>>();
+        List<String> result = new ArrayList<String>();
+        if (s == null || s.equals("")) {
+            results.add(result);
+            return results;
+        }
+        
+        boolean[][] isPalindrome = buildMap(String string);
+        dfs(results, result, isPalindrome, s, 0);
+        
+        return results;
+        
+        
+    }
+    
+    public void dfs(List<List<String>> results, List<String> result, boolean[][] isPalindrome, String string, int index) {
+        
+        if (index == string.length) {
+            List<String> cur = new ArrayList<String>(result);
+            results.add(cur);
+            return;
+        }
+        
+        for (int len = 1; len + index <= string.length(); len++) {
+            if (isPalindrome(index, index + len - 1)) {
+                String curString = string.substring(index, index + len); 
+                result.add(curString);
+                dfs(results, result, isPalindrome, string, index + len);
+                result.remove(result.size() - 1);
+            }
+        }
+        
+    }
+    
+    public boolean[][] buildMap(String string) {
+        int size = string.length();
+        boolean[][] isPalindrome = new boolean[size][size];
+        
+        for (int i = 0; i < size; i++) {
+            if (i + 1 < size) {
+                isPalindrome[i][i] = (string.charAt(i) == string.charAt(i + 1));
+            }
+            isPalindrome[i][i] = true;
+        }
+        
+        for (int i = 0; i < size; i++) {
+            for (int j = i + 2; j < size; j++) {
+                isPalindrome[i][j] = isPalindrome[i + 1][j - 1] && (string.charAt(i + 1) == string.charAt(j - 1));
+            }
+        }
+        
+        return isPalindrome;
+    }
+}
+```
