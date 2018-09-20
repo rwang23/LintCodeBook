@@ -78,6 +78,17 @@ public class Solution {
 ```
 
 ###先生成palindrome的数组，到时候判断不用再去计算一次，省时间
+- 注意生成palindrom的数组的时候的动态规划
+- state： f[i][j] i到j的substring是不是palindrome
+- fcuntion:  f[i][j] = f[i+1][j-1] && char(i) == char(j)
+- initial: f[i][i] = true, f[i][i + 1] = char(i) == char(i + 1)
+- answer: f[i][j]
+-  注意下面的顺序，先每次+2地走进行遍历，再+3走进行遍历，而不是先开始遍历，再+2，+3
+```java
+	 for (int len = 2; len < size; len++) {
+         	for (int i = 0; i + len < size; i++) 
+```
+##解法
 ```java
 public class Solution {
     /*
@@ -131,11 +142,14 @@ public class Solution {
             isPalindrome[i][i] = true;
         }
         
-        for (int i = 0; i < size; i++) {
-            for (int j = i + 2; j < size; j++) {
+        for (int len = 2; len < size; len++) {
+            for (int i = 0; i + len < size; i++) {
+                int j = i + len;
                 isPalindrome[i][j] = isPalindrome[i + 1][j - 1] && (string.charAt(i) == string.charAt(j));
+                
             }
         }
+
         return isPalindrome;
     }
 }
