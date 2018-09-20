@@ -22,26 +22,32 @@ public class Solution {
      * @return: All the combinations of k numbers out of 1..n
      */
     public List<List<Integer>> combine(int n, int k) {
-		// write your code here
-		List<List<Integer>> result = new ArrayList<List<Integer>>();
-        List<Integer> combo = new ArrayList<Integer>();
-        dfs(result, combo, 1, n, k);
-        return result;
+        // write your code here
+        List<List<Integer>> results = new ArrayList<List<Integer>>();
+        List<Integer> combination = new ArrayList<Integer>();
+        if (n <= 0 || n < k) {
+            results.add(combination);
+            return results;
+        }
+        
+        dfs(results, combination, n, k, 1);
+        return results;
     }
-
-    public void dfs(List<List<Integer>> result, List<Integer> combo, int pos, int n, int k) {
-        if (combo.size() == k) {
-            result.add( new ArrayList<Integer>(combo));
-        } else if (combo.size() > k || pos > n) {
+    
+    public void dfs(List<List<Integer>> results, List<Integer> combination, int n, int k, int start) {
+        
+        if (k == 0) {
+            List<Integer> cur = new ArrayList<Integer>(combination);
+            results.add(cur);
             return;
         }
-
-        for (int i = pos; i <= n; i++) {
-            combo.add(i);
-            dfs(result, combo, i + 1, n, k);
-            combo.remove(combo.size() - 1);
+        
+        for (int i = start; i <= n; i++) {
+            
+            combination.add(i);
+            dfs(results, combination, n, k - 1, i + 1);
+            combination.remove(combination.size() - 1);
         }
     }
 }
-
 ```
