@@ -93,7 +93,7 @@ public class Solution {
             return results;
         }
         
-        boolean[][] isPalindrome = buildMap(String string);
+        boolean[][] isPalindrome = buildMap(s);
         dfs(results, result, isPalindrome, s, 0);
         
         return results;
@@ -103,14 +103,14 @@ public class Solution {
     
     public void dfs(List<List<String>> results, List<String> result, boolean[][] isPalindrome, String string, int index) {
         
-        if (index == string.length) {
+        if (index == string.length()) {
             List<String> cur = new ArrayList<String>(result);
             results.add(cur);
             return;
         }
         
         for (int len = 1; len + index <= string.length(); len++) {
-            if (isPalindrome(index, index + len - 1)) {
+            if (isPalindrome[index][index + len - 1]) {
                 String curString = string.substring(index, index + len); 
                 result.add(curString);
                 dfs(results, result, isPalindrome, string, index + len);
@@ -126,17 +126,16 @@ public class Solution {
         
         for (int i = 0; i < size; i++) {
             if (i + 1 < size) {
-                isPalindrome[i][i] = (string.charAt(i) == string.charAt(i + 1));
+                isPalindrome[i][i + 1] = (string.charAt(i) == string.charAt(i + 1));
             }
             isPalindrome[i][i] = true;
         }
         
         for (int i = 0; i < size; i++) {
             for (int j = i + 2; j < size; j++) {
-                isPalindrome[i][j] = isPalindrome[i + 1][j - 1] && (string.charAt(i + 1) == string.charAt(j - 1));
+                isPalindrome[i][j] = isPalindrome[i + 1][j - 1] && (string.charAt(i) == string.charAt(j));
             }
         }
-        
         return isPalindrome;
     }
 }
