@@ -59,5 +59,52 @@ public class Solution {
 
 
 ####Non-recursion
-- 记忆
+- 使用宽度优先搜索算法的做法（BFS）
+- 一层一层的找到所有的子集
+- [九章](https://www.jiuzhang.com/solution/subsets/)
 
+```
+[] 
+[1] [2] [3]
+[1, 2] [1, 3] [2, 3]
+[1, 2, 3]
+```
+
+```java
+public class Solution {
+    
+    /*
+     * @param nums: A set of numbers
+     * @return: A list of lists
+     */
+    public List<List<Integer>> subsets(int[] nums) {
+        // List vs ArrayList （google）
+        List<List<Integer>> results = new LinkedList<>();
+        
+        if (nums == null) {
+            return results; // 空列表
+        }
+        
+        Arrays.sort(nums);
+        
+        // BFS
+        Queue<List<Integer>> queue = new LinkedList<>();
+        queue.offer(new LinkedList<Integer>());
+        
+        while (!queue.isEmpty()) {
+            List<Integer> subset = queue.poll();
+            results.add(subset);
+            
+            for (int i = 0; i < nums.length; i++) {
+                if (subset.size() == 0 || subset.get(subset.size() - 1) < nums[i]) {
+                    List<Integer> nextSubset = new LinkedList<Integer>(subset);
+                    nextSubset.add(nums[i]);
+                    queue.offer(nextSubset);
+                }
+            }
+        }
+        
+        return results;
+    }
+}
+```
