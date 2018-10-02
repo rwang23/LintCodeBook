@@ -395,7 +395,7 @@ This is the summary of my experience in LintCode.
 	* [Generate Parentheses](DFS/Generate-Parentheses.md)
 	* [Reconstruct Itinerary](DFS/Reconstruct-Itinerary.md)
 	* [Expression Add Operators](DFS/Expression-Add-Operators.md)
-
+	* [Wildcard Matching](DFS/Wildcard-Matching.md)
 
 * [Memorization](Memorization/README.md)
 	* [Longest Increasing Path in a Matrix](Memorization/Longest-Increasing-Path-in-a-Matrix.md)
