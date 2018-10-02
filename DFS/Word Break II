@@ -78,6 +78,10 @@ public class Solution {
 ```
 
 ###记忆化搜索
+- 拆分问题，每个大string都由若干个小string组成，所以如果能构成每个小string，那么合在一起就能构成大string
+- 这样就可以开始记忆化记录
+- 记录每一个子string，需要构成的来自于dict的单词
+- 所以此时for循环，不再是循环每个单词，而是循环每个index，看0-index 和index+1 - end的这两个子string是如何构成的
 
 ```java
 public class Solution {
