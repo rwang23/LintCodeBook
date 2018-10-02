@@ -1,0 +1,78 @@
+##Word Break II
+
+  Given a string s and a dictionary of words dict, 
+  add spaces in s to construct a sentence where each word is a valid dictionary word.
+
+  Return all such possible sentences.
+
+##Example
+  Gieve s = lintcode,
+  dict = ["de", "ding", "co", "code", "lint"].
+
+  A solution is ["lint code", "lint co de"].
+  
+  
+##思路
+- DFS，但是跑到96% 超内存了
+- 应该使用记忆化搜索减小内存使用量
+
+###超内存
+```java
+public class Solution {
+    /*
+     * @param s: A string
+     * @param wordDict: A set of words.
+     * @return: All possible sentences.
+     */
+    public List<String> wordBreak(String s, Set<String> wordDict) {
+        // write your code here
+        List<String> results = new ArrayList<String>();
+        
+        if (s == null || s.length() == 0 || wordDict.isEmpty()) {
+            return results;
+        }
+        
+        List<String> words = new ArrayList<String>(wordDict);
+        Collections.sort(words);
+        dfs(results, words, new StringBuilder(""), s, 0);
+        
+        return results;
+        
+    }
+    
+    public void dfs(List<String> results, List<String> words, StringBuilder sb, String s, int startIndex) {
+        
+        if (startIndex > s.length()) {
+            return;
+        }
+        
+        if (startIndex == s.length()) {
+            StringBuilder sbResult = new StringBuilder(sb);
+            sbResult.setLength(sbResult.length() - 1);
+            results.add(sbResult.toString());
+            return;
+        }
+            
+        for (String word : words) {
+            if (word.equals("")) {
+                return;
+            }
+            int endIndex = startIndex + word.length();
+            if (isMatch(s, startIndex, endIndex, word)) {
+                sb.append(word);
+                sb.append(" ");
+                dfs(results, words, sb, s, endIndex);
+                sb.setLength(sb.length() - word.length() - 1);
+            }
+        }
+        
+    }
+    
+    public boolean isMatch(String s, int index1, int index2, String match) {
+        if (index2 > s.length()) {
+            return false;
+        }
+        return s.substring(index1, index2).equals(match);
+    }
+}
+```
