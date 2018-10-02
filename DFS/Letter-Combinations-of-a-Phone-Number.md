@@ -29,7 +29,6 @@
 ####思路
 - 典型DFS
 - 值得注意的是,这个combination不是把所有字母合在一起,而是比如"23",从2的字母取一个,3的取一个
-- char c : map.get(digits.charAt(sb.length())) 这个写法值得掌握
 
 ```java
 public class Solution {
