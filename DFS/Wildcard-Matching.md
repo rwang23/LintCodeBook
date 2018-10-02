@@ -76,6 +76,9 @@ public class Solution {
 ```
   
 ##记忆化
+- 需要建立一个sindex和pindex的hashmap,结果是true或者false
+- 如果建立了这样一个object,因为是个新的object而不是Prime type或者string,使用map.containsKey就会出问题，找不到这个object
+- 取而代之的是建立一个Boolean[][]二维数组，同时再建立一个visited[][]的二维数组去记录访问
 
 ```java
 public class Solution {
