@@ -14,50 +14,56 @@ String Permutation Recursion
 
 ####思路
 - 跟permutation差不多
-- 但是lintcode显示我超时了,然而我在自己的eclipse跑出来没问题
+- 注意去重
+- 既然有了visited，就利用visited进行判断，如果char[i] == char[i-1] 而i-1还没走过，那么一定是重复的
+- permutation 里边是使用index进行去重，有了visted就更容易
 
 ```java
 public class Solution {
     /**
-     * @param str a string
-     * @return all permutations
+     * @param str: A string
+     * @return: all permutations
      */
     public List<String> stringPermutation2(String str) {
-        // Write your code here
-        if (str == null) {
-            return new ArrayList<String>();
+        // write your code here
+        List<String> results = new ArrayList<String>();
+        
+        if (str == null || str.length() == 0) {
+            results.add("");
+            return results;
         }
-        List<String> result= new ArrayList<String>();
-        StringBuilder word = new StringBuilder();
-        HashSet<Integer> set = new HashSet<Integer>();
-        char[] characters = str.toCharArray();
-        Arrays.sort(characters);
-        dfs(result, word, characters, set);
-        return result;
+        
+        boolean[] visited = new boolean[str.length()];
+        char[] chars = str. toCharArray();
+        Arrays.sort(chars);
+        
+        helper(results, visited, chars, new StringBuilder(""));
+        
+        return results;
     }
-
-    public void dfs(List<String> result, StringBuilder word, char[] characters, HashSet<Integer> set) {
-        if (word.length() == characters.length) {
-            String cur = word.toString();
-            if (!result.contains(cur)) {
-                result.add(new String(cur));
-            }
+    
+    public void helper(List<String> results, boolean[] visited, char[] chars, StringBuilder sb) {
+        
+        if (sb.length() == chars.length) {
+            String target = sb.toString();
+            results.add(target);
             return;
         }
-
-        if (word.length() >= characters.length) {
-            return;
-        }
-
-        for (int i = 0; i < characters.length; i++) {
-            if (set.contains(i)) {
+        
+        for (int i = 0; i < chars.length; i++) {
+            if (visited[i]) {
                 continue;
             }
-            set.add(i);
-            word.append(characters[i]);
-            dfs(result, word, characters, set);
-            word.deleteCharAt(word.length() - 1);
-            set.remove(i);
+            
+            if (i >= 1 && chars[i] == chars[i - 1] && !visited[i - 1]) {
+                continue;
+            }
+            
+            sb.append(chars[i]);
+            visited[i] = true;
+            helper(results, visited, chars, sb);
+            visited[i] = false;
+            sb.setLength(sb.length() - 1);
         }
     }
 }
