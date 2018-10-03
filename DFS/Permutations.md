@@ -82,6 +82,60 @@ public class Solution {
 - [参考](https://blog.csdn.net/happyaaaaaaaaaaa/article/details/51534048)
 - 假设我们有了当前前 i 个元素的组合，当第 i+1个元素加入时，我们需要做的是将这个元素加入之前的每一个结果，并且放在每个结果的每个位置，因为之前的结果没有重复，所以加入新元素的结果也不会有重复（这里是假定数字集合没有重复）
 
+####使用queue，更好理解
+```
+public class Solution {
+    /*
+     * @param nums: A list of integers.
+     * @return: A list of permutations.
+     */
+    public List<List<Integer>> permute(int[] nums) {
+        // write your code here
+        List<List<Integer>> results = new ArrayList<List<Integer>>();
+        List<Integer> list = new ArrayList<Integer>();
+        Queue<List<Integer>> queue = new LinkedList<List<Integer>>();
+        
+        if (nums == null || nums.length == 0) {
+            results.add(new ArrayList<Integer>());
+            return results;
+        }
+        
+	//单独处理只有一个元素的时候
+        if (nums.length == 1) {
+            list.add(nums[0]);
+            results.add(list);
+            return results;
+        }
+      
+        list.add(nums[0]);
+        queue.offer(list);
+        int index = 1;
+        
+        while (!queue.isEmpty()) {
+	    //层级BFS遍历，每次进入下一层，再把下一个数加进来
+            int queueSize = queue.size();
+            for (int i = 0; i < queueSize; i++) {
+                List<Integer> cur = queue.poll();
+                int insert = nums[index];
+                int size = cur.size();
+                for (int j = 0; j <= size; j++) {
+                    List<Integer> addList = new ArrayList<Integer>(cur);
+                    addList.add(j, insert);
+                    if (addList.size() == nums.length) {
+                        results.add(addList);
+                    } else {
+                        queue.offer(addList);
+                    }
+                }
+            }
+            index++;
+        }
+        
+        return results;
+    }
+}
+```
+####使用list
 
 ```java
 public class Solution {
