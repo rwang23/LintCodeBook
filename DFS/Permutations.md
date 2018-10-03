@@ -18,7 +18,7 @@
 
 ####Tags: Recursion
 
-####思路
+####递归思路
 - 三个数取一次
 - 就算先取了2，也必须回过去找1，所以可以用不设限制条件的循环，重新去找1
 - 如果又遇到了2，跳过就可以
@@ -70,3 +70,6 @@ public class Solution {
     }
 }
 ```
+
+###非递归思路
+- [参考](https://www.letiantian.me/2014-11-29-permutation-combination-non-recursive-algorithms/)
