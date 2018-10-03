@@ -73,3 +73,6 @@ public class Solution {
 
 ###非递归思路
 - [参考](https://www.letiantian.me/2014-11-29-permutation-combination-non-recursive-algorithms/)
+- 全排列就是从第一个数字起每个数分别与它后面的数字交换
+- 去重的全排列就是从第一个数字起每个数分别与它后面非重复出现的数字交换
+- 全排列的非递归就是由后向前找替换数和替换点，然后由后向前找第一个比替换数大的数与替换数交换，最后颠倒替换点后的所有数据。
