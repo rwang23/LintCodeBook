@@ -72,12 +72,96 @@ public class Solution {
 ```
 
 ###非递归思路1
-- [参考](https://www.letiantian.me/2014-11-29-permutation-combination-non-recursive-algorithms/)
 - next permutation的思路
 - 全排列就是从第一个数字起每个数分别与它后面的数字交换
 - 去重的全排列就是从第一个数字起每个数分别与它后面非重复出现的数字交换
 - 全排列的非递归就是由后向前找替换数和替换点，然后由后向前找第一个比替换数大的数与替换数交换，最后颠倒替换点后的所有数据。
 
+```
+permutation iterative固定做法
+从后往前寻找索引满足 a[k] < a[k + 1], 如果此条件不满足，则说明已遍历到最后一个。
+从后往前遍历，找到第一个比a[k]大的数a[l], 即a[k] < a[l].
+交换a[k]与a[l].
+反转k + 1 ~ n之间的元素。
+input [1,3,2]
+第一步,发现1 < 3 所以 i 指向的是1这个元素 = 0
+第二步,从后面往前找第一个比1大的数,发现是2,index是2
+第三步,交换a[0] a[2] 数组变成[2,3,1]
+第四步, 翻转i+1 到最后 数组变成[2,1,3]
+得到答案
+```
+
+```java
+public class Solution {
+    /*
+     * @param nums: A list of integers.
+     * @return: A list of permutations.
+     */
+    public List<List<Integer>> permute(int[] nums) {
+        // write your code here
+        List<List<Integer>> results = new ArrayList<List<Integer>>();
+
+        if (nums == null || nums.length == 0) {
+            results.add(new ArrayList<Integer>());
+            return results;
+        }
+        
+        Arrays.sort(nums);
+        results.add(toList(nums));
+        
+        while (true) {
+            int target = -1;
+            for (int k = nums.length - 2; k >= 0; k--) {
+                if (nums[k] < nums[k + 1]) {
+                    target = k;
+                    break;
+                }
+            }
+            
+            if (target == -1) {
+                break;
+            }
+            
+            for (int j = nums.length - 1; j >= target + 1; j--) {
+                if (nums[j] > nums[target]) {
+                    swap(target, j, nums);
+                    break;
+                }
+            }
+            
+            reverse(target + 1, nums.length - 1, nums);
+            
+            
+            List<Integer> list = toList(nums);
+            results.add(list);
+        }
+        
+        return results;
+    }
+    
+    public void reverse(int start, int end, int[] nums) {
+        for (int i = start, j = end; i < j; i++,j--) {
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+        }
+    }
+    
+    public void swap(int start, int end, int[] nums) {
+        int temp = nums[start];
+        nums[start] = nums[end];
+        nums[end] = temp;
+    }
+    
+    public List<Integer> toList(int[] nums) {
+        List<Integer> list = new ArrayList<Integer>();
+        for (int i : nums) {
+            list.add(i);
+        }
+        return list;
+    }
+}
+```
 
 ###非递归思路2
 - [参考](https://blog.csdn.net/happyaaaaaaaaaaa/article/details/51534048)
