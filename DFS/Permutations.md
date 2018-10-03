@@ -71,8 +71,37 @@ public class Solution {
 }
 ```
 
-###非递归思路
+###非递归思路1
 - [参考](https://www.letiantian.me/2014-11-29-permutation-combination-non-recursive-algorithms/)
 - 全排列就是从第一个数字起每个数分别与它后面的数字交换
 - 去重的全排列就是从第一个数字起每个数分别与它后面非重复出现的数字交换
 - 全排列的非递归就是由后向前找替换数和替换点，然后由后向前找第一个比替换数大的数与替换数交换，最后颠倒替换点后的所有数据。
+
+
+###非递归思路2
+- [参考](https://blog.csdn.net/happyaaaaaaaaaaa/article/details/51534048)
+- 假设我们有了当前前 i 个元素的组合，当第 i+1个元素加入时，我们需要做的是将这个元素加入之前的每一个结果，并且放在每个结果的每个位置，因为之前的结果没有重复，所以加入新元素的结果也不会有重复（这里是假定数字集合没有重复）
+
+
+```javapublic class Solution {
+     public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> first = new ArrayList<>();
+        first.add(nums[0]);
+        res.add(first);
+        for(int i = 1; i < nums.length; i++) {
+            List<List<Integer>> newRes = new ArrayList<>();
+            for(List<Integer> temp : res) {
+                int size = temp.size() + 1;
+                for(int j = 0; j < size; j++) {
+                    List<Integer> item = new ArrayList<>(temp);
+                    item.add(j, nums[i]);
+                    newRes.add(item);
+                }
+            }
+            res = newRes;
+        }
+        return res;
+    }
+}
+```
