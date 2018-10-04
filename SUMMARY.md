@@ -384,6 +384,8 @@ This is the summary of my experience in LintCode.
 	* [Permutations Sequence](DFS/Permutation-Sequence.md)
 	* [Number of Islands](DFS/Number-of-Islands.md)
 	* [Number of Islands II](DFS/Number-of-Islands-II.md)
+	* [Word Pattern](DFS/Word-Pattern.md)
+	* [Word Pattern II](DFS/Word-Pattern-II.md)
 	* [Word Search](DFS/Word-Search.md)
 	* [Word Search II](DFS/Word-Search-II.md)
 	* [Word Break II](DFS/Word-Break-II.md)
