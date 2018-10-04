@@ -57,9 +57,38 @@ public class MovingAverage {
     }
 }
 
-/**
- * Your MovingAverage object will be instantiated and called as such:
- * MovingAverage obj = new MovingAverage(size);
- * double param_1 = obj.next(val);
- */
+```
+```
+public class MovingAverage {
+    /*
+    * @param size: An integer
+    
+    */
+    
+    Queue<Integer> queue;
+    double sum = 0;
+    int size = 0;
+    public MovingAverage(int size) {
+        // do intialization if necessary
+        queue = new LinkedList<Integer>();
+        this.size = size;
+    }
+
+    /*
+     * @param val: An integer
+     * @return:  
+     */
+    public double next(int val) {
+        // write your code here
+        if (queue.size() == size) {
+            int remove = queue.poll();
+            sum -= remove;
+        } 
+        
+        queue.offer(val);
+        sum += val;
+        
+        return sum / queue.size();
+    }
+}
 ```
