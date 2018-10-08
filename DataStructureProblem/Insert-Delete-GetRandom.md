@@ -36,6 +36,7 @@ randomSet.getRandom();
 ###解法
 - 本来想自己在写个ListNode,但是根本不必要
 - 又不需要记录顺序,并不需要ListNode
+- 如果没有random,那么也只需要一个hashmap就完事了
 - 需要random那么需要index去获得,那么最后只需要一个数列和hashmap就行了
 
 ```java

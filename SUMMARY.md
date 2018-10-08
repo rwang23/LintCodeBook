@@ -333,6 +333,7 @@ This is the summary of my experience in LintCode.
 	* [Implement Stack by Two Queues](DataStructureProblem/Implement-Stack-by-Two-Queues.md)
 	* [Implement Trie](DataStructureProblem/Implement-Trie.md)
 	* [Insert Delete GetRandom](DataStructureProblem/Insert-Delete-GetRandom.md)
+	* [Insert Delete GetRandom-II](DataStructureProblem/Insert-Delete-GetRandom-II.md)
 	* [Stack Sorting](DataStructureProblem/Stack-Sorting.md)
 	* [Heapify](DataStructureProblem/Heapify.md)
 	* [Merge k Sorted Arrays](DataStructureProblem/Merge-k-Sorted-Arrays.md)
