@@ -52,6 +52,12 @@ Java 中提供`PriorityQueue`类，该类是 Interface Queue 的另外一种实�
 - 自己实现的heap如果加上hashmap,可以实现remove O(logn) contains O(1)
 - retrieval: `peek`, `element`, and `size` - O(1).
 
+###一些用法
+- PriorityQueue(): Creates a PriorityQueue with the default initial capacity (11) that orders its elements according to their natural ordering.
+- 默认是最小heap，每次出的话，得到最小值
+- 最大heap使用reverseOrder
+- PriorityQueue<Integer> queue = new PriorityQueue<>(10, Collections.reverseOrder());
+
 ## Deque - 双端队列
 
 双端队列（deque，全名double-ended queue）可以让你在任何一端添加或者移除元素，因此它是一种具有队列和栈性质的数据结构。
