@@ -322,6 +322,7 @@ This is the summary of my experience in LintCode.
 	* [Convert Binary Search Tree to Doubly Linked List](Linkedlist/Convert-Binary-Search-Tree-to-Doubly-Linked-List.md)
 
 * [Data Structure Problem](DataStructureProblem/README.md)
+	* [K Closest Points](DataStructureProblem/ K-Closest-Points.md)
 	* [Contains Duplicate](DataStructureProblem/Contains-Duplicate.md)
 	* [Contains Duplicate II](DataStructureProblem/Contains-Duplicate-II.md)
 	* [Contains Duplicate III](DataStructureProblem/Contains-Duplicate-III.md)
