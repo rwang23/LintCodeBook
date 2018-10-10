@@ -1,5 +1,8 @@
 ##Comparator用法
-
+###常见使用sort
+- Arrays.sort(array, Collections.reverseOrder())
+-  Arrays.sort(array） 可以用于prime type，但是如果要逆序sort要加上Collections.reverseOrder()，就不能用于prime type了
+- Collections.sort(list, Collections.reverseOrder())
 
 ####Compare
 - 是比较两个Object是否相同的办法,需要overwrite hashCode()
