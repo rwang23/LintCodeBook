@@ -57,6 +57,13 @@ Java 中提供`PriorityQueue`类，该类是 Interface Queue 的另外一种实�
 - 默认是最小heap，每次出的话，得到最小值
 - 最大heap使用reverseOrder
 - PriorityQueue<Integer> queue = new PriorityQueue<>(10, Collections.reverseOrder());
+- 这里的10，只是initial size，并不是max size， 如果要使用fixed size heap,那么需要自己去poll，如下
+  
+```java
+if (que.size() > YOUR_LIMIT) {
+     que.poll();
+}
+```
 
 ## Deque - 双端队列
 
