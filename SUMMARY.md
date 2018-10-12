@@ -1,6 +1,6 @@
 # Summary
 
-This is the summary of my experience in LintCode.
+This is the summary of my experience in LintCode/Leetcode challenge.
 
 * [Java](Java/README.md)
 	* [Comparator](Java/comparator.md)
