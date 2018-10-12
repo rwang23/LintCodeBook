@@ -19,7 +19,58 @@ Time complexity in O(logn)
 ####Tags Expand
 Binary Search
 
-####思路
+
+####思路1
+- 找左边界，然后向右走
+- 如果整个队列都是重复的，那么还是要O(nlogn)
+
+```java
+public class Solution {
+    /**
+     * @param A: A an integer array sorted in ascending order
+     * @param target: An integer
+     * @return: An integer
+     */
+    public int totalOccurrence(int[] A, int target) {
+        // write your code here
+        if (A == null || A.length == 0) {
+            return 0;
+        }
+        
+        int start = 0;
+        int end = A.length - 1;
+        
+        while (start < end - 1) {
+            int mid = start + (end - start) / 2;
+            if (A[mid] >= target) {
+                end = mid;
+            } else {
+                start = mid;
+            }
+            
+        }
+        
+        int index = 0;
+        if (A[start] == target) {
+            index = start;
+        } else if (A[end] == target) {
+            index = end;
+        } else {
+            return 0;
+        }
+        
+        int occur = 1;
+        while (index + 1 < A.length && A[index] == A[index + 1]) {
+            index++;
+            occur++;
+        }
+        
+        return occur;
+    }
+}
+```
+
+####思路2
 - search for range变形,找左边界,再找右边界,index相减加1即可
 
 ```java
