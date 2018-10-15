@@ -442,6 +442,7 @@ This is the summary of my experience in LintCode/Leetcode challenge.
 	* [Sqrt](Math/Sqrt.md)
 	* [Pow](Math/Pow.md)
 	* [Multiply Strings](Math/Multiply-Strings.md)
+	* [Prime Factorization](Math/Prime-Factorization.md)
 	* [Reverse Integer](Math/Reverse-Integer.md)
 	* [Power of Three](Math/Power-of-Three.md)
 	* [Power of Four](Math/Power-of-Four.md)
