@@ -115,6 +115,7 @@ This is the summary of my experience in LintCode/Leetcode challenge.
 	* [Search For a Range](BinarySearch/Search-For-Range.md)
 	* [Search Insert Position](BinarySearch/Search-Insert-Position.md)
 	* [Wood Cut](BinarySearch/Wood-Cut.md)
+	* [Drop Eggs](BinarySearch/Drop-Eggs.md)
 	* [Smallest Rectangle Enclosing Black Pixels](BinarySearch/Smallest-Rectangle-Enclosing-Black-Pixels.md)
 
 * [Binary Tree](BinaryTree/README.md)
