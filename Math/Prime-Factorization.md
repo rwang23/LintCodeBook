@@ -12,6 +12,7 @@
   You should sort the factors in ascending order.
   
 ##思路
+- 写的时候使用了Math。sqrt，但是没必要..直接i * i <= num就可以了
 
 ```java
 public class Solution {
