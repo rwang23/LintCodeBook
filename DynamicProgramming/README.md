@@ -31,3 +31,9 @@
 - function: f[i] = f[j] ... j 是i之前的一个位置
 - intialize: f[0]..
 - answer: f[n-1]..
+
+####Two Sequences Dp
+- state: f[i][j]代表了第一个sequence的前i个数字 /字符 配上第二个sequence的前j个...
+- function: f[i][j] = 研究第i个和第j个的匹配关系
+- intialize: f[i][0] 和 f[0][i]
+- answer: f[s1.length()][s2.length()]
