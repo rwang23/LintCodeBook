@@ -15,6 +15,7 @@
 
 ##思路
 - 一开始用了map
+- 后来用了数组就行
 - 后来一想只需要set,每次put然后在遇到remove
 
 ```java
@@ -29,31 +30,29 @@ public class Solution {
             return 0;
         }
 
-        Map<Character, Integer> map = new HashMap<Character, Integer>();
+        int[] chars = new int[58];
+        int total = 0;
+
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (map.containsKey(c)) {
-                map.put(c, map.get(c) + 1);
+            int index = c - 'A';
+
+            if (chars[index] % 2 == 1) {
+                total += 2;
+                chars[index] = 0;
             } else {
-                map.put(c, 1);
+                chars[index] = 1;
             }
         }
 
-        int sum = 0;
-        boolean hasOdd = false;
-        for (Integer i : map.values()) {
-            if (i % 2 == 0) {
-                sum += i;
-            } else {
-                sum += i - 1;
-                hasOdd = true;
+        for (int i = 0; i < 58; i++) {
+            if (chars[i] == 1) {
+                total++;
+                break;
             }
         }
 
-        if (hasOdd) {
-            sum++;
-        }
-        return sum;
+        return total;
     }
 }
 ```

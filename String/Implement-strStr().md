@@ -10,6 +10,7 @@
 - 使用两个指针
 - 这种问题一定要注意的是,第一个或者第二个指针的范围
 - 这道题 第一个i指针 + target.length() 不可能比source.length()大,如果大了的话就没有符合的
+- 不能用substring,因为这就是O(n)了
 
 ```java
 public class Solution {
