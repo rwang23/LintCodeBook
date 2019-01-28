@@ -33,35 +33,36 @@ s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 ####代码
 ```java
 public class Solution {
+    /**
+     * @param s: A string
+     * @return: Whether the string is a valid palindrome
+     */
     public boolean isPalindrome(String s) {
-        if (s == null) {
+        // write your code here
+        if (s.equals("")) {
             return true;
         }
 
-        String normal = new String("abcdefghijklmnopqrstuvwxyz0123456789");
-        HashSet<Character> set = new HashSet<Character>();
-        for (int i = 0; i < normal.length(); i++) {
-            set.add(normal.charAt(i));
-        }
+        for (int i = 0, j = s.length() - 1; i < j; i++, j--) {
+            char c1 = s.charAt(i);
+            char c2 = s.charAt(j);
 
-        for (int i = 0, j = s.length() - 1; i < j; i++, j-- ) {
-            while (i < j && !set.contains(Character.toLowerCase(s.charAt(i)))) {
+            while (i < j && !Character.isLetterOrDigit(c1)) {
                 i++;
+                c1 = s.charAt(i);
             }
-            while (i < j && !set.contains(Character.toLowerCase(s.charAt(j)))) {
+
+            while (i < j && !Character.isLetterOrDigit(c2)) {
                 j--;
+                c2 = s.charAt(j);
             }
 
-            if (i >= j) {
-                return true;
-            }
-
-            if (Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j))) {
+            if (Character.toUpperCase(c1) != Character.toUpperCase(c2)) {
                 return false;
             }
         }
-        return true;
 
+        return true;
     }
 }
 ```

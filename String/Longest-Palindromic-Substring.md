@@ -110,3 +110,53 @@ public class Solution {
     }
 }
 ```
+
+###思路3
+- 基于中心点枚举的算法
+- 只不过用了两次循环,没有必要真的加入虚拟index,那样容易弄乱
+
+```Java
+public class Solution {
+    /**
+     * @param s: input string
+     * @return: the longest palindromic substring
+     */
+    public String longestPalindrome(String s) {
+        // write your code here
+        if (s.equals("")) {
+            return new String("");
+        }
+
+        int longestLength = 0;
+        int start = 0;
+        int end = s.length() - 1;
+
+        for (int i = 0; i < s.length(); i++) {
+
+            int j = 0;
+            while (i - j >= 0 && i + j < s.length() && s.charAt(i - j) == s.charAt(i + j)) {
+                if (longestLength < 2 * j + 1) {
+                    longestLength = 2 * j + 1;
+                    start = i - j;
+                    end = i + j;
+                }
+                j++;
+            }
+
+            j = 0;
+            while (i - j - 1 >= 0 && i + j < s.length() && s.charAt(i - j - 1) == s.charAt(i + j)) {
+                if (longestLength < 2 * j + 2) {
+                    longestLength = 2 * j + 2;
+                    start = i - j - 1;
+                    end = i + j;
+                }
+                j++;
+            }
+
+        }
+        System.out.println(start);
+        System.out.println(end + 1);
+        return s.substring(start, end + 1);
+    }
+}
+```
