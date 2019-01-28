@@ -295,6 +295,7 @@ This is the summary of my experience in LintCode/Leetcode challenge.
 	* [First Missing Positive](Array/First-Missing-Positive.md)
 
 * [Linkedlist](Linkedlist/README.md)
+	* [Middle of LinkedList](Linkedlist/MiddleofLinkedList.md)
 	* [Delete Node in the Middle of Singly Linked List](Linkedlist/Delete-Node-in-the-Middle-of-Singly-Linked-List.md)
 	* [Reverse Linked List](Linkedlist/Reverse-Linked-List.md)
 	* [Reverse Linked List II](Linkedlist/Reverse-Linked-ListII.md)
