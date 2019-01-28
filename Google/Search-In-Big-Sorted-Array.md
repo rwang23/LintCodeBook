@@ -2,16 +2,23 @@
 
 39% Accepted
 
-	Given a big sorted array, find the first index of a target number.
-    Your algorithm should be in O(log k), where k is the first index of the target number.
+```
+Given a big sorted array with non-negative integers sorted by non-decreasing order. The array is so big so that you can not get the length of the whole array directly, and you can only access the kth number by ArrayReader.get(k) (or ArrayReader->get(k) for C++). Find the first index of a target number. Your algorithm should be in O(log k), where k is the first index of the target number.
 
-	Return -1, if the number doesn't exist in the array.
+Return -1, if the number doesn't exist in the array.
 
-	Have you met this question in a real interview? Yes
-	Example
-	Given [1, 3, 6, 9, 21], and target = 3, return 1.
+Example
+Given [1, 3, 6, 9, 21, ...], and target = 3, return 1.
 
-	Given [1, 3, 6, 9, 21], and target = 4, return -1.
+Given [1, 3, 6, 9, 21, ...], and target = 4, return -1.
+
+Challenge
+O(log k), k is the first index of the given target number.
+
+Notice
+If you accessed an inaccessible index (outside of the array), ArrayReader.get will return 2,147,483,647.
+
+```
 
 ####Challenge
 O(log k), k is the first index of the given target number.
@@ -28,49 +35,39 @@ O(log k), k is the first index of the given target number.
 
 ```java
 public class Solution {
-    /**
-     * @param A: An integer array
+    /*
+     * @param reader: An instance of ArrayReader.
      * @param target: An integer
-     * @return : An integer which is the index of the target number
+     * @return: An integer which is the first index of target.
      */
-    public int searchBigSortedArray(int[] A, int target) {
+    public int searchBigSortedArray(ArrayReader reader, int target) {
         // write your code here
-        if(A == null || A.length == 0){
-            return -1;
+
+        int index = 1;
+
+        while (reader.get(index) != 2147483647 && reader.get(index) < target) {
+            index = index * 2;
         }
 
-        int start = 0;
-        int end = A.length - 1;
-        while (A[start] < target) {
-            start = start*2 + 1;
-            if(start > A.length - 1){
-                start = end;
-                break;
-            }
-        }
-        if (A[start] > target
-            start = (start - 1) / 2;
-        }
+        int end = index;
+        int start = index / 2;
 
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
-            if (A[mid] == target) {
+            if (reader.get(mid) >= target) {
                 end = mid;
-            }else if (A[mid] > target) {
-                end = mid;
-            }else{
+            } else {
                 start = mid;
             }
         }
 
-        if (A[start] == target) {
+        if (reader.get(start) == target) {
             return start;
-        } else if(A[end] == target) {
+        } else if (reader.get(end) == target) {
             return end;
-        } else{
-            return -1;
         }
 
+        return -1;
     }
 }
 
