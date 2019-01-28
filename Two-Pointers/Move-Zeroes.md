@@ -1,4 +1,5 @@
 ##Move Zeroes
+[Move Zeroes](https://www.lintcode.com/problem/move-zeroes/description?_from=ladder&&fromId=1)
 
 	Total Accepted: 78338 Total Submissions: 177188 Difficulty: Easy
 	Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
@@ -27,23 +28,23 @@ public class Solution {
         if (nums == null || nums.length == 0) {
             return;
         }
-        
+
         int i = 0; //zero index
         int j = 0; //non-zero index
-        
+
         while (i < nums.length && j < nums.length) {
             while (i < nums.length && nums[i] != 0) {
                 i++;
             }
-            
+
             while (j < nums.length && nums[j] == 0 || j <= i) {
                 j++;
             }
-            
+
             if (i == nums.length || j == nums.length) {
                 return;
             }
-            
+
             int temp = nums[i];
             nums[i] = nums[j];
             nums[j] = temp;
@@ -52,23 +53,29 @@ public class Solution {
 }
 ```
 ####思路2
+- 双指针,跟下面这道题很像
+- [Remove Duplicate in a array](https://rwang23.gitbooks.io/lintcodebook/content/Two-Pointers/Remove-Duplicate-Numbers-in-Array.html)
 ```java
 public class Solution {
     /**
-     * @param nums an integer array
-     * @return nothing, do this in-place
+     * @param nums: an integer array
+     * @return: nothing
      */
     public void moveZeroes(int[] nums) {
-        // Write your code here
-        int left = 0, right = 0;
-        while (right < nums.length) {
-            if (nums[right] != 0) {
-                int temp = nums[left];
-                nums[left] = nums[right];
-                nums[right] = temp;
-                left++;
+        // write your code here
+        if (nums == null || nums.length == 0) {
+            return;
+        }
+
+        int curIndex = 0;
+        for (int zeroIndex = 0; zeroIndex < nums.length; zeroIndex++) {
+            if (nums[zeroIndex] != 0) {
+                nums[curIndex++] = nums[zeroIndex];
             }
-            right++;
+        }
+
+        while (curIndex < nums.length) {
+            nums[curIndex++] = 0;
         }
     }
 }

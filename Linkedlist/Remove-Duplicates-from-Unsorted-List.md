@@ -1,4 +1,4 @@
-##Remove Duplicates from Unsorted List
+##Remove Duplicates from Unsorted LinkedList
 
 57% Accepted
 
