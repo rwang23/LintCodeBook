@@ -24,6 +24,7 @@
 - 这个题有很多值得注意的地方，见注释
 - 最值得注意的地方就是pos的传入,
 - 要先画图画清楚,Pos是如何作用的
+- 主要参考第二个答案
 
 ```java
 public class Solution {
@@ -84,12 +85,27 @@ public class Solution {
 - initial: f[i][i] = true, f[i][i + 1] = char(i) == char(i + 1)
 - answer: f[i][j]
 -  注意下面的顺序，先每次+2地走进行遍历，再+3走进行遍历，而不是先开始遍历，再+2，+3
+
 ```java
-	 for (int len = 2; len < size; len++) {
-         	for (int i = 0; i + len < size; i++) 
+	 写循环前,先要想好
+	 直接写下面的方式是错误的,
+	 要先想好动态规划是怎么推到的
+   既然是这样的形式f[i][j] = f[i+1][j-1]
+	 那么就必然是夹逼,以size的形式,在内环跑完,每次size扩大,
+	 而不是两根指针同向跑
+
+	 for (int i = 0;...) {
+	  	for (int j = i + 2...)
+	 }
+
+	 for (int j = 2; j < size; j++) {
+         	for (int i = 0; i + len < size; i++)
 ```
-##解法
+
+###解法
+
 ```java
+
 public class Solution {
     /*
      * @param s: A string
@@ -98,55 +114,62 @@ public class Solution {
     public List<List<String>> partition(String s) {
         // write your code here
         List<List<String>> results = new ArrayList<List<String>>();
-        List<String> result = new ArrayList<String>();
+        List<String> list = new ArrayList<String>();
+
         if (s == null || s.equals("")) {
-            results.add(result);
+            results.add(list);
             return results;
         }
-        
-        boolean[][] isPalindrome = buildMap(s);
-        dfs(results, result, isPalindrome, s, 0);
-        
+
+        //check from s.substring(i, j) is a palindrome
+        boolean[][] isPalindrome = generatePalindromeMatrix(s);
+
+        dfs(results, list, s, 0, isPalindrome);
         return results;
-        
-        
     }
-    
-    public void dfs(List<List<String>> results, List<String> result, boolean[][] isPalindrome, String string, int index) {
-        
-        if (index == string.length()) {
-            List<String> cur = new ArrayList<String>(result);
-            results.add(cur);
+
+    public void dfs(List<List<String>> results, List<String> list, String s, int index, boolean[][] isPalindrome) {
+        if (index == s.length()) {
+            results.add(new ArrayList<String>(list));
             return;
         }
-        
-        for (int len = 1; len + index <= string.length(); len++) {
-            if (isPalindrome[index][index + len - 1]) {
-                String curString = string.substring(index, index + len); 
-                result.add(curString);
-                dfs(results, result, isPalindrome, string, index + len);
-                result.remove(result.size() - 1);
+
+        for (int i = index + 1; i <= s.length(); i++) {
+            String substring = s.substring(index, i);
+            if (isPalindrome[index][i - 1]) {
+                list.add(substring);
+                dfs(results, list, s, i, isPalindrome);
+                list.remove(list.size() - 1);
             }
         }
-        
     }
-    
-    public boolean[][] buildMap(String string) {
-        int size = string.length();
-        boolean[][] isPalindrome = new boolean[size][size];
-        
-        for (int i = 0; i < size; i++) {
-            if (i + 1 < size) {
-                isPalindrome[i][i + 1] = (string.charAt(i) == string.charAt(i + 1));
-            }
-            isPalindrome[i][i] = true;
+
+    public boolean[][] generatePalindromeMatrix(String s) {
+        if (s == null || s.length() == 0) {
+            return new boolean[0][0];
         }
-        
-        for (int len = 2; len < size; len++) {
-            for (int i = 0; i + len < size; i++) {
-                int j = i + len;
-                isPalindrome[i][j] = isPalindrome[i + 1][j - 1] && (string.charAt(i) == string.charAt(j));
-                
+
+        //f[i][j] is status of palindrome
+        //i < j
+        //f[i][j] == (f[i + 1][j - 1] && char[i + 1] == char[j - 1]
+        //f[i][i] = true
+        //f[i][i+1] = true if char[i] == char[i + 1]
+
+        boolean[][] isPalindrome = new boolean[s.length()][s.length()];
+
+        for (int i = 0; i < s.length(); i++) {
+            isPalindrome[i][i] = true;
+
+            if (i >= 1 && s.charAt(i) == s.charAt(i - 1)) {
+                isPalindrome[i - 1][i] = true;
+            }
+        }
+
+        for (int i = 2; i < s.length(); i++) {
+            for (int j = 0; i + j < s.length(); j++) {
+                if (s.charAt(j) == s.charAt(i + j)) {
+                    isPalindrome[j][i + j] = isPalindrome[j + 1][i + j - 1];
+                }
             }
         }
 
