@@ -8,23 +8,14 @@ Given a binary tree, find the subtree with minimum sum. Return the root of the s
      /   \
    -5     2
    / \   /  \
-  0   2 -4  -5 
+  0   2 -4  -5
   return the node 1.
-  
-####解法
-- 最开始写的解法里边的getSum有这么一段，每次判断左右，这样就导致了如果子节点是空，那么sum就是0，就会比其他sum都小，导致错误
-- 既然已经分治，那么这里就不需要单独对左右子树了
 
-```java
-        if (left <= min) {
-            min = left;
-            minNode = root.left;
-        }
-        if (right <= min) {
-            min = right;
-            minNode = root.right;
-        }
-```
+####解法
+- 无法直接的分治递归,需要添加一个全局变量
+- 如果要直接分支递归,则需要添加一个class,里边包含sum,minSum,minSubtree
+
+####全局变量
 
 ```java
 /**
@@ -51,17 +42,17 @@ public class Solution {
         if (root == null) {
             return root;
         }
-        
+
         minNode = root;
         getSum(root);
         return minNode;
     }
-    
+
     public int getSum(TreeNode root) {
         if (root == null) {
             return 0;
         }
-        
+
         int left = getSum(root.left);
         int right = getSum(root.right);
         int sum = left + right + root.val;
@@ -70,8 +61,60 @@ public class Solution {
             min = sum;
             minNode = root;
         }
-        
+
         return sum;
+    }
+}
+```
+
+####直接分治
+
+```java
+class ResultType {
+    public TreeNode minSubtree;
+    public int sum, minSum;
+    public ResultType(TreeNode minSubtree, int minSum, int sum) {
+        this.minSubtree = minSubtree;
+        this.minSum = minSum;
+        this.sum = sum;
+    }
+}
+
+public class Solution {
+    /**
+     * @param root the root of binary tree
+     * @return the root of the minimum subtree
+     */
+    public TreeNode findSubtree(TreeNode root) {
+        ResultType result = helper(root);
+        return result.minSubtree;
+    }
+
+    public ResultType helper(TreeNode node) {
+        if (node == null) {
+            return new ResultType(null, Integer.MAX_VALUE, 0);
+        }
+
+        ResultType leftResult = helper(node.left);
+        ResultType rightResult = helper(node.right);
+
+        ResultType result = new ResultType(
+            node,
+            leftResult.sum + rightResult.sum + node.val,
+            leftResult.sum + rightResult.sum + node.val
+        );
+
+        if (leftResult.minSum <= result.minSum) {
+            result.minSum = leftResult.minSum;
+            result.minSubtree = leftResult.minSubtree;
+        }
+
+        if (rightResult.minSum <= result.minSum) {
+            result.minSum = rightResult.minSum;
+            result.minSubtree = rightResult.minSubtree;
+        }
+
+        return result;
     }
 }
 ```
